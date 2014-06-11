@@ -1,0 +1,34 @@
+---
+layout: documentation
+page_title_show: true
+title: "Artoo Example - blink_led"
+page_title: "Example: blink_led"
+author: The Hybrid Group
+description: A Artoo code example
+page_subtitle: "<a href='https://github.com/hybridgroup/artoo-raspi/tree/master/examples' target='_blank'>View In Repo</a>"
+active_menu_docs: true
+---
+
+-content_for :js_accordeon do
+  :javascript
+    $("#example-panel").addClass("active-panel");
+    $(".accordion-docs dt:nth-child(15) a:nth-child(2) img").addClass("rotate");
+
+.example
+  :markdown
+        :::ruby
+        require 'artoo'
+
+        connection :raspi, :adaptor => :raspi
+        device :board, :driver => :device_info
+        device :led, :driver => :led, :pin => 11
+
+        work do
+          puts "Firmware name: \#{board.firmware_name}"
+          puts "Firmata version: \#{board.version}"
+
+          every 1.second do
+            led.on? ? led.off : led.on
+          end
+        end
+

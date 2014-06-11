@@ -1,0 +1,92 @@
+---
+page_title_show: true
+title: Artoo Platforms
+author: The Hybrid Group
+description: Artoo Platforms
+layout: documentation
+active_menu_docs: true
+
+page_title: Getting Started
+page_subtitle: A Guide by Humans, for Humans.
+platforms: true
+---
+-content_for :js_accordeon do
+  :javascript
+    $("#getting-panel").addClass("active-panel");
+    $("#getting-panel ul li:nth-child(1)").addClass("active-link");
+    $(".accordion-docs dt:nth-child(3) a:nth-child(2) img").addClass("rotate");
+  
+
+%section.intro
+  %h1 Setup your environment
+  %h2 Ruby
+  %p To be able to run artoo you need to install ruby.
+
+  %h3 Install RVM
+  %p
+    %b Follow the instructions below
+    or go to
+    %a{ href: "https://rvm.io/rvm/install" } https://rvm.io/rvm/install
+    for more detailed instructions.
+  %p
+    Run the following command in a terminal
+  :markdown
+        :::bash
+        \curl -L https://get.rvm.io | bash -s stable
+
+  %p Once the installation is complete, close your terminal and open a new one.
+  %p To make sure your RVM is installed correctly run the following command
+  :markdown
+        :::bash
+        type rvm | head -n 1
+  %p and you should see the following output:
+  :markdown
+        :::bash
+        rvm is a function
+
+  %h3 Install ruby 2.1.1
+  %p If you are a first time user, we recomend you to install this version.
+  %p With RVM installed, just run this command:
+  :markdown
+        :::bash
+        rvm install 2.1.1
+
+  %h3 Or Install rubinius 2.1.1
+
+  %P For maximum concurrency, like when you need to control multiple robots, microcontrollers or devices at the same time.
+  %p We recommend using Rubinius 2.1.1 or higher
+  %p
+    With RVM installed, just run this command:
+  :markdown
+        :::bash
+        rvm get head && rvm install rbx-2.1.1 --1.9
+        rvm install rbx-2.1.1
+
+  %h3 Other versions supported
+  %p Ruby 2.0, Ruby 1.9.3, JRuby 1.7.4+, and Rubinius 2.0+
+
+%section.installation
+  %h2 Instal artoo
+  %p Once you have ruby installed, you can install artoo gem with this command:
+  :markdown
+        :::ruby
+        gem install artoo
+  %p Then install the gems required by the hardware you want to use. For example, if you wanted to use an XBox360 controller to fly your ARDrone:
+  :markdown
+        :::ruby
+        gem install artoo-joystick
+        gem install artoo-ardrone
+  %h2 Writing your robot code
+  %p Now you are ready to write your own code.
+  %ul
+    %li Follow our Getting Started Tutorials for step-by-step guidance on next steps.
+    %li
+      Visit
+      %a{href: '/documentation/platforms'} platforms section
+      for more information about our supported devices and examples.
+    %li
+      Or visit a repo with full example of using Artoo for test driven robotics located at
+      =link_to "https://github.com/hybridgroup/artoo-test-example", "https://github.com/hybridgroup/artoo-test-example"
+
+
+  

@@ -1,0 +1,33 @@
+---
+layout: documentation
+page_title_show: true
+title: "Artoo Example - firmata"
+page_title: "Example: firmata"
+author: The Hybrid Group
+description: A Artoo code example
+page_subtitle: "<a href='https://github.com/hybridgroup/artoo/tree/master/examples' target='_blank'>View In Repo</a>"
+active_menu_docs: true
+---
+
+-content_for :js_accordeon do
+  :javascript
+    $("#example-panel").addClass("active-panel");
+    $(".accordion-docs dt:nth-child(15) a:nth-child(2) img").addClass("rotate");
+
+.example
+  :markdown
+        :::ruby
+        require 'artoo'
+
+        connection :firmata, :adaptor => :firmata, :port => '/dev/ttyACM0' #linux
+        device :board
+        device :led, :driver => :led, :pin => 13
+
+        work do
+          puts "Firmware name \#{board.firmware_name}"
+          puts "Firmata version \#{board.version}"
+          every 1.second do
+            led.toggle
+          end
+        end
+
