@@ -67,12 +67,12 @@
                 
                 <section class="intro"><h1>Setup your environment</h1>
                   <h2>Ruby</h2>
-                  <p>To be able to run artoo you need to install ruby.</p>
+                  <p>To be able to run Artoo, you first need to install a Ruby interpreter.</p>
                   <h3>Install RVM</h3>
                   <p>
                     <b>Follow the instructions below</b>
                     or go to
-                    <a href="https://rvm.io/rvm/install">https://rvm.io/rvm/install</a>
+                    <a href="the%20RVM%20site">https://rvm.io/rvm/install</a>
                     for more detailed instructions.
                   </p>
                   <p>
@@ -81,20 +81,23 @@
                   <pre class="CodeRay">\curl -L https://get.rvm.io | bash -s stable
 </pre>
                   <p>Once the installation is complete, close your terminal and open a new one.</p>
-                  <p>To make sure your RVM is installed correctly run the following command</p>
+                  <p>To make sure your RVM is installed correctly, run the following command:</p>
                   <pre class="CodeRay">type rvm | head -n 1
 </pre>
                   <p>and you should see the following output:</p>
                   <pre class="CodeRay">rvm is a function
 </pre>
-                  <h3>Install ruby 2.1.1</h3>
-                  <p>If you are a first time user, we recomend you to install this version.</p>
+                  <h3>Install Ruby 2.1.1</h3>
+                  <p>If you are a first time user, we recommend you install this version.</p>
                   <p>With RVM installed, just run this command:</p>
                   <pre class="CodeRay">rvm install 2.1.1
 </pre>
-                  <h3>Or Install rubinius 2.1.1</h3>
-                  <p>For maximum concurrency, like when you need to control multiple robots, microcontrollers or devices at the same time.</p>
-                  <p>We recommend using Rubinius 2.1.1 or higher</p>
+                  <h3>Or install Rubinius 2.1.1</h3>
+                  <p>
+                    For maximum concurrency, like when you need to control multiple robots,
+                    microcontrollers or devices at the same time, we recommend using Rubinius
+                    2.1.1 or higher.
+                  </p>
                   <p>
                     With RVM installed, just run this command:
                   </p>
@@ -102,12 +105,12 @@
 rvm install rbx-2.1.1
 </pre>
                   <h3>Other versions supported</h3>
-                  <p>Ruby 2.0, Ruby 1.9.3, JRuby 1.7.4+, and Rubinius 2.0+</p>
-                </section><section class="installation"><h2>Instal artoo</h2>
-                  <p>Once you have ruby installed, you can install artoo gem with this command:</p>
+                  <p>Ruby 1.9.3+, JRuby 1.7.4+, and Rubinius 2.0+</p>
+                </section><section class="installation"><h2>Install Artoo</h2>
+                  <p>Once you have Ruby installed, you can install the Artoo gem with this command:</p>
                   <pre class="CodeRay">gem install artoo
 </pre>
-                  <p>Then install the gems required by the hardware you want to use. For example, if you wanted to use an XBox360 controller to fly your ARDrone:</p>
+                  <p>Then install the gems required by the hardware you want to use. For example, if you wanted to use an Xbox 360 controller to fly an ARDrone:</p>
                   <pre class="CodeRay">gem install artoo-joystick
 gem install artoo-ardrone
 </pre>
