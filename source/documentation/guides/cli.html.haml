@@ -12,12 +12,17 @@ active_menu_docs: true
     $("#guides-panel").addClass("active-panel");
     $("#guides-panel ul li:nth-child(4)").addClass("active-link");
     $(".accordion-docs dt:nth-child(5) a:nth-child(2) img").addClass("rotate");
-  
+
 .cli
   %h1 What is it?
   %p
-    Artoo CLI is a powerful command line interface tool that provides several tools to make RobotOps and
-    setting up your devices to work with Artoo a lot easier.
+    Artoo uses the Gort
+    = link_to "(http://gort.io) ","http://gort.io", target: :blank
+    Command Line Interface (CLI) so you can access important features right from the command line. We call it "RobotOps", aka "DevOps For Robotics". You can scan, connect, update device firmware, and more!
+  %p
+    Gort
+    = link_to "(http://gort.io) ", "http://gort.io", target: :blank
+    is a Command Line Interface (CLI) for RobotOps. Gort provides tools to scan for connected devices, upload firmware, and more.
 
   %h2 How to install
   %p
