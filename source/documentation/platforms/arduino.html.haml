@@ -30,7 +30,7 @@ wiichuck_driver: true
     $("#platform-panel").addClass("active-panel");
     $("#platform-panel ul li:nth-child(2)").addClass("active-link");
     $(".accordion-docs dt:nth-child(7) a:nth-child(2) img").addClass("rotate");
-  
+
 %section.intro
   = image_tag "/images/devices/arduino.jpg", class: "display"
   .info_intro
@@ -90,35 +90,27 @@ wiichuck_driver: true
         :::bash
         $ gem install artoo-arduino
 
-  %p
-    Once plugged in, use the `artoo connect scan -t serial` command to find out your
+    Once plugged in, use the Gort´s `gort connect scan -t serial` command to find out your
     connection info and serial port address:
 
-  :markdown
         :::bash
-        $ artoo arduino scan
+        $ gort arduino scan
 
-  %p
-    Use the `artoo firmata install` command to install avrdude,
+    Use the `gort firmata install` command to install avrdude,
     this will allow us to upload firmata to the arduino:
 
-  :markdown
         :::bash
-        $ artoo arduino install
+        $ gort arduino install
 
-  %p
     Once the avrdude uploader is installed we upload the firmata protocol to
-    the arduino, use the arduino serial port address found when you ran `artoo
+    the arduino, use the arduino serial port address found when you ran `gort
     connect scan -t serial`, or leave it blank to use the default address `/dev/ttyACM0`:
 
-  :markdown
         :::bash
-        $ artoo arduino upload /dev/ttyACM0
+        $ gort arduino upload /dev/ttyACM0
 
-  %p
     Now you need to install serialportl gem to do the connection:
 
-  :markdown
         :::bash
         gem install hybridgroup-serialport
 
@@ -146,30 +138,24 @@ wiichuck_driver: true
         :::bash
         $ gem install artoo-arduino
 
-  %p
-    Once plugged in, use the `artoo connect scan -t serial` command
+    Once plugged in, use the Gort´s `gort connect scan -t serial` command
     to find out your connection info and serial port address:
 
-  :markdown
         :::bash
-        $ artoo arduino scan
+        $ gort arduino scan
 
-  %p
-    Use the `artoo firmata install` command to install avrdude,
+    Use the `gort firmata install` command to install avrdude,
     this will allow us to upload firmata to the arduino:
 
-  :markdown
         :::bash
-        $ artoo arduino install
+        $ gort arduino install
 
-  %p
     Once the avrdude uploader is installed we upload the firmata protocol to
-    the arduino, use the arduino serial port address found when you ran `artoo
+    the arduino, use the arduino serial port address found when you ran `gort
     connect scan -t serial`, or leave it blank to use the default address `/dev/ttyACM0`:
 
-  :markdown
         :::bash
-        $ artoo arduino upload /dev/ttyACM0
+        $ gort arduino upload /dev/ttyACM0
 
   %p
     Now you need to install serialportl gem to do the connection:
