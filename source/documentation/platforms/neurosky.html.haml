@@ -18,7 +18,7 @@ neurosky_driver: true
     $("#platform-panel").addClass("active-panel");
     $("#platform-panel ul li:nth-child(9)").addClass("active-link");
     $(".accordion-docs dt:nth-child(7) a:nth-child(2) img").addClass("rotate");
-  
+
 %section.intro
   = image_tag "/images/devices/neurosky.jpg", class: "display"
   .info_intro
@@ -28,7 +28,7 @@ neurosky_driver: true
       = succeed "." do
         = link_to "here", "http://neurosky.com/products-markets/eeg-biosensors/hardware/", target: :blank
   .clear
-  
+
 %section.how-to#HowToInstall
   %h2 How To Install
   %p Installing artoo with Neurosky support is pretty easy using ruby gems.
@@ -68,10 +68,12 @@ neurosky_driver: true
 
   %p First pair your computer and Mindwave. You might be prompted for a passcode, if so enter '0000'.
 
-  %p Once paired, use the `artoo connect scan` command to find out your connection info:
   :markdown
+
+    Once paired, use the Gort´s `gort connect scan` command to find out your connection info:
+
         :::bash
-        $ artoo connect scan
+        $ gort connect scan
 
   %p Now you are ready to connect to the Mindwave
 
@@ -85,22 +87,23 @@ neurosky_driver: true
   %h4 Ubuntu
 
   %p The main steps are:
-  %ul 
+  %ul
     %li - Pair your computer and the Mindwave
     %li - Map your device to a unix port
     %li - Connect to the device via Artoo
 
   %p First pair your computer and Mindwave. You might be prompted for a passcode, if so enter '0000'.
 
-  %p Once paired, use the `artoo connect scan` command to find out your connection info:
   :markdown
+    Once paired, use the `gort connect scan` command to find out your connection info:
+
         :::bash
-        $ artoo connect scan
+        $ gort connect scan
         Scanning ...
           00:06:66:4A:14:99 Mindwave
 
-  %p Next, you need to bind the Mindawave to the system port. In the above example, /dev/rfcomm0. The easiest way to do this is to use the `artoo connect bind` command:
-  :markdown
+    Next, you need to bind the Mindawave to the system port. In the above example, /dev/rfcomm0. The easiest way to do this is to use the `artoo connect bind` command:
+
         :::bash
         artoo connect bind 00:06:66:4A:14:99 /dev/rfcomm0
 
