@@ -96,9 +96,6 @@
                   <p>Installing artoo with sphero support is pretty easy using ruby gems.</p>
                   <pre class="CodeRay">gem install artoo-sphero
 </pre>
-                  <p>Then you would need to install serial port gem</p>
-                  <pre class="CodeRay">gem install hybridgroup-serialport
-</pre>
                 </section><section class="how-to" id="HowToUse"><h2>How To Use</h2>
                   <p>Example of a simple program that makes the Sphero roll and change colors.</p>
                   <pre class="CodeRay"> require <span class="string"><span class="delimiter">'</span><span class="content">artoo</span><span class="delimiter">'</span></span>
@@ -144,26 +141,25 @@ work <span class="keyword">do</span>
                     <li>Map your device to a unix port</li>
                     <li>Connect to the device via Artoo</li>
                   </ul>
-<p>
-                    First pair your computer and Sphero. We do this by finding the sphero bluetooth address
-                    and then running the `artoo bluetooth pair` command, you might be prompted to confirm a passcode,
-                    just accept whatever passcode prompted.
-                  </p>
-                  <pre class="CodeRay">$ artoo bluetooth scan
+<p>First pair your computer and Sphero. We do this by finding the sphero bluetooth address
+                  and then running the <a href="http://gort.io">Gort´s</a> <code>gort bluetooth pair</code> command, you might be prompted to confirm a passcode,
+                  just accept whatever passcode prompted.</p>
+                  
+                  <pre class="CodeRay">$ gort bluetooth scan
 Scanning ...
   00:06:66:4A:14:99 Sphero-WRW
 </pre>
-                  <p>
-                    After finding the bluetooth address, we pair the device with the computer.
-                    The easiest way to do this is to use the `artoo bluetooth pair` command:
-                  </p>
-                  <pre class="CodeRay">artoo bluetooth pair 00:06:66:4A:14:99
+                  
+                  <p>After finding the bluetooth address, we pair the device with the computer.
+                  The easiest way to do this is to use the <code>gort bluetooth pair</code> command:</p>
+                  
+                  <pre class="CodeRay">gort bluetooth pair 00:06:66:4A:14:99
 </pre>
-                  <p>
-                    Next, you need to bind the Sphero to the system serial port. In the above
-                    example, /dev/Sphero-WRW. Use the `artoo bluetooth bind` command:
-                  </p>
-                  <pre class="CodeRay">artoo bluetooth bind 00:06:66:4A:14:99 Sphero-WRW
+                  
+                  <p>Next, you need to bind the Sphero to the system serial port. In the above
+                  example, /dev/Sphero-WRW. Use the <code>gort bluetooth bind</code> command:</p>
+                  
+                  <pre class="CodeRay">gort bluetooth bind 00:06:66:4A:14:99 Sphero-WRW
 </pre>
                   <p>
                     Now you are ready to run the example code, be sure to update this line with correct port

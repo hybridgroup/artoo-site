@@ -5,9 +5,9 @@
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-<meta name="description">
+<meta content="A Artoo code example" name="description">
 <meta content="The Hybrid Group" name="author">
-<title>Artoo Tutorials</title>
+<title>Artoo Example - ouya_controller</title>
 <link href="/stylesheets/style.css" rel="stylesheet">
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script><script src="/javascripts/script.js"></script><script src="/hybridpages/assets/javascript/accordeon.js"></script><link href="//fonts.googleapis.com/css?family=Russo+One%7CInconsolata:400,700%7CMontserrat:700" rel="stylesheet">
 <link href="/favicon.ico" rel="shortcut icon" type="image/gif">
@@ -56,8 +56,8 @@
 </div>
       <div class="page-title">
         <div class="w">
-          <h1 class="title">Getting Started</h1>
-          <h2 class="subtitle">A Guide by Humans, for Humans.</h2>
+          <h1 class="title">Example: ouya_controller</h1>
+          <h2 class="subtitle"><a href="https://github.com/hybridgroup/artoo-joystick/tree/master/examples" target="_blank">View In Repo</a></h2>
         </div>
       </div>
       <div class="container">
@@ -65,100 +65,60 @@
           <section class="content full"><div class="documentation">
               <div class="container-documentation">
                 
-                <section class="intro"><h1>Tutorial - Arduino LED Blinks</h1>
-                  <h3>Welcome!</h3>
-                  <p>
-                    After completing this tutorial, you will be familiar with the most important concepts needed to play with Artoo
-                    and
-                    <a target="blank" href="http://arduino.cc/">Arduino.</a>
-                    If you are new to this world, don't worry; this tutorial should cover all you need to make it work.
-                  </p>
-                  <h3>Requirements</h3>
-                  <ul>
-<li>
-                      Before we start, make sure you have
-                      <a href="/documentation/getting-started">Ruby and Artoo installed</a>
-                    </li>
-                    <li>
-                      Make sure your Arduino device supports the
-                      <a target="blank" href="http://www.firmata.org/wiki/Main_Page">Firmata protocol.</a>
-                    </li>
-                  </ul>
-<h3>Installing Arduino</h3>
-                  <h4>Windows</h4>
-                  <p>
-                    Follow this guide to
-                    <a target="blank" href="http://arduino.cc/en/Guide/Windows">Setup Arduino on Windows</a>
-                  </p>
-                  <h4>MacOS</h4>
-                  <p>
-                    Follow this guide to
-                    <a target="blank" href="http://arduino.cc/en/Guide/MacOSX">Setup Arduino on Mac OS X</a>
-                  </p>
-                  <h4>Linux</h4>
-                  <p>Open a terminal and run the following command:</p>
-                  <p>sudo apt-get install arduino</p>
-                  <p>or</p>
-                  <ol>
-<li>
-                      Download
-                      <a target="blank" href="http://arduino.cc/en/Main/Software">Arduino IDE.</a>
-                    </li>
-                    <li>Extract the downloaded package.</li>
-                  </ol>
-<h3>How to connect</h3>
-                  <p>
-                    First plug the Arduino into your computer via the USB/serial port. A dialog box
-                    will appear telling you that a new network interface has been detected. Click
-                    "Network Preferences...", and when it opens, simply click "Apply".
-                  </p>
-                  <p>Install the artoo-arduino gem:</p>
-                  <pre class="CodeRay">$ gem install artoo-arduino
+                <div class="example">
+                  <pre class="CodeRay">require <span class="string"><span class="delimiter">'</span><span class="content">artoo</span><span class="delimiter">'</span></span>
+
+connection <span class="symbol">:joystick</span>, <span class="symbol">:adaptor</span> =&gt; <span class="symbol">:joystick</span>
+device <span class="symbol">:controller</span>, <span class="symbol">:driver</span> =&gt; <span class="symbol">:ouya</span>, <span class="symbol">:connection</span> =&gt; <span class="symbol">:joystick</span>, <span class="symbol">:interval</span> =&gt; <span class="float">0.01</span>
+
+work <span class="keyword">do</span>
+  on controller, <span class="symbol">:joystick</span> =&gt; proc { |*value|
+    puts <span class="string"><span class="delimiter">"</span><span class="content">joystick </span><span class="inline"><span class="inline-delimiter">#{</span>value[<span class="integer">1</span>][<span class="symbol">:s</span>]<span class="inline-delimiter">}</span></span><span class="content"> x:</span><span class="inline"><span class="inline-delimiter">#{</span>value[<span class="integer">1</span>][<span class="symbol">:x</span>]<span class="inline-delimiter">}</span></span><span class="content"> y:</span><span class="inline"><span class="inline-delimiter">#{</span>value[<span class="integer">1</span>][<span class="symbol">:y</span>]<span class="inline-delimiter">}</span></span><span class="delimiter">"</span></span>
+  }
+
+  on controller, <span class="symbol">:button_o</span> =&gt; proc { |*value|
+    puts <span class="string"><span class="delimiter">"</span><span class="content">Button O Pressed!</span><span class="delimiter">"</span></span>
+  }
+  on controller, <span class="symbol">:button_u</span> =&gt; proc { |*value|
+    puts <span class="string"><span class="delimiter">"</span><span class="content">Button U Pressed!</span><span class="delimiter">"</span></span>
+  }
+  on controller, <span class="symbol">:button_y</span> =&gt; proc { |*value|
+    puts <span class="string"><span class="delimiter">"</span><span class="content">Button Y Pressed!</span><span class="delimiter">"</span></span>
+  }
+  on controller, <span class="symbol">:button_a</span> =&gt; proc { |*value|
+    puts <span class="string"><span class="delimiter">"</span><span class="content">Button A Pressed!</span><span class="delimiter">"</span></span>
+  }
+  
+  on controller, <span class="symbol">:button_dpad_up</span> =&gt; proc { |*value|
+    puts <span class="string"><span class="delimiter">"</span><span class="content">Button DPad Up Pressed!</span><span class="delimiter">"</span></span>
+  }
+  on controller, <span class="symbol">:button_dpad_down</span> =&gt; proc { |*value|
+    puts <span class="string"><span class="delimiter">"</span><span class="content">Button DPad Down Pressed!</span><span class="delimiter">"</span></span>
+  }
+  on controller, <span class="symbol">:button_dpad_left</span> =&gt; proc { |*value|
+    puts <span class="string"><span class="delimiter">"</span><span class="content">Button DPad Left Pressed!</span><span class="delimiter">"</span></span>
+  }
+  on controller, <span class="symbol">:button_dpad_right</span> =&gt; proc { |*value|
+    puts <span class="string"><span class="delimiter">"</span><span class="content">Button DPad Right Pressed!</span><span class="delimiter">"</span></span>
+  }
+  
+  
+  on controller, <span class="symbol">:button_lt</span> =&gt; proc { |*value|
+    puts <span class="string"><span class="delimiter">"</span><span class="content">Button Left Trigger Pressed!</span><span class="delimiter">"</span></span>
+  }
+  on controller, <span class="symbol">:button_rt</span> =&gt; proc { |*value|
+    puts <span class="string"><span class="delimiter">"</span><span class="content">Button Right Trigger Pressed!</span><span class="delimiter">"</span></span>
+  }
+  on controller, <span class="symbol">:button_r2</span> =&gt; proc { |*value|
+    puts <span class="string"><span class="delimiter">"</span><span class="content">Button Right Bumper Pressed!</span><span class="delimiter">"</span></span>
+  }
+  on controller, <span class="symbol">:button_l2</span> =&gt; proc { |*value|
+    puts <span class="string"><span class="delimiter">"</span><span class="content">Button Left Bumper Pressed!</span><span class="delimiter">"</span></span>
+  }
+<span class="keyword">end</span>
 </pre>
-                  <p>
-                    Once plugged in, use the `artoo connect scan -t serial` command to find out your
-                    connection info and serial port address:
-                  </p>
-                  <pre class="CodeRay">$ artoo arduino scan
-</pre>
-                  <p>
-                    Use the `artoo firmata install` command to install avrdude,
-                    this will allow us to upload firmata to the arduino:
-                  </p>
-                  <pre class="CodeRay">$ artoo arduino install
-</pre>
-                  <p>
-                    Once the avrdude uploader is installed we upload the firmata protocol to
-                    the arduino, use the arduino serial port address found when you ran `artoo
-                    connect scan -t serial`, or leave it blank to use the default address `/dev/ttyACM0`:
-                  </p>
-                  <pre class="CodeRay">$ artoo arduino upload /dev/ttyACM0
-</pre>
-                  <p>
-                    Finally change code to the correct serial port
-                  </p>
-                  <pre class="CodeRay">connection :arduino, adaptor: :firmata, port: '/dev/ttyACM0' # linux
-</pre>
-                  <h3>Running the examples</h3>
-                  <p>
-                    If you installed the gem, you'll have to
-                    <a href="https://github.com/hybridgroup/artoo-arduino/blob/master/examples/blink_led.rb">download the "Blink Led" example separately:</a>
-                  </p>
-                  <p>
-                    If you cloned the repository, you can access the example in the following folder: examples/blink_led.rb
-                  </p>
-                  <p>
-                    Now, let's run the example:
-                    </p>
-<pre class="CodeRay">$ ruby examples/firmata_blink_led.rb
-</pre>
-                  
-                  <p>The LED should be blinking in your arduino board.</p>
-                  <p>
-                    <strong>Congratulations you have successfully completed this tutorial!</strong>
-                  </p>
-                </section>
-</div>
+                </div>
+              </div>
               <div class="side-documentation">
                 <div class="mobile-menu">
                   <a href="#" id="menu-docs">
@@ -450,9 +410,8 @@
                       });
                     });
                 </script><script>
-                  $("#getting-panel").addClass("active-panel");
-                  $("#getting-panel ul li:nth-child(2)").addClass("active-link");
-                  $(".accordion-docs dt:nth-child(3) a:nth-child(2) img").addClass("rotate");
+                  $("#example-panel").addClass("active-panel");
+                  $(".accordion-docs dt:nth-child(15) a:nth-child(2) img").addClass("rotate");
                 </script>
 </div>
             </div>

@@ -134,22 +134,21 @@ work <span class="keyword">do</span>
                   <pre class="CodeRay">$ gem install artoo-digispark
 </pre>
                   <p>
-                    After installing the artoo-digispark gem run the following command to
+                    After installing the artoo-digispark gem run the following Gort´s command to
                     upload littlewire to the digispark, plug it to a USB port when
                     prompted:
                   </p>
-                  <pre class="CodeRay">$ artoo littlewire upload
+                  <pre class="CodeRay">$ gort littlewire upload
 </pre>
-                  <p>
-                    Once plugged in, use the `artoo scan usb` command
-                    to verify your connection info:
-                  </p>
-                  <pre class="CodeRay">$ artoo scan usb
+                  
+                  <p>Once plugged in, use the <code>gort scan usb</code> command
+                  to verify your connection info:</p>
+                  
+                  <pre class="CodeRay">$ gort scan usb
 </pre>
-                  <p>
-                    Now use the `ID` info returned to find the `product` and `vendor` ID's
-                    required to establish a connection with the Digispark in your Artoo code.
-                  </p>
+                  
+                  <p>Now use the <code>ID</code> info returned to find the <code>product</code> and <code>vendor</code> ID's
+                  required to establish a connection with the Digispark in your Artoo code.</p>
                   <p>That is it, you are set to start running Artoo digispark examples.</p>
                   <h3>Ubuntu</h3>
                   <p>The main steps are:</p>
@@ -166,26 +165,25 @@ work <span class="keyword">do</span>
                   <p>Install the artoo-digispark gem:</p>
                   <pre class="CodeRay">$ gem install artoo-digispark
 </pre>
-                  <p>
-                    After installing the artoo-digispark gem run the following command to
-                    upload littlewire to the digispark, do NOT plug it to a USB port until
-                    prompted, you might be asked to enter your sudo password, since
-                    uploading littlewire to the digispark requires some new udev rules, you
-                    can check and review them in /etc/udev/rules.d/49-micronucleus.rules
-                    after running the `artoo littlewire upload` command):
-                  </p>
-                  <pre class="CodeRay">$ artoo littlewire upload
+                  
+                  <p>After installing the artoo-digispark gem run the following command to
+                  upload littlewire to the digispark, do NOT plug it to a USB port until
+                  prompted, you might be asked to enter your sudo password, since
+                  uploading littlewire to the digispark requires some new udev rules, you
+                  can check and review them in /etc/udev/rules.d/49-micronucleus.rules
+                  after running the <code>gort littlewire upload</code> command.</p>
+                  
+                  <pre class="CodeRay">$ gort littlewire upload
 </pre>
-                  <p>
-                    Once plugged in, use the `artoo scan usb` command
-                    to verify your connection info:
-                  </p>
-                  <pre class="CodeRay">$ artoo scan usb
+                  
+                  <p>Once plugged in, use the <code>gort scan usb</code> command
+                  to verify your connection info:</p>
+                  
+                  <pre class="CodeRay">$ gort scan usb
 </pre>
-                  <p>
-                    Now use the `ID` info returned to find the `product` and `vendor` ID's
-                    required to establish a connection with the Digispark in your Artoo code.
-                  </p>
+                  
+                  <p>Now use the <code>ID</code> info returned to find the <code>product</code> and <code>vendor</code> ID's
+                  required to establish a connection with the Digispark in your Artoo code.</p>
                   <p>That is it, you are set to start running Artoo digispark examples.</p>
                   <p>
                     Thanks to [@bluebie]

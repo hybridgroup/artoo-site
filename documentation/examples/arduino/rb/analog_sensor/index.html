@@ -75,7 +75,6 @@
 connection <span class="symbol">:firmata</span>, <span class="symbol">:adaptor</span> =&gt; <span class="symbol">:firmata</span>, <span class="symbol">:port</span> =&gt; <span class="string"><span class="delimiter">'</span><span class="content">/dev/ttyACM0</span><span class="delimiter">'</span></span> <span class="comment">#linux</span>
 <span class="comment">#connection :firmata, :adaptor =&gt; :firmata, :port =&gt; '127.0.0.1:8023'</span>
 
-<span class="comment"># Analog inputs are based from 0 to 5 on the Arduino UNO, may vary on other arduino boards</span>
 device <span class="symbol">:sensor</span>, <span class="key">driver</span>: <span class="symbol">:analog_sensor</span>, <span class="key">pin</span>: <span class="integer">0</span>, <span class="key">interval</span>: <span class="float">0.25</span>, <span class="key">upper</span>: <span class="integer">900</span>, <span class="key">lower</span>: <span class="integer">200</span>
 device <span class="symbol">:led</span>, <span class="symbol">:driver</span> =&gt; <span class="symbol">:led</span>, <span class="symbol">:pin</span> =&gt; <span class="integer">8</span>
 

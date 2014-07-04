@@ -127,29 +127,24 @@ work <span class="keyword">do</span>
                   <p>Install the artoo-arduino gem:</p>
                   <pre class="CodeRay">$ gem install artoo-arduino
 </pre>
-                  <p>
-                    Once plugged in, use the `artoo connect scan -t serial` command to find out your
-                    connection info and serial port address:
-                  </p>
-                  <pre class="CodeRay">$ artoo arduino scan
+                  
+                  <p>Once plugged in, use the Gort´s <code>gort connect scan -t serial</code> command to find out your
+                  connection info and serial port address:</p>
+                  
+                  <pre class="CodeRay">$ gort arduino scan
 </pre>
-                  <p>
-                    Use the `artoo firmata install` command to install avrdude,
-                    this will allow us to upload firmata to the arduino:
-                  </p>
-                  <pre class="CodeRay">$ artoo arduino install
+                  
+                  <p>Use the <code>gort firmata install</code> command to install avrdude,
+                  this will allow us to upload firmata to the arduino:</p>
+                  
+                  <pre class="CodeRay">$ gort arduino install
 </pre>
-                  <p>
-                    Once the avrdude uploader is installed we upload the firmata protocol to
-                    the arduino, use the arduino serial port address found when you ran `artoo
-                    connect scan -t serial`, or leave it blank to use the default address `/dev/ttyACM0`:
-                  </p>
-                  <pre class="CodeRay">$ artoo arduino upload /dev/ttyACM0
-</pre>
-                  <p>
-                    Now you need to install serialportl gem to do the connection:
-                  </p>
-                  <pre class="CodeRay">gem install hybridgroup-serialport
+                  
+                  <p>Once the avrdude uploader is installed we upload the firmata protocol to
+                  the arduino, use the arduino serial port address found when you ran <code>gort
+connect scan -t serial</code>, or leave it blank to use the default address <code>/dev/ttyACM0</code>:</p>
+                  
+                  <pre class="CodeRay">$ gort arduino upload /dev/ttyACM0
 </pre>
                   <p>
                     Finally change code to the correct serial port
@@ -168,29 +163,24 @@ work <span class="keyword">do</span>
                   <p>Install the artoo-arduino gem:</p>
                   <pre class="CodeRay">$ gem install artoo-arduino
 </pre>
-                  <p>
-                    Once plugged in, use the `artoo connect scan -t serial` command
-                    to find out your connection info and serial port address:
-                  </p>
-                  <pre class="CodeRay">$ artoo arduino scan
+                  
+                  <p>Once plugged in, use the Gort´s <code>gort connect scan -t serial</code> command
+                  to find out your connection info and serial port address:</p>
+                  
+                  <pre class="CodeRay">$ gort arduino scan
 </pre>
-                  <p>
-                    Use the `artoo firmata install` command to install avrdude,
-                    this will allow us to upload firmata to the arduino:
-                  </p>
-                  <pre class="CodeRay">$ artoo arduino install
+                  
+                  <p>Use the <code>gort firmata install</code> command to install avrdude,
+                  this will allow us to upload firmata to the arduino:</p>
+                  
+                  <pre class="CodeRay">$ gort arduino install
 </pre>
-                  <p>
-                    Once the avrdude uploader is installed we upload the firmata protocol to
-                    the arduino, use the arduino serial port address found when you ran `artoo
-                    connect scan -t serial`, or leave it blank to use the default address `/dev/ttyACM0`:
-                  </p>
-                  <pre class="CodeRay">$ artoo arduino upload /dev/ttyACM0
-</pre>
-                  <p>
-                    Now you need to install serialportl gem to do the connection:
-                  </p>
-                  <pre class="CodeRay">gem install hybridgroup-serialport
+                  
+                  <p>Once the avrdude uploader is installed we upload the firmata protocol to
+                  the arduino, use the arduino serial port address found when you ran <code>gort
+connect scan -t serial</code>, or leave it blank to use the default address <code>/dev/ttyACM0</code>:</p>
+                  
+                  <pre class="CodeRay">$ gort arduino upload /dev/ttyACM0
 </pre>
                   <p>
                     Finally change code to the correct serial port
