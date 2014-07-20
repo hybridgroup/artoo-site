@@ -1,8 +1,8 @@
 ---
 page_title_show: true
-title: Introducing rubyserial
+title: Introducing Rubyserial
 page_title: Blog
-date: 2014-07-07
+date: 2014-07-18
 tags: robots
 author: Javier Cervantes
 active_menu_blog: true
