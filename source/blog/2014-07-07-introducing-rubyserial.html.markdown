@@ -8,14 +8,13 @@ author: Javier Cervantes
 active_menu_blog: true
 ---
 
-Today we are happy to announce Rubyserial, a ruby gem for reading from and writing
-to serial ports.
+Today we are happy to announce Rubyserial, a new Ruby gem for reading from and writing to serial ports.
 
-It works on windows, mac and linux without native compilation and it can be used
-in any ruby implementation: mri, jruby and rubinius.
+Unlike other Ruby serial port implementations, it supports all of the most popular Ruby implementations (MRI, JRuby, & Rubinius) on the most popular operating systems (OSX, Linux, & Windows). And it does not require any native compilation thanks to using RubyFFI https://github.com/ffi/ffi.
 
-Artoo driver for: arduino, sphero and neurosky have been already migrated
-to use rubyserial by default.
+The interface to RubySerial should be (mostly) compatible with other Ruby serialport gems, so you should be able to drop in the new gem, change the require and use it as a replacement. If not, please let us know so we can address any issues.
+
+The Artoo drivers for Arduino, Sphero and Neurosky have been already migrated to use Rubyserial by default.
 
 If you want to give it a try, install via rubygems:
       gem install rubyserial
@@ -34,5 +33,4 @@ We currently support the following methods:
 
 All of them emit a `RubySerial::Exception` on error.
 
-We are very excited to have this initial version out, and we will be pleased to have your feedback and contributions
-in [RubySerial Repository] (https://github.com/hybridgroup/rubyserial)
+We are very excited to have this initial version out, and we will be pleased to have your feedback and contributions in [RubySerial Repository] (https://github.com/hybridgroup/rubyserial).
