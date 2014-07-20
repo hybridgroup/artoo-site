@@ -1,5 +1,9 @@
 ## Artoo Website
 
+This is the code for the website for Artoo (http://artoo.io) a Ruby framework for robotics, physical computing, and the Internet of Things.
+
+If you are looking for the actual Artoo code itself, it is at https://github.com/hybridgroup/artoo
+
 This site is build using [Middleman](http://middlemanapp.com/basics/getting-started/)  
   
 To run locally:  
