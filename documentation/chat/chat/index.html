@@ -5,9 +5,9 @@
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-<meta content="A Artoo code example" name="description">
+<meta name="description">
 <meta content="The Hybrid Group" name="author">
-<title>Artoo Example - hello_messages</title>
+<title>Artoo IRC Chat</title>
 <link href="/stylesheets/style.css" rel="stylesheet">
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script><script src="/javascripts/script.js"></script><script src="/hybridpages/assets/javascript/accordeon.js"></script><link href="//fonts.googleapis.com/css?family=Russo+One%7CInconsolata:400,700%7CMontserrat:700" rel="stylesheet">
 <link href="/favicon.ico" rel="shortcut icon" type="image/gif">
@@ -56,8 +56,8 @@
 </div>
       <div class="page-title">
         <div class="w">
-          <h1 class="title">Example: hello_messages</h1>
-          <h2 class="subtitle"><a href="https://github.com/hybridgroup/artoo/tree/master/examples" target="_blank">View In Repo</a></h2>
+          <h1 class="title">Live Chat</h1>
+          <h2 class="subtitle">Chat with the Artoo team.</h2>
         </div>
       </div>
       <div class="container">
@@ -65,39 +65,13 @@
           <section class="content full"><div class="documentation">
               <div class="container-documentation">
                 
-                <div class="example">
-                  <pre class="CodeRay">require <span class="string"><span class="delimiter">'</span><span class="content">artoo/robot</span><span class="delimiter">'</span></span>
-
-<span class="keyword">class</span> <span class="class">GreeterRobot</span> &lt; <span class="constant">Artoo</span>::<span class="constant">Robot</span>
-  work <span class="keyword">do</span>
-    every(<span class="integer">5</span>.seconds) <span class="keyword">do</span>
-      say <span class="string"><span class="delimiter">'</span><span class="content">Hola</span><span class="delimiter">'</span></span>
-    <span class="keyword">end</span>
-  <span class="keyword">end</span>
-
-  <span class="keyword">def</span> <span class="function">say</span>(greeting)
-    friend_name = <span class="string"><span class="delimiter">"</span><span class="content">Number </span><span class="inline"><span class="inline-delimiter">#{</span>rand(<span class="integer">5</span>)<span class="inline-delimiter">}</span></span><span class="delimiter">"</span></span>
-    puts <span class="string"><span class="delimiter">"</span><span class="content">Saying '</span><span class="inline"><span class="inline-delimiter">#{</span>greeting<span class="inline-delimiter">}</span></span><span class="content">' to </span><span class="inline"><span class="inline-delimiter">#{</span>friend_name<span class="inline-delimiter">}</span></span><span class="delimiter">"</span></span>
-    <span class="constant">Artoo</span>::<span class="constant">Master</span>.robot(friend_name).hello(greeting, current_instance)
-  <span class="keyword">end</span>
-<span class="keyword">end</span>
-
-<span class="keyword">class</span> <span class="class">MessageRobot</span> &lt; <span class="constant">Artoo</span>::<span class="constant">Robot</span>
-  <span class="keyword">def</span> <span class="function">hello</span>(greeting, sender)
-    puts <span class="string"><span class="delimiter">"</span><span class="content">'</span><span class="inline"><span class="inline-delimiter">#{</span>sender.name<span class="inline-delimiter">}</span></span><span class="content">' said '</span><span class="inline"><span class="inline-delimiter">#{</span>greeting<span class="inline-delimiter">}</span></span><span class="content">' to </span><span class="inline"><span class="inline-delimiter">#{</span>name<span class="inline-delimiter">}</span></span><span class="delimiter">"</span></span>
-  <span class="keyword">end</span>
-<span class="keyword">end</span>
-
-robots = []
-<span class="integer">5</span>.times <span class="keyword">do</span> |i|
-  robots &lt;&lt; <span class="constant">MessageRobot</span>.new(<span class="symbol">:name</span> =&gt; <span class="string"><span class="delimiter">"</span><span class="content">Number </span><span class="inline"><span class="inline-delimiter">#{</span>i<span class="inline-delimiter">}</span></span><span class="delimiter">"</span></span>)
-<span class="keyword">end</span>
-
-robots &lt;&lt; <span class="constant">GreeterRobot</span>.new(<span class="symbol">:name</span> =&gt; <span class="string"><span class="delimiter">"</span><span class="content">Greeter</span><span class="delimiter">"</span></span>)
-
-<span class="constant">Artoo</span>::<span class="constant">Robot</span>.work!(robots)
-</pre>
-                </div>
+                <h1>IRC</h1>
+                <p>
+                  Join us on IRC:
+                  <code>#artoo @ freenode.net</code>
+                  or use the built-in IRC client below.
+                </p>
+                <iframe height="400" src="http://webchat.freenode.net?channels=%23artoo&amp;uio=d4" width="700"></iframe>
               </div>
               <div class="side-documentation">
                 <div class="mobile-menu">
@@ -403,8 +377,9 @@ robots &lt;&lt; <span class="constant">GreeterRobot</span>.new(<span class="symb
                       });
                     });
                 </script><script>
-                  $("#example-panel").addClass("active-panel");
-                  $(".accordion-docs dt:nth-child(15) a:nth-child(2) img").addClass("rotate");
+                  $("#chat-panel").addClass("active-panel");
+                  $("#chat-panel li:nth-child(2)").addClass("active-link");
+                  $(".accordion-docs dt:nth-child(11) a:nth-child(2) img").addClass("rotate");
                 </script>
 </div>
             </div>
