@@ -1333,7 +1333,7 @@
         .CodeRay .head .head {
           color: #f4f; }
         
-        /* line 2, ../../../../../.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/neat-1.5.0/app/assets/stylesheets/grid/_grid.scss */
+        /* line 2, ../../vendor/bundle/ruby/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_grid.scss */
         * {
           -webkit-box-sizing: border-box;
           -moz-box-sizing: border-box;
@@ -1403,11 +1403,11 @@
           margin-left: auto;
           margin-right: auto;
           margin: 9px 0 15px 0; }
-          /* line 18, ../../../../../.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
+          /* line 18, ../../vendor/bundle/ruby/2.0.0/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
           .app-header:before, .app-header:after {
             content: " ";
             display: table; }
-          /* line 23, ../../../../../.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
+          /* line 23, ../../vendor/bundle/ruby/2.0.0/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
           .app-header:after {
             clear: both; }
           /* line 25, ../hybridpages/assets/stylesheets/shared/_headers.scss */
@@ -1422,7 +1422,7 @@
             margin-right: 2.35765%;
             width: 40.29137%;
             margin: -1px 0 0 0; }
-            /* line 40, ../../../../../.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
+            /* line 40, ../../vendor/bundle/ruby/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
             .app-header .display:last-child {
               margin-right: 0; }
           /* line 38, ../hybridpages/assets/stylesheets/shared/_headers.scss */
@@ -1451,7 +1451,7 @@
             text-align: right;
             display: inline-block;
             margin: 13px 0 0 0; }
-            /* line 40, ../../../../../.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
+            /* line 40, ../../vendor/bundle/ruby/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
             .app-header .menu:last-child {
               margin-right: 0; }
             /* line 63, ../hybridpages/assets/stylesheets/shared/_headers.scss */
@@ -1481,7 +1481,7 @@
                 margin-right: 2.35765%;
                 width: 48.82117%;
                 padding: 0; }
-                /* line 40, ../../../../../.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
+                /* line 40, ../../vendor/bundle/ruby/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
                 .app-header .menu:last-child {
                   margin-right: 0; }
                 /* line 95, ../hybridpages/assets/stylesheets/shared/_headers.scss */
@@ -1495,7 +1495,7 @@
               display: block;
               margin-right: 2.35765%;
               width: 48.82117%; }
-              /* line 40, ../../../../../.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
+              /* line 40, ../../vendor/bundle/ruby/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
               .app-header .display:last-child {
                 margin-right: 0; } }
           @media only screen and (max-width: 767px) {
@@ -1517,7 +1517,7 @@
               width: 100%;
               text-align: center;
               margin: -1px 0 0; }
-              /* line 40, ../../../../../.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
+              /* line 40, ../../vendor/bundle/ruby/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
               .app-header .display:last-child {
                 margin-right: 0; }
             /* line 136, ../hybridpages/assets/stylesheets/shared/_headers.scss */
@@ -1536,7 +1536,7 @@
               display: block;
               margin-right: 2.35765%;
               width: 100%; }
-              /* line 40, ../../../../../.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
+              /* line 40, ../../vendor/bundle/ruby/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
               .app-header .menu:last-child {
                 margin-right: 0; }
               /* line 154, ../hybridpages/assets/stylesheets/shared/_headers.scss */
@@ -1617,11 +1617,11 @@
           max-width: 68em;
           margin-left: auto;
           margin-right: auto; }
-          /* line 18, ../../../../../.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
+          /* line 18, ../../vendor/bundle/ruby/2.0.0/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
           .main[role="main"]:before, .main[role="main"]:after {
             content: " ";
             display: table; }
-          /* line 23, ../../../../../.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
+          /* line 23, ../../vendor/bundle/ruby/2.0.0/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
           .main[role="main"]:after {
             clear: both; }
           /* line 47, ../hybridpages/assets/stylesheets/layouts/_home.scss */
@@ -1631,7 +1631,7 @@
             margin-right: 2.35765%;
             width: 48.82117%;
             margin: .5%; }
-            /* line 40, ../../../../../.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
+            /* line 40, ../../vendor/bundle/ruby/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
             .main[role="main"] .videos .video:last-child {
               margin-right: 0; }
             /* line 52, ../hybridpages/assets/stylesheets/layouts/_home.scss */
@@ -1652,7 +1652,7 @@
                 display: block;
                 margin-right: 2.35765%;
                 width: 100%; }
-                /* line 40, ../../../../../.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
+                /* line 40, ../../vendor/bundle/ruby/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
                 .main[role="main"] .videos .video:last-child {
                   margin-right: 0; }
                 /* line 75, ../hybridpages/assets/stylesheets/layouts/_home.scss */
@@ -1664,7 +1664,7 @@
             display: block;
             margin-right: 2.35765%;
             width: 82.94039%; }
-            /* line 40, ../../../../../.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
+            /* line 40, ../../vendor/bundle/ruby/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
             .main[role="main"] .videos .video-index:last-child {
               margin-right: 0; }
             /* line 86, ../hybridpages/assets/stylesheets/layouts/_home.scss */
@@ -1698,7 +1698,7 @@
             width: 23.23176%;
             padding-top: 0px;
             text-align: right; }
-            /* line 40, ../../../../../.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
+            /* line 40, ../../vendor/bundle/ruby/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
             .main[role="main"] .aside.right:last-child {
               margin-right: 0; }
             /* line 136, ../hybridpages/assets/stylesheets/layouts/_home.scss */
@@ -1715,7 +1715,7 @@
             /* line 11, ../hybridpages/assets/stylesheets/_mixins.scss */
             .main[role="main"] section.content .index-content:not(:last-child) {
               margin-bottom: 20px; }
-            /* line 40, ../../../../../.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
+            /* line 40, ../../vendor/bundle/ruby/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
             .main[role="main"] section.content .index-content:last-child {
               margin-right: 0; }
         
@@ -1726,11 +1726,11 @@
           margin-left: auto;
           margin-right: auto;
           text-align: center; }
-          /* line 18, ../../../../../.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
+          /* line 18, ../../vendor/bundle/ruby/2.0.0/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
           .hardware .devices:before, .hardware .devices:after {
             content: " ";
             display: table; }
-          /* line 23, ../../../../../.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
+          /* line 23, ../../vendor/bundle/ruby/2.0.0/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
           .hardware .devices:after {
             clear: both; }
           /* line 8, ../hybridpages/assets/stylesheets/layouts/_hardware.scss */
@@ -1909,7 +1909,7 @@
           margin-right: 2.35765%;
           width: 74.41059%;
           padding-top: 20px; }
-          /* line 40, ../../../../../.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
+          /* line 40, ../../vendor/bundle/ruby/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
           .articles:last-child {
             margin-right: 0; }
           @media only screen and (max-width: 767px) {
@@ -1919,7 +1919,7 @@
               display: block;
               margin-right: 2.35765%;
               width: 100%; }
-              /* line 40, ../../../../../.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
+              /* line 40, ../../vendor/bundle/ruby/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
               .articles:last-child {
                 margin-right: 0; } }
           @media only screen and (max-width: 767px) {
@@ -2003,7 +2003,7 @@
           display: block;
           margin-right: 2.35765%;
           width: 23.23176%; }
-          /* line 40, ../../../../../.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
+          /* line 40, ../../vendor/bundle/ruby/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
           .side-column:last-child {
             margin-right: 0; }
           @media only screen and (max-width: 767px) {
@@ -2013,7 +2013,7 @@
               display: block;
               margin-right: 2.35765%;
               width: 100%; }
-              /* line 40, ../../../../../.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
+              /* line 40, ../../vendor/bundle/ruby/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
               .side-column:last-child {
                 margin-right: 0; } }
           /* line 130, ../hybridpages/assets/stylesheets/elements/_blog.scss */
@@ -2220,11 +2220,11 @@
           margin-left: auto;
           margin-right: auto;
           padding-left: 30px; }
-          /* line 18, ../../../../../.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
+          /* line 18, ../../vendor/bundle/ruby/2.0.0/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
           .documentation .index:before, .documentation .index:after {
             content: " ";
             display: table; }
-          /* line 23, ../../../../../.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
+          /* line 23, ../../vendor/bundle/ruby/2.0.0/gems/bourbon-3.1.8/app/assets/stylesheets/addons/_clearfix.scss */
           .documentation .index:after {
             clear: both; }
           /* line 45, ../hybridpages/assets/stylesheets/elements/_documentation.scss */
@@ -2238,7 +2238,7 @@
             height: 130px;
             margin-bottom: 20px;
             border-radius: 2px; }
-            /* line 40, ../../../../../.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
+            /* line 40, ../../vendor/bundle/ruby/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
             .documentation .index section:last-child {
               margin-right: 0; }
             @media only screen and (max-width: 767px) {
@@ -2248,7 +2248,7 @@
                 display: block;
                 margin-right: 2.35765%;
                 width: 100%; }
-                /* line 40, ../../../../../.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
+                /* line 40, ../../vendor/bundle/ruby/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
                 .documentation .index section:last-child {
                   margin-right: 0; } }
             /* line 59, ../hybridpages/assets/stylesheets/elements/_documentation.scss */
@@ -2276,7 +2276,7 @@
           display: block;
           margin-right: 2.35765%;
           width: 100%; }
-          /* line 40, ../../../../../.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
+          /* line 40, ../../vendor/bundle/ruby/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
           .documentation:last-child {
             margin-right: 0; }
           /* line 94, ../hybridpages/assets/stylesheets/elements/_documentation.scss */
@@ -2430,7 +2430,7 @@
           display: block;
           margin-right: 2.35765%;
           width: 23.23176%; }
-          /* line 40, ../../../../../.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
+          /* line 40, ../../vendor/bundle/ruby/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
           .colors:last-child {
             margin-right: 0; }
           @media only screen and (min-width: 767px) and (max-width: 964px) {
@@ -2440,7 +2440,7 @@
               display: block;
               margin-right: 2.35765%;
               width: 23.23176%; }
-              /* line 40, ../../../../../.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
+              /* line 40, ../../vendor/bundle/ruby/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
               .colors:last-child {
                 margin-right: 0; }
               /* line 311, ../hybridpages/assets/stylesheets/elements/_documentation.scss */
@@ -2453,7 +2453,7 @@
               display: block;
               margin-right: 2.35765%;
               width: 100%; }
-              /* line 40, ../../../../../.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
+              /* line 40, ../../vendor/bundle/ruby/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
               .colors:last-child {
                 margin-right: 0; } }
           /* line 322, ../hybridpages/assets/stylesheets/elements/_documentation.scss */
@@ -3049,7 +3049,7 @@
           margin-right: 2.35765%;
           width: 23.23176%;
           background: #e1fcff; }
-          /* line 40, ../../../../../.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
+          /* line 40, ../../vendor/bundle/ruby/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
           .side-documentation:last-child {
             margin-right: 0; }
           @media only screen and (max-width: 767px) {
@@ -3062,7 +3062,7 @@
               height: auto !important;
               position: absolute;
               left: 0; }
-              /* line 40, ../../../../../.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
+              /* line 40, ../../vendor/bundle/ruby/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
               .side-documentation:last-child {
                 margin-right: 0; } }
           /* line 14, ../hybridpages/assets/stylesheets/elements/_accordeon.scss */
@@ -3199,7 +3199,7 @@
           margin-right: 2.35765%;
           width: 74.41059%;
           padding-top: 20px; }
-          /* line 40, ../../../../../.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
+          /* line 40, ../../vendor/bundle/ruby/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
           .container-documentation:last-child {
             margin-right: 0; }
           @media only screen and (max-width: 767px) {
@@ -3210,7 +3210,7 @@
               margin-right: 2.35765%;
               width: 100%;
               margin-top: 50px; }
-              /* line 40, ../../../../../.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
+              /* line 40, ../../vendor/bundle/ruby/2.0.0/gems/neat-1.5.0/app/assets/stylesheets/grid/_span-columns.scss */
               .container-documentation:last-child {
                 margin-right: 0; } }
       </div>
