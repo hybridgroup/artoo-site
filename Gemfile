@@ -8,6 +8,7 @@ gem "coderay"
 gem 'rake'
 gem "therubyracer"
 gem 'bourbon'
+gem 'neat'
 gem "middleman-neat"
 gem 'rack-google-analytics'
 

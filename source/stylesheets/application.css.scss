@@ -1,0 +1,75 @@
+// Sassy and Neat.
+@import "bourbon";
+@import "neat";
+@import "vendor/normalize";
+
+// Configuration
+// --------------------------------------------------
+$grid-columns : 12;
+
+
+// Devices
+// --------------------------------------------------
+$design-edge          : new-breakpoint(max-width 1000px 4);
+$tablet               : new-breakpoint(max-width 768px 4);
+$mobile-large         : new-breakpoint(max-width 568px 4);
+$mobile               : new-breakpoint(max-width 480px 4);
+$mobile-small         : new-breakpoint(max-width 320px 4);
+
+
+// Color Palette
+// --------------------------------------------------
+$color-white: #fff;
+$color-blue: blue;
+$color-light-blue: blue;
+$color-extra-light-blue: blue;
+$color-medium-blue: blue;
+$color-medium-dark-blue: blue;
+$color-dark-blue: blue;
+
+
+// Panels
+// --------------------------------------------------
+$color-panel-header: $color-blue;
+$color-panel-footer: $color-dark-blue;
+$color-panel-body: $color-dark-blue;
+$color-panel-container: $color-blue;
+
+
+// Text
+// --------------------------------------------------
+$font-primary: 'Open Sans', sans-serif;
+$font-secondary: 'Montserrat', sans-serif;
+
+$color-anchor: #000;
+$color-anchor-hover: #c00;
+
+$color-anchor-header: $color-white;
+$color-anchor-header-hover: $color-blue;
+
+
+// Button
+// --------------------------------------------------
+$color-button-action-font              : #ffffff;
+$color-button-action-static-background : #de4f66;
+$color-button-action-static-shadow     : #d93f54;
+$color-button-action-hover-background  : #EF7085;
+$color-button-action-hover-shadow      : #f65f75;
+$color-button-action-active-background : #ef4e69;
+$color-button-action-active-shadow     : #ef4e69;
+
+
+// Includes
+// --------------------------------------------------
+
+@import "support/before/*";
+
+@import "support/*";
+
+@import "views/shared/*";
+
+@import "objects/*";
+
+@import "views/*";
+
+@import "support/after/*";
