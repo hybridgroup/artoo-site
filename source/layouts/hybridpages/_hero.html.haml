@@ -1,0 +1,22 @@
+- if current_page.data.hero
+  .hero
+    .container
+      .content
+        %h1.title
+          = current_page.data.hero_title
+
+        %p
+          = current_page.data.hero_subtitle
+
+        = current_page.data.getting_started_button
+
+      .display
+        %img{src: "/images/elements/artoo.png"}/
+
+      .social
+        .container
+          = yield_content :social_links 
+
+  .description
+    .container
+      %h2 Gobot is a framework for robotics, physical computing, and the Internet of Things, written in <span>the Go programming language</span>

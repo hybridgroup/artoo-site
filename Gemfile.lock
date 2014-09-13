@@ -124,6 +124,7 @@ DEPENDENCIES
   middleman-blog
   middleman-gh-pages
   middleman-neat
+  neat
   rack-codehighlighter
   rack-google-analytics
   rake
