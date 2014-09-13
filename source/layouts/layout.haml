@@ -1,19 +1,23 @@
 %html
   %head
     = partial "/hybridpages/partials/layouts/head"
-    %link{rel: "stylesheet", href: "//fonts.googleapis.com/css?family=Russo+One|Inconsolata:400,700|Montserrat:700"}
+    %link{rel: "stylesheet", href: "//fonts.googleapis.com/css?family=Open+Sans:400,600,800|Lato:400"}
     %link{href: '/favicon.ico', rel: 'shortcut icon', type: 'image/gif' }
   %body  
     = partial "layouts/layout-contents"
-    .app
-      .w
-        %header.app-header{role: "banner"}
+    .app-header
+      %header.app-header{role: "banner"}
+        .container
           .display
-            = partial "/hybridpages/partials/layouts/app-logo"
+            %h1.app-logo
+              = yield_content :logo
+            %span.subtitle
+              = yield_content :logo_subtitle
 
-          %span.menu
+          %nav.menu
             = yield_content :menu
 
+    .app-content
       - if current_page.data.hero == true
         = partial "/layouts/hybridpages/hero"
       
@@ -22,12 +26,9 @@
 
       .container
         = yield
-        
-      - if current_page.data.catcher == true
-        = partial "/hybridpages/partials/widgets/catcher" 
 
-    %footer.app-footer
-      = yield_content :footer
+    .app-footer
+      = partial "/layouts/hybridpages/footer"
 
     
   - if is_blog_article?
