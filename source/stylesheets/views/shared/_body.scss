@@ -1,5 +1,6 @@
 body {
   background-color: $color-light-blue;
+  font-family: $font-primary;
   margin: 0;
 }
 
@@ -10,6 +11,5 @@ body {
 }
 
 .main-content{
-	@extend .container;
-	height:40px;
+	@include outer-container;
 }

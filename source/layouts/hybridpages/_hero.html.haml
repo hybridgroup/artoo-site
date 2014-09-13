@@ -5,17 +5,16 @@
         %h1.title
           = current_page.data.hero_title
 
-        %p
+        %p.sub-title
           = current_page.data.hero_subtitle
 
-        = current_page.data.getting_started_button
+        %a{ href:'/documentation/getting-started', class:'action'} Get Started
 
       .display
         %img{src: "/images/elements/artoo.png"}/
 
       .social
-        .container
-          = yield_content :social_links 
+        = yield_content :social_links 
 
   .description
     .container

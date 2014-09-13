@@ -48,15 +48,17 @@ $color-anchor-hover: #c00;
 $color-anchor-header: $color-grey;
 $color-anchor-header-hover: $color-blue;
 
+$color-title-hero: #70b3db;
+$color-sub-title-hero: $color-light-blue;
 
 // Button
 // --------------------------------------------------
 $color-button-action-font              : $font-primary;
 $color-button-action-static-background : #7eb847;
-$color-button-action-static-shadow     : #d6ca63;
-$color-button-action-hover-background  : #EF7085;
-$color-button-action-hover-shadow      : #f65f75;
-$color-button-action-active-background : #ef4e69;
+$color-button-action-static-shadow     : #6ca635;
+$color-button-action-hover-background  : $color-button-action-static-shadow;
+$color-button-action-hover-shadow      : darken($color-button-action-static-shadow, 5%);
+$color-button-action-active-background : lighten($color-button-action-static-background,5%);
 $color-button-action-active-shadow     : #ef4e69;
 
 

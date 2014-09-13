@@ -1,0 +1,21 @@
+%hero{
+	background: url(/images/elements/background.png) top center repeat;
+  position: relative;
+  z-index: 0;
+
+  .content{
+		@include span-columns(8 of 12);
+	}
+
+  .title{
+		color: $color-title-hero;
+	}
+
+	.sub-title{
+		color: $color-sub-title-hero;
+	}
+
+	.display{
+		@include span-columns(4 of 12);
+	}
+}

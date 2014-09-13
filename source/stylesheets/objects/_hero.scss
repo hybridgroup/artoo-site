@@ -1,0 +1,7 @@
+.hero{
+	@extend %hero;
+
+	.action{
+		@extend %button;
+	}
+}
