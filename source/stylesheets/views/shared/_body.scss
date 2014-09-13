@@ -1,0 +1,15 @@
+body {
+  background-color: $color-light-blue;
+  margin: 0;
+}
+
+.container {
+  @include outer-container;
+  margin: 0 auto;
+  position: relative;
+}
+
+.main-content{
+	@extend .container;
+	height:40px;
+}

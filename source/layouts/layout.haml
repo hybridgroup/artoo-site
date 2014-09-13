@@ -1,21 +1,20 @@
 %html
   %head
-    = partial "/hybridpages/partials/layouts/head"
+    = partial "/layouts/hybridpages/head"
     %link{rel: "stylesheet", href: "//fonts.googleapis.com/css?family=Open+Sans:400,600,800|Lato:400"}
     %link{href: '/favicon.ico', rel: 'shortcut icon', type: 'image/gif' }
   %body  
     = partial "layouts/layout-contents"
-    .app-header
-      %header.app-header{role: "banner"}
-        .container
-          .display
-            %h1.app-logo
-              = yield_content :logo
-            %span.subtitle
-              = yield_content :logo_subtitle
+    .app-header[role="banner"]
+      .container
+        .display
+          %h1.app-logo
+            = yield_content :logo
+          %span.subtitle
+            = yield_content :logo_subtitle
 
-          %nav.menu
-            = yield_content :menu
+        %nav.menu
+          = yield_content :menu
 
     .app-content
       - if current_page.data.hero == true
@@ -24,8 +23,7 @@
       - if current_page.data.page_title_show == true
         = partial "/hybridpages/partials/widgets/page_title"    
 
-      .container
-        = yield
+      = yield
 
     .app-footer
       = partial "/layouts/hybridpages/footer"
