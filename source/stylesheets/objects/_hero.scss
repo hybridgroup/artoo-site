@@ -4,11 +4,21 @@
 	.content{
 		@include span-columns(8 of 12);
 		@include omega;
+		margin-top: 35px;
+
+		.title{
+			font-size: 2.2em;
+			font-weight: 700;
+		}
+
+		.sub-title{
+			font-size: em(22);
+		}
 	}
 
 	.display{
 		@include span-columns(4 of 12);
-		
+
 		img{
 			position: relative;
 			top: 46px;
@@ -17,5 +27,11 @@
 
 	.action{
 		@extend %button;
+		top: 15px;
+	}
+
+	.splitter{
+		float: left;
+		margin-top: 15px;
 	}
 }

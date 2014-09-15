@@ -6,11 +6,12 @@
 // Configuration
 // --------------------------------------------------
 $grid-columns : 12;
+$max-width: 966px;
 
 
 // Devices
 // --------------------------------------------------
-$design-edge          : new-breakpoint(max-width 1000px 4);
+$design-edge          : new-breakpoint(max-width 966px 4);
 $tablet               : new-breakpoint(max-width 768px 4);
 $mobile-large         : new-breakpoint(max-width 568px 4);
 $mobile               : new-breakpoint(max-width 480px 4);

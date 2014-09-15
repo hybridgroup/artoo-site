@@ -7,7 +7,12 @@
 		color: $color-title-hero;
 	}
 
-	.sub-title{
+	.sub-title,a{
 		color: $color-sub-title-hero;
+		text-decoration: none;
+	}
+
+	.animations{
+		position: relative;
 	}
 }
