@@ -1,6 +1,20 @@
 .hero{
 	@extend %hero;
 
+	.content{
+		@include span-columns(8 of 12);
+		@include omega;
+	}
+
+	.display{
+		@include span-columns(4 of 12);
+		
+		img{
+			position: relative;
+			top: 46px;
+		}
+	}
+
 	.action{
 		@extend %button;
 	}
