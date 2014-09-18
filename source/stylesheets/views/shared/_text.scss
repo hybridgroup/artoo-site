@@ -1,0 +1,20 @@
+a{
+	color: $color-anchor;
+	text-decoration: none;
+
+	&:hover {
+		color: $color-anchor-hover
+  	}
+}
+
+p{
+	color: $font-color;
+}
+
+h1,h2,h3{
+	color: $color-heading;
+}
+
+.alternative-heading{
+	color: $color-alternative-heading
+}

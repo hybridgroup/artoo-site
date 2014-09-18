@@ -1,0 +1,42 @@
+h2.alternative-heading{
+	a{
+		@extend .alternative-heading;
+
+		&:hover {
+        	color: $color-dark-blue;
+      	}
+	}
+}
+.platform-list {
+
+  list-style: none;
+  margin: 0;
+
+  li {
+  	@include row();
+    display: inline-block;
+    text-align: center;
+
+    img {
+
+      &:hover {
+
+        opacity: .8;
+      }
+    }
+
+    a {
+
+      .title {
+        color: $color-medium-dark-blue;
+        font-size:	em(14);
+        padding:em(10);
+        width: 100%;
+        
+        &:hover {
+        	color: $color-dark-blue;
+      	}
+      }
+    }
+  }
+}

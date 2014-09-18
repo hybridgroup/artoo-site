@@ -1,32 +1,34 @@
 -content_for :logo do
-  %a{:href => "/"} artoo
+  %a{:href => "/"} artoo Ruby on Robots
 
--content_for :logo_subtitle do
-  .main Ruby on Robots
+-content_for :menu do
+  %ul
+    %li  
+      - if current_page.data.active_menu_docs == true
+        = link_to "Docs", "/documentation", (menu_item("documentation")), class: "active"
+      -else
+        = link_to "Docs", "", (menu_item("documentation"))
 
--content_for :menu do 
+    %li  
+      - if current_page.data.active_menu_platforms == true
+        = link_to "Platforms", "/documentation/platforms", (menu_item("documentation/platforms")), class: "active"
+      -else
+        = link_to "Platforms", "", (menu_item("documentation/platforms"))
 
-  - if current_page.data.active_menu_docs == true
-    = link_to "Docs", "/documentation", (menu_item("documentation")), class: "active"
-  -else
-    = link_to "Docs", "", (menu_item("documentation"))
+    %li  
+      - if current_page.data.active_menu_videos == true
+        = link_to "Videos", "/videos", (menu_item("videos")), class: "active"
+      -else
+        = link_to "Videos", "", (menu_item("videos"))
 
-  - if current_page.data.active_menu_platforms == true
-    = link_to "Platforms", "/documentation/platforms", (menu_item("documentation/platforms")), class: "active"
-  -else
-    = link_to "Platforms", "", (menu_item("documentation/platforms"))
-  
-  - if current_page.data.active_menu_videos == true
-    = link_to "Videos", "/videos", (menu_item("videos")), class: "active"
-  -else
-    = link_to "Videos", "", (menu_item("videos"))
-  
-  - if current_page.data.active_menu_blog == true
-    = link_to "Blog", "/blog", (menu_item("blog")), class: "active"
-  -else
-    = link_to "Blog", "", (menu_item("blog"))
+    %li  
+      - if current_page.data.active_menu_blog == true
+        = link_to "Blog", "/blog", (menu_item("blog")), class: "active"
+      -else
+        = link_to "Blog", "", (menu_item("blog"))
 
-  = link_to "Github", "https://github.com/hybridgroup/artoo/", class: "item"
+    %li  
+      =  link_to "Github", "https://github.com/hybridgroup/gobot/", class: "item", target: "blank"
 
 -content_for :social_links do
   .splitter

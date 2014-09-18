@@ -1,17 +1,15 @@
 %html
   %head
     = partial "/layouts/hybridpages/head"
-    %link{rel: "stylesheet", href: "//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Lato:400"}
+    %link{rel: "stylesheet", href: "//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Lato:400|Inconsolata"}
     %link{href: '/favicon.ico', rel: 'shortcut icon', type: 'image/gif' }
   %body  
     = partial "layouts/layout-contents"
     .app-header{role: "banner"}
       .container
         .display
-          %h1.app-logo
+          .app-logo
             = yield_content :logo
-          %span.subtitle
-            = yield_content :logo_subtitle
 
         %nav.menu
           = yield_content :menu

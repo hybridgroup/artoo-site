@@ -3,6 +3,9 @@
 @import "neat";
 @import "vendor/normalize";
 
+//Bourbon Addons
+@import "addons/hide-text";
+
 // Configuration
 // --------------------------------------------------
 $grid-columns : 12;
@@ -25,15 +28,15 @@ $color-blue: #c1effe;
 $color-light-blue: #ebfdff;
 $color-medium-blue: #b4e3ff;
 $color-medium-dark-blue: #4692bf;
-$color-dark-blue: #005c93;
-$color-extra-dark-blue: #0f4b87;
+$color-dark-blue: #0f4b87;
 $color-grey: #505050;
+$color-light-grey: #444;
 
 
 // Panels
 // --------------------------------------------------
 $color-panel-header: $color-light-blue;
-$color-panel-footer: $color-extra-dark-blue;
+$color-panel-footer: $color-dark-blue;
 $color-panel-body: $color-light-blue;
 $color-panel-container: $color-blue;
 
@@ -42,15 +45,22 @@ $color-panel-container: $color-blue;
 // --------------------------------------------------
 $font-primary: 'Open Sans', sans-serif;
 $font-secondary: 'Lato', sans-serif;
+$font-color: $color-light-grey;
+
+$color-title-hero: #70b3db;
+$color-sub-title-hero: $color-light-blue;
 
 $color-anchor: $color-medium-dark-blue;
-$color-anchor-hover: #c00;
+$color-anchor-hover: $color-dark-blue;
+
+$color-anchor-nav: $color-grey;
+$color-anchor-nav-hover: $color-title-hero;
 
 $color-anchor-header: $color-grey;
 $color-anchor-header-hover: $color-blue;
 
-$color-title-hero: #70b3db;
-$color-sub-title-hero: $color-light-blue;
+$color-heading: $color-dark-blue;
+$color-alternative-heading: #cc3500;
 
 // Button
 // --------------------------------------------------
@@ -62,9 +72,15 @@ $color-button-action-hover-shadow      : darken($color-button-action-static-shad
 $color-button-action-active-background : lighten($color-button-action-static-background,5%);
 $color-button-action-active-shadow     : #ef4e69;
 
+//CodeRay
+// --------------------------------------------------
+$color-code-border: #b2b2b2;
+
 
 // Includes
 // --------------------------------------------------
+
+@import "vendor/coderay";
 
 @import "support/before/*";
 

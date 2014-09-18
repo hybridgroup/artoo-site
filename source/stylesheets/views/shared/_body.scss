@@ -12,6 +12,10 @@ body {
 
 .main-content{
 	@include outer-container;
+
+  section{
+    @include row();
+  }
 }
 
 .clear {

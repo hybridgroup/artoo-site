@@ -1,0 +1,85 @@
+{
+  "ARDrone": {
+    "slug": "ardrone",
+    "drivers": ["ARDrone - Flight", "ARDrone - Navigation"]
+  },
+
+  "Arduino": {
+    "slug": "arduino",
+    "drivers": ["GPIO", "I2C"]
+  },
+
+  "Beaglebone Black": {
+    "slug": "beaglebone",
+    "drivers": ["GPIO", "I2C"]
+  },
+
+  "Crazyflie": {
+    "slug": "crazyflie",
+    "drivers": ["Crazyflie"]
+  },
+
+  "Digispark": {
+    "slug": "digispark",
+    "drivers": ["GPIO", "I2C"]
+  },
+
+  "Joystick": {
+    "slug": "joystick",
+    "drivers": ["Joystick - DualShock 3", "Joystick - Xbox 360"]
+  },
+
+  "Keyboard": {
+    "slug": "keyboard",
+    "drivers": ["Keyboard"]
+  },
+
+  "Leap Motion": {
+    "slug": "leapmotion",
+    "drivers": ["Leap Motion"]
+  },
+
+  "Neurosky": {
+    "slug": "neurosky",
+    "drivers": ["Neurosky Mindwave"]
+  },
+
+  "OpenCV": {
+    "slug": "opencv",
+    "drivers": []
+  },
+
+  "Pebble": {
+    "slug": "pebble",
+    "drivers": ["Pebble"]
+  },
+
+  "Raspberry Pi": {
+    "slug": "raspi",
+    "drivers": [
+      "Button",
+      "Continuous Servo",
+      "LED",
+      "Makey Button",
+      "Servo",
+      "Motor",
+
+      "I2C"
+    ]
+  },
+
+  "Roomba": {
+    "slug": "roomba",
+    "drivers": ["Roomba"]
+  },
+
+  "Spark": {
+    "slug": "spark",
+    "drivers": ["GPIO"]
+  },
+
+  "Sphero": {
+    "slug": "sphero",
+    "drivers": ["Sphero"]
+  }
+}
