@@ -65,12 +65,17 @@ $color-alternative-heading: #cc3500;
 // Button
 // --------------------------------------------------
 $color-button-action-font              : $font-primary;
+
 $color-button-action-static-background : #7eb847;
 $color-button-action-static-shadow     : #6ca635;
+
 $color-button-action-hover-background  : $color-button-action-static-shadow;
 $color-button-action-hover-shadow      : darken($color-button-action-static-shadow, 5%);
+
 $color-button-action-active-background : lighten($color-button-action-static-background,5%);
 $color-button-action-active-shadow     : #ef4e69;
+
+$color-button-footer: #cc3500;
 
 //CodeRay
 // --------------------------------------------------
