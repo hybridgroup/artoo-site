@@ -1,0 +1,87 @@
+{
+  "Getting Started": "/documentation/getting-started",
+
+  "Guides": {
+    "About artoo": "/documentation/guides/what_is_artoo",
+    "Concepts": "/documentation/guides/concepts",
+    "API": "/documentation/guides/api",
+    "CLI": "/documentation/guides/cli",
+    "Console": "/documentation/guides/console/",
+    "Test-Driven Robotics": "/documentation/guides/test-driven-robotics",
+    "Helper Methods": "/documentation/guides/helpers",
+    "Generated Documentation": "http://rubydoc.info/gems/artoo/frames"
+  },
+
+  "Platforms": {
+    "Ardrone": "/documentation/platforms/ardrone",
+    "Arduino": "/documentation/platforms/arduino",
+    "Beaglebone": "/documentation/platforms/beaglebone",
+    "Crazyflie": "/documentation/platforms/crazyflie",
+    "Digispark": "/documentation/platforms/digispark",
+    "Joystick": "/documentation/platforms/joystick",
+    "Keyboard": "/documentation/platforms/keyboard",
+    "Leap Motion": "/documentation/platforms/leapmotion",
+    "Neurosky Mindware": "/documentation/platforms/neurosky",
+    "OpenCV": "/documentation/platforms/opencv",
+    "Pebble": "/documentation/platforms/pebble",
+    "Raspberry Pi": "/documentation/platforms/raspberry-pi",
+    "Roomba": "/documentation/platforms/roomba",
+    "Spark": "/documentation/platforms/spark",
+    "Sphero": "/documentation/platforms/sphero"
+  },
+
+  "Drivers": {
+    "GPIO": {
+      "Analog Sensor": "/documentation/drivers/analog-sensor",
+      "Button": "/documentation/drivers/button",
+      "Continuous Servo": "/documentation/drivers/continuous-servo",
+      "LED": "/documentation/drivers/led",
+      "Makey Button": "/documentation/drivers/makey-button",
+      "Maxbotix": "/documentation/drivers/maxbotix",
+      "Motor": "/documentation/drivers/motor",
+      "Servo": "/documentation/drivers/servo"
+    },
+
+    "I2C": {
+      "BlinkM": "/documentation/drivers/blinkm",
+      "HMC6352 Compass": "/documentation/drivers/hmc6352-compass",
+      "LCD": "/documentation/drivers/lcd",
+      "Wii Class Controller": "/documentation/drivers/wiiclassic",
+      "Wii Nunchuck Controller": "/documentation/drivers/wiichuck"
+    },
+
+    "Ardrone - Flight": "/documentation/drivers/ardrone",
+    "Ardrone - Navigation": "/documentation/drivers/ardrone-navigation",
+    "Ardrone - Video": "/documentation/drivers/ardrone-video",
+    "Crazyflie - Flight": "/documentation/drivers/crazyflie",
+    "Crazyflie - Navigation": "/documentation/drivers/crazyflie-nav",
+    "Generic Joystick": "/documentation/drivers/joystick",
+    "Joystick - DualShock 3": "/documentation/drivers/ps3",
+    "Joystick - Xbox 360": "/documentation/drivers/xbox360",
+    "Keyboard": "/documentation/drivers/keyboard",
+    "Leap Motion": "/documentation/drivers/leapmotion",
+    "Neurosky Mindware": "/documentation/drivers/neurosky",
+    "Pebble": "/documentation/drivers/pebble",
+    "Roomba": "/documentation/drivers/roomba",
+    "Sphero": "/documentation/drivers/sphero"
+  },
+
+  "Troubleshooting": {
+    "Communication with Devices": "/documentation/troubleshooting/communication"
+  },
+
+  "Contribute": {
+    "How to contribute?": "/documentation/contribute",
+    "Code generator": "/documentation/contribute/code-generator",
+    "Guidelines": "/documentation/contribute/guidelines",
+    "Contact Us": "/documentation/contribute/contact-us"
+  },
+
+  "Tutorials": {
+    "Arduino LED blinks": "/documentation/getting-started/tutorials/arduino",
+    "Sphero changes color": "/documentation/getting-started/tutorials/arduino"
+  },
+
+  "Examples": "/documentation/examples",
+  "Chat": "/documentation/chat/chat"
+}

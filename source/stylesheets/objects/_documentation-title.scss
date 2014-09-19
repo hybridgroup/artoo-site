@@ -1,0 +1,15 @@
+.page-title{
+	background: url(/images/elements/docs-header.png) top center repeat;
+	.container{
+		padding: em(33) 0 em(20) 0;
+	}
+	.title{
+		color: $color-documentation-title;
+		margin: 0;
+	}
+
+	.subtitle{
+		color: $color-documentation-subtitle;
+		margin: 0;
+	}
+}
