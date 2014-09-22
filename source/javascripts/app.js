@@ -38,11 +38,15 @@ var SidebarCtrl = function SidebarCtrl($scope, $element) {
 };
 
 $(function() {
-  $('.scroll').click(function(event){
+
+  $('a.scroll').click(function(event){
     event.preventDefault();
     var target = $(this).attr('href');
-    $('html, body').animate({
+    if ( $(target).length ) {
+      $('html, body').animate({
         scrollTop: $( target ).offset().top
-    }, 1000);
+      }, 1000);
+    };
   });
+
 });
