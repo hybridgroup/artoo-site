@@ -1,0 +1,106 @@
+.side-documentation {
+  @include span-columns(3);
+  background: $color-panel-sidebar;
+  margin-top: em(20);
+  padding: 0 em(10);
+
+ 
+
+  .mobile-menu {
+    text-align: right;
+    display: none;
+
+
+    .active {
+      background: white;
+
+    }
+
+    a {
+      border: solid 2px white;
+      padding: em(10);
+      display: inline-block;
+
+      &:hover {
+        background: white;
+
+      }
+
+      .line {
+        margin: em(5) 0;
+        background: white;
+      }
+    }
+  }
+
+  .docs-sidebar {
+    &.show {
+      display: block;
+    }
+    
+    > a, .section .name {
+      font-size: em(14);
+      font-weight: bold;
+
+      &:last-of-type {
+        border-bottom: none;
+      }
+    }
+
+    a, .name {
+      width: 100%;
+      display: block;
+      padding: 10px;
+      cursor: pointer;
+      color: #333;
+
+     
+    }
+
+    .links a {
+      font-size: 10pt;
+      color: #333;
+
+      padding: em(5) em(10);
+
+    
+    }
+
+    a.active {
+      font-weight: bold;
+    }
+
+    .section .links {
+      padding-left: em(15);
+      padding-top: em(10);
+    }
+
+    .sub-section .links {
+      padding-left: em(20);
+    }
+
+    .section:before {
+      content: '▶';
+      float: right;
+      margin-top: em(13);
+      margin-right: em(10);
+      color: #A5A5A5;
+      font-size: 11px;
+    }
+
+    .section.active:before {
+      content: '▼';
+    }
+  }
+}
+
+.container-documentation {
+  @include span-columns(9);
+  padding-top: em(20);
+
+  .how-to {
+    padding-top: em(65);
+  }
+
+
+}
