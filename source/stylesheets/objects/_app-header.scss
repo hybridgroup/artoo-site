@@ -2,18 +2,14 @@
 
     .display {
         @include span-columns(5);
-        display: inline-block;
-        margin: 0;
+        margin: em(12) 0 0 0;
     }
 
-    .app-logo{
-        background: url(/images/elements/logo.png) top center no-repeat;
+    .logo {
+        display: block;
+        background: url(/images/elements/logo.png) left top no-repeat;
+        text-indent: -99999px;
         background-size: contain;
-        margin-top: 15px;
-    }
-
-    .app-logo, .subtitle{
-        @include hide-text;
     }
 
     .menu {
