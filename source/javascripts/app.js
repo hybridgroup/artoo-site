@@ -36,3 +36,13 @@ var SidebarCtrl = function SidebarCtrl($scope, $element) {
     activeTab = name;
   }
 };
+
+$(function() {
+  $('.scroll').click(function(event){
+    event.preventDefault();
+    var target = $(this).attr('href');
+    $('html, body').animate({
+        scrollTop: $( target ).offset().top
+    }, 1000);
+  });
+});
