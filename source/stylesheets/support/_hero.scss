@@ -1,7 +1,7 @@
 %hero{
 	background: url(/images/elements/background.png) top center repeat;
 	position: relative;
-	z-index: -1;
+	z-index: 0;
 
   .title{
 		color: $color-title-hero;
@@ -12,11 +12,13 @@
 	}
 
 	.animations{
-		position: relative;
+		position: absolute;
 		z-index: 0;
+		width: 100%;
+		top: 0px;
 
 		*{
-			position: absolute;
+			position: relative;
 		}
 	}
 }

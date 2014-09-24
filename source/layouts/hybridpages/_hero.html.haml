@@ -13,16 +13,15 @@
       .display
         %img{src: "/images/elements/artoo.png"}/
 
-      .animations
-        .ship-small
-        .ship-medium
-        .ship-large
-        .planet
-        .moon
-
       .social
         = yield_content :social_links 
+    .animations
+      .ship-small
+      .ship-medium
+      .ship-large
+      .planet
+      .moon
 
-  .description
+  .site-description
     .container
       = yield_content :description

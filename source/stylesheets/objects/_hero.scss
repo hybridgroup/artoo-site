@@ -5,6 +5,8 @@
 		@include span-columns(8 of 12);
 		@include omega;
 		margin-top: 35px;
+		position: relative;
+		z-index: 1;
 
 		.title{
 			font-size: 2.2em;
@@ -28,6 +30,7 @@
 
 	.action{
 		@extend %button;
+		text-shadow: 1px 2px 1px $color-button-action-hover-background;
 		top: 15px;
 	}
 
@@ -36,42 +39,50 @@
 		margin-top: 15px;
 	}
 
-	.moon{
-		background: url(/images/elements/moon.png) top center no-repeat;
-		top: 279px;
-		left: 39px;
-	}
-
 	.ship-small{
-		background: url(/images/elements/ship-small.png) top center no-repeat;
+		@include animation(ship-small 10s infinite linear);
+		background: url(/images/elements/ship-small.png) top center repeat-x;
+		background-position-x: 325px;
 		top: 20px;
-		left: 38px;
 	}
 
 	.ship-medium{
-		background: url(/images/elements/ship-medium.png) top center no-repeat;
-		top: 206px;
-		right: 393px;
+		@include animation(ship-medium 5s infinite linear);
+		background: url(/images/elements/ship-medium.png) top center repeat-x;
+		background-position-x: 651px;
+		top: 120px;
 	}
 
 	.ship-large{
-		background: url(/images/elements/ship-large.png) top center no-repeat;
-		top: 291px;
-		left: 212px;
-		z-index: 1;
-	}
-
-	.planet{
-		background: url(/images/elements/planet.png) top center no-repeat;
-		right: 23px;
-		top: 40px;
+		@include animation(ship-small 20s infinite linear);
+		background: url(/images/elements/ship-large.png) top center repeat-x;
+		background-position-x: 420px;
+		top: 220px;
 	}
 }
 
-.description{
+.site-description{
 	background-color: $color-blue;
 
 	.container{
 		padding: em(30) 0;
 	}
+}
+
+@include keyframes(ship-small) {
+  from {
+    background-position: 2000px;
+  }
+  to {
+    background-position: 0px;
+  }
+}
+
+@include keyframes(ship-medium) {
+  from {
+    background-position: 0px;
+  }
+  to {
+    background-position: 2000px;
+  }
 }
