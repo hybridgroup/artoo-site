@@ -1,10 +1,14 @@
 .side-documentation {
   @include span-columns(3);
   background: $color-panel-sidebar;
-  margin-top: em(20);
+  margin-top: em(61);
   padding: 0 em(10);
 
- 
+  .sidebar-header{
+    background: url(/images/elements/sidebar-header.png) top center no-repeat;
+    background-size: 100%;
+    margin: em(-61) em(-10) 0;
+  }
 
   .mobile-menu {
     text-align: right;
@@ -52,14 +56,12 @@
       display: block;
       padding: 10px;
       cursor: pointer;
-      color: #333;
-
-     
+      color: $color-dark-blue
     }
 
     .links a {
-      font-size: 10pt;
-      color: #333;
+      font-size: em(10);
+      color: $color-dark-blue;
 
       padding: em(5) em(10);
 
