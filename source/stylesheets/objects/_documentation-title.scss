@@ -1,5 +1,7 @@
 .page-title{
 	background: url(/images/elements/docs-header.png) top center repeat;
+	border-top: 2px solid $color-white;
+
 	.container{
 		padding: em(30) 0 em(20) 0;
 	}

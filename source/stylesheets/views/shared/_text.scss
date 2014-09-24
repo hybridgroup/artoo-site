@@ -15,6 +15,12 @@ h1,h2,h3{
 	color: $color-heading;
 }
 
+code{
+	border: 1px solid white;
+	padding: 0 em(2);
+	color: $color-code;
+}
+
 .alternative-heading{
-	color: $color-alternative-heading
+	color: $color-alternative-heading;
 }

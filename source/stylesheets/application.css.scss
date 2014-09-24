@@ -31,6 +31,7 @@ $color-medium-dark-blue: #4692bf;
 $color-dark-blue: #0f4b87;
 $color-grey: #505050;
 $color-light-grey: #444;
+$color-red: #ea2b3f;
 
 
 // Panels
@@ -68,6 +69,8 @@ $color-alternative-heading: #cc3500;
 $color-documentation-title: #70b3db;
 $color-documentation-subtitle: $color-light-blue;
 
+$color-code: $color-red;
+
 
 // Button
 // --------------------------------------------------
@@ -76,7 +79,7 @@ $color-button-action-font              : $font-primary;
 $color-button-action-static-background : #7eb847;
 $color-button-action-static-shadow     : #6ca635;
 
-$color-button-action-hover-background  : $color-button-action-static-shadow;
+$color-button-action-hover-background  : #56832b;
 $color-button-action-hover-shadow      : darken($color-button-action-static-shadow, 5%);
 
 $color-button-action-active-background : lighten($color-button-action-static-background,5%);

@@ -1,5 +1,10 @@
 .documentation {
+	font-family: $font-secondary;
+
 	.box{
-  		height: em(150);
+  		height: em(120);
+	}
+	.platform{
+		width: 24%;
 	}
 }
