@@ -39,7 +39,7 @@ var SidebarCtrl = function SidebarCtrl($scope, $element) {
 
 $(function() {
 
-  $('a.scroll').click(function(event){
+  $('a.scroll, .container-subnav a').click(function(event){
     event.preventDefault();
     var target = $(this).attr('href');
     if ( $(target).length ) {
