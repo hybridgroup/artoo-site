@@ -3,7 +3,7 @@
 		.documentation
 			.side-documentation
 				= partial "/layouts/partials/side-bar"
-			.container-documentation
+			.documentation-single
 				- if current_page.data.page_title_show == true
 					= partial "/hybridpages/partials/widgets/page_subtitle"  
 				= yield
