@@ -1,7 +1,10 @@
 %sub-nav {
-  border-top: 1px solid $color-subnav-border;
-  border-bottom: 1px solid $color-subnav-border;
-  padding: em(20) 0;
+
+  nav {
+    border-top: 1px solid $color-subnav-border;
+    border-bottom: 1px solid $color-subnav-border;
+    padding: em(20) 0;
+  }
 
   a {
     padding: em(5) em(10);
@@ -9,4 +12,26 @@
     color: $color-grey;
     font-size: $font-subnav-size;
   }
+
+  .scroll-top {
+    display: none;
+  }
+
+}
+
+%sub-nav-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+
+  nav {
+    padding: 0;
+    border: none;
+  }
+
+  .scroll-top {
+    display: inline-block;
+  }
+
 }
