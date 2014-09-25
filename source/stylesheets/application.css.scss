@@ -23,53 +23,53 @@ $mobile-small         : new-breakpoint(max-width 320px 4);
 
 // Color Palette
 // --------------------------------------------------
-$color-white: #fff;
-$color-blue: #c1effe;
-$color-light-blue: #ebfdff;
-$color-medium-blue: #b4e3ff;
-$color-medium-dark-blue: #4692bf;
-$color-dark-blue: #0f4b87;
-$color-grey: #505050;
-$color-light-grey: #444;
-$color-red: #ea2b3f;
+$color-white            : #fff;
+$color-blue             : #c1effe;
+$color-light-blue       : #ebfdff;
+$color-medium-blue      : #b4e3ff;
+$color-medium-dark-blue : #4692bf;
+$color-dark-blue        : #0f4b87;
+$color-grey             : #505050;
+$color-light-grey       : #444;
+$color-red              : #ea2b3f;
 
 
 // Panels
 // --------------------------------------------------
-$color-panel-header: $color-light-blue;
-$color-panel-footer: $color-dark-blue;
-$color-panel-body: $color-light-blue;
-$color-panel-container: $color-blue;
-$color-panel-sidebar: $color-blue;
-$color-panel-doc-box: $color-blue;
-$color-panel-doc-box-header: $color-dark-blue;
+$color-panel-header         : $color-light-blue;
+$color-panel-footer         : $color-dark-blue;
+$color-panel-body           : $color-light-blue;
+$color-panel-container      : $color-blue;
+$color-panel-sidebar        : $color-blue;
+$color-panel-doc-box        : $color-blue;
+$color-panel-doc-box-header : $color-dark-blue;
 
 
 // Text
 // --------------------------------------------------
-$font-primary: 'Open Sans', sans-serif;
-$font-secondary: 'Lato', sans-serif;
-$font-color: $color-light-grey;
+$font-primary                 : 'Open Sans', sans-serif;
+$font-secondary               : 'Lato', sans-serif;
+$font-color                   : $color-light-grey;
 
-$color-title-hero: #70b3db;
-$color-sub-title-hero: $color-light-blue;
+$color-title-hero             : #70b3db;
+$color-sub-title-hero         : $color-light-blue;
 
-$color-anchor: $color-medium-dark-blue;
-$color-anchor-hover: $color-dark-blue;
+$color-anchor                 : $color-medium-dark-blue;
+$color-anchor-hover           : $color-dark-blue;
 
-$color-anchor-nav: $color-grey;
-$color-anchor-nav-hover: $color-title-hero;
+$color-anchor-nav             : $color-grey;
+$color-anchor-nav-hover       : $color-title-hero;
 
-$color-anchor-header: $color-grey;
-$color-anchor-header-hover: $color-blue;
+$color-anchor-header          : $color-grey;
+$color-anchor-header-hover    : $color-blue;
 
-$color-heading: $color-dark-blue;
-$color-alternative-heading: #cc3500;
+$color-heading                : $color-dark-blue;
+$color-alternative-heading    : #cc3500;
 
-$color-documentation-title: #70b3db;
-$color-documentation-subtitle: $color-light-blue;
+$color-documentation-title    : #70b3db;
+$color-documentation-subtitle : $color-light-blue;
 
-$color-code: $color-red;
+$color-code                   : $color-red;
 
 
 // Button
@@ -85,12 +85,16 @@ $color-button-action-hover-shadow      : darken($color-button-action-static-shad
 $color-button-action-active-background : lighten($color-button-action-static-background,5%);
 $color-button-action-active-shadow     : #ef4e69;
 
-$color-button-footer: #cc3500;
+$color-button-footer                   : #cc3500;
 
 //CodeRay
 // --------------------------------------------------
 $color-code-border: #b2b2b2;
 
+//Sub Nav
+// --------------------------------------------------
+$color-subnav-border : #cecece;
+$font-subnav-size    : .9em;
 
 // Includes
 // --------------------------------------------------
