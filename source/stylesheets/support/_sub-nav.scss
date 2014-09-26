@@ -40,6 +40,7 @@
     border: none;
     display: inline-block;
     @include span-columns(9);
+    @include omega();
   }
 
   .container-subnav {

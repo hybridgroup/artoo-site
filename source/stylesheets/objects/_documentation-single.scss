@@ -1,5 +1,6 @@
 .documentation-single {
   @include span-columns(9);
+  @include omega();
   padding-top: em(20);
 
   .subnav-drivers {
@@ -8,6 +9,15 @@
 
   .subNavfixed {
     @extend %sub-nav-fixed;
+  }
+
+  .display {
+    @include span-columns(4 of 9);
+  }
+
+
+  .intro_intro {
+    @include span-columns(5 of 9);
   }
 
   .how-to {
