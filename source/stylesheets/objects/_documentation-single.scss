@@ -15,12 +15,31 @@
     @include span-columns(4 of 9);
   }
 
-
-  .intro_intro {
+  .info_intro {
     @include span-columns(5 of 9);
+    @include omega();
+    overflow: hidden;
+  }
+
+  .platform-button {
+    
   }
 
   .how-to {
     padding-top: em(65);
+  }
+
+  .hardware h2 {
+    clear: both;
+    margin: em(24) 0;
+  }
+
+  .devices {
+    @include outer-container;
+  }
+
+  .device {
+    @include span-columns(4);
+    @include omega(3n);
   }
 }
