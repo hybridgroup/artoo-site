@@ -18,7 +18,7 @@
       - if current_page.data.hero == true
         = partial "/layouts/hybridpages/hero"
       
-      - if current_page.data.page_title_show == true
+      - if current_page.data.page_title_show == true && (current_page.data.layout != 'documentation' || current_page.data.main_nav == true)
         = partial "/layouts/hybridpages/page_title"    
 
       = yield
@@ -28,7 +28,7 @@
 
     
   - if is_blog_article?
-    %script{:src => "/hybridpages/assets/javascript/disqus.js"}
+    %script{:src => "/javascript/vendor/disqus.js"}
     %script{src: "//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53632dea5fd71564", type: "text/javascript"}
 
 
