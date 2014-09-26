@@ -22,11 +22,10 @@ neurosky_driver: true
 %section.intro
   = image_tag "/images/devices/neurosky.jpg", class: "display"
   .info_intro
+    = partial '/hybridpages/partials/widgets/page_repo_issues'
     %p  NeuroSky delivers fully integrated, single chip EEG biosensors. NeuroSky enables its partners and developers to bring their brainwave application ideas to market with the shortest amount of time, and lowest end consumer price.
     %p
-      For more info about the Neurosky platform click
-      = succeed "." do
-        = link_to "here", "http://neurosky.com/products-markets/eeg-biosensors/hardware/", target: :blank
+      = link_to "+ info about the Neurosky platform click here", "http://neurosky.com/products-markets/eeg-biosensors/hardware/", target: :blank, :class => "platform-button"
   .clear
 
 %section.how-to#HowToInstall

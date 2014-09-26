@@ -33,11 +33,10 @@ makey_driver: true
 %section.intro
   = image_tag "/images/devices/digispark.jpg", class: "display"
   .info_intro
+    = partial '/hybridpages/partials/widgets/page_repo_issues'
     %p The Digispark is an Attiny85 based microcontroller development board similar to the Arduino line, only cheaper, smaller, and a bit less powerful. With a whole host of shields to extend its functionality and the ability to use the familiar Arduino IDE the Digispark is a great way to jump into electronics, or perfect for when an Arduino is too big or too much.
     %p
-      For more info about the Digispark platform click
-      = succeed "." do
-        = link_to "here", "http://digistump.com/category/1", target: :blank
+      = link_to "+ info about the Digispark platform click here", "http://digistump.com/category/1", target: :blank, :class => "platform-button"
   .clear
 
 %section.how-to#HowToInstall
