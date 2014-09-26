@@ -18,7 +18,7 @@
       - if current_page.data.hero == true
         = partial "/layouts/hybridpages/hero"
       
-      - if current_page.data.page_title_show == true && (current_page.data.layout != 'documentation' || current_page.data.main_nav == true)
+      - if current_page.data.page_title_show == true 
         = partial "/layouts/hybridpages/page_title"    
 
       = yield
