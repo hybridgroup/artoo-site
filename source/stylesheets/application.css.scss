@@ -93,8 +93,11 @@ $color-code-border: #b2b2b2;
 
 //Sub Nav
 // --------------------------------------------------
-$color-subnav-border : #cecece;
-$font-subnav-size    : .9em;
+$color-subnav-border           : #cecece;
+$font-subnav-size              : .9em;
+$color-subnav-link             : $color-grey;
+$color-subnav-hover            : $color-white;
+$color-subnav-hover-background : $color-dark-blue;
 
 // Includes
 // --------------------------------------------------

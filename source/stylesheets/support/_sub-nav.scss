@@ -9,8 +9,18 @@
   a {
     padding: em(5) em(10);
     margin: em(20) em(2);
-    color: $color-grey;
+    color: $color-subnav-link;
     font-size: $font-subnav-size;
+
+    &:hover, &.active {
+      color: $color-subnav-hover;
+      background: $color-subnav-hover-background;
+    }
+
+    &.scroll-top:hover {
+      background: none;
+    }
+
   }
 
   .scroll-top, .sub-nav-title {
