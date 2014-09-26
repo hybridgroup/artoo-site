@@ -19,10 +19,15 @@
     @include span-columns(5 of 9);
     @include omega();
     overflow: hidden;
+
+    p {
+      margin-bottom: em(25);
+    }
   }
 
   .platform-button {
-    
+    @extend %button-platform;
+    margin-top: em(25);
   }
 
   .how-to {
