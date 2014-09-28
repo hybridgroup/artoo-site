@@ -25,9 +25,7 @@ pebble_driver: true
     = partial '/layouts/hybridpages/page_repo_issues'
     %p  The Pebble is a smart watch, that connects via bluetooth.
     %p
-      For more info about the Pebble platform click
-      = succeed "." do
-        = link_to "here", "http://getpebble.com/", target: :blank
+      = link_to "+ info about the Pebble platform click here", "http://getpebble.com/", target: :blank, :class => "platform-button"
   .clear
 
 %section.how-to#HowToInstall
