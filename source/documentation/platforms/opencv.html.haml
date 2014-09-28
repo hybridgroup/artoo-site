@@ -23,9 +23,7 @@ subnavjs: true
     = partial '/layouts/hybridpages/page_repo_issues'
     %p OpenCV is a real-time computer vision library.
     %p
-      For more info about OpenCV click
-      = succeed "." do
-        = link_to "here", "http://opencv.org/", target: :blank
+      = link_to "+ info about OpenCV click here", "http://opencv.org/", target: :blank, :class => "platform-button"
   .clear
   
 %section.how-to#HowToInstall
