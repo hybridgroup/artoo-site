@@ -1,23 +1,35 @@
 .side-documentation {
   @include span-columns(3);
   background: $color-panel-sidebar;
-  margin-top: em(61);
-  padding: 0 em(10);
+  margin-top: 4.3em;
+  padding: 3.5em 0.625em 0;
+
+  @include media ($tablet) {
+    @include span-columns(12 of 12);
+    margin-top: 0;
+    padding-top: 0;
+  }
+
 
   .sidebar-header{
     background: url(/images/elements/sidebar-header.png) top center no-repeat;
-    background-size: 100%;
-    margin: em(-61) em(-10) 0;
+    margin: -7.825em -0.625em 0;
+
+    @include media ($tablet) {
+      display: none;
+    }
   }
 
   .mobile-menu {
     text-align: right;
     display: none;
 
+    @include media ($tablet) {
+      display: block;
+    }
 
     .active {
       background: white;
-
     }
 
     a {
@@ -28,21 +40,28 @@
       &:hover {
         background: white;
 
+        .line{
+          background: $color-panel-sidebar;
+        }
       }
-
-      .line {
-        margin: em(5) 0;
-        background: white;
-      }
+    }
+    .line {
+      margin: em(5) 0;
+      background: white;
     }
   }
 
   .docs-sidebar {
+    @include media ($tablet) {
+      display: none;
+    }
+
     &.show {
       display: block;
     }
     
     > a, .section .name {
+      border-bottom: 1px solid white;
       font-size: em(14);
       font-weight: bold;
 
@@ -56,20 +75,24 @@
       display: block;
       padding: 10px;
       cursor: pointer;
-      color: $color-dark-blue
+      color: $color-dark-blue;
+      position: relative;
+      z-index: 1;
     }
 
     .links a {
       font-size: em(14);
       color: $color-dark-blue;
-
       padding: em(5) em(10);
 
-    
+      &:hover{
+        color: darken($color-dark-blue,15%);
+      }
     }
 
     a.active {
-      font-weight: bold;
+      color: darken($color-dark-blue,15%);
+      font-weight: 700;
     }
 
     .section .links {
@@ -84,10 +107,11 @@
     .section:before {
       content: '▶';
       float: right;
-      margin-top: em(13);
-      margin-right: em(10);
-      color: #A5A5A5;
-      font-size: 11px;
+      margin: 12px 12px 0 0;
+      color: $color-dark-red;
+      font-size: 8px;
+      position: relative;
+      z-index: 0;
     }
 
     .section.active:before {
