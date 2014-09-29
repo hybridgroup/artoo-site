@@ -16,7 +16,18 @@
 	width: 100%;
 	height: 46px;
 }
-
 .platform{
 	width: 19%;
+	
+    @include media($mobile-large) {
+		width: 49%;
+		float: none;
+    }
+}
+
+/* center align twitter button*/
+@include media($mobile-large) {
+	#twitter-widget-0{
+	  width: 99px !important;
+	}
 }

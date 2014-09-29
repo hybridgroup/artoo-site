@@ -11,6 +11,11 @@ p{
 	color: $font-color;
 }
 
+ul{
+    padding: 0;
+    list-style: none;
+}
+
 h1,h2,h3{
 	color: $color-heading;
 }

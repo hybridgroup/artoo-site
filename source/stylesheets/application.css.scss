@@ -16,7 +16,7 @@ $max-width: 966px;
 // --------------------------------------------------
 $design-edge          : new-breakpoint(max-width 966px 4);
 $tablet               : new-breakpoint(max-width 768px 4);
-$mobile-large         : new-breakpoint(max-width 568px 4);
+$mobile-large         : new-breakpoint(max-width 640px 4);
 $mobile               : new-breakpoint(max-width 480px 4);
 $mobile-small         : new-breakpoint(max-width 320px 4);
 
@@ -27,6 +27,7 @@ $color-white            : #fff;
 $color-blue             : #c1effe;
 $color-light-blue       : #ebfdff;
 $color-medium-blue      : #b4e3ff;
+$color-medium-light-blue: #79bee8;
 $color-medium-dark-blue : #4692bf;
 $color-dark-blue        : #0f4b87;
 $color-grey             : #505050;
@@ -69,6 +70,8 @@ $color-alternative-heading    : #cc3500;
 
 $color-documentation-title    : #70b3db;
 $color-documentation-subtitle : $color-light-blue;
+
+$color-blog					  : $color-dark-red;
 
 $color-code                   : $color-red;
 

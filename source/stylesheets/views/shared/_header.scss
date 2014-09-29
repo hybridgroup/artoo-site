@@ -1,6 +1,16 @@
 .app-header {
 	height: 53px;
+
+	@include media($tablet){
+		height: auto;
+	}
 }
 .app-logo{
 	width: 188px;
+}
+
+.logo{
+	@include media($tablet){
+		height: 85px;
+	}
 }

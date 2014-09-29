@@ -4,7 +4,7 @@
 	.content{
 		@include span-columns(8 of 12);
 		@include omega;
-		margin-top: 35px;
+		margin-top: em(35);
 		position: relative;
 		z-index: 1;
 
@@ -16,6 +16,17 @@
 		.sub-title{
 			font-size: em(22);
 		}
+		@include media($tablet) {
+			@include span-columns(12 of 12);
+			text-align: center;
+
+			br{
+				display: none;
+			}
+		}
+		@iclude media($mobile-large){
+			margin-top: -13px;
+		}
 	}
 
 	.display{
@@ -26,6 +37,10 @@
 			top: 46px;
 			z-index: 2;
 		}
+
+		@include media($tablet) {
+	      display: none;
+	    }
 	}
 
 	.action{
@@ -33,10 +48,34 @@
 		text-shadow: 1px 2px 1px $color-button-action-hover-background;
 		top: 15px;
 	}
+	.social{
+		position: relative;
 
+		@include media($tablet) {
+			top: 40px;
+			text-align: center;
+			padding-left: em(13);
+		}
+
+	}
 	.splitter{
-		float: left;
-		margin-top: 15px;
+		display: inline-block;
+		margin-top: em(10);
+
+		@include media($tablet) {
+
+			#twitter-widget-1{
+			  display: none;
+			}
+
+			.fork{
+			  display: none;
+			}
+		}
+		
+		@include media ($mobile-large){
+			display: block;
+		}
 	}
 
 	.ship-small{
