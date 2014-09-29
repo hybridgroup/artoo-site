@@ -1,8 +1,7 @@
 .article
   = partial "/blog/header", {locals: { article: article }}
-  = article.body
+  = article.summary(750)
   .tags
-    .img
-      = image_tag "elements/tag.png"
+    %p.tag Tags
     - article.tags.each do |tag_name|
       = link_to tag_name, tag_path(tag_name)

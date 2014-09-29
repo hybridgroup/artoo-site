@@ -10,14 +10,15 @@
           = yield
       - if is_blog_article?
         = partial "blog/disqus"
-    .side-column
-      .categories
-        %h4 Tags
+    .side-columns
+      .side-column
+        %h3.side-header Categories
         = yield_content :tags
-      .network
-        %h4 Network
+      .side-column
+        %h3.side-header Network
         = yield_content :network
-      .titles
-        %h4 Posts
-        %ul 
-          = partial "blog/sidebar_links", {locals: { article: current_article } }
+      .side-column
+        %h3.side-header 
+          Posts
+          %ul.archive
+            = partial "blog/sidebar_links", {locals: { article: current_article } }
