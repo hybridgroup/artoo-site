@@ -4,15 +4,23 @@
 	.box{
   		height: em(120);
 	}
+    
 	.platform{
 		width: 24%;
+        @include media($mobile-large) {
+            width: 49%;
+            float: none;
+        }
 	}
+
 	.sidebar-header{
     	height: 69px;
     }
+
     #docs-menu{
       width: 55px;
     }
+
     .line {
         height: 2px;
         width: 30px;

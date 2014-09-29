@@ -9,22 +9,26 @@
 
 
 	.frameworks {
-		background: url(/images/elements/background-footer.png) top center repeat-x;
+		background: url(/images/elements/background-footer.png) top center repeat;
 		padding: em(20) 0;
 	}
 
-	.framework{
+	.robot-title{
 		color: $color-alternative-heading;
 		font-weight: 600;
 	}
 
-	.robotics-framework {
+	.framework {
 		@include span-columns(4 of 12);
 		float: left;
 		padding: em(20);
 
 		.footer-button {
 			@extend %button-footer;
+		}
+
+		@include media($tablet) {
+			@include span-columns(12 of 12);
 		}
 	}
 }
