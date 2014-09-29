@@ -1,6 +1,7 @@
 .side-documentation {
   @include span-columns(3);
   background: $color-panel-sidebar;
+  border-bottom: 1px solid $color-dark-blue;
   margin-top: 4.3em;
   padding: 3.5em 0.625em 0;
 
