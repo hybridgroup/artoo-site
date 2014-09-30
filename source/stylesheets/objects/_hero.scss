@@ -43,11 +43,12 @@
 	    }
 	}
 
-	.action{
-		@extend %button;
+	.action {
+		@extend %button-green;
 		text-shadow: 1px 2px 1px $color-button-action-hover-background;
 		top: 15px;
 	}
+
 	.social{
 		position: relative;
 

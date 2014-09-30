@@ -1,11 +1,3 @@
-%button-footer{
-	@extend %button;
-	background-color: $color-button-footer;
-	border: none;
-	font-size: em(14);
-	padding: em(9) em(25);
-}
-
 %button-platform {
 	@extend %button;
 	background-color: $color-button-footer;
@@ -21,9 +13,11 @@
 
 %button-green {
 	@extend %button;
-	background-color: $color-button-action-hover-background;
-	border-color: $color-button-action-hover-shadow;
-	&:hover {
-		background-color: $color-button-action-static-background;
-	}
+}
+
+%button-footer{
+	@extend %button-red;
+	border: none;
+	font-size: em(14);
+	padding: em(9) em(25);
 }
