@@ -13,3 +13,13 @@
 	font-size: em(16);
 	padding: em(9) em(25);
 }
+
+%button-red {
+	@extend %button;
+	background-color: $color-button-footer;
+}
+
+%button-green {
+	@extend %button;
+	background-color: $color-button-footer;
+}
