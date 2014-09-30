@@ -21,5 +21,9 @@
 
 %button-green {
 	@extend %button;
-	background-color: $color-button-footer;
+	background-color: $color-button-action-hover-background;
+	border-color: $color-button-action-hover-shadow;
+	&:hover {
+		background-color: $color-button-action-static-background;
+	}
 }
