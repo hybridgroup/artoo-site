@@ -26,7 +26,10 @@
   }
 
   .button-red {
-    @extend %button-platform;
+    @extend %button-red;
+    border: none;
+    font-size: em(16);
+    padding: em(9) em(25);
     margin-top: em(25);
   }
 
