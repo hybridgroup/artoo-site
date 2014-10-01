@@ -9,10 +9,6 @@
     @include media($design-edge){
         padding: 0 em(15);
     }
-
-    @include media($mobile-large){
-        padding: 0;
-    }
 }
 
 .articles {

@@ -26,7 +26,6 @@
   .scroll-top, .sub-nav-title {
     display: none;
   }
-
 }
 
 %sub-nav-fixed {
@@ -59,4 +58,7 @@
     font-size: em(18);
   }
 
+  @include media($tablet){
+    display: none;
+  }
 }

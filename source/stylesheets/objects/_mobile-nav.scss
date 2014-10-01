@@ -15,6 +15,7 @@
     background: $color-medium-light-blue;
     border-radius: 13px;
     padding: 10px 12px;
+    margin: 5px;
     display: inline-block;
 
     &:hover {
@@ -27,7 +28,7 @@
     }
   }
   .line {
-    margin: 5px 0 1px;
+    margin: 5px 0 5px;
     background: white;
   }
 }

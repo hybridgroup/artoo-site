@@ -17,6 +17,10 @@
 
   .display {
     @include span-columns(4 of 9);
+    
+    @include media($tablet){
+    	@include span-columns(9 of 9);
+    }
   }
 
   .info_intro {
@@ -26,6 +30,9 @@
 
     p {
       margin-bottom: em(25);
+    }
+    @include media($tablet){
+    	@include span-columns(9 of 9);
     }
   }
 
