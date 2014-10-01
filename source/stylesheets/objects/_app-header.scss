@@ -81,4 +81,16 @@
             padding: 0 em(10);
         }
     }
+    @include media($mobile-small) {
+        .menu {
+            display: none;
+            margin-bottom: -18px;
+        }
+        
+        li{
+            border-bottom: 1px solid $color-blue;
+            padding: 5px 0;
+            width: 100%;
+        }
+    }
 }
