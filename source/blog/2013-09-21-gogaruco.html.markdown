@@ -3,7 +3,7 @@ page_title_show: true
 title: GoGaRuCo
 page_title: Blog
 date: 2013-09-21
-tags: events
+tags: Events
 author: Damen Evans
 active_menu_blog: true
 ---

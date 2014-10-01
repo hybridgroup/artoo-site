@@ -3,7 +3,7 @@ page_title_show: true
 title: 2013 - The Wrap Up Post
 page_title: Blog
 date: 2014-01-04
-tags: events
+tags: Events
 author: Ron Evans
 active_menu_blog: true
 ---

@@ -3,7 +3,7 @@ page_title_show: true
 title: Welcome To The New Era
 page_title: Blog
 date: 2013-09-04
-tags: robots
+tags: Robots
 author: Ron Evans
 active_menu_blog: true
 ---

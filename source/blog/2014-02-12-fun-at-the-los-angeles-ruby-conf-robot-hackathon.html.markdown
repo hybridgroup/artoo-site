@@ -3,7 +3,7 @@ page_title_show: true
 title: Fun At The Los Angeles Ruby Conference Robot Hackathon
 page_title: Blog
 date: 2014-02-12
-tags: events
+tags: Events
 author: Ron Evans
 active_menu_blog: true
 ---
