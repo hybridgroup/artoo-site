@@ -1,7 +1,11 @@
 .documentation-single {
-  @include span-columns(9);
+  @include span-columns(9 of 12);
   @include omega();
   padding-top: em(20);
+
+  @include media($tablet){
+  	@include span-columns(12 of 12);
+  }
 
   .subnav-drivers {
     @extend %sub-nav;

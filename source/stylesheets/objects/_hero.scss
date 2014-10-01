@@ -24,8 +24,13 @@
 				display: none;
 			}
 		}
-		@iclude media($mobile-large){
-			margin-top: -13px;
+		@include media($mobile){
+			.title{
+				font-size: em(26);
+			}
+			.sub-title{
+				font-size: em(20);
+			}
 		}
 	}
 
