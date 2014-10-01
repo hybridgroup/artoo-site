@@ -17,7 +17,7 @@
 
   .display {
     @include span-columns(4 of 9);
-    
+
     @include media($tablet){
     	@include span-columns(9 of 9);
     }
@@ -33,15 +33,19 @@
     }
     @include media($tablet){
     	@include span-columns(9 of 9);
+    	text-align: center;
     }
   }
 
   .action {
     @extend %button-red;
     border: none;
-    font-size: em(16);
+    font-size: em(14);
     padding: em(9) em(25);
     margin-top: em(25);
+    @include media ($design-edge){
+    	font-size: em(12);
+    }
   }
 
   .how-to {
