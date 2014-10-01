@@ -8,7 +8,7 @@
   @include media ($tablet) {
     @include span-columns(12 of 12);
     margin-top: 0;
-    padding-top: 0;
+    padding: 0;
   }
 
 
@@ -21,44 +21,9 @@
     }
   }
 
-  .mobile-menu {
-    text-align: right;
-    display: none;
-
-    @include media ($tablet) {
-      display: block;
-    }
-
-    .active {
-      background: white;
-    }
-
-    a {
-      border: solid 2px white;
-      padding: em(10);
-      display: inline-block;
-
-      &:hover {
-        background: white;
-
-        .line{
-          background: $color-panel-sidebar;
-        }
-      }
-    }
-    .line {
-      margin: em(5) 0;
-      background: white;
-    }
-  }
-
   .docs-sidebar {
     @include media ($tablet) {
       display: none;
-    }
-
-    &.show {
-      display: block;
     }
     
     > a, .section .name {

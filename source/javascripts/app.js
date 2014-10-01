@@ -68,4 +68,9 @@ $(function() {
     $(this).addClass("active");
   });
 
+  $("#mobile-menu").click(function() {
+    $(".menu").toggleClass("show");
+  });
+
 });
+
