@@ -30,6 +30,12 @@
         }
     }
 
+    .devices h2 {
+        overflow: hidden;
+        clear: both;
+        padding-top: em(20);
+    }
+
     .device img {
         max-width: 100%;
     }
