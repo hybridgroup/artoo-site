@@ -13,12 +13,7 @@ subnavjs: true
 
 roomba_driver: true
 ---
--content_for :js_accordeon do
-  :javascript
-    $("#platform-panel").addClass("active-panel");
-    $("#platform-panel ul li:nth-child(13)").addClass("active-link");
-    $(".accordion-docs dt:nth-child(7) a:nth-child(2) img").addClass("rotate");
-  
+
 %section.intro
   = image_tag "/images/devices/roomba.jpg", class: "display"
   .info_intro
@@ -59,5 +54,4 @@ roomba_driver: true
 
   .hardware
     .devices
-      =# TODO: Update drivers list at the top of the page.
-      = partial "documentation/partials/devices_roomba_drivers"
+      = partial "layouts/partials/devices_for_platform", locals: { platform: "Roomba" }

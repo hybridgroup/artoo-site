@@ -13,11 +13,6 @@ subnavjs: true
 
 pebble_driver: true
 ---
--content_for :js_accordeon do
-  :javascript
-    $("#platform-panel").addClass("active-panel");
-    $("#platform-panel ul li:nth-child(11)").addClass("active-link");
-    $(".accordion-docs dt:nth-child(7) a:nth-child(2) img").addClass("rotate");
   
 %section.intro
   = image_tag "/images/devices/pebble.jpg", class: "display"
@@ -77,4 +72,4 @@ pebble_driver: true
 
   .hardware
     .devices
-      = partial "documentation/partials/devices_pebble_drivers"
+      = partial "layouts/partials/devices_for_platform", locals: { platform: "Pebble" }

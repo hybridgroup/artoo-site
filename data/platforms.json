@@ -16,7 +16,7 @@
 
   "Crazyflie": {
     "slug": "crazyflie",
-    "drivers": ["Crazyflie"]
+    "drivers": ["Crazyflie Navigation", "Crazyflie Flight"]
   },
 
   "Digispark": {
@@ -26,7 +26,7 @@
 
   "Joystick": {
     "slug": "joystick",
-    "drivers": ["Joystick - DualShock 3", "Joystick - Xbox 360"]
+    "drivers": ["Joystick - DualShock 3", "Joystick - Xbox 360", "Generic Joystick"]
   },
 
   "Keyboard": {

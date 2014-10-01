@@ -45,7 +45,6 @@
     "I2C": {
       "BlinkM": "/documentation/drivers/blinkm",
       "HMC6352 Compass": "/documentation/drivers/hmc6352-compass",
-      "LCD": "/documentation/drivers/lcd",
       "Wii Class Controller": "/documentation/drivers/wiiclassic",
       "Wii Nunchuck Controller": "/documentation/drivers/wiichuck"
     },

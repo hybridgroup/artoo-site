@@ -13,14 +13,9 @@ subnavjs: true
 
 leapmotion_driver: true
 ---
--content_for :js_accordeon do
-  :javascript
-    $("#platform-panel").addClass("active-panel");
-    $("#platform-panel ul li:nth-child(8)").addClass("active-link");
-    $(".accordion-docs dt:nth-child(7) a:nth-child(2) img").addClass("rotate");
   
 %section.intro
-  = image_tag "/images/devices/leap_motion.jpg", class: "display"
+  = image_tag "/images/devices/leapmotion.jpg", class: "display"
   .info_intro
     = partial '/layouts/hybridpages/page_repo_issues'
     %p  The Leap Motion is a user-interface device that tracks the user's hand motions, and translates them into events that can control robots and physical computing hardware.
@@ -95,5 +90,4 @@ leapmotion_driver: true
 
   .hardware
     .devices
-      =# TODO: Update drivers list at the top of the page.
-      = partial "documentation/partials/devices_leapmotion_drivers"
+      = partial "layouts/partials/devices_for_platform", locals: { platform: "Leap Motion" }

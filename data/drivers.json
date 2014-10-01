@@ -30,6 +30,6 @@
   "Leap Motion": "leapmotion",
   "Neurosky Mindwave": "neurosky",
   "Pebble": "pebble",
-  "Roomba": "crazyflie",
+  "Roomba": "roomba",
   "Sphero": "sphero"
 }
