@@ -55,7 +55,7 @@ catcher_phrase: Ready to build the next big thing with Ruby?
   %p
     Artoo has an extensible system for connecting to hardware devices. The following robotics and physical computing platforms are currently supported:
 
-  %h2.alternative-heading 15 Platforms
+  %h2.alternative-heading #{data.platforms.length} Platforms
 
   %ul.platform-list
     - data.platforms.each do |name, info|
@@ -69,7 +69,7 @@ catcher_phrase: Ready to build the next big thing with Ruby?
   %p Artoo also has support for devices that can work across multiple hardware platforms.
 
   %h2.alternative-heading
-    = link_to "8 GPIO drivers", "https://en.wikipedia.org/wiki/General_Purpose_Input/Output" , target:"_blank"
+    = link_to "#{data.drivers.GPIO.length} GPIO drivers", "https://en.wikipedia.org/wiki/General_Purpose_Input/Output" , target:"_blank"
 
   %ul.platform-list
     - data.drivers.GPIO.each do |name, url|
@@ -79,7 +79,7 @@ catcher_phrase: Ready to build the next big thing with Ruby?
           %img{src: "/images/devices/#{url}.jpg", style: "width: 90%"}
 
   %h2.alternative-heading
-    = link_to "5 I2C drivers", "https://en.wikipedia.org/wiki/I%C2%B2C", target:"_blank"
+    = link_to "#{data.drivers.I2C.length} I2C drivers", "https://en.wikipedia.org/wiki/I%C2%B2C", target:"_blank"
 
   %ul.platform-list
     - data.drivers.I2C.each do |name, url|
