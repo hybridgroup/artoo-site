@@ -1,31 +1,31 @@
-a{
-	color: $color-anchor;
-	text-decoration: none;
+a {
+  color: $color-anchor;
+  text-decoration: none;
 
-	&:hover {
-		color: $color-anchor-hover
-  	}
+  &:hover {
+    color: $color-anchor-hover
+  }
 }
 
-p{
-	color: $font-color;
+p {
+  color: $font-color;
 }
 
-ul{
-    padding: 0;
-    list-style: none;
+ul {
+  padding: 0;
+  list-style: none;
 }
 
-h1,h2,h3,h4{
-	color: $color-heading;
+h1, h2, h3, h4 {
+  color: $color-heading;
 }
 
-code{
-	border: 1px solid white;
-	padding: 0 em(2);
-	color: $color-code;
+code {
+  border: 1px solid white;
+  padding: 0 em(2);
+  color: $color-code;
 }
 
-.alternative-heading{
-	color: $color-alternative-heading;
+.alternative-heading {
+  color: $color-alternative-heading;
 }
