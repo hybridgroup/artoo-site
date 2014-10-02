@@ -79,7 +79,7 @@ catcher_phrase: Ready to build the next big thing with Ruby?
           %img{src: "/images/devices/#{url}.jpg", style: "width: 90%"}
 
   %h2.alternative-heading 
-    = link_to "4 I2C drivers", "https://en.wikipedia.org/wiki/I%C2%B2C", target:"_blank"
+    = link_to "5 I2C drivers", "https://en.wikipedia.org/wiki/I%C2%B2C", target:"_blank"
 
   %ul.platform-list
     - data.drivers.I2C.each do |name, url|
@@ -113,7 +113,13 @@ catcher_phrase: Ready to build the next big thing with Ruby?
         puts "Hello from the API running at \#{api_host}:\#{api_port}..."
       end
 
-%section.videos
-  .video-index
-    %h2 Artoo in Action
-    %iframe{:src => "http://www.youtube.com/embed/ciSs9x_Ogls", :frameborder => "0", :allowfullscreen => "true"}
+%section.cli
+  %h2.homepage CLI
+  %script{type:"text/javascript", src:"https://asciinema.org/a/10306.js", id:"asciicast-10306", "data-autoplay" => "1",  "data-loop" => "true"}
+  :markdown
+    [Gort][] is a Command Line Toolkit (CLI) for RobotOps. Gort provides tools to scan for connected devices, upload firmware, and it works perfectly with Gobot. Also included with Gobot is a CLI for generating new robots and adaptors. 
+
+    You can can learn more about Gobot's CLI in the docs [here][cli-docs].
+
+    [Gort]: http://gort.io
+    [cli-docs]: /documentation/guides/cli
