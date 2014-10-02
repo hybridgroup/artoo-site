@@ -36,6 +36,17 @@
 
     &:hover, &:focus {
       color: $color-anchor-nav-hover;
+
+    .logo {
+        display: block;
+        background: url(/images/elements/logo-normal.png) left top no-repeat;
+        text-indent: -99999px;
+        background-size: 100%;
+        
+        @include hidpi(2) {
+          background: url(/images/elements/logo-retina.png) left top no-repeat;
+          background-size: 100%;
+        }
     }
   }
 
