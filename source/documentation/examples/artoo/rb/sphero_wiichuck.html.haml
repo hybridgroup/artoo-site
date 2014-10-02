@@ -27,7 +27,7 @@ active_menu_docs: true
             @heading = heading(value[1])
           }
           every(1.seconds) do
-          	puts "Rolling..."
+            puts "Rolling..."
             sphero.roll 50, @heading
           end
         end

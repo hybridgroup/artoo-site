@@ -27,7 +27,7 @@ active_menu_docs: true
           }
 
           every(1.seconds) do
-          	puts "Rolling..."
+            puts "Rolling..."
             sphero.set_color(rand(255),rand(255),rand(255))
             sphero.roll 20, @heading
           end

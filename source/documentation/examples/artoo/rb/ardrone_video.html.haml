@@ -24,12 +24,12 @@ active_menu_docs: true
           drone.start
           drone.take_off
 
-        	after(25.seconds) { drone.hover.land }
-        	after(30.seconds) { drone.stop }
+          after(25.seconds) { drone.hover.land }
+          after(30.seconds) { drone.stop }
         end
 
         def v_frame(*data)
-        	@count ||= 0
-        	@count += 1
+          @count ||= 0
+          @count += 1
           puts "Frame# \#{@count} \#{data[1].size} bytes"
         end
