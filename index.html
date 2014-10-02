@@ -1,440 +1,351 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
-<html>
-<head>
+<html ng-app="artoo">
+  <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta charset="utf-8">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
-<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-<meta content="Artoo is a framework for robotics, physical computing, and the Internet of Things written in the Ruby programming language. It provides a simple, yet powerful way to create solutions that incorporate multiple, different hardware devices at the same time." name="description">
-<meta content="The Hybrid Group" name="author">
-<title>Artoo - Ruby framework for robotics, physical computing, and the Internet of Things</title>
-<link href="/stylesheets/style.css" rel="stylesheet">
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script><script src="/javascripts/script.js"></script><script src="/hybridpages/assets/javascript/accordeon.js"></script><link href="//fonts.googleapis.com/css?family=Russo+One%7CInconsolata:400,700%7CMontserrat:700" rel="stylesheet">
-<link href="/favicon.ico" rel="shortcut icon" type="image/gif">
-<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-
-  _gaq.push(['_setAccount', "UA-46433484-1"]);
-
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta content="&lt;h2&gt;Artoo is a framework for robotics, physical computing, and the Internet of Things written in the Ruby programming language. It provides a simple, yet powerful way to create solutions that incorporate multiple, different hardware devices at the same time.&lt;h2&gt;" name="description">
+    <meta content="The Hybrid Group" name="author">
+    <title>Artoo - Ruby framework for robotics, physical computing, and the Internet of Things</title>
+    <link href="/stylesheets/application.css" rel="stylesheet">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="/javascripts/vendor/angular.min.js"></script>
+    <script src="/javascripts/app.js"></script>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700%7CLato:400,700%7CInconsolata" rel="stylesheet">
+    <link href="/favicon.ico" rel="shortcut icon" type="image/gif">
+  <script type="text/javascript">
 
 
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46433484-1', {"cookieDomain":"artoo.io"});
 
 
 
 
-  _gaq.push(['_trackPageview']);
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
 
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
 
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+
+
+
+
+
+
+
+
+
+   ga('send', 'pageview');
+
+
 </script></head>
-<body>
+  <body>
     
-    <div class="app">
-      <div class="w">
-        <header class="app-header" role="banner"><div class="display">
-            <h1 class="app-logo">
-              <a href="/">artoo</a>
-            </h1>
-            <span class="subtitle">
-              <div class="main">Ruby on Robots</div>
-            </span>
+    <div class="app-header" id="top" role="banner">
+      <div class="container">
+        <div class="display">
+          <div class="app-logo">
+            <a class="logo" href="/">artoo Ruby on Robots</a>
           </div>
-          <span class="menu">
-            <a href="/documentation" class="item">Docs</a>
-            <a href="/documentation/platforms" class="item">Platforms</a>
-            <a href="/videos" class="item">Videos</a>
-            <a href="/blog" class="item">Blog</a>
-            <a class="item" href="https://github.com/hybridgroup/artoo/">Github</a>
-          </span>
-        </header>
-</div>
+        </div>
+        <div class="mobile-menu home">
+          <a id="mobile-menu">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </a>
+        </div>
+        <nav class="menu">
+          <ul class="nav-list">
+            <li>
+              <a href="/documentation" class="item">Docs</a>
+            </li>
+            <li>
+              <a href="/documentation/platforms" class="item">Platforms</a>
+            </li>
+            <li>
+              <a href="/videos" class="item">Videos</a>
+            </li>
+            <li>
+              <a href="/blog" class="item">Blog</a>
+            </li>
+            <li>
+              <a class="item" target="blank" href="https://github.com/hybridgroup/gobot/">Github</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="app-content">
       <div class="hero">
         <div class="container">
-          <h1 class="title">
-            We believe that it's time to bring <br> Ruby and Robots together.
-          </h1>
-          <h2 class="subtitle">
-            Next generation robotics framework with support for <a href="#platforms">15 different platforms</a>
-          </h2>
-          <a href="/documentation/getting-started" class="cta"> Get Started</a>
-        </div>
-      </div>
-      <div class="social">
-        <div class="container">
-          <div class="splitter">
-            <iframe allowtransparency="true" frameborder="0" height="20" scrolling="0" src="http://ghbtns.com/github-btn.html?user=hybridgroup&amp;repo=artoo&amp;type=watch&amp;count=true" width="95"></iframe>
-            <iframe allowtransparency="true" frameborder="0" height="20" scrolling="0" src="http://ghbtns.com/github-btn.html?user=hybridgroup&amp;repo=artoo&amp;type=fork&amp;count=true" width="95"></iframe>
+          <div class="window-panel">
+            <div class="panel one"></div>
+            <div class="panel two"></div>
           </div>
-          <div class="splitter">
-            <a class="twitter-share-button" data-dnt="true" data-text="Ruby on Robots!" data-url="http://artoo.io" data-via="artooio" href="https://twitter.com/share">Tweet</a>
-            <script>
-              !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
-            </script><a class="twitter-follow-button" data-dnt="true" data-show-count="false" href="https://twitter.com/artooio">Follow @artooio</a>
-            <script>
-              !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
-            </script>
-</div>
+          <div class="content">
+            <h1 class="title">
+              We believe that it's time to bring <br> Ruby and Robots together.
+            </h1>
+            <p class="sub-title">
+              Next generation robotics framework with<br> support for <a href="#platforms">15 different platforms</a>
+            </p>
+            <a class="action" href="/documentation/getting-started">Get Started</a>
+          </div>
+          <div class="display">
+            <img src="/images/elements/artoo.png">
+          </div>
+          <div class="social">
+            <div class="splitter">
+              <iframe allowtransparency="true" frameborder="0" height="20" scrolling="0" src="http://ghbtns.com/github-btn.html?user=hybridgroup&amp;repo=artoo&amp;type=watch&amp;count=true" width="95"></iframe>
+              <iframe allowtransparency="true" class="fork" frameborder="0" height="20" scrolling="0" src="http://ghbtns.com/github-btn.html?user=hybridgroup&amp;repo=artoo&amp;type=fork&amp;count=true" width="95"></iframe>
+            </div>
+            <div class="splitter">
+              <a class="twitter-share-button" data-dnt="true" data-text="Ruby on Robots!" data-url="http://artoo.io" data-via="artooio" href="https://twitter.com/share">Tweet</a>
+              <script>
+                !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+              </script>
+              <a class="twitter-follow-button" data-dnt="true" data-show-count="false" href="https://twitter.com/artooio">Follow @artooio</a>
+              <script>
+                !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+              </script>
+            </div>
+          </div>
+        </div>
+        <div class="animations">
+          <div class="ship-small"></div>
+          <div class="ship-medium"></div>
+          <div class="ship-large"></div>
         </div>
       </div>
-      <div class="container">
-        <div class="main" role="main">
-          <section class="content"><div class="index-content">
-              <h2>About</h2>
-              <p>Artoo is a framework for robotics, physical computing, and the Internet of Things written in the Ruby programming language.</p>
-              <p>It provides a simple, yet powerful way to create solutions that incorporate multiple, different hardware devices at the same time.</p>
-              <p>With Artoo, you can easily connect multiple, different hardware devices together into a single Ruby-powered robotic solution.</p>
-              <p>
-                Want to use Javascript on Robots? Check out our sister project Cylon
-                <a href="http://cylonjs.com">(http://cylonjs.com).</a>
-              </p>
-              <p>
-                Want to use the Go programming language to power your robots? Check out our sister project Gobot
-                <a href="http://gobot.io">(http://gobot.io).</a>
-              </p>
-              <p>
-                Gort
-                <a target="blank" href="http://gort.io">(http://gort.io) </a>
-                is a Command Line Interface (CLI) for RobotOps. Gort provides tools to scan for connected devices, upload firmware, and more.
-              </p>
-            </div>
-            <div class="aside right">
-              <img src="images/elements/artoo.png">
-</div>
-            <div class="clear"></div>
-            <h2>Meet The Code</h2>
-            <p>Artoo’s simple code makes telling robots what to do incredibly simple and fun.</p>
-            <p>All you need to get started is the <code>artoo</code> gem</p>
-            <pre class="CodeRay">require <span class="string"><span class="delimiter">'</span><span class="content">artoo</span><span class="delimiter">'</span></span>
+      <div class="site-description">
+        <div class="container">
+          <h2 id="meet-the-code">Meet The Code</h2>
+          
+          <p>Artoo's simple code makes telling robots what to do incredibly simple and fun.<br>
+          All you need to get started is the <code>artoo</code> gem</p>
+          <pre class="CodeRay">require <span class="string"><span class="delimiter">'</span><span class="content">artoo</span><span class="delimiter">'</span></span>
 </pre>
-            <p>
-              Then hook it up to your robot (in this case, a
-              <a href="http://gosphero.com">Sphero :</a>
-            </p>
-            <pre class="CodeRay">connection <span class="symbol">:sphero</span>, <span class="key">adaptor</span>: <span class="symbol">:sphero</span>, <span class="key">port</span>: <span class="string"><span class="delimiter">'</span><span class="content">4560</span><span class="delimiter">'</span></span>
+        </div>
+      </div>
+      <div class="main-content" role="main">
+        <section>
+          <h2 class="alternative-heading">Example</h2>
+          <p>Then hook it up to your robot (in this case, a <a href="/documentation/platforms/sphero">Sphero</a>)</p>
+          <pre class="CodeRay">connection <span class="symbol">:sphero</span>, <span class="key">adaptor</span>: <span class="symbol">:sphero</span>, <span class="key">port</span>: <span class="string"><span class="delimiter">'</span><span class="content">4560</span><span class="delimiter">'</span></span>
 device <span class="symbol">:sphero</span>, <span class="key">driver</span>: <span class="symbol">:sphero</span>
 </pre>
-            <p>And tell it what to do!</p>
-            <pre class="CodeRay">work <span class="keyword">do</span>
+          <p>And tell it what to do!</p>
+          <pre class="CodeRay">work <span class="keyword">do</span>
   every(<span class="integer">3</span>.seconds) <span class="keyword">do</span>
     puts <span class="string"><span class="delimiter">"</span><span class="content">Rolling...</span><span class="delimiter">"</span></span>
     sphero.roll <span class="integer">60</span>, rand(<span class="integer">360</span>)
   <span class="keyword">end</span>
 <span class="keyword">end</span>
 </pre>
-            <h2 id="platforms">Platform Support</h2>
-            <p>
-              Artoo has a extensible system for connecting to hardware devices. The following robotics and physical computing platforms are currently supported:
-              </p>
-<p class="important-title">
-                15 Platforms
-              </p>
-              <ul class="homepage-platform">
-<li>
-                  <div class="title">
-                    <a target="_blank" href="http://ardrone2.parrot.com/">Ardrone</a>
-                  </div>
-                  <a href="/documentation/platforms/ardrone">
-                    <img src="/images/devices/ardrone.jpg" style="width: 90%"></a>
-                  <div class="repo">
-                    <a target="_blank" href="https://github.com/hybridgroup/artoo-ardrone">repo</a>
-                  </div>
-                </li>
-                <li>
-                  <div class="title">
-                    <a target="_blank" href="http://www.arduino.cc/">Arduino</a>
-                  </div>
-                  <a href="/documentation/platforms/arduino">
-                    <img src="/images/devices/arduino.jpg" style="width: 90%"></a>
-                  <div class="repo">
-                    <a target="_blank" href="https://github.com/hybridgroup/artoo-arduino">repo</a>
-                  </div>
-                </li>
-                <li>
-                  <div class="title">
-                    <a target="_blank" href="http://beagleboard.org/">BeagleBone Black</a>
-                  </div>
-                  <a href="/documentation/platforms/beaglebone">
-                    <img src="/images/devices/beaglebone.jpg" style="width: 90%"></a>
-                  <div class="repo">
-                    <a target="_blank" href="https://github.com/hybridgroup/artoo-beaglebone">repo</a>
-                  </div>
-                </li>
-                <li>
-                  <div class="title">
-                    <a target="_blank" href="http://www.bitcraze.se/">Crazyflie</a>
-                  </div>
-                  <a href="/documentation/platforms/crazyflie">
-                    <img src="/images/devices/crazyflie.jpg" style="width: 90%"></a>
-                  <div class="repo">
-                    <a target="_blank" href="https://github.com/hybridgroup/artoo-crazyflie">repo</a>
-                  </div>
-                </li>
-                <li>
-                  <div class="title">
-                    <a target="_blank" href="http://digistump.com/products/1">Digispark</a>
-                  </div>
-                  <a href="/documentation/platforms/digispark">
-                    <img src="/images/devices/digispark.jpg" style="width: 90%"></a>
-                  <div class="repo">
-                    <a target="_blank" href="https://github.com/hybridgroup/artoo-digispark">repo</a>
-                  </div>
-                </li>
-                <li>
-                  <div class="title">
-                    <a target="_blank" href="http://www.libsdl.org/">Joystick</a>
-                  </div>
-                  <a href="/documentation/platforms/joystick">
-                    <img src="/images/devices/joystick.jpg" style="width: 90%"></a>
-                  <div class="repo">
-                    <a target="_blank" href="https://github.com/hybridgroup/artoo-joystick">repo</a>
-                  </div>
-                </li>
-                <li>
-                  <div class="title">
-                    <a target="_blank" href="http://en.wikipedia.org/wiki/Computer_keyboard">Keyboard</a>
-                  </div>
-                  <a href="/documentation/platforms/keyboard">
-                    <img src="/images/devices/keyboard.jpg" style="width: 90%"></a>
-                  <div class="repo">
-                    <a target="_blank" href="https://github.com/hybridgroup/artoo-keyboard">repo</a>
-                  </div>
-                </li>
-                <li>
-                  <div class="title">
-                    <a target="_blank" href="https://www.leapmotion.com/">Leap Motion</a>
-                  </div>
-                  <a href="/documentation/platforms/leapmotion">
-                    <img src="/images/devices/leap_motion.jpg" style="width: 90%"></a>
-                  <div class="repo">
-                    <a target="_blank" href="https://github.com/hybridgroup/artoo-leapmotion">repo</a>
-                  </div>
-                </li>
-                <li>
-                  <div class="title">
-                    <a target="_blank" href="http://store.neurosky.com/products/mindwave-mobile">Neurosky</a>
-                  </div>
-                  <a href="/documentation/platforms/neurosky">
-                    <img src="/images/devices/neurosky.jpg" style="width: 90%"></a>
-                  <div class="repo">
-                    <a target="_blank" href="https://github.com/hybridgroup/artoo-neurosky">repo</a>
-                  </div>
-                </li>
-                <li>
-                  <div class="title">
-                    <a target="_blank" href="http://opencv.org/">OpenCV</a>
-                  </div>
-                  <a href="/documentation/platforms/opencv">
-                    <img src="/images/devices/opencv.jpg" style="width: 90%"></a>
-                  <div class="repo">
-                    <a target="_blank" href="https://github.com/hybridgroup/artoo-opencv">repo</a>
-                  </div>
-                </li>
-                <li>
-                  <div class="title">
-                    <a target="_blank" href="https://getpebble.com/">Pebble</a>
-                  </div>
-                  <a href="/documentation/platforms/pebble">
-                    <img src="/images/devices/pebble.jpg" style="width: 90%"></a>
-                  <div class="repo">
-                    <a target="_blank" href="https://github.com/hybridgroup/artoo-pebble">repo</a>
-                  </div>
-                </li>
-                <li>
-                  <div class="title">
-                    <a target="_blank" href="http://www.raspberrypi.org/">Raspberry Pi</a>
-                  </div>
-                  <a href="/documentation/platforms/raspi">
-                    <img src="/images/devices/raspi.jpg" style="width: 90%"></a>
-                  <div class="repo">
-                    <a target="_blank" href="https://github.com/hybridgroup/artoo-raspi">repo</a>
-                  </div>
-                </li>
-                <li>
-                  <div class="title">
-                    <a target="_blank" href="http://www.irobot.com/us/learn/Educators/Create.aspx">Roomba</a>
-                  </div>
-                  <a href="/documentation/platforms/roomba">
-                    <img src="/images/devices/roomba.jpg" style="width: 90%"></a>
-                  <div class="repo">
-                    <a target="_blank" href="https://github.com/hybridgroup/artoo-roomba">repo</a>
-                  </div>
-                </li>
-                <li>
-                  <div class="title">
-                    <a target="_blank" href="http://spark.io">Spark</a>
-                  </div>
-                  <a href="/documentation/platforms/spark">
-                    <img src="/images/devices/spark.jpg" style="width: 90%"></a>
-                  <div class="repo">
-                    <a target="_blank" href="https://github.com/hybridgroup/artoo-spark">repo</a>
-                  </div>
-                </li>
-                <li>
-                  <div class="title">
-                    <a target="_blank" href="http://www.gosphero.com/">Sphero</a>
-                  </div>
-                  <a href="/documentation/platforms/sphero">
-                    <img src="/images/devices/sphero.jpg" style="width: 90%"></a>
-                  <div class="repo">
-                    <a target="_blank" href="https://github.com/hybridgroup/artoo-sphero">repo</a>
-                  </div>
-                </li>
-              </ul>
-<div class="clear"></div>
-            
-            <p>More platforms are coming soon!</p>
-            <p>Artoo also has support for devices that can work across multiple hardware platforms.</p>
-            <p class="important-title">
-              8
-              <a target="_blank" href="https://en.wikipedia.org/wiki/General_Purpose_Input/Output">GPIO</a>
-              drivers
-            </p>
-            <ul class="homepage-platform">
-<li>
-                <div class="title">
-                  <a href="/documentation/drivers/analog-sensor">Analog Sensor</a>
-                </div>
-                <a href="/documentation/drivers/analog-sensor">
-                  <img src="/images/devices/analog-sensor.jpg" style="width: 90%"></a>
-                <div class="repo">
-                  <a target="_blank" href="https://github.com/hybridgroup/artoo-gpio">repo</a>
-                </div>
-              </li>
-              <li>
-                <div class="title">
-                  <a href="/documentation/drivers/button">Button</a>
-                </div>
-                <a href="/documentation/drivers/button">
-                  <img src="/images/devices/button.jpg" style="width: 90%"></a>
-                <div class="repo">
-                  <a target="_blank" href="https://github.com/hybridgroup/artoo-gpio">repo</a>
-                </div>
-              </li>
-              <li>
-                <div class="title">
-                  <a href="/documentation/drivers/continuous_servo">Continuous Servo</a>
-                </div>
-                <a href="/documentation/drivers/continuous_servo">
-                  <img src="/images/devices/continuous_servo.jpg" style="width: 90%"></a>
-                <div class="repo">
-                  <a target="_blank" href="https://github.com/hybridgroup/artoo-gpio">repo</a>
-                </div>
-              </li>
-              <li>
-                <div class="title">
-                  <a href="/documentation/drivers/led">LED</a>
-                </div>
-                <a href="/documentation/drivers/led">
-                  <img src="/images/devices/LED.jpg" style="width: 90%"></a>
-                <div class="repo">
-                  <a target="_blank" href="https://github.com/hybridgroup/artoo-gpio">repo</a>
-                </div>
-              </li>
-              <li>
-                <div class="title">
-                  <a href="/documentation/drivers/makey-button">MakeyButton</a>
-                </div>
-                <a href="/documentation/drivers/makey-button">
-                  <img src="/images/devices/makey-button.jpg" style="width: 90%"></a>
-                <div class="repo">
-                  <a target="_blank" href="https://github.com/hybridgroup/artoo-gpio">repo</a>
-                </div>
-              </li>
-              <li>
-                <div class="title">
-                  <a href="/documentation/drivers/motor">Motor</a>
-                </div>
-                <a href="/documentation/drivers/motor">
-                  <img src="/images/devices/motor.jpg" style="width: 90%"></a>
-                <div class="repo">
-                  <a target="_blank" href="https://github.com/hybridgroup/artoo-gpio">repo</a>
-                </div>
-              </li>
-              <li>
-                <div class="title">
-                  <a href="/documentation/drivers/maxbotix">Maxbotix</a>
-                </div>
-                <a href="/documentation/drivers/maxbotix">
-                  <img src="/images/devices/maxbotix.jpg" style="width: 90%"></a>
-                <div class="repo">
-                  <a target="_blank" href="https://github.com/hybridgroup/artoo-gpio">repo</a>
-                </div>
-              </li>
-              <li>
-                <div class="title">
-                  <a href="/documentation/drivers/servo">Servo</a>
-                </div>
-                <a href="/documentation/drivers/servo">
-                  <img src="/images/devices/servo.jpg" style="width: 90%"></a>
-                <div class="repo">
-                  <a target="_blank" href="https://github.com/hybridgroup/artoo-gpio">repo</a>
-                </div>
-              </li>
-              <div class="clear"></div>
-            </ul>
-<p class="important-title">
-              4
-              <a target="_blank" href="https://en.wikipedia.org/wiki/I%C2%B2C">I2C</a>
-              drivers
-            </p>
-            <ul class="homepage-platform">
-<li>
-                <div class="title">
-                  <a href="/documentation/drivers/blinkm">BlinkM</a>
-                </div>
-                <a href="/documentation/drivers/blinkm">
-                  <img src="/images/devices/blinkm.jpg" style="width: 90%"></a>
-                <div class="repo">
-                  <a target="_blank" href="https://github.com/hybridgroup/artoo-i2c">repo</a>
-                </div>
-              </li>
-              <li>
-                <div class="title">
-                  <a href="/documentation/drivers/hmc6352-compass">HMC6352</a>
-                </div>
-                <a href="/documentation/drivers/hmc6352-compass">
-                  <img src="/images/devices/hmc6352-compass.jpg" style="width: 90%"></a>
-                <div class="repo">
-                  <a target="_blank" href="https://github.com/hybridgroup/artoo-i2c">repo</a>
-                </div>
-              </li>
-              <li>
-                <div class="title">
-                  <a href="/documentation/drivers/wiiclassic">Wii Classic</a>
-                </div>
-                <a href="/documentation/drivers/wiiclassic">
-                  <img src="/images/devices/wii-classic-controller.jpg" style="width: 90%"></a>
-                <div class="repo">
-                  <a target="_blank" href="https://github.com/hybridgroup/artoo-i2c">repo</a>
-                </div>
-              </li>
-              <li>
-                <div class="title">
-                  <a href="/documentation/drivers/wiichuck">Wii Nunchuk</a>
-                </div>
-                <a href="/documentation/drivers/wiichuck">
-                  <img src="/images/devices/wiichuck.jpg" style="width: 90%"></a>
-                <div class="repo">
-                  <a target="_blank" href="https://github.com/hybridgroup/artoo-i2c">repo</a>
-                </div>
-              </li>
-              <div class="clear"></div>
-            </ul>
-<p class="important-title">
-              See more drivers
-              <a href="/documentation/drivers">here</a>
-            </p>
-            <p>More platforms are coming soon!</p>
-            <h2>API</h2>
-            <p>Artoo includes a RESTful API to query the status of any robot running within a group, including the connection and device status, and device streaming data via websockets.</p>
-            <p>To activate the API, use the <code>api</code> command like this:</p>
-            <pre class="CodeRay">require <span class="string"><span class="delimiter">'</span><span class="content">artoo</span><span class="delimiter">'</span></span>
+        </section>
+        <section>
+          <h2>Platform Support</h2>
+          <p>
+            Artoo has an extensible system for connecting to hardware devices. The following robotics and physical computing platforms are currently supported:
+          </p>
+          <h2 class="alternative-heading">15 Platforms</h2>
+          <ul class="platform-list">
+            <li class="platform">
+              <a href="/documentation/platforms/ardrone">
+                <h3 class="title">ARDrone</h3>
+                <img src="/images/devices/ardrone.jpg" style="width: 90%">
+              </a>
+            </li>
+            <li class="platform">
+              <a href="/documentation/platforms/arduino">
+                <h3 class="title">Arduino</h3>
+                <img src="/images/devices/arduino.jpg" style="width: 90%">
+              </a>
+            </li>
+            <li class="platform">
+              <a href="/documentation/platforms/beaglebone">
+                <h3 class="title">Beaglebone Black</h3>
+                <img src="/images/devices/beaglebone.jpg" style="width: 90%">
+              </a>
+            </li>
+            <li class="platform">
+              <a href="/documentation/platforms/crazyflie">
+                <h3 class="title">Crazyflie</h3>
+                <img src="/images/devices/crazyflie.jpg" style="width: 90%">
+              </a>
+            </li>
+            <li class="platform">
+              <a href="/documentation/platforms/digispark">
+                <h3 class="title">Digispark</h3>
+                <img src="/images/devices/digispark.jpg" style="width: 90%">
+              </a>
+            </li>
+            <li class="platform">
+              <a href="/documentation/platforms/joystick">
+                <h3 class="title">Joystick</h3>
+                <img src="/images/devices/joystick.jpg" style="width: 90%">
+              </a>
+            </li>
+            <li class="platform">
+              <a href="/documentation/platforms/keyboard">
+                <h3 class="title">Keyboard</h3>
+                <img src="/images/devices/keyboard.jpg" style="width: 90%">
+              </a>
+            </li>
+            <li class="platform">
+              <a href="/documentation/platforms/leapmotion">
+                <h3 class="title">Leap Motion</h3>
+                <img src="/images/devices/leapmotion.jpg" style="width: 90%">
+              </a>
+            </li>
+            <li class="platform">
+              <a href="/documentation/platforms/neurosky">
+                <h3 class="title">Neurosky</h3>
+                <img src="/images/devices/neurosky.jpg" style="width: 90%">
+              </a>
+            </li>
+            <li class="platform">
+              <a href="/documentation/platforms/opencv">
+                <h3 class="title">OpenCV</h3>
+                <img src="/images/devices/opencv.jpg" style="width: 90%">
+              </a>
+            </li>
+            <li class="platform">
+              <a href="/documentation/platforms/pebble">
+                <h3 class="title">Pebble</h3>
+                <img src="/images/devices/pebble.jpg" style="width: 90%">
+              </a>
+            </li>
+            <li class="platform">
+              <a href="/documentation/platforms/raspi">
+                <h3 class="title">Raspberry Pi</h3>
+                <img src="/images/devices/raspi.jpg" style="width: 90%">
+              </a>
+            </li>
+            <li class="platform">
+              <a href="/documentation/platforms/roomba">
+                <h3 class="title">Roomba</h3>
+                <img src="/images/devices/roomba.jpg" style="width: 90%">
+              </a>
+            </li>
+            <li class="platform">
+              <a href="/documentation/platforms/spark">
+                <h3 class="title">Spark</h3>
+                <img src="/images/devices/spark.jpg" style="width: 90%">
+              </a>
+            </li>
+            <li class="platform">
+              <a href="/documentation/platforms/sphero">
+                <h3 class="title">Sphero</h3>
+                <img src="/images/devices/sphero.jpg" style="width: 90%">
+              </a>
+            </li>
+          </ul>
+          <p>More platforms are coming soon!</p>
+          <p>Artoo also has support for devices that can work across multiple hardware platforms.</p>
+          <h2 class="alternative-heading">
+            <a target="_blank" href="https://en.wikipedia.org/wiki/General_Purpose_Input/Output">8 GPIO drivers</a>
+          </h2>
+          <ul class="platform-list">
+            <li class="platform">
+              <a href="/documentation/drivers/analog-sensor">
+                <h3 class="title">Analog Sensor</h3>
+                <img src="/images/devices/analog-sensor.jpg" style="width: 90%">
+              </a>
+            </li>
+            <li class="platform">
+              <a href="/documentation/drivers/button">
+                <h3 class="title">Button</h3>
+                <img src="/images/devices/button.jpg" style="width: 90%">
+              </a>
+            </li>
+            <li class="platform">
+              <a href="/documentation/drivers/continuous-servo">
+                <h3 class="title">Continuous Servo</h3>
+                <img src="/images/devices/continuous-servo.jpg" style="width: 90%">
+              </a>
+            </li>
+            <li class="platform">
+              <a href="/documentation/drivers/led">
+                <h3 class="title">LED</h3>
+                <img src="/images/devices/led.jpg" style="width: 90%">
+              </a>
+            </li>
+            <li class="platform">
+              <a href="/documentation/drivers/makey-button">
+                <h3 class="title">Makey Button</h3>
+                <img src="/images/devices/makey-button.jpg" style="width: 90%">
+              </a>
+            </li>
+            <li class="platform">
+              <a href="/documentation/drivers/maxbotix">
+                <h3 class="title">Maxbotix</h3>
+                <img src="/images/devices/maxbotix.jpg" style="width: 90%">
+              </a>
+            </li>
+            <li class="platform">
+              <a href="/documentation/drivers/motor">
+                <h3 class="title">Motor</h3>
+                <img src="/images/devices/motor.jpg" style="width: 90%">
+              </a>
+            </li>
+            <li class="platform">
+              <a href="/documentation/drivers/servo">
+                <h3 class="title">Servo</h3>
+                <img src="/images/devices/servo.jpg" style="width: 90%">
+              </a>
+            </li>
+          </ul>
+          <h2 class="alternative-heading">
+            <a target="_blank" href="https://en.wikipedia.org/wiki/I%C2%B2C">4 I2C drivers</a>
+          </h2>
+          <ul class="platform-list">
+            <li class="platform">
+              <a href="/documentation/drivers/blinkm">
+                <h3 class="title">BlinkM</h3>
+                <img src="/images/devices/blinkm.jpg" style="width: 90%">
+              </a>
+            </li>
+            <li class="platform">
+              <a href="/documentation/drivers/hmc6352-compass">
+                <h3 class="title">HMC6352 Compass</h3>
+                <img src="/images/devices/hmc6352-compass.jpg" style="width: 90%">
+              </a>
+            </li>
+            <li class="platform">
+              <a href="/documentation/drivers/led">
+                <h3 class="title">LED</h3>
+                <img src="/images/devices/led.jpg" style="width: 90%">
+              </a>
+            </li>
+            <li class="platform">
+              <a href="/documentation/drivers/wiiclassic">
+                <h3 class="title">Wii Classic Controller</h3>
+                <img src="/images/devices/wiiclassic.jpg" style="width: 90%">
+              </a>
+            </li>
+            <li class="platform">
+              <a href="/documentation/drivers/wiichuck">
+                <h3 class="title">Wii Nunchuck</h3>
+                <img src="/images/devices/wiichuck.jpg" style="width: 90%">
+              </a>
+            </li>
+          </ul>
+        </section>
+        <p class="important-title">
+          See more drivers
+          <a href="/documentation/drivers">here</a>
+        </p>
+        <p>More platforms are coming soon!</p>
+        <h2>API</h2>
+        <p>Artoo includes a RESTful API to query the status of any robot running within a group, including the connection and device status, and device streaming data via websockets.</p>
+        <p>To activate the API, use the <code>api</code> command like this:</p>
+        <pre class="CodeRay">require <span class="string"><span class="delimiter">'</span><span class="content">artoo</span><span class="delimiter">'</span></span>
 
 connection <span class="symbol">:loop</span>
 device <span class="symbol">:passthru</span>
@@ -444,32 +355,52 @@ work <span class="keyword">do</span>
   puts <span class="string"><span class="delimiter">"</span><span class="content">Hello from the API running at </span><span class="inline"><span class="inline-delimiter">#{</span>api_host<span class="inline-delimiter">}</span></span><span class="content">:</span><span class="inline"><span class="inline-delimiter">#{</span>api_port<span class="inline-delimiter">}</span></span><span class="content">...</span><span class="delimiter">"</span></span>
 <span class="keyword">end</span>
 </pre>
-            <section class="videos"><div class="video-index">
-                <h2>Artoo in Action</h2>
-                <iframe allowfullscreen="true" frameborder="0" src="http://www.youtube.com/embed/ciSs9x_Ogls"></iframe>
-              </div>
-            </section></section>
-</div>
+        <section class="videos">
+          <div class="video-index">
+            <h2>Artoo in Action</h2>
+            <iframe allowfullscreen="true" frameborder="0" src="http://www.youtube.com/embed/ciSs9x_Ogls"></iframe>
+          </div>
+        </section>
       </div>
-      <section class="catcher"><div class="w">
-          <h3 class="phrase">Ready to build the next big thing with Ruby?</h3>
-          <a href="/documentation/getting-started" class="cta"> Get Started</a>
+    </div>
+    <div class="app-footer">
+      <div class="frameworks">
+        <div class="container">
+          <div class="framework">
+            <img class="robot" src="/images/elements/artoo-footer.png">
+            <p class="robot-title">Multiple Solutions</p>
+            <p class="description">Artoo provides a simple, yet powerful way to create solutions that incorporate multiple, different hardware devices at the same time.</p>
+          </div>
+          <div class="framework">
+            <img class="robot" src="/images/elements/cylon.png">
+            <p class="robot-title">Cylon Project</p>
+            <p class="description">Want to use Javascript to power your robots? Check out our sister project Cylon.js</p>
+            <a class="footer-button" href="http://cylonjs.com" target="blank">View Project</a>
+          </div>
+          <div class="framework">
+            <img class="robot" src="/images/elements/gobot.png">
+            <p class="robot-title">Gobot Project</p>
+            <p class="description">Want to use Golang on robots? Check out our sister project Gobot</p>
+            <a class="footer-button" href="http://gobot.io" target="blank">View Project</a>
+          </div>
         </div>
-      </section>
-</div>
-    <footer class="app-footer"><div class="w">
-        <div class="copyright">
-          <div class="left-side">
-            © Copyright 2012-2014
+      </div>
+      <div class="copyright">
+        <div class="container">
+          <div class="hybrid-group">
+            <span>© Copyright 2012-2014</span>
             <a href="http://hybridgroup.com" id="THG-logo" target="_blank">
-              <img alt="The Hybrid Group" src="/images/elements/THG_logo.png"></a>
+              <img alt="The Hybrid Group" src="/images/elements/thg-logo.png">
+            </a>
           </div>
-          <div class="right-side">
-            <a href="#top">Top</a>
+          <div class="top-link">
+            <a class="scroll" href="#top">
+              <img alt="Top" src="/images/elements/top.png">
+              <p class="top">Top</p>
+            </a>
           </div>
-          <div class="clear"></div>
         </div>
       </div>
-    </footer>
-</body>
+    </div>
+  </body>
 </html>

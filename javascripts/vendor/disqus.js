@@ -1,6 +1,6 @@
 var addthis_config = {"data_track_addressbar":true};
 
-var disqus_shortname = 'artoo-ruby';  
+var disqus_shortname = 'artoo-ruby';
 
 /* * * DON'T EDIT BELOW THIS LINE * * */
 (function() {

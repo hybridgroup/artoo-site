@@ -1,141 +1,168 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
-<html>
-<head>
+<html ng-app="artoo">
+  <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta charset="utf-8">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
-<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-<meta name="description">
-<meta content="Ron Evans" name="author">
-<title>National Robotics Week at BostonRB</title>
-<link href="/stylesheets/style.css" rel="stylesheet">
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script><script src="/javascripts/script.js"></script><script src="/hybridpages/assets/javascript/accordeon.js"></script><link href="//fonts.googleapis.com/css?family=Russo+One%7CInconsolata:400,700%7CMontserrat:700" rel="stylesheet">
-<link href="/favicon.ico" rel="shortcut icon" type="image/gif">
-<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-
-  _gaq.push(['_setAccount', "UA-46433484-1"]);
-
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="description">
+    <meta content="Ron Evans" name="author">
+    <title>National Robotics Week at BostonRB</title>
+    <link href="/stylesheets/application.css" rel="stylesheet">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="/javascripts/vendor/angular.min.js"></script>
+    <script src="/javascripts/app.js"></script>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700%7CLato:400,700%7CInconsolata" rel="stylesheet">
+    <link href="/favicon.ico" rel="shortcut icon" type="image/gif">
+  <script type="text/javascript">
 
 
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46433484-1', {"cookieDomain":"artoo.io"});
 
 
 
 
-  _gaq.push(['_trackPageview']);
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
 
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
 
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+
+
+
+
+
+
+
+
+
+   ga('send', 'pageview');
+
+
 </script></head>
-<body>
+  <body>
     
-    <div class="app">
-      <div class="w">
-        <header class="app-header" role="banner"><div class="display">
-            <h1 class="app-logo">
-              <a href="/">artoo</a>
-            </h1>
-            <span class="subtitle">
-              <div class="main">Ruby on Robots</div>
-            </span>
+    <div class="app-header" id="top" role="banner">
+      <div class="container">
+        <div class="display">
+          <div class="app-logo">
+            <a class="logo" href="/">artoo Ruby on Robots</a>
           </div>
-          <span class="menu">
-            <a href="/documentation" class="item">Docs</a>
-            <a href="/documentation/platforms" class="item">Platforms</a>
-            <a href="/videos" class="item">Videos</a>
-            <a class="active" href="/blog">Blog</a>
-            <a class="item" href="https://github.com/hybridgroup/artoo/">Github</a>
-          </span>
-        </header>
-</div>
+        </div>
+        <div class="mobile-menu home">
+          <a id="mobile-menu">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </a>
+        </div>
+        <nav class="menu">
+          <ul class="nav-list">
+            <li>
+              <a href="/documentation" class="item">Docs</a>
+            </li>
+            <li>
+              <a href="/documentation/platforms" class="item">Platforms</a>
+            </li>
+            <li>
+              <a href="/videos" class="item">Videos</a>
+            </li>
+            <li>
+              <a class="active" href="/blog">Blog</a>
+            </li>
+            <li>
+              <a class="item" target="blank" href="https://github.com/hybridgroup/gobot/">Github</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="app-content">
       <div class="page-title">
-        <div class="w">
+        <div class="container">
           <h1 class="title">Blog</h1>
         </div>
       </div>
-      <div class="container">
-        
-        <div class="main blog" role="main">
-          <div class="articles">
-            <div class="article">
-              <header class="header"><div class="date">
-                  <div class="blue">
-                    <div class="month">
-                      Apr
-                    </div>
-                    <div class="day">
-                      08
-                    </div>
+      
+      <div class="main-content blog" role="main">
+        <div class="articles">
+          <div class="article">
+            <header class="header">
+              <div class="dates">
+                <div class="date-top">
+                  <div class="month">
+                    Apr
                   </div>
-                  <div class="red">
-                    <div class="year">
-                      2014
-                    </div>
+                  <div class="day">
+                    08
                   </div>
                 </div>
-                <div class="data">
-                  <h3>
-                    <a href="/blog/2014/04/08/national-robotics-week-at-bostonrb/">National Robotics Week at BostonRB</a>
-                  </h3>
-                  <div class="author">
-                    by Ron Evans
+                <div class="date-bottom">
+                  <div class="year">
+                    2014
                   </div>
                 </div>
-              </header><p>In celebration of <a href="http://nationalroboticsweek.org">National Robotics Week</a>, we brought our robot road show to Boston to speak to <a href="http://bostonrb.org/">BostonRB</a>, one of the US's most active Ruby communities. Held at Brightcove's office downtown, the turnout was quite impressive.</p>
-              
-              <p><img src="/images/blog/2014-04-08/bostonrb.jpg" alt="" style="margin: 10px 0;"></p>
-              
-              <p>We had just introduced support for the <a href="http://store.neurosky.com/products/mindwave-mobile">Neurosky Mindwave Mobile EEG</a>, so it was really fun to catch the crowd by surprise with our new "mind controller". Of course we had to include some current favorites, such as our version of Conway's Game of Life using <a href="hhttp://www.gosphero.com">Sphero</a> robots.</p>
-              
-              <p>Thanks everyone who came out to see us, we really enjoyed sharing our latest developments with the Rubyists of BostonRB!</p>
-              
-              <p>Please follow us on Twitter at <a href="http://twitter.com/artooio">@artooio</a> for our latest news, and find out the next stops on the robot world tour.</p>
-            </div>
-            <div class="comments">
-              <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
-                <a class="addthis_button_preferred_2"></a>
-                <a class="addthis_button_preferred_3"></a>
-                <a class="addthis_button_preferred_1"></a>
-                <a class="addthis_button_preferred_4"></a>
-                <a class="addthis_button_compact"></a>
-                <a class="addthis_counter addthis_bubble_style"></a>
               </div>
-              <div id="disqus_thread"></div>
-              <noscript>
-                Please enable JavaScript to view the
-                <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-              </noscript>
-              <a class="dsq-brlink" href="http://disqus.com">
-                comments powered by
-                <span class="logo-disqus">Disqus</span>
-              </a>
+              <h2 class="article-title">
+                <a id="#disqus_thread" href="/blog/2014/04/08/national-robotics-week-at-bostonrb/">National Robotics Week at BostonRB</a>
+              </h2>
+              <div class="author">
+                by Ron Evans
+              </div>
+            </header>
+            <p>In celebration of <a href="http://nationalroboticsweek.org">National Robotics Week</a>, we brought our robot road show to Boston to speak to <a href="http://bostonrb.org/">BostonRB</a>, one of the US's most active Ruby communities. Held at Brightcove's office downtown, the turnout was quite impressive.</p>
+            
+            <p><img src="/images/blog/2014-04-08/bostonrb.jpg" alt="" style="margin: 10px 0;"></p>
+            
+            <p>We had just introduced support for the <a href="http://store.neurosky.com/products/mindwave-mobile">Neurosky Mindwave Mobile EEG</a>, so it was really fun to catch the crowd by surprise with our new "mind controller". Of course we had to include some current favorites, such as our version of Conway's Game of Life using <a href="hhttp://www.gosphero.com">Sphero</a> robots.</p>
+            
+            <p>Thanks everyone who came out to see us, we really enjoyed sharing our latest developments with the Rubyists of BostonRB!</p>
+            
+            <p>Please follow us on Twitter at <a href="http://twitter.com/artooio">@artooio</a> for our latest news, and find out the next stops on the robot world tour.</p>
+          </div>
+          <div class="comments">
+            <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+              <a class="addthis_button_preferred_2"></a>
+              <a class="addthis_button_preferred_3"></a>
+              <a class="addthis_button_preferred_1"></a>
+              <a class="addthis_button_preferred_4"></a>
+              <a class="addthis_button_compact"></a>
+              <a class="addthis_counter addthis_bubble_style"></a>
+            </div>
+            <div id="disqus_thread"></div>
+            <noscript>
+              Please enable JavaScript to view the
+              <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+            </noscript>
+            <a class="dsq-brlink" href="http://disqus.com">
+              comments powered by
+              <span class="logo-disqus">Disqus</span>
+            </a>
+          </div>
+        </div>
+        <div class="side-columns">
+          <div class="side-column">
+            <h3 class="side-header">Categories</h3>
+            <ul>
+              <li><a href="/blog/tags/robots/">Robots</a></li>
+              <li><a href="/blog/tags/events/">Events</a></li>
+            </ul>
+          </div>
+          <div class="side-column">
+            <h3 class="side-header">Network</h3>
+            <div class="network-links">
+              <a class="network-link" href="https://twitter.com/artooio"><img src="/images/elements/twitter.png"></a>
+              <a class="network-link" href="https://github.com/hybridgroup/artoo"><img src="/images/elements/github.png"></a>
             </div>
           </div>
           <div class="side-column">
-            <div class="categories">
-              <h4>Tags</h4>
-              <ul>
-<li><a href="/blog/tags/robots/">Robots</a></li>
-                <li><a href="/blog/tags/events/">Events</a></li>
-              </ul>
-</div>
-            <div class="network">
-              <h4>Network</h4>
-              <div class="network-links">
-                <a href="https://twitter.com/artooio"><img src="/images/elements/twitter.png"></a>
-                <a href="https://github.com/hybridgroup/artoo"><img src="/images/elements/github.png"></a>
-              </div>
-            </div>
-            <div class="titles">
-              <h4>Posts</h4>
-              <ul>
-<li><a href="/blog/2014/07/18/introducing-rubyserial/">Introducing Rubyserial</a></li>
+            <h3 class="side-header">
+              Posts
+              <ul class="archive">
+                <li><a href="/blog/2014/07/18/introducing-rubyserial/">Introducing Rubyserial</a></li>
                 <li><a href="/blog/2014/04/08/national-robotics-week-at-bostonrb/">National Robotics Week at BostonRB</a></li>
                 <li><a href="/blog/2014/02/12/fun-at-the-los-angeles-ruby-conf-robot-hackathon/">Fun At The Los Angeles Ruby Conference Robot Hackathon</a></li>
                 <li><a href="/blog/2014/02/06/robeaux-universal-robot-user-interface/">Robeaux - The Universal Robot User Interface</a></li>
@@ -143,25 +170,51 @@
                 <li><a href="/blog/2013/09/21/gogaruco/">GoGaRuCo</a></li>
                 <li><a href="/blog/2013/09/04/welcome-to-the-new-era/">Welcome To The New Era</a></li>
               </ul>
-</div>
+            </h3>
           </div>
         </div>
       </div>
     </div>
-    <footer class="app-footer"><div class="w">
-        <div class="copyright">
-          <div class="left-side">
-            © Copyright 2012-2014
-            <a href="http://hybridgroup.com" id="THG-logo" target="_blank">
-              <img alt="The Hybrid Group" src="/images/elements/THG_logo.png"></a>
+    <div class="app-footer">
+      <div class="frameworks">
+        <div class="container">
+          <div class="framework">
+            <img class="robot" src="/images/elements/artoo-footer.png">
+            <p class="robot-title">Multiple Solutions</p>
+            <p class="description">Artoo provides a simple, yet powerful way to create solutions that incorporate multiple, different hardware devices at the same time.</p>
           </div>
-          <div class="right-side">
-            <a href="#top">Top</a>
+          <div class="framework">
+            <img class="robot" src="/images/elements/cylon.png">
+            <p class="robot-title">Cylon Project</p>
+            <p class="description">Want to use Javascript to power your robots? Check out our sister project Cylon.js</p>
+            <a class="footer-button" href="http://cylonjs.com" target="blank">View Project</a>
           </div>
-          <div class="clear"></div>
+          <div class="framework">
+            <img class="robot" src="/images/elements/gobot.png">
+            <p class="robot-title">Gobot Project</p>
+            <p class="description">Want to use Golang on robots? Check out our sister project Gobot</p>
+            <a class="footer-button" href="http://gobot.io" target="blank">View Project</a>
+          </div>
         </div>
       </div>
-    </footer>
-</body>
-<script src="/hybridpages/assets/javascript/disqus.js"></script><script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53632dea5fd71564" type="text/javascript"></script>
+      <div class="copyright">
+        <div class="container">
+          <div class="hybrid-group">
+            <span>© Copyright 2012-2014</span>
+            <a href="http://hybridgroup.com" id="THG-logo" target="_blank">
+              <img alt="The Hybrid Group" src="/images/elements/thg-logo.png">
+            </a>
+          </div>
+          <div class="top-link">
+            <a class="scroll" href="#top">
+              <img alt="Top" src="/images/elements/top.png">
+              <p class="top">Top</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="/javascripts/vendor/disqus.js"></script>
+  <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53632dea5fd71564" type="text/javascript"></script>
 </html>

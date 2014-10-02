@@ -1,0 +1,2672 @@
+@charset "UTF-8";
+/* line 2, /Users/mario/.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/neat-1.6.0/app/assets/stylesheets/grid/_grid.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/*! normalize.css v3.0.1 | MIT License | git.io/normalize */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+/* line 10, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_normalize.scss */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/**
+ * Remove default margin.
+ */
+/* line 20, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_normalize.scss */
+body {
+  margin: 0; }
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+/* line 33, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_normalize.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block; }
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+/* line 53, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_normalize.scss */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */ }
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+/* line 66, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ */
+/* line 76, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_normalize.scss */
+[hidden],
+template {
+  display: none; }
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+/* line 88, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_normalize.scss */
+a {
+  background: transparent; }
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+/* line 96, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_normalize.scss */
+a:active,
+a:hover,
+.platform-list a:hover .title {
+  outline: 0; }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+/* line 108, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_normalize.scss */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+/* line 116, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_normalize.scss */
+b,
+strong {
+  font-weight: bold; }
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+/* line 125, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_normalize.scss */
+dfn {
+  font-style: italic; }
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+/* line 134, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_normalize.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+/* line 143, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_normalize.scss */
+mark {
+  background: #ff0;
+  color: #000; }
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+/* line 152, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_normalize.scss */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+/* line 160, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+/* line 168, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_normalize.scss */
+sup {
+  top: -0.5em; }
+
+/* line 172, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_normalize.scss */
+sub {
+  bottom: -0.25em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+/* line 183, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_normalize.scss */
+img {
+  border: 0; }
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+/* line 191, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_normalize.scss */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+/* line 202, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_normalize.scss */
+figure {
+  margin: 1em 40px; }
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+/* line 210, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_normalize.scss */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0; }
+
+/**
+ * Contain overflow in all browsers.
+ */
+/* line 220, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_normalize.scss */
+pre {
+  overflow: auto; }
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+/* line 228, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_normalize.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+/* line 251, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_normalize.scss */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */ }
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+/* line 265, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_normalize.scss */
+button {
+  overflow: visible; }
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+/* line 276, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_normalize.scss */
+button,
+select {
+  text-transform: none; }
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+/* line 289, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_normalize.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */ }
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+/* line 301, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_normalize.scss */
+button[disabled],
+html input[disabled] {
+  cursor: default; }
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+/* line 310, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_normalize.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+/* line 321, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_normalize.scss */
+input {
+  line-height: normal; }
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+/* line 333, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_normalize.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+/* line 345, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_normalize.scss */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
+ */
+/* line 356, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_normalize.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box; }
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+/* line 369, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_normalize.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+/* line 378, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_normalize.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+/* line 389, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_normalize.scss */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+/* line 398, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_normalize.scss */
+textarea {
+  overflow: auto; }
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+/* line 407, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_normalize.scss */
+optgroup {
+  font-weight: bold; }
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+/* line 418, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_normalize.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 423, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_normalize.scss */
+td,
+th {
+  padding: 0; }
+
+/* line 1, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay {
+  background-color: white;
+  border: 1px solid #b2b2b2;
+  font-family: Monaco, Inconsolata, "Courier New", monospace;
+  color: black;
+  padding: 1em 0px 1em 1em;
+  clear: both; }
+
+/* line 10, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay pre {
+  margin: 0px; }
+
+/* line 14, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+span.CodeRay {
+  white-space: pre;
+  border: 0px;
+  padding: 2px; }
+
+/* line 16, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+table.CodeRay {
+  border-collapse: collapse;
+  width: 100%;
+  padding: 2px; }
+
+/* line 18, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+table.CodeRay td {
+  padding: 1em 0.5em;
+  vertical-align: top; }
+
+/* line 23, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .line-numbers, .CodeRay .no {
+  background-color: #ECECEC;
+  color: #AAA;
+  text-align: right; }
+
+/* line 29, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .line-numbers a {
+  color: #AAA; }
+
+/* line 33, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .line-numbers tt {
+  font-weight: bold; }
+
+/* line 35, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .line-numbers .highlighted {
+  color: red; }
+
+/* line 37, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .line {
+  display: block;
+  float: left;
+  width: 100%; }
+
+/* line 39, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay span.line-numbers {
+  padding: 0px 4px; }
+
+/* line 41, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .code {
+  width: 100%; }
+
+/* line 43, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+ol.CodeRay {
+  font-size: 10pt; }
+
+/* line 44, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+ol.CodeRay li {
+  white-space: pre; }
+
+/* line 46, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .code pre {
+  overflow: auto; }
+
+/* line 47, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .debug {
+  color: white !important;
+  background: blue !important; }
+
+/* line 49, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .annotation {
+  color: #007; }
+
+/* line 50, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .attribute-name {
+  color: #f08; }
+
+/* line 51, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .attribute-value {
+  color: #700; }
+
+/* line 52, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .binary {
+  color: #509;
+  font-weight: bold; }
+
+/* line 53, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .comment {
+  color: #998;
+  font-style: italic; }
+
+/* line 54, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .char {
+  color: #04D; }
+
+/* line 55, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .char .content {
+  color: #04D; }
+
+/* line 56, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .char .delimiter {
+  color: #039; }
+
+/* line 57, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .class {
+  color: #458;
+  font-weight: bold; }
+
+/* line 58, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .complex {
+  color: #A08;
+  font-weight: bold; }
+
+/* line 59, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .constant {
+  color: teal; }
+
+/* line 60, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .color {
+  color: #0A0; }
+
+/* line 61, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .class-variable {
+  color: #369; }
+
+/* line 62, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .decorator {
+  color: #B0B; }
+
+/* line 63, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .definition {
+  color: #099;
+  font-weight: bold; }
+
+/* line 64, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .directive {
+  color: #088;
+  font-weight: bold; }
+
+/* line 65, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .delimiter {
+  color: black; }
+
+/* line 66, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .doc {
+  color: #970; }
+
+/* line 67, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .doctype {
+  color: #34b; }
+
+/* line 68, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .doc-string {
+  color: #D42;
+  font-weight: bold; }
+
+/* line 69, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .escape {
+  color: #666;
+  font-weight: bold; }
+
+/* line 70, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .entity {
+  color: #800;
+  font-weight: bold; }
+
+/* line 71, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .error {
+  color: #F00;
+  background-color: #FAA; }
+
+/* line 72, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .exception {
+  color: #C00;
+  font-weight: bold; }
+
+/* line 73, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .filename {
+  color: #099; }
+
+/* line 74, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .function {
+  color: #900;
+  font-weight: bold; }
+
+/* line 75, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .global-variable {
+  color: teal;
+  font-weight: bold; }
+
+/* line 76, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .hex {
+  color: #058;
+  font-weight: bold; }
+
+/* line 77, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .integer {
+  color: #099; }
+
+/* line 78, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .include {
+  color: #B44;
+  font-weight: bold; }
+
+/* line 79, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .inline {
+  color: black; }
+
+/* line 80, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .inline .inline {
+  background: #ccc; }
+
+/* line 81, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .inline .inline .inline {
+  background: #bbb; }
+
+/* line 82, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .inline .inline-delimiter {
+  color: #D14; }
+
+/* line 83, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .inline-delimiter {
+  color: #D14; }
+
+/* line 84, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .important {
+  color: #f00; }
+
+/* line 85, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .interpreted {
+  color: #B2B;
+  font-weight: bold; }
+
+/* line 86, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .instance-variable {
+  color: teal; }
+
+/* line 87, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .label {
+  color: #970;
+  font-weight: bold; }
+
+/* line 88, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .local-variable {
+  color: #963; }
+
+/* line 89, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .octal {
+  color: #40E;
+  font-weight: bold; }
+
+/* line 91, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .predefined-constant {
+  font-weight: bold; }
+
+/* line 92, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .predefined {
+  color: #369;
+  font-weight: bold; }
+
+/* line 93, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .preprocessor {
+  color: #579; }
+
+/* line 94, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .pseudo-class {
+  color: #00C;
+  font-weight: bold; }
+
+/* line 95, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .predefined-type {
+  color: #074;
+  font-weight: bold; }
+
+/* line 96, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .reserved, .keyword {
+  color: #000;
+  font-weight: bold; }
+
+/* line 98, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .key {
+  color: #808; }
+
+/* line 99, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .key .delimiter {
+  color: #606; }
+
+/* line 100, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .key .char {
+  color: #80f; }
+
+/* line 101, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .value {
+  color: #088; }
+
+/* line 103, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .regexp {
+  background-color: #fff0ff; }
+
+/* line 104, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .regexp .content {
+  color: #808; }
+
+/* line 105, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .regexp .delimiter {
+  color: #404; }
+
+/* line 106, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .regexp .modifier {
+  color: #C2C; }
+
+/* line 107, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .regexp .function {
+  color: #404;
+  font-weight: bold; }
+
+/* line 109, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .string {
+  color: #D20; }
+
+/* line 111, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .string .string .string {
+  background-color: #ffd0d0; }
+
+/* line 112, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .string .content {
+  color: #cc3500; }
+
+/* line 113, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .string .char {
+  color: #D14; }
+
+/* line 114, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .string .delimiter {
+  color: #D14; }
+
+/* line 116, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .shell {
+  color: #D14; }
+
+/* line 118, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .shell .delimiter {
+  color: #D14; }
+
+/* line 120, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .symbol {
+  color: #990073; }
+
+/* line 121, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .symbol .content {
+  color: #A60; }
+
+/* line 122, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .symbol .delimiter {
+  color: #630; }
+
+/* line 124, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .tag {
+  color: #070; }
+
+/* line 125, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .tag-special {
+  color: #D70;
+  font-weight: bold; }
+
+/* line 126, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .type {
+  color: #339;
+  font-weight: bold; }
+
+/* line 127, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .variable {
+  color: #036; }
+
+/* line 129, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .insert {
+  background: #afa; }
+
+/* line 130, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .delete {
+  background: #faa; }
+
+/* line 131, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .change {
+  color: #aaf;
+  background: #007; }
+
+/* line 132, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .head {
+  color: #f8f;
+  background: #505; }
+
+/* line 134, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .insert .insert {
+  color: #080;
+  font-weight: bold; }
+
+/* line 135, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .delete .delete {
+  color: #800;
+  font-weight: bold; }
+
+/* line 136, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .change .change {
+  color: #66f; }
+
+/* line 137, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/vendor/_coderay.scss */
+.CodeRay .head .head {
+  color: #f4f; }
+
+/* line 1, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/support/before/_button.scss */
+.app-footer .framework .footer-button, .documentation-single .action, .hero .action {
+  background-color: #7eb847;
+  border-bottom: 4px solid #6ca635;
+  color: #fff;
+  font-size: 22px;
+  padding: 0.5625em 1.5625em;
+  position: relative;
+  text-decoration: none; }
+  /* line 10, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/support/before/_button.scss */
+  .app-footer .framework .footer-button:hover, .documentation-single .action:hover, .hero .action:hover {
+    background-color: #8bbf59;
+    border-color: #79b93b;
+    cursor: pointer; }
+  /* line 16, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/support/before/_button.scss */
+  .app-footer .framework .footer-button:active, .documentation-single .action:active, .hero .action:active {
+    background-color: #56832b;
+    border-color: #5f932f;
+    cursor: pointer; }
+
+/* line 1, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/support/_button.scss */
+.app-footer .framework .footer-button, .documentation-single .action {
+  background-color: #cc3500; }
+
+/* line 10, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/support/_button.scss */
+.app-footer .framework .footer-button {
+  border: none;
+  font-size: 0.875em;
+  padding: 0.5625em 1.5625em; }
+
+/* line 1, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/support/_hero.scss */
+.hero {
+  background: url(/images/elements/background.png) top center repeat;
+  position: relative;
+  z-index: 0; }
+  /* line 6, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/support/_hero.scss */
+  .hero .title {
+    color: #70b3db; }
+  /* line 10, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/support/_hero.scss */
+  .hero .sub-title, .hero a {
+    color: #ebfdff; }
+  /* line 14, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/support/_hero.scss */
+  .hero .animations {
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    top: 0px; }
+    /* line 20, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/support/_hero.scss */
+    .hero .animations * {
+      position: relative; }
+
+/* line 3, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/support/_sub-nav.scss */
+.documentation-single .subnav-drivers nav {
+  border-top: 1px solid #cecece;
+  border-bottom: 1px solid #cecece;
+  padding: 1.25em 0; }
+/* line 9, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/support/_sub-nav.scss */
+.documentation-single .subnav-drivers a {
+  padding: 0.3125em 0.625em;
+  margin: 1.25em 0.125em;
+  color: #505050;
+  font-size: 0.9em; }
+  /* line 15, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/support/_sub-nav.scss */
+  .documentation-single .subnav-drivers a:hover, .documentation-single .subnav-drivers .platform-list a:hover .title, .platform-list a:hover .documentation-single .subnav-drivers .title, .documentation-single .subnav-drivers a.active {
+    color: #fff;
+    background: #0f4b87; }
+  /* line 20, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/support/_sub-nav.scss */
+  .documentation-single .subnav-drivers a.scroll-top:hover, .documentation-single .subnav-drivers .platform-list a:hover .scroll-top.title, .platform-list a:hover .documentation-single .subnav-drivers .scroll-top.title {
+    background: none; }
+/* line 26, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/support/_sub-nav.scss */
+.documentation-single .subnav-drivers .scroll-top, .documentation-single .subnav-drivers .sub-nav-title {
+  display: none; }
+
+/* line 31, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/support/_sub-nav.scss */
+.documentation-single .subNavfixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99; }
+  /* line 37, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/support/_sub-nav.scss */
+  .documentation-single .subNavfixed nav {
+    padding: 0;
+    border: none;
+    display: inline-block;
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 74.41059%;
+    margin-right: 0; }
+    /* line 38, /Users/mario/.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/neat-1.6.0/app/assets/stylesheets/grid/_span-columns.scss */
+    .documentation-single .subNavfixed nav:last-child {
+      margin-right: 0; }
+  /* line 45, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/support/_sub-nav.scss */
+  .documentation-single .subNavfixed .container-subnav {
+    margin: 0 auto;
+    padding: 0; }
+  /* line 50, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/support/_sub-nav.scss */
+  .documentation-single .subNavfixed .scroll-top, .documentation-single .subNavfixed .sub-nav-title {
+    display: inline-block; }
+  /* line 54, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/support/_sub-nav.scss */
+  .documentation-single .subNavfixed .sub-nav-title {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 23.23176%;
+    color: #0f4b87;
+    font-weight: bold;
+    font-size: 1.125em; }
+    /* line 38, /Users/mario/.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/neat-1.6.0/app/assets/stylesheets/grid/_span-columns.scss */
+    .documentation-single .subNavfixed .sub-nav-title:last-child {
+      margin-right: 0; }
+  @media screen and (max-width: 768px) {
+    /* line 31, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/support/_sub-nav.scss */
+    .documentation-single .subNavfixed {
+      display: none; } }
+
+/* line 1, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/shared/_body.scss */
+body {
+  background-color: #ebfdff;
+  font-family: "Open Sans", sans-serif;
+  margin: 0; }
+
+/* line 7, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/shared/_body.scss */
+.container {
+  max-width: 966px;
+  margin-left: auto;
+  margin-right: auto;
+  margin: 0 auto;
+  position: relative; }
+  /* line 15, /Users/mario/.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/bourbon-4.0.2/app/assets/stylesheets/addons/_clearfix.scss */
+  .container:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+/* line 13, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/shared/_body.scss */
+.main-content {
+  max-width: 966px;
+  margin-left: auto;
+  margin-right: auto; }
+  /* line 15, /Users/mario/.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/bourbon-4.0.2/app/assets/stylesheets/addons/_clearfix.scss */
+  .main-content:after {
+    content: "";
+    display: table;
+    clear: both; }
+  /* line 16, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/shared/_body.scss */
+  .main-content section {
+    display: block; }
+    /* line 15, /Users/mario/.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/bourbon-4.0.2/app/assets/stylesheets/addons/_clearfix.scss */
+    .main-content section:after {
+      content: "";
+      display: table;
+      clear: both; }
+
+/* line 21, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/shared/_body.scss */
+.clear {
+  *zoom: 1; }
+  /* line 23, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/shared/_body.scss */
+  .clear:before, .clear:after {
+    content: " ";
+    display: table; }
+  /* line 27, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/shared/_body.scss */
+  .clear:after {
+    clear: both; }
+
+/* line 3, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/shared/_footer.scss */
+.app-footer .robot {
+  height: 7.5em; }
+/* line 6, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/shared/_footer.scss */
+.app-footer .description {
+  height: 5.3125em; }
+
+/* line 1, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/shared/_header.scss */
+.app-header {
+  height: 53px; }
+  @media screen and (max-width: 768px) {
+    /* line 1, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/shared/_header.scss */
+    .app-header {
+      height: auto; } }
+
+/* line 8, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/shared/_header.scss */
+.app-logo {
+  width: 188px; }
+
+@media screen and (max-width: 768px) {
+  /* line 12, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/shared/_header.scss */
+  .logo {
+    height: 85px; } }
+
+/* line 18, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/shared/_header.scss */
+#docs-menu, #mobile-menu {
+  width: 55px; }
+
+/* line 22, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/shared/_header.scss */
+.line {
+  height: 6px; }
+
+/* line 1, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/shared/_text.scss */
+a {
+  color: #4692bf;
+  text-decoration: none; }
+  /* line 5, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/shared/_text.scss */
+  a:hover, .platform-list a:hover .title {
+    color: #0f4b87; }
+
+/* line 10, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/shared/_text.scss */
+p {
+  color: #444; }
+
+/* line 14, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/shared/_text.scss */
+ul {
+  padding: 0;
+  list-style: none; }
+
+/* line 19, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/shared/_text.scss */
+h1, h2, h3, h4 {
+  color: #0f4b87; }
+
+/* line 23, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/shared/_text.scss */
+code {
+  border: 1px solid white;
+  padding: 0 0.125em;
+  color: #ea2b3f; }
+
+/* line 29, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/shared/_text.scss */
+.alternative-heading, h2.alternative-heading a {
+  color: #cc3500; }
+
+/* line 3, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_app-header.scss */
+.app-header .display {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 40.29137%;
+  margin: 0.75em 0 0 0; }
+  /* line 38, /Users/mario/.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/neat-1.6.0/app/assets/stylesheets/grid/_span-columns.scss */
+  .app-header .display:last-child {
+    margin-right: 0; }
+/* line 8, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_app-header.scss */
+.app-header .logo {
+  display: block;
+  background: url(/images/elements/logo.png) left top no-repeat;
+  text-indent: -99999px;
+  background-size: contain; }
+/* line 15, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_app-header.scss */
+.app-header .menu {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 57.35098%;
+  text-align: right;
+  display: inline-block;
+  position: relative;
+  z-index: 1; }
+  /* line 38, /Users/mario/.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/neat-1.6.0/app/assets/stylesheets/grid/_span-columns.scss */
+  .app-header .menu:last-child {
+    margin-right: 0; }
+/* line 23, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_app-header.scss */
+.app-header li {
+  display: inline-block; }
+/* line 27, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_app-header.scss */
+.app-header .item {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0.625em;
+  padding: 0.5em 0.25em; }
+  /* line 33, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_app-header.scss */
+  .app-header .item, .app-header .item:visited, .app-header .item:active {
+    color: #505050; }
+  /* line 37, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_app-header.scss */
+  .app-header .item:hover, .app-header .item:focus {
+    color: #70b3db; }
+/* line 42, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_app-header.scss */
+.app-header .active {
+  font-weight: 600;
+  margin: 0.625em;
+  padding: 0.5em 0.25em; }
+@media screen and (max-width: 768px) {
+  /* line 50, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_app-header.scss */
+  .app-header .logo {
+    background: url(/images/elements/logo-mobile.png) left top no-repeat; }
+  /* line 53, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_app-header.scss */
+  .app-header .subtitle, .app-header .menu {
+    width: auto;
+    display: block; }
+  /* line 58, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_app-header.scss */
+  .app-header .display, .app-header .app-logo {
+    display: inline-block; }
+  /* line 62, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_app-header.scss */
+  .app-header .display {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+    text-align: center; }
+    /* line 38, /Users/mario/.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/neat-1.6.0/app/assets/stylesheets/grid/_span-columns.scss */
+    .app-header .display:last-child {
+      margin-right: 0; }
+  /* line 67, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_app-header.scss */
+  .app-header .subtitle {
+    font-size: 19px;
+    line-height: 15px;
+    padding: 0; }
+  /* line 73, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_app-header.scss */
+  .app-header .menu {
+    text-align: center;
+    margin-top: -1.25em 0 0;
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%; }
+    /* line 38, /Users/mario/.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/neat-1.6.0/app/assets/stylesheets/grid/_span-columns.scss */
+    .app-header .menu:last-child {
+      margin-right: 0; }
+  /* line 79, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_app-header.scss */
+  .app-header .nav-list {
+    padding: 0px 0 0.3125em;
+    margin: 0; }
+  /* line 84, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_app-header.scss */
+  .app-header .item {
+    margin: 0;
+    padding: 0 0.625em; } }
+@media screen and (max-width: 320px) {
+  /* line 90, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_app-header.scss */
+  .app-header .menu {
+    display: none;
+    margin-bottom: -18px; }
+  /* line 95, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_app-header.scss */
+  .app-header li {
+    border-bottom: 1px solid #c1effe;
+    padding: 5px 0;
+    width: 100%; } }
+
+/* line 1, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_blog-date.scss */
+.dates {
+  color: white;
+  text-align: center;
+  margin-right: 20px;
+  float: left;
+  font-weight: 600; }
+  @media screen and (max-width: 640px) {
+    /* line 1, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_blog-date.scss */
+    .dates {
+      margin-right: 0;
+      float: right; } }
+  /* line 13, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_blog-date.scss */
+  .dates .date-top {
+    padding: 0.5em;
+    background-color: #79bee8; }
+  /* line 18, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_blog-date.scss */
+  .dates .month {
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 16px; }
+  /* line 24, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_blog-date.scss */
+  .dates .day {
+    font-size: 24px;
+    line-height: 24px; }
+  /* line 29, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_blog-date.scss */
+  .dates .date-bottom {
+    padding: 0.125em;
+    background-color: #CC3403; }
+  /* line 34, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_blog-date.scss */
+  .dates .year {
+    font-size: 14px;
+    line-height: 14px; }
+
+/* line 1, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_blog.scss */
+.main-content.blog {
+  max-width: 966px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 3.125em;
+  font-family: "Lato", sans-serif; }
+  /* line 15, /Users/mario/.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/bourbon-4.0.2/app/assets/stylesheets/addons/_clearfix.scss */
+  .main-content.blog:after {
+    content: "";
+    display: table;
+    clear: both; }
+  /* line 6, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_blog.scss */
+  .main-content.blog h1, .main-content.blog h2, .main-content.blog h3, .main-content.blog h4, .main-content.blog a {
+    color: #CC3403; }
+  @media screen and (max-width: 966px) {
+    /* line 1, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_blog.scss */
+    .main-content.blog {
+      padding: 0 0.9375em; } }
+
+/* line 14, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_blog.scss */
+.articles {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%;
+  padding-top: 1.5625em; }
+  /* line 38, /Users/mario/.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/neat-1.6.0/app/assets/stylesheets/grid/_span-columns.scss */
+  .articles:last-child {
+    margin-right: 0; }
+  @media screen and (max-width: 966px) {
+    /* line 14, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_blog.scss */
+    .articles {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%; }
+      /* line 38, /Users/mario/.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/neat-1.6.0/app/assets/stylesheets/grid/_span-columns.scss */
+      .articles:last-child {
+        margin-right: 0; } }
+  /* line 22, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_blog.scss */
+  .articles .header {
+    display: block; }
+    /* line 15, /Users/mario/.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/bourbon-4.0.2/app/assets/stylesheets/addons/_clearfix.scss */
+    .articles .header:after {
+      content: "";
+      display: table;
+      clear: both; }
+
+/* line 28, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_blog.scss */
+.article .article-title {
+  display: inline-block;
+  font-size: 28px;
+  vertical-align: top;
+  margin: 0; }
+/* line 35, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_blog.scss */
+.article p {
+  text-align: justify; }
+/* line 39, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_blog.scss */
+.article .comments, .article .tags {
+  display: block; }
+  /* line 42, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_blog.scss */
+  .article .comments a, .article .tags a {
+    text-decoration: underline; }
+/* line 47, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_blog.scss */
+.article img {
+  width: 100%;
+  float: left; }
+/* line 52, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_blog.scss */
+.article .tag {
+  display: inline-block;
+  font-size: 1em;
+  font-weight: bold;
+  margin-right: 0.625em; }
+/* line 59, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_blog.scss */
+.article .comments {
+  margin-right: 3.75em; }
+
+/* line 64, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_blog.scss */
+.side-columns {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%; }
+  /* line 38, /Users/mario/.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/neat-1.6.0/app/assets/stylesheets/grid/_span-columns.scss */
+  .side-columns:last-child {
+    margin-right: 0; }
+  @media screen and (max-width: 966px) {
+    /* line 64, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_blog.scss */
+    .side-columns {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%; }
+      /* line 38, /Users/mario/.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/neat-1.6.0/app/assets/stylesheets/grid/_span-columns.scss */
+      .side-columns:last-child {
+        margin-right: 0; } }
+  /* line 71, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_blog.scss */
+  .side-columns .side-header {
+    margin-bottom: 0.625em;
+    font-size: 22px; }
+  /* line 76, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_blog.scss */
+  .side-columns .side-column {
+    vertical-align: top;
+    margin-bottom: 20px; }
+    @media screen and (max-width: 966px) {
+      /* line 76, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_blog.scss */
+      .side-columns .side-column {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 31.76157%; }
+        /* line 38, /Users/mario/.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/neat-1.6.0/app/assets/stylesheets/grid/_span-columns.scss */
+        .side-columns .side-column:last-child {
+          margin-right: 0; } }
+    /* line 84, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_blog.scss */
+    .side-columns .side-column a {
+      font-size: 18px;
+      font-weight: 600;
+      color: #505050; }
+      /* line 89, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_blog.scss */
+      .side-columns .side-column a:hover, .side-columns .side-column .platform-list a:hover .title, .platform-list a:hover .side-columns .side-column .title {
+        color: #CC3403;
+        text-decoration: underline; }
+
+@media screen and (max-width: 480px) {
+  /* line 99, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_blog.scss */
+  .twitter-share-button {
+    margin-bottom: 0.625em; } }
+/* line 1, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_documentation-boxes.scss */
+.documentation-boxes {
+  margin-top: 20px; }
+
+/* line 5, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_documentation-boxes.scss */
+.box {
+  margin: 0 auto;
+  float: left;
+  display: block;
+  margin-right: 2.99668%;
+  width: 29.52859%;
+  background: #c1effe;
+  margin-bottom: 1.25em; }
+  /* line 38, /Users/mario/.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/neat-1.6.0/app/assets/stylesheets/grid/_span-columns.scss */
+  .box:last-child {
+    margin-right: 0; }
+  @media screen and (max-width: 768px) {
+    /* line 5, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_documentation-boxes.scss */
+    .box {
+      float: left;
+      display: block;
+      margin-right: 2.99668%;
+      width: 100%;
+      text-align: center; }
+      /* line 38, /Users/mario/.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/neat-1.6.0/app/assets/stylesheets/grid/_span-columns.scss */
+      .box:last-child {
+        margin-right: 0; } }
+  /* line 16, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_documentation-boxes.scss */
+  .box:hover {
+    background: #0f4b87; }
+    /* line 18, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_documentation-boxes.scss */
+    .box:hover .description {
+      color: #fff; }
+  /* line 22, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_documentation-boxes.scss */
+  .box a {
+    width: 100%;
+    height: 100%;
+    display: block; }
+  /* line 27, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_documentation-boxes.scss */
+  .box .title {
+    color: #fff;
+    font-weight: bold;
+    background: #0f4b87;
+    padding: 0.3125em 0.75em; }
+  /* line 33, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_documentation-boxes.scss */
+  .box .description {
+    color: #0f4b87;
+    padding: 0.3125em 0.625em;
+    font-size: 0.875em; }
+
+/* line 2, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_documentation-driver.scss */
+.commands-api li {
+  list-style-type: square;
+  margin-left: 20px; }
+/* line 7, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_documentation-driver.scss */
+.commands-api h2 {
+  background: #0f4b87;
+  color: white;
+  padding: 0.9375em 0.625em;
+  font-size: 12pt;
+  margin: 20px 0 0 0; }
+/* line 15, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_documentation-driver.scss */
+.commands-api h4 {
+  color: #444; }
+/* line 19, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_documentation-driver.scss */
+.commands-api h5 {
+  background: white;
+  padding: 0.625em;
+  margin: 0;
+  font-size: 10pt;
+  color: #444; }
+/* line 27, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_documentation-driver.scss */
+.commands-api pre {
+  background: white;
+  margin: 0; }
+/* line 32, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_documentation-driver.scss */
+.commands-api p, .commands-api ul {
+  background: white;
+  margin: 0;
+  padding: 0.625em;
+  font-family: Inconsolata, Menlo, Monaco,"Courier New",monospace; }
+/* line 39, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_documentation-driver.scss */
+.commands-api li {
+  margin-left: 20px;
+  color: #444; }
+
+/* line 45, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_documentation-driver.scss */
+.commands {
+  background: white;
+  font-size: 10.5pt; }
+  /* line 49, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_documentation-driver.scss */
+  .commands span {
+    font-size: 0.875em;
+    line-height: 1.3125em;
+    background: #fafafa;
+    border: 1px solid #ccc;
+    color: #444;
+    padding: 5px; }
+  /* line 58, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_documentation-driver.scss */
+  .commands th {
+    background: #0f4b87;
+    color: white;
+    padding: 0.9375em 0.3125em;
+    font-size: 1.2em; }
+  /* line 65, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_documentation-driver.scss */
+  .commands td {
+    border-bottom: 1px solid #d4d4d4;
+    padding: 0.3125em 0.3125em 1.25em; }
+  /* line 70, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_documentation-driver.scss */
+  .commands .command {
+    font-family: Inconsolata, Menlo, Monaco, "Courier New", monospace;
+    font-weight: bold;
+    font-size: 11pt; }
+  @media screen and (max-width: 768px) {
+    /* line 45, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_documentation-driver.scss */
+    .commands {
+      width: 100%; } }
+
+/* line 80, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_documentation-driver.scss */
+.colors {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%; }
+  /* line 38, /Users/mario/.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/neat-1.6.0/app/assets/stylesheets/grid/_span-columns.scss */
+  .colors:last-child {
+    margin-right: 0; }
+  @media screen and (max-width: 768px) {
+    /* line 80, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_documentation-driver.scss */
+    .colors {
+      float: left;
+      display: block;
+      margin-right: 7.42297%;
+      width: 73.14426%; }
+      /* line 38, /Users/mario/.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/neat-1.6.0/app/assets/stylesheets/grid/_span-columns.scss */
+      .colors:last-child {
+        margin-right: 0; }
+      /* line 86, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_documentation-driver.scss */
+      .colors p {
+        font-size: 10px; } }
+  @media screen and (max-width: 768px) {
+    /* line 80, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_documentation-driver.scss */
+    .colors {
+      float: left;
+      display: block;
+      margin-right: 7.42297%;
+      width: 314.84594%; }
+      /* line 38, /Users/mario/.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/neat-1.6.0/app/assets/stylesheets/grid/_span-columns.scss */
+      .colors:last-child {
+        margin-right: 0; } }
+
+/* line 1, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_documentation-single.scss */
+.documentation-single {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 74.41059%;
+  margin-right: 0;
+  padding: 1.25em 0.9375em 0; }
+  /* line 38, /Users/mario/.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/neat-1.6.0/app/assets/stylesheets/grid/_span-columns.scss */
+  .documentation-single:last-child {
+    margin-right: 0; }
+  @media screen and (max-width: 768px) {
+    /* line 1, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_documentation-single.scss */
+    .documentation-single {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%; }
+      /* line 38, /Users/mario/.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/neat-1.6.0/app/assets/stylesheets/grid/_span-columns.scss */
+      .documentation-single:last-child {
+        margin-right: 0; } }
+  /* line 19, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_documentation-single.scss */
+  .documentation-single .display {
+    float: left;
+    display: block;
+    margin-right: 3.16844%;
+    width: 42.6842%; }
+    /* line 38, /Users/mario/.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/neat-1.6.0/app/assets/stylesheets/grid/_span-columns.scss */
+    .documentation-single .display:last-child {
+      margin-right: 0; }
+    @media screen and (max-width: 768px) {
+      /* line 19, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_documentation-single.scss */
+      .documentation-single .display {
+        float: left;
+        display: block;
+        margin-right: 3.16844%;
+        width: 100%; }
+        /* line 38, /Users/mario/.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/neat-1.6.0/app/assets/stylesheets/grid/_span-columns.scss */
+        .documentation-single .display:last-child {
+          margin-right: 0; } }
+  /* line 27, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_documentation-single.scss */
+  .documentation-single .info_intro {
+    float: left;
+    display: block;
+    margin-right: 3.16844%;
+    width: 54.14736%;
+    margin-right: 0;
+    overflow: hidden; }
+    /* line 38, /Users/mario/.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/neat-1.6.0/app/assets/stylesheets/grid/_span-columns.scss */
+    .documentation-single .info_intro:last-child {
+      margin-right: 0; }
+    /* line 32, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_documentation-single.scss */
+    .documentation-single .info_intro p {
+      margin-bottom: 1.5625em; }
+    @media screen and (max-width: 768px) {
+      /* line 27, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_documentation-single.scss */
+      .documentation-single .info_intro {
+        float: left;
+        display: block;
+        margin-right: 3.16844%;
+        width: 100%;
+        text-align: center; }
+        /* line 38, /Users/mario/.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/neat-1.6.0/app/assets/stylesheets/grid/_span-columns.scss */
+        .documentation-single .info_intro:last-child {
+          margin-right: 0; } }
+  /* line 41, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_documentation-single.scss */
+  .documentation-single .action {
+    border: none;
+    font-size: 0.875em;
+    padding: 0.5625em 1.5625em;
+    margin-top: 1.5625em; }
+    @media screen and (max-width: 966px) {
+      /* line 41, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_documentation-single.scss */
+      .documentation-single .action {
+        font-size: 0.75em; } }
+  /* line 52, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_documentation-single.scss */
+  .documentation-single .how-to {
+    padding-top: 4.0625em; }
+  /* line 56, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_documentation-single.scss */
+  .documentation-single .hardware h2 {
+    clear: both;
+    margin: 1.5em 0; }
+  /* line 61, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_documentation-single.scss */
+  .documentation-single .devices {
+    max-width: 966px;
+    margin-left: auto;
+    margin-right: auto; }
+    /* line 15, /Users/mario/.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/bourbon-4.0.2/app/assets/stylesheets/addons/_clearfix.scss */
+    .documentation-single .devices:after {
+      content: "";
+      display: table;
+      clear: both; }
+  /* line 65, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_documentation-single.scss */
+  .documentation-single .device {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%; }
+    /* line 38, /Users/mario/.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/neat-1.6.0/app/assets/stylesheets/grid/_span-columns.scss */
+    .documentation-single .device:last-child {
+      margin-right: 0; }
+    /* line 52, /Users/mario/.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/neat-1.6.0/app/assets/stylesheets/grid/_omega.scss */
+    .documentation-single .device:nth-child(3n) {
+      margin-right: 0; }
+    /* line 57, /Users/mario/.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/neat-1.6.0/app/assets/stylesheets/grid/_omega.scss */
+    .documentation-single .device:nth-child(3n+1) {
+      clear: left; }
+
+/* line 1, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_documentation-title.scss */
+.page-title {
+  background: url(/images/elements/docs-header.png) top center repeat;
+  border-top: 2px solid #fff;
+  background-size: cover; }
+  /* line 6, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_documentation-title.scss */
+  .page-title .container {
+    padding: 1.875em 0.9375em 1.25em; }
+  /* line 10, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_documentation-title.scss */
+  .page-title .title {
+    color: #70b3db;
+    margin: 0; }
+  /* line 15, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_documentation-title.scss */
+  .page-title .subtitle {
+    color: #ebfdff;
+    margin: 0; }
+    @media screen and (max-width: 966px) {
+      /* line 15, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_documentation-title.scss */
+      .page-title .subtitle {
+        font-size: 1.25em; } }
+
+/* line 1, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_footer.scss */
+.app-footer {
+  @indlude row();
+  background: #0f4b87;
+  color: white;
+  font-family: "Lato", sans-serif;
+  margin-top: 1.25em;
+  position: relative;
+  text-align: center; }
+  /* line 11, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_footer.scss */
+  .app-footer .frameworks {
+    background: url(/images/elements/background-footer.png) top center repeat;
+    padding: 1.25em 0; }
+  /* line 16, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_footer.scss */
+  .app-footer .robot-title {
+    color: #cc3500;
+    font-weight: 600; }
+  /* line 21, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_footer.scss */
+  .app-footer .framework {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+    float: left;
+    padding: 1.25em; }
+    /* line 38, /Users/mario/.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/neat-1.6.0/app/assets/stylesheets/grid/_span-columns.scss */
+    .app-footer .framework:last-child {
+      margin-right: 0; }
+    @media screen and (max-width: 768px) {
+      /* line 21, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_footer.scss */
+      .app-footer .framework {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 100%; }
+        /* line 38, /Users/mario/.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/neat-1.6.0/app/assets/stylesheets/grid/_span-columns.scss */
+        .app-footer .framework:last-child {
+          margin-right: 0; } }
+
+/* line 36, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_footer.scss */
+.copyright {
+  border-top: 2px solid #ebfdff;
+  clear: both;
+  padding: 0.625em 0; }
+  /* line 42, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_footer.scss */
+  .copyright .hybrid-group {
+    float: left; }
+    /* line 45, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_footer.scss */
+    .copyright .hybrid-group img {
+      vertical-align: sub;
+      margin-left: 1.5625em; }
+  /* line 51, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_footer.scss */
+  .copyright .top-link {
+    float: right; }
+    /* line 54, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_footer.scss */
+    .copyright .top-link .top {
+      color: #b4e3ff;
+      text-align: center;
+      margin: 0; }
+
+/* line 4, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_hero.scss */
+.hero .content {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%;
+  margin-right: 0;
+  margin-top: 2.1875em;
+  position: relative;
+  z-index: 1; }
+  /* line 38, /Users/mario/.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/neat-1.6.0/app/assets/stylesheets/grid/_span-columns.scss */
+  .hero .content:last-child {
+    margin-right: 0; }
+  /* line 11, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_hero.scss */
+  .hero .content .title {
+    font-size: 2.2em;
+    font-weight: 700; }
+  /* line 16, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_hero.scss */
+  .hero .content .sub-title {
+    font-size: 1.375em; }
+  @media screen and (max-width: 768px) {
+    /* line 4, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_hero.scss */
+    .hero .content {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%;
+      text-align: center; }
+      /* line 38, /Users/mario/.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/neat-1.6.0/app/assets/stylesheets/grid/_span-columns.scss */
+      .hero .content:last-child {
+        margin-right: 0; }
+      /* line 23, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_hero.scss */
+      .hero .content br {
+        display: none; } }
+  @media screen and (max-width: 480px) {
+    /* line 28, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_hero.scss */
+    .hero .content .title {
+      font-size: 1.625em; }
+    /* line 31, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_hero.scss */
+    .hero .content .sub-title {
+      font-size: 1.25em; } }
+/* line 37, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_hero.scss */
+.hero .display {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%; }
+  /* line 38, /Users/mario/.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/neat-1.6.0/app/assets/stylesheets/grid/_span-columns.scss */
+  .hero .display:last-child {
+    margin-right: 0; }
+  /* line 40, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_hero.scss */
+  .hero .display img {
+    position: relative;
+    top: 46px;
+    z-index: 2; }
+  @media screen and (max-width: 768px) {
+    /* line 37, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_hero.scss */
+    .hero .display {
+      display: none; } }
+/* line 51, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_hero.scss */
+.hero .action {
+  text-shadow: 1px 2px 1px #8bbf59;
+  top: 15px; }
+/* line 57, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_hero.scss */
+.hero .social {
+  position: relative; }
+  @media screen and (max-width: 768px) {
+    /* line 57, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_hero.scss */
+    .hero .social {
+      top: 40px;
+      text-align: center;
+      padding-left: 0.8125em; } }
+/* line 67, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_hero.scss */
+.hero .splitter {
+  display: inline-block;
+  margin-top: 0.875em; }
+  @media screen and (max-width: 768px) {
+    /* line 73, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_hero.scss */
+    .hero .splitter #twitter-widget-1 {
+      display: none; }
+    /* line 77, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_hero.scss */
+    .hero .splitter .fork {
+      display: none; } }
+  @media screen and (max-width: 640px) {
+    /* line 67, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_hero.scss */
+    .hero .splitter {
+      display: block; } }
+/* line 87, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_hero.scss */
+.hero .ship-small {
+  -webkit-animation: ship-small 10s infinite linear;
+  -moz-animation: ship-small 10s infinite linear;
+  animation: ship-small 10s infinite linear;
+  background: url(/images/elements/ship-small.png) top center repeat-x;
+  background-position-x: 325px;
+  top: 50px; }
+/* line 94, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_hero.scss */
+.hero .ship-medium {
+  -webkit-animation: ship-medium 5s infinite linear;
+  -moz-animation: ship-medium 5s infinite linear;
+  animation: ship-medium 5s infinite linear;
+  background: url(/images/elements/ship-medium.png) top center repeat-x;
+  background-position-x: 651px;
+  top: 120px; }
+/* line 101, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_hero.scss */
+.hero .ship-large {
+  -webkit-animation: ship-small 20s infinite linear;
+  -moz-animation: ship-small 20s infinite linear;
+  animation: ship-small 20s infinite linear;
+  background: url(/images/elements/ship-large.png) top center repeat-x;
+  background-position-x: 420px;
+  top: 210px; }
+/* line 107, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_hero.scss */
+.hero .window-panel {
+  position: absolute;
+  z-index: 2; }
+/* line 111, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_hero.scss */
+.hero .panel {
+  position: absolute;
+  width: 14px;
+  height: 368px;
+  background-color: #0f4b87; }
+/* line 118, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_hero.scss */
+.hero .one {
+  left: -65px; }
+/* line 122, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_hero.scss */
+.hero .two {
+  left: 1022px; }
+
+/* line 127, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_hero.scss */
+.site-description {
+  background-color: #c1effe; }
+  /* line 130, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_hero.scss */
+  .site-description .container {
+    padding: 1.875em 0; }
+
+@-webkit-keyframes ship-small {
+  from {
+    background-position: 0px; }
+  to {
+    background-position: 2000px; } }
+@-moz-keyframes ship-small {
+  from {
+    background-position: 0px; }
+  to {
+    background-position: 2000px; } }
+@keyframes ship-small {
+  from {
+    background-position: 0px; }
+  to {
+    background-position: 2000px; } }
+@-webkit-keyframes ship-medium {
+  from {
+    background-position: 0px; }
+  to {
+    background-position: 2000px; } }
+@-moz-keyframes ship-medium {
+  from {
+    background-position: 0px; }
+  to {
+    background-position: 2000px; } }
+@keyframes ship-medium {
+  from {
+    background-position: 0px; }
+  to {
+    background-position: 2000px; } }
+/* line 1, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_mobile-nav.scss */
+.mobile-menu {
+  text-align: right;
+  display: none;
+  margin-right: 10px; }
+  @media screen and (max-width: 768px) {
+    /* line 1, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_mobile-nav.scss */
+    .mobile-menu {
+      display: block; } }
+  /* line 10, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_mobile-nav.scss */
+  .mobile-menu .active {
+    background: white; }
+  /* line 14, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_mobile-nav.scss */
+  .mobile-menu a {
+    background: #79bee8;
+    border-radius: 13px;
+    padding: 10px 12px;
+    margin: 5px;
+    display: inline-block; }
+    /* line 21, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_mobile-nav.scss */
+    .mobile-menu a:hover, .mobile-menu .platform-list a:hover .title, .platform-list a:hover .mobile-menu .title {
+      background: white;
+      cursor: pointer; }
+      /* line 25, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_mobile-nav.scss */
+      .mobile-menu a:hover .line, .platform-list a:hover .mobile-menu .title .line {
+        background: #79bee8; }
+  /* line 30, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_mobile-nav.scss */
+  .mobile-menu .line {
+    margin: 5px 0 5px;
+    background: white; }
+
+/* line 35, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_mobile-nav.scss */
+.mobile-menu.home {
+  display: none; }
+  @media screen and (max-width: 320px) {
+    /* line 35, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_mobile-nav.scss */
+    .mobile-menu.home {
+      display: block; } }
+
+/* line 43, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_mobile-nav.scss */
+.show {
+  display: block !important; }
+
+/* line 8, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_platform-list.scss */
+.platform-list {
+  list-style: none;
+  margin: 0; }
+  /* line 12, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_platform-list.scss */
+  .platform-list li {
+    display: block;
+    display: inline-block;
+    text-align: center; }
+    /* line 15, /Users/mario/.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/bourbon-4.0.2/app/assets/stylesheets/addons/_clearfix.scss */
+    .platform-list li:after {
+      content: "";
+      display: table;
+      clear: both; }
+  /* line 19, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_platform-list.scss */
+  .platform-list a:hover img, .platform-list a:hover .title img {
+    opacity: .8; }
+  /* line 27, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_platform-list.scss */
+  .platform-list .title {
+    color: #4692bf;
+    font-size: 0.875em;
+    padding: 0.625em;
+    width: 100%; }
+
+/* line 1, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_side-bar.scss */
+.side-documentation {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 23.23176%;
+  background: #c1effe;
+  border-bottom: 1px solid #0f4b87;
+  margin-top: 4.3em;
+  padding: 3.5em 0.625em 0; }
+  /* line 38, /Users/mario/.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/neat-1.6.0/app/assets/stylesheets/grid/_span-columns.scss */
+  .side-documentation:last-child {
+    margin-right: 0; }
+  @media screen and (max-width: 768px) {
+    /* line 1, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_side-bar.scss */
+    .side-documentation {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%;
+      margin-top: 0;
+      padding: 0; }
+      /* line 38, /Users/mario/.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/neat-1.6.0/app/assets/stylesheets/grid/_span-columns.scss */
+      .side-documentation:last-child {
+        margin-right: 0; } }
+  /* line 13, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_side-bar.scss */
+  .side-documentation .mobile-header {
+    display: none;
+    float: left;
+    margin: 0.9375em 0.625em; }
+    @media screen and (max-width: 768px) {
+      /* line 13, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_side-bar.scss */
+      .side-documentation .mobile-header {
+        display: block; } }
+  /* line 24, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_side-bar.scss */
+  .side-documentation .sidebar-header {
+    background: url(/images/elements/sidebar-header.png) top center no-repeat;
+    margin: -7.825em -0.625em 0; }
+    @media screen and (max-width: 768px) {
+      /* line 24, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_side-bar.scss */
+      .side-documentation .sidebar-header {
+        display: none; } }
+  @media screen and (max-width: 768px) {
+    /* line 33, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_side-bar.scss */
+    .side-documentation .docs-sidebar {
+      display: none; } }
+  /* line 38, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_side-bar.scss */
+  .side-documentation .docs-sidebar > a, .side-documentation .docs-sidebar .section .name {
+    border-bottom: 1px solid white;
+    font-size: 0.875em;
+    font-weight: bold; }
+    /* line 43, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_side-bar.scss */
+    .side-documentation .docs-sidebar > a:last-of-type, .side-documentation .docs-sidebar .section .name:last-of-type {
+      border-bottom: none; }
+  /* line 48, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_side-bar.scss */
+  .side-documentation .docs-sidebar a, .side-documentation .docs-sidebar .name {
+    width: 100%;
+    display: block;
+    padding: 10px;
+    cursor: pointer;
+    color: #0f4b87;
+    position: relative;
+    z-index: 1; }
+  /* line 58, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_side-bar.scss */
+  .side-documentation .docs-sidebar .links a {
+    font-size: 0.875em;
+    color: #0f4b87;
+    padding: 0.3125em 0.625em; }
+    /* line 63, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_side-bar.scss */
+    .side-documentation .docs-sidebar .links a:hover, .side-documentation .docs-sidebar .links .platform-list a:hover .title, .platform-list a:hover .side-documentation .docs-sidebar .links .title {
+      color: #072542; }
+  /* line 68, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_side-bar.scss */
+  .side-documentation .docs-sidebar a.active {
+    color: #072542;
+    font-weight: 700; }
+  /* line 73, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_side-bar.scss */
+  .side-documentation .docs-sidebar .section .links {
+    padding-left: 0.9375em;
+    padding-top: 0.625em; }
+  /* line 78, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_side-bar.scss */
+  .side-documentation .docs-sidebar .sub-section .links {
+    padding-left: 1.25em; }
+  /* line 82, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_side-bar.scss */
+  .side-documentation .docs-sidebar .section:before {
+    content: '▶';
+    float: right;
+    margin: 12px 12px 0 0;
+    color: #CC3403;
+    font-size: 8px;
+    position: relative;
+    z-index: 0; }
+  /* line 92, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_side-bar.scss */
+  .side-documentation .docs-sidebar .section.active:before {
+    content: '▼'; }
+
+/* line 1, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_blog.scss */
+.network-link {
+  width: 30px; }
+
+/* line 4, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_blog.scss */
+.dates {
+  width: 70px; }
+
+/* line 7, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_blog.scss */
+.article-title {
+  width: 85%; }
+
+/* line 1, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_documentation.scss */
+.documentation {
+  font-family: "Lato", sans-serif; }
+  /* line 4, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_documentation.scss */
+  .documentation .box {
+    height: 7.5em; }
+  /* line 8, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_documentation.scss */
+  .documentation .platform {
+    width: 24%; }
+    @media screen and (max-width: 640px) {
+      /* line 8, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_documentation.scss */
+      .documentation .platform {
+        width: 49%;
+        float: none; } }
+  /* line 16, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_documentation.scss */
+  .documentation section {
+    overflow: hidden;
+    display: block; }
+  /* line 21, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_documentation.scss */
+  .documentation .sidebar-header {
+    height: 69px; }
+  /* line 25, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_documentation.scss */
+  .documentation .subNavfixed {
+    width: 100%;
+    background: #b4e3ff; }
+    /* line 29, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_documentation.scss */
+    .documentation .subNavfixed .container-subnav {
+      max-width: 966px; }
+    /* line 33, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_documentation.scss */
+    .documentation .subNavfixed .sub-nav-title {
+      line-height: 3.875em; }
+  /* line 38, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_documentation.scss */
+  .documentation .devices h2 {
+    overflow: hidden;
+    clear: both;
+    padding-top: 1.25em; }
+  /* line 44, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_documentation.scss */
+  .documentation .device img {
+    max-width: 100%; }
+  /* line 48, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_documentation.scss */
+  .documentation .image-circuit img {
+    height: 300px; }
+
+/* line 1, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_home.scss */
+.hero {
+  height: 430px; }
+
+/* line 5, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_home.scss */
+.ship-small {
+  width: 100%;
+  height: 29px; }
+
+/* line 10, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_home.scss */
+.ship-medium {
+  width: 100%;
+  height: 35px; }
+
+/* line 15, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_home.scss */
+.ship-large {
+  width: 100%;
+  height: 46px; }
+
+/* line 19, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_home.scss */
+.platform {
+  width: 19%; }
+  @media screen and (max-width: 640px) {
+    /* line 19, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_home.scss */
+    .platform {
+      width: 49%;
+      float: none; } }
+
+/* center align twitter button*/
+@media screen and (max-width: 640px) {
+  /* line 30, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_home.scss */
+  #twitter-widget-0 {
+    width: 99px !important; } }
+/* line 1, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.square {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #cccccc;
+  float: left;
+  margin-right: 10px; }
+
+/* line 10, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.aliceblue {
+  background: aliceblue; }
+
+/* line 15, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.antiquewhite {
+  background: antiquewhite; }
+
+/* line 20, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.aqua {
+  background: cyan; }
+
+/* line 25, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.aquamarine {
+  background: aquamarine; }
+
+/* line 30, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.azure {
+  background: azure; }
+
+/* line 35, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.beige {
+  background: beige; }
+
+/* line 40, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.bisque {
+  background: bisque; }
+
+/* line 45, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.black {
+  background: black; }
+
+/* line 50, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.blanchedalmond {
+  background: blanchedalmond; }
+
+/* line 55, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.blue {
+  background: blue; }
+
+/* line 60, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.blueviolet {
+  background: blueviolet; }
+
+/* line 65, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.brown {
+  background: brown; }
+
+/* line 70, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.burlywood {
+  background: burlywood; }
+
+/* line 75, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.cadetblue {
+  background: cadetblue; }
+
+/* line 80, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.chartreuse {
+  background: chartreuse; }
+
+/* line 85, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.chocolate {
+  background: chocolate; }
+
+/* line 90, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.coral {
+  background: coral; }
+
+/* line 95, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.cornflowerblue {
+  background: cornflowerblue; }
+
+/* line 100, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.cornsilk {
+  background: cornsilk; }
+
+/* line 105, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.crimson {
+  background: crimson; }
+
+/* line 110, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.cyan {
+  background: cyan; }
+
+/* line 115, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.darkblue {
+  background: darkblue; }
+
+/* line 120, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.darkcyan {
+  background: darkcyan; }
+
+/* line 125, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.darkgoldenrod {
+  background: darkgoldenrod; }
+
+/* line 130, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.darkgray {
+  background: darkgray; }
+
+/* line 135, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.darkgreen {
+  background: darkgreen; }
+
+/* line 140, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.darkkhaki {
+  background: darkkhaki; }
+
+/* line 145, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.darkmagenta {
+  background: darkmagenta; }
+
+/* line 150, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.darkolivegreen {
+  background: darkolivegreen; }
+
+/* line 155, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.darkorange {
+  background: darkorange; }
+
+/* line 160, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.darkorchid {
+  background: darkorchid; }
+
+/* line 165, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.darkred {
+  background: darkred; }
+
+/* line 170, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.darksalmon {
+  background: darksalmon; }
+
+/* line 175, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.darkseagreen {
+  background: darkseagreen; }
+
+/* line 180, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.darkslateblue {
+  background: darkslateblue; }
+
+/* line 185, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.darkslategray {
+  background: darkslategray; }
+
+/* line 190, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.darkturquoise {
+  background: darkturquoise; }
+
+/* line 195, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.darkviolet {
+  background: darkviolet; }
+
+/* line 200, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.deeppink {
+  background: deeppink; }
+
+/* line 205, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.deepskyblue {
+  background: deepskyblue; }
+
+/* line 210, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.dimgray {
+  background: dimgray; }
+
+/* line 215, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.dodgerblue {
+  background: dodgerblue; }
+
+/* line 220, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.firebrick {
+  background: firebrick; }
+
+/* line 225, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.floralwhite {
+  background: floralwhite; }
+
+/* line 230, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.forestgreen {
+  background: forestgreen; }
+
+/* line 235, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.fuchsia {
+  background: magenta; }
+
+/* line 240, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.gainsboro {
+  background: gainsboro; }
+
+/* line 245, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.ghostwhite {
+  background: ghostwhite; }
+
+/* line 250, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.gold {
+  background: gold; }
+
+/* line 255, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.goldenrod {
+  background: goldenrod; }
+
+/* line 260, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.gray {
+  background: gray; }
+
+/* line 265, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.green {
+  background: green; }
+
+/* line 270, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.greenyellow {
+  background: greenyellow; }
+
+/* line 275, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.honeydew {
+  background: honeydew; }
+
+/* line 280, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.hotpink {
+  background: hotpink; }
+
+/* line 285, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.indianred {
+  background: indianred; }
+
+/* line 290, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.indigo {
+  background: indigo; }
+
+/* line 295, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.ivory {
+  background: ivory; }
+
+/* line 300, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.khaki {
+  background: khaki; }
+
+/* line 305, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.lavender {
+  background: lavender; }
+
+/* line 310, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.lavenderblush {
+  background: lavenderblush; }
+
+/* line 315, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.lawngreen {
+  background: lawngreen; }
+
+/* line 320, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.lemonchiffon {
+  background: lemonchiffon; }
+
+/* line 325, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.lightblue {
+  background: lightblue; }
+
+/* line 330, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.lightcoral {
+  background: lightcoral; }
+
+/* line 335, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.lightcyan {
+  background: lightcyan; }
+
+/* line 340, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.lightgoldenrodyellow {
+  background: lightgoldenrodyellow; }
+
+/* line 345, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.lightgreen {
+  background: lightgreen; }
+
+/* line 350, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.lightgrey {
+  background: lightgray; }
+
+/* line 355, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.lightpink {
+  background: lightpink; }
+
+/* line 360, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.lightsalmon {
+  background: lightsalmon; }
+
+/* line 365, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.lightseagreen {
+  background: lightseagreen; }
+
+/* line 370, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.lightskyblue {
+  background: lightskyblue; }
+
+/* line 375, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.lightslategray {
+  background: lightslategray; }
+
+/* line 380, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.lightsteelblue {
+  background: lightsteelblue; }
+
+/* line 385, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.lightyellow {
+  background: lightyellow; }
+
+/* line 390, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.lime {
+  background: lime; }
+
+/* line 395, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.limegreen {
+  background: limegreen; }
+
+/* line 400, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.linen {
+  background: linen; }
+
+/* line 405, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.magenta {
+  background: magenta; }
+
+/* line 410, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.maroon {
+  background: maroon; }
+
+/* line 415, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.mediumaquamarine {
+  background: mediumaquamarine; }
+
+/* line 420, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.mediumblue {
+  background: mediumblue; }
+
+/* line 425, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.mediumorchid {
+  background: mediumorchid; }
+
+/* line 430, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.mediumpurple {
+  background: mediumpurple; }
+
+/* line 435, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.mediumseagreen {
+  background: mediumseagreen; }
+
+/* line 440, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.mediumslateblue {
+  background: mediumslateblue; }
+
+/* line 445, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.mediumspringgreen {
+  background: mediumspringgreen; }
+
+/* line 450, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.mediumturquoise {
+  background: mediumturquoise; }
+
+/* line 455, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.mediumvioletred {
+  background: mediumvioletred; }
+
+/* line 460, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.midnightblue {
+  background: midnightblue; }
+
+/* line 465, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.mintcream {
+  background: mintcream; }
+
+/* line 470, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.mistyrose {
+  background: mistyrose; }
+
+/* line 475, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.moccasin {
+  background: moccasin; }
+
+/* line 480, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.navajowhite {
+  background: navajowhite; }
+
+/* line 485, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.navy {
+  background: navy; }
+
+/* line 490, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.oldlace {
+  background: oldlace; }
+
+/* line 495, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.olive {
+  background: olive; }
+
+/* line 500, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.olivedrab {
+  background: olivedrab; }
+
+/* line 505, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.orange {
+  background: orange; }
+
+/* line 510, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.orangered {
+  background: orangered; }
+
+/* line 515, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.orchid {
+  background: orchid; }
+
+/* line 520, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.palegoldenrod {
+  background: palegoldenrod; }
+
+/* line 525, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.palegreen {
+  background: palegreen; }
+
+/* line 530, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.paleturquoise {
+  background: paleturquoise; }
+
+/* line 535, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.palevioletred {
+  background: palevioletred; }
+
+/* line 540, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.papayawhip {
+  background: papayawhip; }
+
+/* line 545, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.peachpuff {
+  background: peachpuff; }
+
+/* line 550, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.peru {
+  background: peru; }
+
+/* line 555, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.pink {
+  background: pink; }
+
+/* line 560, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.plum {
+  background: plum; }
+
+/* line 565, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.powderblue {
+  background: powderblue; }
+
+/* line 570, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.purple {
+  background: purple; }
+
+/* line 575, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.red {
+  background: red; }
+
+/* line 580, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.rosybrown {
+  background: rosybrown; }
+
+/* line 585, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.royalblue {
+  background: royalblue; }
+
+/* line 590, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.saddlebrown {
+  background: saddlebrown; }
+
+/* line 595, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.salmon {
+  background: salmon; }
+
+/* line 600, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.sandybrown {
+  background: sandybrown; }
+
+/* line 605, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.seagreen {
+  background: seagreen; }
+
+/* line 610, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.seashell {
+  background: seashell; }
+
+/* line 615, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.sienna {
+  background: sienna; }
+
+/* line 620, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.silver {
+  background: silver; }
+
+/* line 625, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.skyblue {
+  background: skyblue; }
+
+/* line 630, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.slateblue {
+  background: slateblue; }
+
+/* line 635, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.slategray {
+  background: slategray; }
+
+/* line 640, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.snow {
+  background: snow; }
+
+/* line 645, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.springgreen {
+  background: springgreen; }
+
+/* line 650, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.steelblue {
+  background: steelblue; }
+
+/* line 655, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.tan {
+  background: tan; }
+
+/* line 660, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.teal {
+  background: teal; }
+
+/* line 665, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.thistle {
+  background: thistle; }
+
+/* line 670, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.tomato {
+  background: tomato; }
+
+/* line 675, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.turquoise {
+  background: turquoise; }
+
+/* line 680, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.violet {
+  background: violet; }
+
+/* line 685, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.wheat {
+  background: wheat; }
+
+/* line 690, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.white {
+  background: white; }
+
+/* line 695, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.whitesmoke {
+  background: whitesmoke; }
+
+/* line 700, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.yellow {
+  background: yellow; }
+
+/* line 705, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_sphero_colors.scss */
+.yellowgreen {
+  background: yellowgreen; }
+
+/* line 1, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_videos.scss */
+.video {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+  margin-right: 0;
+  margin: .5%; }
+  /* line 38, /Users/mario/.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/neat-1.6.0/app/assets/stylesheets/grid/_span-columns.scss */
+  .video:last-child {
+    margin-right: 0; }
+  @media screen and (max-width: 768px) {
+    /* line 1, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_videos.scss */
+    .video {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%; }
+      /* line 38, /Users/mario/.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/neat-1.6.0/app/assets/stylesheets/grid/_span-columns.scss */
+      .video:last-child {
+        margin-right: 0; } }
+  /* line 10, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_videos.scss */
+  .video .video-title {
+    font-size: 16px;
+    height: 30px; }
+  /* line 15, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/views/_videos.scss */
+  .video iframe, .video object {
+    width: 100%;
+    height: 300px; }

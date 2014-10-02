@@ -1,145 +1,172 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
-<html>
-<head>
+<html ng-app="artoo">
+  <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta charset="utf-8">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
-<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-<meta name="description">
-<meta content="Ron Evans" name="author">
-<title>Robeaux - The Universal Robot User Interface</title>
-<link href="/stylesheets/style.css" rel="stylesheet">
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script><script src="/javascripts/script.js"></script><script src="/hybridpages/assets/javascript/accordeon.js"></script><link href="//fonts.googleapis.com/css?family=Russo+One%7CInconsolata:400,700%7CMontserrat:700" rel="stylesheet">
-<link href="/favicon.ico" rel="shortcut icon" type="image/gif">
-<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-
-  _gaq.push(['_setAccount', "UA-46433484-1"]);
-
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="description">
+    <meta content="Ron Evans" name="author">
+    <title>Robeaux - The Universal Robot User Interface</title>
+    <link href="/stylesheets/application.css" rel="stylesheet">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="/javascripts/vendor/angular.min.js"></script>
+    <script src="/javascripts/app.js"></script>
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700%7CLato:400,700%7CInconsolata" rel="stylesheet">
+    <link href="/favicon.ico" rel="shortcut icon" type="image/gif">
+  <script type="text/javascript">
 
 
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46433484-1', {"cookieDomain":"artoo.io"});
 
 
 
 
-  _gaq.push(['_trackPageview']);
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
 
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
 
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+
+
+
+
+
+
+
+
+
+   ga('send', 'pageview');
+
+
 </script></head>
-<body>
+  <body>
     
-    <div class="app">
-      <div class="w">
-        <header class="app-header" role="banner"><div class="display">
-            <h1 class="app-logo">
-              <a href="/">artoo</a>
-            </h1>
-            <span class="subtitle">
-              <div class="main">Ruby on Robots</div>
-            </span>
+    <div class="app-header" id="top" role="banner">
+      <div class="container">
+        <div class="display">
+          <div class="app-logo">
+            <a class="logo" href="/">artoo Ruby on Robots</a>
           </div>
-          <span class="menu">
-            <a href="/documentation" class="item">Docs</a>
-            <a href="/documentation/platforms" class="item">Platforms</a>
-            <a href="/videos" class="item">Videos</a>
-            <a class="active" href="/blog">Blog</a>
-            <a class="item" href="https://github.com/hybridgroup/artoo/">Github</a>
-          </span>
-        </header>
-</div>
+        </div>
+        <div class="mobile-menu home">
+          <a id="mobile-menu">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </a>
+        </div>
+        <nav class="menu">
+          <ul class="nav-list">
+            <li>
+              <a href="/documentation" class="item">Docs</a>
+            </li>
+            <li>
+              <a href="/documentation/platforms" class="item">Platforms</a>
+            </li>
+            <li>
+              <a href="/videos" class="item">Videos</a>
+            </li>
+            <li>
+              <a class="active" href="/blog">Blog</a>
+            </li>
+            <li>
+              <a class="item" target="blank" href="https://github.com/hybridgroup/gobot/">Github</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="app-content">
       <div class="page-title">
-        <div class="w">
+        <div class="container">
           <h1 class="title">Blog</h1>
         </div>
       </div>
-      <div class="container">
-        
-        <div class="main blog" role="main">
-          <div class="articles">
-            <div class="article">
-              <header class="header"><div class="date">
-                  <div class="blue">
-                    <div class="month">
-                      Feb
-                    </div>
-                    <div class="day">
-                      06
-                    </div>
+      
+      <div class="main-content blog" role="main">
+        <div class="articles">
+          <div class="article">
+            <header class="header">
+              <div class="dates">
+                <div class="date-top">
+                  <div class="month">
+                    Feb
                   </div>
-                  <div class="red">
-                    <div class="year">
-                      2014
-                    </div>
+                  <div class="day">
+                    06
                   </div>
                 </div>
-                <div class="data">
-                  <h3>
-                    <a href="/blog/2014/02/06/robeaux-universal-robot-user-interface/">Robeaux - The Universal Robot User Interface</a>
-                  </h3>
-                  <div class="author">
-                    by Ron Evans
+                <div class="date-bottom">
+                  <div class="year">
+                    2014
                   </div>
                 </div>
-              </header><p>We're off to a nice start for 2014 with the release of version 1.6 of Artoo - Ruby on Robots (<a href="http://artoo.io">http://artoo.io</a>), our first release of the year. We learned a lot from our great experience at RobotsConf (<a href="http://robotsconf.com">http://robotsconf.com</a>), and this is just the first step forward in a series of new improvements for all of you, our loyal friends. This release adds some powerful new capabilities, as well as support for more hardware. </p>
-              
-              <p>First of all, the user interface to the API for all of our robotic platforms is now in a new separate library. Called Robeaux (<a href="http://robeaux.io">http://robeaux.io</a>), it is a universal dashboard to robotic systems, written using AngularJS (<a href="http://angularjs.org/">http://angularjs.org/</a>). We're now using it within the newest releases of Artoo, Cylon.js (<a href="http://cylonjs.com">http://cylonjs.com</a>), and Gobot (<a href="http://gobot.io">http://gobot.io</a>).</p>
-              
-              <p>We've also added more hardware support. Artoo now has a keyboard adaptor and driver, so you can use a standard computer keyboard to control your robotic devices. Please note we do not recommend using a keyboard to fly anything more than simple maneuvers using a drone. Unless absolutely necessary. Or fun.</p>
-              
-              <p>Another new driver is called the "MakeyButton". Inspired by the awesome MakeyMakey (<a href="http://makeymakey.com">http://makeymakey.com</a>), this GPIO driver allows you to connect a high Ohm resistor to a digital pin on your Arduino or Raspberry Pi. Using this simple circuit, and our driver, you can control your robots with bananas, clay, or drawable circuitry.</p>
-              
-              <p>Our Sphero (<a href="http://gosphero.com">http://gosphero.com</a>) drivers have now had a major overhaul. They can now keep up with the speed of the higher powered Sphero 2.0. We have also added the ability to orient the Sphero front direction. You do need to know which way you are going at that velocity.</p>
-              
-              <p>Last but certainly not least, we've updated the Artoo documentation to include better and more complete information. We've also added more examples. You have told us how important docs and examples are to help get started.</p>
-              
-              <p>Make sure you follow us on Twitter at <a href="http://twitter.com/artooio">@artooio</a> for the latest updates. We're excited about our first release of the year, and we're looking forward to hearing from you what you think about it, and what else you think we should be working on.</p>
-            </div>
-            <div class="comments">
-              <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
-                <a class="addthis_button_preferred_2"></a>
-                <a class="addthis_button_preferred_3"></a>
-                <a class="addthis_button_preferred_1"></a>
-                <a class="addthis_button_preferred_4"></a>
-                <a class="addthis_button_compact"></a>
-                <a class="addthis_counter addthis_bubble_style"></a>
               </div>
-              <div id="disqus_thread"></div>
-              <noscript>
-                Please enable JavaScript to view the
-                <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-              </noscript>
-              <a class="dsq-brlink" href="http://disqus.com">
-                comments powered by
-                <span class="logo-disqus">Disqus</span>
-              </a>
+              <h2 class="article-title">
+                <a id="#disqus_thread" href="/blog/2014/02/06/robeaux-universal-robot-user-interface/">Robeaux - The Universal Robot User Interface</a>
+              </h2>
+              <div class="author">
+                by Ron Evans
+              </div>
+            </header>
+            <p>We're off to a nice start for 2014 with the release of version 1.6 of Artoo - Ruby on Robots (<a href="http://artoo.io">http://artoo.io</a>), our first release of the year. We learned a lot from our great experience at RobotsConf (<a href="http://robotsconf.com">http://robotsconf.com</a>), and this is just the first step forward in a series of new improvements for all of you, our loyal friends. This release adds some powerful new capabilities, as well as support for more hardware. </p>
+            
+            <p>First of all, the user interface to the API for all of our robotic platforms is now in a new separate library. Called Robeaux (<a href="http://robeaux.io">http://robeaux.io</a>), it is a universal dashboard to robotic systems, written using AngularJS (<a href="http://angularjs.org/">http://angularjs.org/</a>). We're now using it within the newest releases of Artoo, Cylon.js (<a href="http://cylonjs.com">http://cylonjs.com</a>), and Gobot (<a href="http://gobot.io">http://gobot.io</a>).</p>
+            
+            <p>We've also added more hardware support. Artoo now has a keyboard adaptor and driver, so you can use a standard computer keyboard to control your robotic devices. Please note we do not recommend using a keyboard to fly anything more than simple maneuvers using a drone. Unless absolutely necessary. Or fun.</p>
+            
+            <p>Another new driver is called the "MakeyButton". Inspired by the awesome MakeyMakey (<a href="http://makeymakey.com">http://makeymakey.com</a>), this GPIO driver allows you to connect a high Ohm resistor to a digital pin on your Arduino or Raspberry Pi. Using this simple circuit, and our driver, you can control your robots with bananas, clay, or drawable circuitry.</p>
+            
+            <p>Our Sphero (<a href="http://gosphero.com">http://gosphero.com</a>) drivers have now had a major overhaul. They can now keep up with the speed of the higher powered Sphero 2.0. We have also added the ability to orient the Sphero front direction. You do need to know which way you are going at that velocity.</p>
+            
+            <p>Last but certainly not least, we've updated the Artoo documentation to include better and more complete information. We've also added more examples. You have told us how important docs and examples are to help get started.</p>
+            
+            <p>Make sure you follow us on Twitter at <a href="http://twitter.com/artooio">@artooio</a> for the latest updates. We're excited about our first release of the year, and we're looking forward to hearing from you what you think about it, and what else you think we should be working on.</p>
+          </div>
+          <div class="comments">
+            <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+              <a class="addthis_button_preferred_2"></a>
+              <a class="addthis_button_preferred_3"></a>
+              <a class="addthis_button_preferred_1"></a>
+              <a class="addthis_button_preferred_4"></a>
+              <a class="addthis_button_compact"></a>
+              <a class="addthis_counter addthis_bubble_style"></a>
+            </div>
+            <div id="disqus_thread"></div>
+            <noscript>
+              Please enable JavaScript to view the
+              <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+            </noscript>
+            <a class="dsq-brlink" href="http://disqus.com">
+              comments powered by
+              <span class="logo-disqus">Disqus</span>
+            </a>
+          </div>
+        </div>
+        <div class="side-columns">
+          <div class="side-column">
+            <h3 class="side-header">Categories</h3>
+            <ul>
+              <li><a href="/blog/tags/robots/">Robots</a></li>
+              <li><a href="/blog/tags/events/">Events</a></li>
+            </ul>
+          </div>
+          <div class="side-column">
+            <h3 class="side-header">Network</h3>
+            <div class="network-links">
+              <a class="network-link" href="https://twitter.com/artooio"><img src="/images/elements/twitter.png"></a>
+              <a class="network-link" href="https://github.com/hybridgroup/artoo"><img src="/images/elements/github.png"></a>
             </div>
           </div>
           <div class="side-column">
-            <div class="categories">
-              <h4>Tags</h4>
-              <ul>
-<li><a href="/blog/tags/robots/">Robots</a></li>
-                <li><a href="/blog/tags/events/">Events</a></li>
-              </ul>
-</div>
-            <div class="network">
-              <h4>Network</h4>
-              <div class="network-links">
-                <a href="https://twitter.com/artooio"><img src="/images/elements/twitter.png"></a>
-                <a href="https://github.com/hybridgroup/artoo"><img src="/images/elements/github.png"></a>
-              </div>
-            </div>
-            <div class="titles">
-              <h4>Posts</h4>
-              <ul>
-<li><a href="/blog/2014/07/18/introducing-rubyserial/">Introducing Rubyserial</a></li>
+            <h3 class="side-header">
+              Posts
+              <ul class="archive">
+                <li><a href="/blog/2014/07/18/introducing-rubyserial/">Introducing Rubyserial</a></li>
                 <li><a href="/blog/2014/04/08/national-robotics-week-at-bostonrb/">National Robotics Week at BostonRB</a></li>
                 <li><a href="/blog/2014/02/12/fun-at-the-los-angeles-ruby-conf-robot-hackathon/">Fun At The Los Angeles Ruby Conference Robot Hackathon</a></li>
                 <li><a href="/blog/2014/02/06/robeaux-universal-robot-user-interface/">Robeaux - The Universal Robot User Interface</a></li>
@@ -147,25 +174,51 @@
                 <li><a href="/blog/2013/09/21/gogaruco/">GoGaRuCo</a></li>
                 <li><a href="/blog/2013/09/04/welcome-to-the-new-era/">Welcome To The New Era</a></li>
               </ul>
-</div>
+            </h3>
           </div>
         </div>
       </div>
     </div>
-    <footer class="app-footer"><div class="w">
-        <div class="copyright">
-          <div class="left-side">
-            © Copyright 2012-2014
-            <a href="http://hybridgroup.com" id="THG-logo" target="_blank">
-              <img alt="The Hybrid Group" src="/images/elements/THG_logo.png"></a>
+    <div class="app-footer">
+      <div class="frameworks">
+        <div class="container">
+          <div class="framework">
+            <img class="robot" src="/images/elements/artoo-footer.png">
+            <p class="robot-title">Multiple Solutions</p>
+            <p class="description">Artoo provides a simple, yet powerful way to create solutions that incorporate multiple, different hardware devices at the same time.</p>
           </div>
-          <div class="right-side">
-            <a href="#top">Top</a>
+          <div class="framework">
+            <img class="robot" src="/images/elements/cylon.png">
+            <p class="robot-title">Cylon Project</p>
+            <p class="description">Want to use Javascript to power your robots? Check out our sister project Cylon.js</p>
+            <a class="footer-button" href="http://cylonjs.com" target="blank">View Project</a>
           </div>
-          <div class="clear"></div>
+          <div class="framework">
+            <img class="robot" src="/images/elements/gobot.png">
+            <p class="robot-title">Gobot Project</p>
+            <p class="description">Want to use Golang on robots? Check out our sister project Gobot</p>
+            <a class="footer-button" href="http://gobot.io" target="blank">View Project</a>
+          </div>
         </div>
       </div>
-    </footer>
-</body>
-<script src="/hybridpages/assets/javascript/disqus.js"></script><script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53632dea5fd71564" type="text/javascript"></script>
+      <div class="copyright">
+        <div class="container">
+          <div class="hybrid-group">
+            <span>© Copyright 2012-2014</span>
+            <a href="http://hybridgroup.com" id="THG-logo" target="_blank">
+              <img alt="The Hybrid Group" src="/images/elements/thg-logo.png">
+            </a>
+          </div>
+          <div class="top-link">
+            <a class="scroll" href="#top">
+              <img alt="Top" src="/images/elements/top.png">
+              <p class="top">Top</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="/javascripts/vendor/disqus.js"></script>
+  <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53632dea5fd71564" type="text/javascript"></script>
 </html>
