@@ -8,4 +8,15 @@ page_title: Drivers
 page_subtitle: All Drivers
 active_menu_docs: true
 ---
-= partial "../drivers"
+%section.hardware
+  .devices
+    - data.drivers.reject { |k, v| v.is_a?(Hash) }.each do |name, val|
+      %a.device{href: "/documentation/drivers/#{val}", title: name}
+        %img{src: "/images/devices/#{val}.jpg"}
+
+    - data.drivers.select { |k, v| v.is_a?(Hash) }.each do |name, val|
+      .group
+        %h2= "#{name} Drivers"
+        - val.each do |name, val|
+          %a.device{href: "/documentation/drivers/#{val}", title: name}
+            %img{src: "/images/devices/#{val}.jpg"}

@@ -85,8 +85,4 @@ subnavjs: true
     %b raspberry-pi,
     this project enables PWM in the GPIO pins .
   .devices
-    =# TODO: Update platform list at the top of the page.
-    = partial "documentation/partials/devices_platforms"
-
-
-
+    = partial "/layouts/partials/platforms_for_driver", locals: { driver: "Servo" }

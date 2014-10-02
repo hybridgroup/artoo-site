@@ -84,4 +84,4 @@ subnavjs: true
   %h2 Compatibility
   =# TODO: Update platform list at the top of the page.
   .devices
-    = partial "documentation/partials/devices_platforms"
+    = partial "/layouts/partials/platforms_for_driver", locals: { driver: "Maxbotix" }
