@@ -88,7 +88,7 @@
 		@include animation(ship-small 10s infinite linear);
 		background: url(/images/elements/ship-small.png) top center repeat-x;
 		background-position-x: 325px;
-		top: 20px;
+		top: 50px;
 	}
 
 	.ship-medium{
@@ -102,7 +102,25 @@
 		@include animation(ship-small 20s infinite linear);
 		background: url(/images/elements/ship-large.png) top center repeat-x;
 		background-position-x: 420px;
-		top: 220px;
+		top: 210px;
+	}
+	.window-panel{
+		position: absolute;
+		z-index: 2;
+	}
+	.panel{
+		position: absolute;;
+		width: 14px;
+		height: 368px;
+		background-color: $color-dark-blue;
+	}
+
+	.one{
+		left: -65px;
+	}
+
+	.two{
+		left: 1022px;
 	}
 }
 

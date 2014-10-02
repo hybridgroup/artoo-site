@@ -11,7 +11,7 @@ body {
 }
 
 .main-content{
-	@include outer-container;
+  @include outer-container;
 
   section{
     @include row();
