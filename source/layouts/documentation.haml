@@ -1,9 +1,9 @@
 - wrap_layout :layout do
-	.main-content{:role => "main"}
-		.documentation
-			.side-documentation
-				= partial "/layouts/partials/side-bar"
-			.documentation-single
-				- if current_page.data.page_title_show == true
-					= partial "/layouts/hybridpages/page_subtitle"  
-				= yield
+  .main-content{:role => "main"}
+    .documentation
+      .side-documentation
+        = partial "/layouts/partials/side-bar"
+      .documentation-single
+        - if current_page.data.page_title_show == true
+          = partial "/layouts/hybridpages/page_subtitle"  
+        = yield
