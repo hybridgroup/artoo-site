@@ -83,11 +83,11 @@ $color-button-action-font              : $font-primary;
 $color-button-action-static-background : #7eb847;
 $color-button-action-static-shadow     : #6ca635;
 
-$color-button-action-hover-background  : #56832b;
-$color-button-action-hover-shadow      : darken($color-button-action-static-shadow, 5%);
+$color-button-action-hover-background  : lighten($color-button-action-static-background,5%);
+$color-button-action-hover-shadow      : lighten($color-button-action-static-shadow,5%);
 
-$color-button-action-active-background : lighten($color-button-action-static-background,5%);
-$color-button-action-active-shadow     : #ef4e69;
+$color-button-action-active-background : #56832b;
+$color-button-action-active-shadow     : darken($color-button-action-static-shadow, 5%);
 
 $color-button-footer                   : #cc3500;
 

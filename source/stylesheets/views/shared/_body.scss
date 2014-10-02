@@ -12,7 +12,6 @@ body {
 
 .main-content{
 	@include outer-container;
-  padding: 0 15px;
 
   section{
     @include row();

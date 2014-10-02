@@ -9,12 +9,13 @@
 
 	&:hover{
 		background-color: $color-button-action-hover-background;
-		border-color: $color-button-action-hover-shadow;
+		border-color:$color-button-action-hover-shadow;
 		cursor: pointer;
 	}
 
 	&:active{
 		background-color: $color-button-action-active-background;
+		border-color: $color-button-action-active-shadow;
 		cursor: pointer;
 	}
 }

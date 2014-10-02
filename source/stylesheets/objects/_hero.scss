@@ -66,7 +66,7 @@
 	}
 	.splitter{
 		display: inline-block;
-		margin-top: em(10);
+		margin-top: em(14);
 
 		@include media($tablet) {
 
@@ -116,12 +116,13 @@
 
 @include keyframes(ship-small) {
   from {
-    background-position: 2000px;
-  }
-  to {
     background-position: 0px;
   }
+  to {
+    background-position: 2000px;
+  }
 }
+
 
 @include keyframes(ship-medium) {
   from {
