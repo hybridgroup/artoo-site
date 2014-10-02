@@ -1063,10 +1063,15 @@ code {
 /* line 8, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_app-header.scss */
 .app-header .logo {
   display: block;
-  background: url(/images/elements/logo.png) left top no-repeat;
+  background: url(/images/elements/logo-normal.png) left top no-repeat;
   text-indent: -99999px;
-  background-size: contain; }
-/* line 15, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_app-header.scss */
+  background-size: 100%; }
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+    /* line 8, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_app-header.scss */
+    .app-header .logo {
+      background: url(/images/elements/logo-retina.png) left top no-repeat;
+      background-size: 100%; } }
+/* line 20, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_app-header.scss */
 .app-header .menu {
   float: left;
   display: block;
@@ -1079,38 +1084,38 @@ code {
   /* line 38, /Users/mario/.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/neat-1.6.0/app/assets/stylesheets/grid/_span-columns.scss */
   .app-header .menu:last-child {
     margin-right: 0; }
-/* line 23, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_app-header.scss */
+/* line 28, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_app-header.scss */
 .app-header li {
   display: inline-block; }
-/* line 27, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_app-header.scss */
+/* line 32, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_app-header.scss */
 .app-header .item {
   font-size: 16px;
   font-weight: 600;
   margin: 0.625em;
   padding: 0.5em 0.25em; }
-  /* line 33, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_app-header.scss */
+  /* line 38, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_app-header.scss */
   .app-header .item, .app-header .item:visited, .app-header .item:active {
     color: #505050; }
-  /* line 37, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_app-header.scss */
+  /* line 42, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_app-header.scss */
   .app-header .item:hover, .app-header .item:focus {
     color: #70b3db; }
-/* line 42, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_app-header.scss */
+/* line 47, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_app-header.scss */
 .app-header .active {
   font-weight: 600;
   margin: 0.625em;
   padding: 0.5em 0.25em; }
 @media screen and (max-width: 768px) {
-  /* line 50, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_app-header.scss */
+  /* line 55, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_app-header.scss */
   .app-header .logo {
     background: url(/images/elements/logo-mobile.png) left top no-repeat; }
-  /* line 53, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_app-header.scss */
+  /* line 58, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_app-header.scss */
   .app-header .subtitle, .app-header .menu {
     width: auto;
     display: block; }
-  /* line 58, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_app-header.scss */
+  /* line 63, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_app-header.scss */
   .app-header .display, .app-header .app-logo {
     display: inline-block; }
-  /* line 62, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_app-header.scss */
+  /* line 67, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_app-header.scss */
   .app-header .display {
     float: left;
     display: block;
@@ -1120,12 +1125,12 @@ code {
     /* line 38, /Users/mario/.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/neat-1.6.0/app/assets/stylesheets/grid/_span-columns.scss */
     .app-header .display:last-child {
       margin-right: 0; }
-  /* line 67, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_app-header.scss */
+  /* line 72, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_app-header.scss */
   .app-header .subtitle {
     font-size: 19px;
     line-height: 15px;
     padding: 0; }
-  /* line 73, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_app-header.scss */
+  /* line 78, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_app-header.scss */
   .app-header .menu {
     text-align: center;
     margin-top: -1.25em 0 0;
@@ -1136,20 +1141,20 @@ code {
     /* line 38, /Users/mario/.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/neat-1.6.0/app/assets/stylesheets/grid/_span-columns.scss */
     .app-header .menu:last-child {
       margin-right: 0; }
-  /* line 79, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_app-header.scss */
+  /* line 84, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_app-header.scss */
   .app-header .nav-list {
     padding: 0px 0 0.3125em;
     margin: 0; }
-  /* line 84, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_app-header.scss */
+  /* line 89, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_app-header.scss */
   .app-header .item {
     margin: 0;
     padding: 0 0.625em; } }
 @media screen and (max-width: 320px) {
-  /* line 90, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_app-header.scss */
+  /* line 95, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_app-header.scss */
   .app-header .menu {
     display: none;
     margin-bottom: -18px; }
-  /* line 95, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_app-header.scss */
+  /* line 100, /Users/mario/Dev/hybridgroup/artoo-site/source/stylesheets/objects/_app-header.scss */
   .app-header li {
     border-bottom: 1px solid #c1effe;
     padding: 5px 0;
