@@ -1,15 +1,15 @@
 %button-red {
-	@extend %button;
-	background-color: $color-button-footer;
+  @extend %button;
+  background-color: $color-button-footer;
 }
 
 %button-green {
-	@extend %button;
+  @extend %button;
 }
 
 %button-footer{
-	@extend %button-red;
-	border: none;
-	font-size: em(14);
-	padding: em(9) em(25);
+  @extend %button-red;
+  border: none;
+  font-size: em(14);
+  padding: em(9) em(25);
 }
