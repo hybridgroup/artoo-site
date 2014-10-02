@@ -20,7 +20,7 @@ active_menu_docs: true
         device :video, :driver => :opencv_window, :connection => :video, :title => "Video", :interval => 0.01
 
         work do
-          on capture, :frame => proc { |*value| 
+          on capture, :frame => proc { |*value|
             begin
               opencv = value[1]
               biggest_circle = 0

@@ -21,10 +21,10 @@ spark_platform: true
 %section.intro
   =image_tag "/images/devices/motor.jpg", class: "display"
   .info_intro
-    %p 
+    %p
       Provides motor manipulation tools for artoo like on/off, speed modulation using PWM, use of bidirectional motors using forward/backward pins.
   .clear
-  
+
 %section.how_to#HowToConnect
   %h2 How To Connect
   %h3 For Arduino:
@@ -89,7 +89,7 @@ spark_platform: true
         #connection :arduino, :adaptor => :firmata, :port => '/dev/tty*'
         connection :arduino, :adaptor => :firmata, :port => '127.0.0.1:8023'
         device :board, :driver => :device_info
-        device :motor, :driver => :motor, 
+        device :motor, :driver => :motor,
                        :forward_pin  => 4, # Digital or PWM pin
                        :backward_pin => 2, # Digital or PWM pin
                        :speed_pin    => 9  # PWM pin only
@@ -127,19 +127,19 @@ spark_platform: true
 %section.circuit#Circuit
   %h2 Circuit
   .description-circuit
-    %p  
-  .image-circuit 
-    %img{:src => "/documentation/drivers/breadboards/gpio/motor_bb.png", :alt => ""}/ 
-  .clear 
+    %p
+  .image-circuit
+    %img{:src => "/documentation/drivers/breadboards/gpio/motor_bb.png", :alt => ""}/
+  .clear
 
 %section.compatability.hardware#Compatability
   %h2 Compatibility
-  %p 
+  %p
     %b Important Note:
     You need to install
     = link_to "pi-blaster", "https://github.com/sarfata/pi-blaster", target: :blank
-    in the 
-    %b raspberry-pi, 
+    in the
+    %b raspberry-pi,
     this project enables PWM in the GPIO pins .
   =# TODO: Update platform list at the top of the page.
   .devices

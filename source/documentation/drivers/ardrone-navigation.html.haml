@@ -39,7 +39,7 @@ ardrone_platform: true
   :markdown
         :::ruby
         on nav, :navdata => proc { |caller, navdata| puts "Sequence number: \#{ navdata.sequence_number }" }
-        on nav, :demo => proc { |caller, navdata, nav_option_demo| 
+        on nav, :demo => proc { |caller, navdata, nav_option_demo|
           puts "Ardrone pitch: \#{ nav_option_demo.pitch }"
           puts "Ardrone roll:  \#{ nav_option_demo.roll }"
           puts "Ardrone yaw:   \#{ nav_option_demo.yaw }"

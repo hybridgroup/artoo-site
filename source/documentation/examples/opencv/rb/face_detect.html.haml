@@ -21,7 +21,7 @@ active_menu_docs: true
 
         work do
           haar = "\#{Dir.pwd}/examples/haarcascade_frontalface_alt.xml"
-          on capture, :frame => proc { |*value| 
+          on capture, :frame => proc { |*value|
             begin
               opencv = value[1]
               faces = opencv.detect_faces(haar)

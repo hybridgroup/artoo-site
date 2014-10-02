@@ -20,7 +20,7 @@ active_menu_docs: true
           @rolling = false
 
           every(3.seconds) do
-            puts "Rolling..." 
+            puts "Rolling..."
             unless @rolling
               # same as interfaces[:rover].forward(90)
               forward(90)

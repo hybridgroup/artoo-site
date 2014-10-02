@@ -19,7 +19,7 @@ raspberry_platform: true
 ---
 %section.intro
   =image_tag "/images/devices/hmc6352-compass.jpg", class: "display"
-  .info_intro 
+  .info_intro
     %p Allows user to read heading from HMC6352 Digital Compass via i2c interface
   .clear
 
@@ -38,8 +38,8 @@ raspberry_platform: true
   :markdown
         :::ruby
         on compass, :heading => proc { |caller, data| puts "heading: \#{data}"}
-        
-  
+
+
   %h3 Example using a HMC6352 Digital Compass.
   :markdown
         :::ruby
@@ -61,11 +61,11 @@ raspberry_platform: true
 %section.circuit#Circuit
   %h2 Circuit
   .description-circuit
-    %p 
-  .image-circuit 
-    %img{:src => "/documentation/drivers/breadboards/i2c/hmc6352_bb.png", :alt => ""}/ 
-  .clear 
-  
+    %p
+  .image-circuit
+    %img{:src => "/documentation/drivers/breadboards/i2c/hmc6352_bb.png", :alt => ""}/
+  .clear
+
 %section.compatability.hardware#Compatability
   %h2 Compatibility
   .devices

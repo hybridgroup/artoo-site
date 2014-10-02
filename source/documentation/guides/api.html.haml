@@ -10,7 +10,7 @@ active_menu_docs: true
 %h1  How To Connect with the API
 %p With artoo can access a running API server.
 %h3 Running your robot:
-:markdown	
+:markdown
 	To test your code you can type this on your console:
 
 	    :::ruby
@@ -25,11 +25,11 @@ active_menu_docs: true
 
 	    :::ruby
 		require 'artoo'
-		
+
 		connection :loop
 		device :passthru
 		api :host => '127.0.0.1', :port => '4321'
-		
+
 		work do
 		  puts "Hello from the API running at \#{api_host}:\#{api_port}..."
 		end
@@ -37,12 +37,12 @@ active_menu_docs: true
 %p artoo automatically, starts the server.
 %h2  How To Configure
 %p The Artoo API server, allows a configuration for your robots.
-:markdown	
+:markdown
 	You can set it up like this:
 
 	    :::ruby
 		  api :host => '127.0.0.1', :port => '4321'
-		
+
 	Now you can run the server on the curl : `http://127.0.0.1:4321`.
 
 	For example:
@@ -56,7 +56,7 @@ active_menu_docs: true
 
 	    work do
 	      puts "Hello from the API running at \#{api_host}:\#{api_port}..."
-	    end	
+	    end
 
 %h2 Robeaux
 %p Robeaux (/rō-bō/) is a universal dashboard to your robotic devices. Like a router admin page, but for robots.
@@ -66,10 +66,10 @@ active_menu_docs: true
 
 %h2 Routes
 %h3  GET /robots
-:markdown	
+:markdown
 	Our first route returns all the Robots the master class knows about in JSON
 	format.
-	   
+
 	    [
 	      {
 	        "name": "SpheroBot",
@@ -105,7 +105,7 @@ active_menu_docs: true
 	    ]
 
 %h3 GET /robots/:robotid
-:markdown	
+:markdown
 	Given a robot's name, returns JSON information about the requested Robot:
 
 	    {
@@ -141,7 +141,7 @@ active_menu_docs: true
 	    }
 
 %h3  GET /robots/:robotid/devices
-:markdown	
+:markdown
 	Given a robot's name, returns JSON information about the devices belonging to
 	the requested Robot:
 
@@ -167,7 +167,7 @@ active_menu_docs: true
 	    ]
 
 %h3  GET /robots/:robotid/devices/:deviceid
-:markdown	
+:markdown
 	Given the names of a device and the robot it belongs to, returns data on the
 	specified device.
 
@@ -191,7 +191,7 @@ active_menu_docs: true
 	    }
 
 %h3 GET /robots/:robotid/devices/:deviceid/commands
-:markdown	
+:markdown
 	Given the names of a device and the robot it belongs to, returns all commands
 	available for the specified device.
 
@@ -204,14 +204,14 @@ active_menu_docs: true
 	    ]
 
 %h3 POST /robots/:robotid/devices/:deviceid/commands/:commandid
-:markdown	
+:markdown
 	Given a robot name, device name, and command name, executes a robot's command
 	and returns the result.
 
 	    // example pending
 
 %h3 GET /robots/:robotid/connections
-:markdown	
+:markdown
 	Given a robot's name, returns JSON information about the connections belonging
 	to the requested Robot:
 
@@ -225,7 +225,7 @@ active_menu_docs: true
 	    ]
 
 %h3  GET /robots/:robotid/connections/:connectionid
-:markdown	
+:markdown
 	Given a robot's name, returns JSON information about the connections belonging
 	to the requested Robot:
 

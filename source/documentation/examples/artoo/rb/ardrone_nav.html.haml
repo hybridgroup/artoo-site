@@ -23,7 +23,7 @@ active_menu_docs: true
           on nav, :update => :nav_update
           drone.start
           drone.take_off
-          
+
           after(50.seconds) { drone.hover.land }
           after(60.seconds) { drone.stop }
         end

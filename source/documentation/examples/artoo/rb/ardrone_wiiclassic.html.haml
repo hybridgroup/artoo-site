@@ -32,7 +32,7 @@ active_menu_docs: true
           on classic, :a_button => proc { drone.take_off }
           on classic, :b_button => proc { drone.hover }
           on classic, :x_button => proc { drone.land }
-          on classic, :y_button => proc { 
+          on classic, :y_button => proc {
             unless @toggle_camera
               drone.bottom_camera
               @toggle_camera = 1

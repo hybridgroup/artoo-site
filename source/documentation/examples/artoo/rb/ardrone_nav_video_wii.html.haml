@@ -35,7 +35,7 @@ active_menu_docs: true
           on classic, :a_button => proc { drone.take_off }
           on classic, :b_button => proc { drone.hover }
           on classic, :x_button => proc { drone.land }
-          on classic, :y_button => proc { 
+          on classic, :y_button => proc {
             if @toggle_camera == 0
               drone.bottom_camera
               @toggle_camera = 1
@@ -60,7 +60,7 @@ active_menu_docs: true
           on classic, :rotate_left => proc { drone.turn_left(@rotate_pitch) }
           on classic, :rotate_right => proc { drone.turn_right(@rotate_pitch) }
           on classic, :reset_rotate => proc { drone.turn_left(0.0) }
-          on classic, :reset_altitude => proc { drone.up(0.0) } 
+          on classic, :reset_altitude => proc { drone.up(0.0) }
         end
 
         def init_settings

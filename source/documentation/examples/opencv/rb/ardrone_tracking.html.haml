@@ -23,7 +23,7 @@ active_menu_docs: true
         device :drone, :driver => :ardrone, :connection => :ardrone
 
         work do
-          on capture, :frame => proc { |*value| 
+          on capture, :frame => proc { |*value|
             begin
             opencv = value[1]
             biggest_circle = 0
@@ -44,9 +44,9 @@ active_menu_docs: true
               puts turnAmount
               if( turnAmount.abs > heightAmount.abs )
                 puts "turning " + turnAmount.to_s
-                if turnAmount < 0 
+                if turnAmount < 0
                   drone.turn_right(turnAmount.abs)
-                else 
+                else
                   drone.turn_left(turnAmount)
                 end
                 sleep 0.1

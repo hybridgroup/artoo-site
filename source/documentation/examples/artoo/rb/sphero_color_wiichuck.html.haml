@@ -18,7 +18,7 @@ active_menu_docs: true
 
         connection :arduino, :adaptor => :firmata, :port => '/dev/ttyACM0' #linux
         device :wiichuck, :driver => :wiichuck, :connection => :arduino, :interval => 0.1
-          
+
         work do
           init_settings
 

@@ -20,7 +20,7 @@ active_menu_docs: true
         device :window, :driver => :opencv_window, :connection => :window, :title => "My Window", :interval => 0.01
 
         work do
-          on capture, :frame => proc { |*value| 
+          on capture, :frame => proc { |*value|
             window.image = value[1].image
           }
         end

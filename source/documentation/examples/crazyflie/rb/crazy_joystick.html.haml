@@ -60,7 +60,7 @@ active_menu_docs: true
             drone.backward(data[:y].abs * deg_scale)
           else
             drone.forward(0)
-          end 
+          end
 
           if data[:x] > 0
             drone.right(data[:x].abs * deg_scale)
@@ -68,7 +68,7 @@ active_menu_docs: true
             drone.left(data[:x].abs * deg_scale)
           else
             drone.left(0)
-          end 
+          end
         end
 
         def handle_hover caller
@@ -78,6 +78,6 @@ active_menu_docs: true
           else
             @hover = true
             drone.hover
-          end  
+          end
         end
 

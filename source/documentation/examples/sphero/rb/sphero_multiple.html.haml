@@ -12,16 +12,16 @@ active_menu_docs: true
   :markdown
         :::ruby
         require 'artoo/robot'
-                   
+
         class SpheroRobot < Artoo::Robot
           connection :sphero, :adaptor => :sphero
           device :sphero, :driver => :sphero
-          
+
           #api :host => '127.0.0.1', :port => '8080'
 
           work do
             @count = 1
-            
+
             every(3.seconds) do
               sphero.set_color(@count % 2 == 0 ? :white : :blue)
               @count += 1
@@ -39,8 +39,8 @@ active_menu_docs: true
                    "127.0.0.1:4566" => "/dev/tty.Sphero-PYG-RN-SPP"}
         robots = []
         SPHEROS.each_key {|p|
-          robots << SpheroRobot.new(:connections => 
-                                      {:sphero => 
+          robots << SpheroRobot.new(:connections =>
+                                      {:sphero =>
                                         {:port => p}})
         }
 

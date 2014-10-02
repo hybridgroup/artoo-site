@@ -13,19 +13,19 @@ active_menu_docs: true
 
   %p After completing this tutorial, you will be familiar with the most important concepts needed to play with artoo and sphero. If you are new to this world, don't worry; this tutorial should cover all you need to make it work.
 
-  %ul 
-    %li 
-      Before we start, be sure to have 
+  %ul
+    %li
+      Before we start, be sure to have
       = link_to "ruby and artoo installed." , "/documentation/getting-started", target: :blank
     %li You should have Bluetooth in your computer.
-    %li 
+    %li
       :markdown
         install artoo sphero gem: `gem install artoo-sphero`
 
   %h3 Pair your sphero device via Bluetooth
   %h4 MacOSX
 
-  %ul 
+  %ul
     %li Turn on your Sphero by shaking it.
     %li Go to Mac OS Bluetooth preferences, click “Set Up New Device”, and follow the onscreen instructions to set up your sphero.
 
@@ -53,32 +53,32 @@ active_menu_docs: true
       Run this command to look for it:
       :markdown
             artoo connect scan
-    %li 
+    %li
       You will see the following output:
       :markdown
             Scanning ...
             00:06:66:44:39:C6   Sphero-YBW
-    %li 
+    %li
       Use that output to bind your device by name running this command:
       :markdown
             artoo connect bind 00:06:66:44:39:C6 Sphero-YBW
 
   %h3 Run artoo program
 
-  %ul 
+  %ul
     %li
       Download
       = link_to "color example.","https://github.com/hybridgroup/artoo/blob/master/examples/sphero_color.rb", target: :blank
     %li Open a new terminal .
-    %li 
+    %li
       Navigate to the directory where you put the example file:
       :markdown
             cd Downloads
-    %li 
+    %li
       You will need to change the port to the device port
       :markdown
             connection :sphero, :adaptor => :sphero, :port => '/dev/Sphero-YBW'
-    %li 
+    %li
       run example
       :markdown
             ruby sphero_color.rb

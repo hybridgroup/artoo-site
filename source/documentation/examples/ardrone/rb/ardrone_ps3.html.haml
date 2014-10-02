@@ -28,7 +28,7 @@ active_menu_docs: true
           on controller, :button_square => proc { drone.take_off }
           on controller, :button_triangle => proc { drone.hover }
           on controller, :button_x => proc { drone.land }
-          on controller, :button_circle => proc { 
+          on controller, :button_circle => proc {
             unless @toggle_camera
               drone.bottom_camera
               @toggle_camera = 1

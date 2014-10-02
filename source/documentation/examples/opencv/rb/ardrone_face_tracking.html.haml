@@ -53,9 +53,9 @@ active_menu_docs: true
               center_x = opencv.image.width * 0.5
               turn = -( face.center.x - center_x ) / center_x
               puts "turning: \#{turn}"
-              if turn < 0 
+              if turn < 0
                 drone.turn_right(turn.abs)
-              else 
+              else
                 drone.turn_left(turn.abs)
               end
               video.image = opencv.image

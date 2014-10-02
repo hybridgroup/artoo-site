@@ -16,7 +16,7 @@ active_menu_docs: true
 
         connection :roomba, :adaptor => :roomba, :port => '/dev/ttyUSB0'
         device :roomba, :driver => :roomba, :connection => :roomba
-          
+
         work do
           roomba.safe_mode
           roomba.nudge_left

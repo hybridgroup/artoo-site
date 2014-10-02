@@ -11,7 +11,7 @@ subnav_platform: true
 active_menu_platforms: true
 subnavjs: true
 ---
-  
+
 %section.intro
   = image_tag "/images/devices/opencv.jpg", class: "display"
   .info_intro
@@ -20,7 +20,7 @@ subnavjs: true
     %p
       = link_to "+ info about OpenCV click here", "http://opencv.org/", target: :blank, :class => "action"
   .clear
-  
+
 %section.how-to#HowToInstall
   %h2 How To Install
   %p Installing artoo with OpenCV support is pretty easy using ruby gems.
@@ -85,7 +85,7 @@ subnavjs: true
           device :window, :driver => :opencv_window, :connection => :window, :title => "My Window", :interval => 0.01
 
           work do
-            on capture, :frame => proc { |*value| 
+            on capture, :frame => proc { |*value|
               window.image = value[1].image
             }
           end

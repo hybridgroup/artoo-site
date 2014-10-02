@@ -16,7 +16,7 @@ active_menu_docs: true
         class ConwaySpheroRobot < Artoo::Robot
           connection :sphero, :adaptor => :sphero
           device :sphero, :driver => :sphero
-          
+
           #api :host => '127.0.0.1', :port => '8080'
 
           work do
@@ -54,7 +54,7 @@ active_menu_docs: true
 
           def birthday
             @age += 1
-            
+
             puts "Happy birthday, \#{name}, you are \#{@age} and had \#{@contacts} contacts."
             #return if @age <= 3
             death unless @contacts >= 6 && @contacts < 11
@@ -79,8 +79,8 @@ active_menu_docs: true
                    "127.0.0.1:4569" => "/dev/tty.Sphero-PYG-RN-SPP"}
         robots = []
         SPHEROS.each_key {|p|
-          robots << ConwaySpheroRobot.new(:connections => 
-                                      {:sphero => 
+          robots << ConwaySpheroRobot.new(:connections =>
+                                      {:sphero =>
                                         {:port => p}})
         }
 

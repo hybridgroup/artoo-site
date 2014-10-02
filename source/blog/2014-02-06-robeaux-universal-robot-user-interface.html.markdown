@@ -8,7 +8,7 @@ author: Ron Evans
 active_menu_blog: true
 ---
 
-We're off to a nice start for 2014 with the release of version 1.6 of Artoo - Ruby on Robots ([http://artoo.io](http://artoo.io)), our first release of the year. We learned a lot from our great experience at RobotsConf ([http://robotsconf.com](http://robotsconf.com)), and this is just the first step forward in a series of new improvements for all of you, our loyal friends. This release adds some powerful new capabilities, as well as support for more hardware. 
+We're off to a nice start for 2014 with the release of version 1.6 of Artoo - Ruby on Robots ([http://artoo.io](http://artoo.io)), our first release of the year. We learned a lot from our great experience at RobotsConf ([http://robotsconf.com](http://robotsconf.com)), and this is just the first step forward in a series of new improvements for all of you, our loyal friends. This release adds some powerful new capabilities, as well as support for more hardware.
 
 First of all, the user interface to the API for all of our robotic platforms is now in a new separate library. Called Robeaux ([http://robeaux.io](http://robeaux.io)), it is a universal dashboard to robotic systems, written using AngularJS ([http://angularjs.org/](http://angularjs.org/)). We're now using it within the newest releases of Artoo, Cylon.js ([http://cylonjs.com](http://cylonjs.com)), and Gobot ([http://gobot.io](http://gobot.io)).
 
