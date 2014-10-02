@@ -1,23 +1,23 @@
 .page-title{
-	background: url(/images/elements/docs-header.png) top center repeat;
-	border-top: 2px solid $color-white;
-	background-size: cover;
+  background: url(/images/elements/docs-header.png) top center repeat;
+  border-top: 2px solid $color-white;
+  background-size: cover;
 
-	.container{
-		padding: em(30) em(15) em(20);
-	}
-	
-	.title{
-		color: $color-documentation-title;
-		margin: 0;
-	}
+  .container{
+    padding: em(30) em(15) em(20);
+  }
+  
+  .title{
+    color: $color-documentation-title;
+    margin: 0;
+  }
 
-	.subtitle{
-		color: $color-documentation-subtitle;
-		margin: 0;
+  .subtitle{
+    color: $color-documentation-subtitle;
+    margin: 0;
 
-		@include media($design-edge){
-			font-size: em(20);
-		}
-	}
+    @include media($design-edge){
+      font-size: em(20);
+    }
+  }
 }
