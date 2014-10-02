@@ -1,0 +1,28 @@
+- if current_page.data.hero
+  .hero
+    .container
+      .window-panel
+        .panel.one
+        .panel.two
+      .content
+        %h1.title
+          = current_page.data.hero_title
+
+        %p.sub-title
+          = current_page.data.hero_subtitle
+
+        %a{ href:'/documentation/getting-started', class:'action'} Get Started
+
+      .display
+        %img{src: "/images/elements/artoo.png"}/
+
+      .social
+        = yield_content :social_links 
+    .animations
+      .ship-small
+      .ship-medium
+      .ship-large
+
+  .site-description
+    .container
+      = yield_content :description

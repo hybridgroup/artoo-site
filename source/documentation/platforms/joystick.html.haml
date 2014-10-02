@@ -15,20 +15,14 @@ joystick_driver: true
 ps3_driver: true
 xbox360_driver: true
 ---
--content_for :js_accordeon do
-  :javascript
-    $("#platform-panel").addClass("active-panel");
-    $("#platform-panel ul li:nth-child(6)").addClass("active-link");
-    $(".accordion-docs dt:nth-child(7) a:nth-child(2) img").addClass("rotate");
 
 %section.intro
   = image_tag "/images/devices/joystick.jpg", class: "display"
   .info_intro
+    = partial '/layouts/hybridpages/page_repo_issues'
     %p You can use Artoo with a PS3 game controller, an XBox360 game controller, or any other USB joystick or game controller that is compatible with Simple DirectMedia Layer (SDL).
     %p
-      For more info about Simple DirectMedia Layer (SDL) go to
-      = succeed "." do
-        = link_to "http://www.libsdl.org/", "http://www.libsdl.org/", target: :blank
+      = link_to "+ info about Simple DirectMedia Layer click here", "http://www.libsdl.org/", target: :blank, :class => "action"
   .clear
 
 %section.how-to#HowToInstall
@@ -76,5 +70,4 @@ xbox360_driver: true
 
   .hardware
     .devices
-      =# TODO: Update drivers list at the top of the page.
-      = partial "documentation/partials/devices_joystick_drivers"
+      = partial "layouts/partials/devices_for_platform", locals: { platform: "Joystick" }

@@ -3,7 +3,7 @@ page_title_show: true
 title: Robeaux - The Universal Robot User Interface
 page_title: Blog
 date: 2014-02-06
-tags: robots
+tags: Robots
 author: Ron Evans
 active_menu_blog: true
 ---

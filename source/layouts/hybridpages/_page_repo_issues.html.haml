@@ -1,0 +1,4 @@
+- unless current_page.data.page_subtitle_docs.nil?
+  %h2.subtitle= current_page.data.page_subtitle_docs
+- if content_for? :subtitle
+  %h2.subtitle= yield_content(:subtitle)

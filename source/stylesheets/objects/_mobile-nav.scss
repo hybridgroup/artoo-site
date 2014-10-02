@@ -1,0 +1,45 @@
+.mobile-menu {
+  text-align: right;
+  display: none;
+  margin-right: 10px; 
+
+  @include media ($tablet) {
+    display: block;
+  }
+
+  .active {
+    background: white;
+  }
+
+  a {
+    background: $color-medium-light-blue;
+    border-radius: 13px;
+    padding: 10px 12px;
+    margin: 5px;
+    display: inline-block;
+
+    &:hover {
+      background: white;
+      cursor: pointer;
+
+      .line{
+        background: $color-medium-light-blue;
+      }
+    }
+  }
+  .line {
+    margin: 5px 0 5px;
+    background: white;
+  }
+}
+.mobile-menu.home{
+  display: none;
+
+  @include media ($mobile-small) {
+    display: block;
+  }
+}
+
+.show {
+  display: block !important;
+}

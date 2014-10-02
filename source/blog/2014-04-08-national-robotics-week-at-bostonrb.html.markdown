@@ -3,7 +3,7 @@ page_title_show: true
 title: National Robotics Week at BostonRB
 page_title: Blog
 date: 2014-04-08
-tags: events
+tags: Events
 author: Ron Evans
 active_menu_blog: true
 ---

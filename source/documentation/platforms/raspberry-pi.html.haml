@@ -22,20 +22,14 @@ wiichuck_driver: true
 wiiclassic_driver: true
 makey_driver: true
 ---
--content_for :js_accordeon do
-  :javascript
-    $("#platform-panel").addClass("active-panel");
-    $("#platform-panel ul li:nth-child(12)").addClass("active-link");
-    $(".accordion-docs dt:nth-child(7) a:nth-child(2) img").addClass("rotate");
   
 %section.intro
   = image_tag "/images/devices/raspi.jpg", class: "display"
   .info_intro
+    = partial '/layouts/hybridpages/page_repo_issues'
     %p The Raspberry Pi is an inexpensive and popular ARM based single board computer with digital & PWM GPIO, and i2c interfaces built in.
     %p
-      For more info about the Raspberry Pi platform go to
-      = succeed "." do
-        = link_to "http://www.raspberrypi.org/", "http://www.raspberrypi.org/", target: :blank
+      = link_to "+ info about the Raspberry Pi platform click here", "http://www.raspberrypi.org/", target: :blank, :class => 'action'
   .clear
   
 %section.how-to#HowToInstall
@@ -99,10 +93,5 @@ makey_driver: true
   %p All Artoo digital and PWM GPIO, and i2c drivers listed below should work with the Raspberry Pi:
 
   .hardware
-    %h2 GPIO Drivers
     .devices
-      // TODO: Update drivers list at the top of the page.
-      = partial "documentation/partials/devices_gpio_drivers"
-    %h2 i2c Drivers
-    .devices
-      = partial "documentation/partials/devices_i2c_drivers"
+      = partial "layouts/partials/devices_for_platform", locals: { platform: "Raspberry Pi" }

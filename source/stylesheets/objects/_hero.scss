@@ -1,0 +1,152 @@
+.hero{
+	@extend %hero;
+
+	.content{
+		@include span-columns(8 of 12);
+		@include omega;
+		margin-top: em(35);
+		position: relative;
+		z-index: 1;
+
+		.title{
+			font-size: 2.2em;
+			font-weight: 700;
+		}
+
+		.sub-title{
+			font-size: em(22);
+		}
+		@include media($tablet) {
+			@include span-columns(12 of 12);
+			text-align: center;
+
+			br{
+				display: none;
+			}
+		}
+		@include media($mobile){
+			.title{
+				font-size: em(26);
+			}
+			.sub-title{
+				font-size: em(20);
+			}
+		}
+	}
+
+	.display{
+		@include span-columns(4 of 12);
+
+		img{
+			position: relative;
+			top: 46px;
+			z-index: 2;
+		}
+
+		@include media($tablet) {
+	      display: none;
+	    }
+	}
+
+	.action {
+		@extend %button-green;
+		text-shadow: 1px 2px 1px $color-button-action-hover-background;
+		top: 15px;
+	}
+
+	.social{
+		position: relative;
+
+		@include media($tablet) {
+			top: 40px;
+			text-align: center;
+			padding-left: em(13);
+		}
+
+	}
+	.splitter{
+		display: inline-block;
+		margin-top: em(14);
+
+		@include media($tablet) {
+
+			#twitter-widget-1{
+			  display: none;
+			}
+
+			.fork{
+			  display: none;
+			}
+		}
+		
+		@include media ($mobile-large){
+			display: block;
+		}
+	}
+
+	.ship-small{
+		@include animation(ship-small 10s infinite linear);
+		background: url(/images/elements/ship-small.png) top center repeat-x;
+		background-position-x: 325px;
+		top: 50px;
+	}
+
+	.ship-medium{
+		@include animation(ship-medium 5s infinite linear);
+		background: url(/images/elements/ship-medium.png) top center repeat-x;
+		background-position-x: 651px;
+		top: 120px;
+	}
+
+	.ship-large{
+		@include animation(ship-small 20s infinite linear);
+		background: url(/images/elements/ship-large.png) top center repeat-x;
+		background-position-x: 420px;
+		top: 210px;
+	}
+	.window-panel{
+		position: absolute;
+		z-index: 2;
+	}
+	.panel{
+		position: absolute;;
+		width: 14px;
+		height: 368px;
+		background-color: $color-dark-blue;
+	}
+
+	.one{
+		left: -65px;
+	}
+
+	.two{
+		left: 1022px;
+	}
+}
+
+.site-description{
+	background-color: $color-blue;
+
+	.container{
+		padding: em(30) 0;
+	}
+}
+
+@include keyframes(ship-small) {
+  from {
+    background-position: 0px;
+  }
+  to {
+    background-position: 2000px;
+  }
+}
+
+
+@include keyframes(ship-medium) {
+  from {
+    background-position: 0px;
+  }
+  to {
+    background-position: 2000px;
+  }
+}

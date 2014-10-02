@@ -20,15 +20,11 @@ servo_driver: true
 continuous_servo_driver: true
 makey_driver: true
 ---
--content_for :js_accordeon do
-  :javascript
-    $("#platform-panel").addClass("active-panel");
-    $("#platform-panel ul li:nth-child(14)").addClass("active-link");
-    $(".accordion-docs dt:nth-child(7) a:nth-child(2) img").addClass("rotate");
   
 %section.intro
   = image_tag "/images/devices/spark.jpg", class: "display"
   .info_intro
+    = partial '/layouts/hybridpages/page_repo_issues'
     %p
       This repository contains the Artoo
       =link_to "(http://artoo.io/)", "http://artoo.io/", target: :blank
@@ -70,7 +66,5 @@ makey_driver: true
   %p Available drivers for the spark platform are listed below, the drivers contain detailed documentation and examples of what kind physical computing (using artoo and ruby) you could be doing:
 
   .hardware
-    %h2 GPIO Drivers
     .devices
-      =# TODO: Update drivers list at the top of the page.
-      = partial "documentation/partials/devices_gpio_drivers"
+      = partial "layouts/partials/devices_for_platform", locals: { platform: "Spark" }

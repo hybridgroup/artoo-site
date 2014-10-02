@@ -1,40 +1,40 @@
-%html
+%html{"ng-app" => "artoo"}
   %head
-    = partial "/hybridpages/partials/layouts/head"
-    %link{rel: "stylesheet", href: "//fonts.googleapis.com/css?family=Russo+One|Inconsolata:400,700|Montserrat:700"}
+    = partial "/layouts/hybridpages/head"
+    %link{rel: "stylesheet", href: "//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Lato:400,700|Inconsolata"}
     %link{href: '/favicon.ico', rel: 'shortcut icon', type: 'image/gif' }
   %body  
     = partial "layouts/layout-contents"
-    .app
-      .w
-        %header.app-header{role: "banner"}
-          .display
-            = partial "/hybridpages/partials/layouts/app-logo"
+    .app-header{role: "banner", :id => "top"}
+      .container
+        .display
+          .app-logo
+            = yield_content :logo
 
-          %span.menu
-            = yield_content :menu
+        .mobile-menu.home
+          %a#mobile-menu
+            .line
+            .line
+            .line
+            
+        %nav.menu
+          = yield_content :menu
 
+    .app-content
       - if current_page.data.hero == true
-        = partial "/hybridpages/partials/widgets/hero"
-
-      - if current_page.data.social == true
-        = partial "/hybridpages/partials/widgets/social"
+        = partial "/layouts/hybridpages/hero"
       
       - if current_page.data.page_title_show == true
-        = partial "/hybridpages/partials/widgets/page_title"    
+        = partial "/layouts/hybridpages/page_title"
 
-      .container
-        = yield
-        
-      - if current_page.data.catcher == true
-        = partial "/hybridpages/partials/widgets/catcher" 
+      = yield
 
-    %footer.app-footer
-      = yield_content :footer
+    .app-footer
+      = partial "/layouts/hybridpages/footer"
 
     
   - if is_blog_article?
-    %script{:src => "/hybridpages/assets/javascript/disqus.js"}
+    %script{:src => "/javascripts/vendor/disqus.js"}
     %script{src: "//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53632dea5fd71564", type: "text/javascript"}
 
 

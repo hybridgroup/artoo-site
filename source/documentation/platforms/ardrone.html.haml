@@ -13,20 +13,14 @@ subnavjs: true
 
 ardrone_drivers: true
 ---
--content_for :js_accordeon do
-  :javascript
-    $("#platform-panel").addClass("active-panel");
-    $("#platform-panel ul li:nth-child(1)").addClass("active-link");
-    $(".accordion-docs dt:nth-child(7) a:nth-child(2) img").addClass("rotate");
 
 %section.intro
   = image_tag "/images/devices/ardrone.jpg", class: "display"
   .info_intro
+    = partial '/layouts/hybridpages/page_repo_issues'
     %p  The ARDrone from Parrot is an inexpensive quadcopter that is controlled using WiFi. It includes a built-in front-facing HD video camera, as well as a second lower resolution bottom facing video camera.
     %p
-      For more info about the ARDrone platform click
-      = succeed "." do
-        = link_to "here", "http://ardrone2.parrot.com/", target: :blank
+      = link_to "+ info about the ARDrone platform click here", "http://ardrone2.parrot.com/", target: :blank, :class => 'action'
   .clear
   
 %section.how-to#HowToInstall
@@ -85,6 +79,5 @@ ardrone_drivers: true
   %p Available drivers for the ARDrone platform are listed below. There are three drivers for the ARDrone: the ARDrone for flight control, the ARDroneNav for navigation data, and the ARDroneVideo for grabbing video data.
   .hardware
     .devices
-      =# TODO: Update drivers list at the top of the page.
-      = partial "documentation/partials/devices_ardrone_drivers"
+      = partial "layouts/partials/devices_for_platform", locals: { platform: "ARDrone" }
      

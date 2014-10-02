@@ -1,0 +1,30 @@
+body {
+  background-color: $color-light-blue;
+  font-family: $font-primary;
+  margin: 0;
+}
+
+.container {
+  @include outer-container;
+  margin: 0 auto;
+  position: relative;
+}
+
+.main-content{
+  @include outer-container;
+
+  section{
+    @include row();
+  }
+}
+
+.clear {
+  *zoom: 1;
+  &:before, &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}

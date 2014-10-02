@@ -13,15 +13,11 @@ subnavjs: true
 
 sphero_driver: true
 ---
--content_for :js_accordeon do
-  :javascript
-    $("#platform-panel").addClass("active-panel");
-    $("#platform-panel ul li:nth-child(15)").addClass("active-link");
-    $(".accordion-docs dt:nth-child(7) a:nth-child(2) img").addClass("rotate");
 
 %section.intro
   =image_tag "/images/devices/sphero.jpg", class: "display"
   .info_intro
+    = partial '/layouts/hybridpages/page_repo_issues'
     %h4 What is Sphero?
     %p  Sphero is a sophisticated and programmable robot housed in a polycarbonate sphere shell.
     %p  The artoo-sphero adaptor makes it easy to interact with Sphero using Ruby, once you have your Sphero setup and connected to your computer you can start writing code to make Sphero move, change direction, speed and colors, or detect Sphero events and execute some code when they occur.
@@ -122,5 +118,4 @@ sphero_driver: true
 
   .hardware
     .devices
-      =# TODO: Update drivers list at the top of the page.
-      = partial "documentation/partials/devices_sphero_drivers"
+      = partial "layouts/partials/devices_for_platform", locals: { platform: "Sphero" }

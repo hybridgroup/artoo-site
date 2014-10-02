@@ -1,0 +1,24 @@
+%hero{
+	background: url(/images/elements/background.png) top center repeat;
+	position: relative;
+	z-index: 0;
+
+    .title{
+		color: $color-title-hero;
+	}
+
+	.sub-title, a{
+		color: $color-sub-title-hero;
+	}
+
+	.animations{
+		position: absolute;
+		z-index: 0;
+		width: 100%;
+		top: 0px;
+
+		*{
+			position: relative;
+		}
+	}
+}

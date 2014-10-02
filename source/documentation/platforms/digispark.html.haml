@@ -24,20 +24,14 @@ wiichuck_driver: true
 wiiclassic_driver: true
 makey_driver: true
 ---
--content_for :js_accordeon do
-  :javascript
-    $("#platform-panel").addClass("active-panel");
-    $("#platform-panel ul li:nth-child(5)").addClass("active-link");
-    $(".accordion-docs dt:nth-child(7) a:nth-child(2) img").addClass("rotate");
 
 %section.intro
   = image_tag "/images/devices/digispark.jpg", class: "display"
   .info_intro
+    = partial '/layouts/hybridpages/page_repo_issues'
     %p The Digispark is an Attiny85 based microcontroller development board similar to the Arduino line, only cheaper, smaller, and a bit less powerful. With a whole host of shields to extend its functionality and the ability to use the familiar Arduino IDE the Digispark is a great way to jump into electronics, or perfect for when an Arduino is too big or too much.
     %p
-      For more info about the Digispark platform click
-      = succeed "." do
-        = link_to "here", "http://digistump.com/category/1", target: :blank
+      = link_to "+ info about the Digispark platform click here", "http://digistump.com/category/1", target: :blank, :class => "action"
   .clear
 
 %section.how-to#HowToInstall
@@ -181,10 +175,5 @@ makey_driver: true
   %p Available drivers for the digispark platform are listed below, the drivers contain detailed documentation and examples of what kind physical computing (using artoo and ruby) you could be doing:
 
   .hardware
-    =# TODO: Update drivers list at the top of the page.
-    %h2 GPIO Drivers
     .devices
-      = partial "documentation/partials/devices_gpio_drivers"
-    %h2 i2c Drivers
-    .devices
-      = partial "documentation/partials/devices_i2c_drivers"
+      = partial "layouts/partials/devices_for_platform", locals: { platform: "Arduino" }

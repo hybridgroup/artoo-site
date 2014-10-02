@@ -13,20 +13,14 @@ subnavjs: true
 
 pebble_driver: true
 ---
--content_for :js_accordeon do
-  :javascript
-    $("#platform-panel").addClass("active-panel");
-    $("#platform-panel ul li:nth-child(11)").addClass("active-link");
-    $(".accordion-docs dt:nth-child(7) a:nth-child(2) img").addClass("rotate");
   
 %section.intro
   = image_tag "/images/devices/pebble.jpg", class: "display"
   .info_intro
+    = partial '/layouts/hybridpages/page_repo_issues'
     %p  The Pebble is a smart watch, that connects via bluetooth.
     %p
-      For more info about the Pebble platform click
-      = succeed "." do
-        = link_to "here", "http://getpebble.com/", target: :blank
+      = link_to "+ info about the Pebble platform click here", "http://getpebble.com/", target: :blank, :class => "action"
   .clear
 
 %section.how-to#HowToInstall
@@ -78,4 +72,4 @@ pebble_driver: true
 
   .hardware
     .devices
-      = partial "documentation/partials/devices_pebble_drivers"
+      = partial "layouts/partials/devices_for_platform", locals: { platform: "Pebble" }

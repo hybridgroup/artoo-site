@@ -25,20 +25,14 @@ wiiclassic_driver: true
 wiichuck_driver: true
 
 ---
--content_for :js_accordeon do
-  :javascript
-    $("#platform-panel").addClass("active-panel");
-    $("#platform-panel ul li:nth-child(2)").addClass("active-link");
-    $(".accordion-docs dt:nth-child(7) a:nth-child(2) img").addClass("rotate");
 
 %section.intro
   = image_tag "/images/devices/arduino.jpg", class: "display"
   .info_intro
+    = partial '/layouts/hybridpages/page_repo_issues'
     %p Arduino is an open-source electronics prototyping platform based on flexible, easy-to-use hardware and software. It's intended for artists, designers, hobbyists and anyone interested in creating interactive objects or environments.
     %p
-      For more info about the arduino platform click
-      = succeed "." do
-        = link_to "here", "http://arduino.cc/", target: :blank
+      = link_to "+ info about the arduino platform click here", "http://arduino.cc/", target: :blank, :class => 'action'
   .clear
 
 %section.how-to#HowToInstall
@@ -181,10 +175,5 @@ wiichuck_driver: true
     physical computing (using artoo and ruby) you could be doing:
 
   .hardware
-    %h2 GPIO Drivers
     .devices
-      // TODO: Update drivers list at the top of the page.
-      = partial "documentation/partials/devices_gpio_drivers"
-    %h2 i2c Drivers
-    .devices
-      = partial "documentation/partials/devices_i2c_drivers"
+      = partial "layouts/partials/devices_for_platform", locals: { platform: "Arduino" }

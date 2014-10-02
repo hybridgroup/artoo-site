@@ -1,0 +1,69 @@
+.documentation-single {
+  @include span-columns(9 of 12);
+  @include omega();
+  padding: em(20) em(15) 0;
+
+
+  @include media($tablet){
+  	@include span-columns(12 of 12);
+  }
+
+  .subnav-drivers {
+    @extend %sub-nav;
+  }
+
+  .subNavfixed {
+    @extend %sub-nav-fixed;
+  }
+
+  .display {
+    @include span-columns(4 of 9);
+
+    @include media($tablet){
+    	@include span-columns(9 of 9);
+    }
+  }
+
+  .info_intro {
+    @include span-columns(5 of 9);
+    @include omega();
+    overflow: hidden;
+
+    p {
+      margin-bottom: em(25);
+    }
+    @include media($tablet){
+    	@include span-columns(9 of 9);
+    	text-align: center;
+    }
+  }
+
+  .action {
+    @extend %button-red;
+    border: none;
+    font-size: em(14);
+    padding: em(9) em(25);
+    margin-top: em(25);
+    @include media ($design-edge){
+    	font-size: em(12);
+    }
+  }
+
+  .how-to {
+    padding-top: em(65);
+  }
+
+  .hardware h2 {
+    clear: both;
+    margin: em(24) 0;
+  }
+
+  .devices {
+    @include outer-container;
+  }
+
+  .device {
+    @include span-columns(4);
+    @include omega(3n);
+  }
+}

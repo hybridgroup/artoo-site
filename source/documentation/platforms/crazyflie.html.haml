@@ -13,20 +13,14 @@ subnavjs: true
 
 crazyflie_drivers: true
 ---
--content_for :js_accordeon do
-  :javascript
-    $("#platform-panel").addClass("active-panel");
-    $("#platform-panel ul li:nth-child(4)").addClass("active-link");
-    $(".accordion-docs dt:nth-child(7) a:nth-child(2) img").addClass("rotate");
   
 %section.intro
   = image_tag "/images/devices/crazyflie.jpg", class: "display"
   .info_intro
+    = partial '/layouts/hybridpages/page_repo_issues'
     %p  You can use Artoo with the Crazyflie micro-quadcopter.
     %p
-      For more info about Crazyflie click
-      = succeed "." do
-        = link_to "here", "http://www.bitcraze.se/", target: :blank
+      = link_to "+ info about Crazyflie click here", "http://www.bitcraze.se/", target: :blank, :class => "action"
   .clear
   
 %section.how-to#HowToInstall
@@ -77,9 +71,8 @@ crazyflie_drivers: true
 
 %section.drivers#Drivers
   %h2 Drivers
-  %p There is currently only one driver for the Crazyflie, as listed below.
+  %p There are currently two drivers for the Crazyflie, as listed below.
 
   .hardware
     .devices
-      =# TODO: Update drivers list at the top of the page.
-      = partial "documentation/partials/devices_crazyflie_drivers"
+      = partial "layouts/partials/devices_for_platform", locals: { platform: "Crazyflie" }

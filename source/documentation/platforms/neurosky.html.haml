@@ -13,20 +13,14 @@ subnavjs: true
 
 neurosky_driver: true
 ---
--content_for :js_accordeon do
-  :javascript
-    $("#platform-panel").addClass("active-panel");
-    $("#platform-panel ul li:nth-child(9)").addClass("active-link");
-    $(".accordion-docs dt:nth-child(7) a:nth-child(2) img").addClass("rotate");
 
 %section.intro
   = image_tag "/images/devices/neurosky.jpg", class: "display"
   .info_intro
+    = partial '/layouts/hybridpages/page_repo_issues'
     %p  NeuroSky delivers fully integrated, single chip EEG biosensors. NeuroSky enables its partners and developers to bring their brainwave application ideas to market with the shortest amount of time, and lowest end consumer price.
     %p
-      For more info about the Neurosky platform click
-      = succeed "." do
-        = link_to "here", "http://neurosky.com/products-markets/eeg-biosensors/hardware/", target: :blank
+      = link_to "+ info about the Neurosky platform click here", "http://neurosky.com/products-markets/eeg-biosensors/hardware/", target: :blank, :class => "action"
   .clear
 
 %section.how-to#HowToInstall
@@ -126,5 +120,4 @@ neurosky_driver: true
 
   .hardware
     .devices
-      =# TODO: Update drivers list at the top of the page.
-      = partial "documentation/partials/devices_neurosky_drivers"
+      = partial "layouts/partials/devices_for_platform", locals: { platform: "Neurosky" }

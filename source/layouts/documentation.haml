@@ -1,13 +1,9 @@
 - wrap_layout :layout do
-	.main{:role => "main"}
-		%section.content.full
-			.documentation
-				.container-documentation
-					- if current_page.data.page_title_show == true
-						= partial "/hybridpages/partials/widgets/page_subtitle"  
-					= yield
-				.side-documentation
-					= partial "/documentation/side-bar"
-					= yield_content :js_accordeon
-
-	
+	.main-content{:role => "main"}
+		.documentation
+			.side-documentation
+				= partial "/layouts/partials/side-bar"
+			.documentation-single
+				- if current_page.data.page_title_show == true
+					= partial "/layouts/hybridpages/page_subtitle"  
+				= yield

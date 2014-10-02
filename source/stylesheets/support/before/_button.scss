@@ -1,0 +1,21 @@
+%button{
+	background-color: $color-button-action-static-background;
+	border-bottom: 4px solid $color-button-action-static-shadow;
+	color: $color-white;
+	font-size: 22px;
+	padding: em(9) em(25);
+	position: relative;
+	text-decoration: none;
+
+	&:hover{
+		background-color: $color-button-action-hover-background;
+		border-color:$color-button-action-hover-shadow;
+		cursor: pointer;
+	}
+
+	&:active{
+		background-color: $color-button-action-active-background;
+		border-color: $color-button-action-active-shadow;
+		cursor: pointer;
+	}
+}

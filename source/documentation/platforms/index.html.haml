@@ -5,9 +5,10 @@ author: The Hybrid Group
 description: Artoo Platforms
 layout: documentation
 active_menu_platforms: true
+main_nav: true
 
 page_title: Platforms
-page_subtitle: Artoo has a extensible system for connecting to hardware devices. The following robotics and physical computing platforms are currently supported.
+page_subtitle: Artoo has an extensible system for connecting to hardware devices.
 
 ardrone_platform: true
 arduino_platform: true
@@ -25,9 +26,9 @@ roomba_platform: true
 spark_platform: true
 sphero_platform: true
 ---
--content_for :js_accordeon do
-	:javascript
-		$("#platform-panel").addClass("active-panel");
-		$(".accordion-docs dt:nth-child(7) a:nth-child(2) img").addClass("rotate");
-  
-= partial "../platforms"
+%ul.platform-list
+  - data.platforms.each do |name, info|
+    %li.platform
+      %a{:href => "/documentation/platforms/#{info.slug}"}
+        %h3.title= name
+        %img{src: "/images/devices/#{info.slug}.jpg", style: "width: 90%"}

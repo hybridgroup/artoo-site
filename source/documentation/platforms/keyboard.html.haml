@@ -13,15 +13,11 @@ subnavjs: true
 
 keyboard_driver: true
 ---
--content_for :js_accordeon do
-  :javascript
-    $("#platform-panel").addClass("active-panel");
-    $("#platform-panel ul li:nth-child(7)").addClass("active-link");
-    $(".accordion-docs dt:nth-child(7) a:nth-child(2) img").addClass("rotate");
   
 %section.intro
   = image_tag "/images/devices/keyboard.jpg", class: "display"
   .info_intro
+    = partial '/layouts/hybridpages/page_repo_issues'
     %p The Artoo adaptor for keyboard input.
   .clear
 
@@ -55,5 +51,5 @@ keyboard_driver: true
 
   .hardware
     .devices
-      = partial "documentation/partials/devices_keyboard_drivers"
+      = partial "layouts/partials/devices_for_platform", locals: { platform: "Keyboard" }
       
