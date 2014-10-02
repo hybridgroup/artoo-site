@@ -1,101 +1,102 @@
 .app-header {
 
-    .display {
-        @include span-columns(5);
-        margin: em(12) 0 0 0;
+  .display {
+    @include span-columns(5);
+    margin: em(12) 0 0 0;
+  }
+
+  .logo {
+    display: block;
+    background: url(/images/elements/logo.png) left top no-repeat;
+    text-indent: -99999px;
+    background-size: contain;
+  }
+
+  .menu {
+    @include span-columns(7);
+    text-align: right;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+  }
+
+  li {
+    display: inline-block;
+  }
+
+  .item {
+    font-size: 16px;
+    font-weight: 600;
+    margin: em(10);
+    padding: em(8) em(4);
+
+    &, &:visited, &:active {
+      color: $color-anchor-nav;
     }
 
-    .logo {
-        display: block;
-        background: url(/images/elements/logo.png) left top no-repeat;
-        text-indent: -99999px;
-        background-size: contain;
+    &:hover, &:focus {
+      color: $color-anchor-nav-hover;
+    }
+  }
+
+  .active {
+    font-weight: 600;
+    margin: em(10);
+    padding: em(8) em(4);
+  }
+
+  @include media($tablet) {
+
+    .logo{
+      background: url(/images/elements/logo-mobile.png) left top no-repeat;
+    }
+    .subtitle, .menu {
+     width: auto;
+     display: block;
+    }
+
+    .display,.app-logo {
+      display: inline-block;
+    }
+
+    .display {
+      @include span-columns(12 of 12);
+      text-align: center;
+    }
+
+    .subtitle {
+      font-size: 19px;
+      line-height: 15px;
+      padding: 0;
     }
 
     .menu {
-        @include span-columns(7);
-        text-align: right;
-        display: inline-block;
-        position: relative;
-        z-index: 1;
+      text-align: center;
+      margin-top: em(-20) 0 0;
+      @include span-columns(12 of 12);
     }
 
-    li {
-        display: inline-block;
+    .nav-list{
+      padding: 0px 0 em(5);
+      margin: 0;
     }
 
     .item {
-      font-size: 16px;
-      font-weight: 600;
-      margin: em(10);
-      padding: em(8) em(4);
-
-      &, &:visited, &:active {
-        color: $color-anchor-nav;
-      }
-
-      &:hover, &:focus {
-        color: $color-anchor-nav-hover;
-      }
+      margin: 0;
+      padding: 0 em(10);
     }
-
-    .active {
-        font-weight: 600;
-        margin: em(10);
-        padding: em(8) em(4);
+  }
+  
+  @include media($mobile-small) {
+    .menu {
+      display: none;
+      margin-bottom: -18px;
     }
-
-    @include media($tablet) {
-
-        .logo{
-            background: url(/images/elements/logo-mobile.png) left top no-repeat;
-        }
-        .subtitle, .menu {
-          width: auto;
-          display: block;
-        }
-
-        .display,.app-logo {
-          display: inline-block;
-        }
-
-        .display {
-          @include span-columns(12 of 12);
-          text-align: center;
-        }
-
-        .subtitle {
-          font-size: 19px;
-          line-height: 15px;
-          padding: 0;
-        }
-
-        .menu {
-          text-align: center;
-          margin-top: em(-20) 0 0;
-          @include span-columns(12 of 12);
-        }
-
-        .nav-list{
-            padding: 0px 0 em(5);
-            margin: 0;
-        }
-
-        .item {
-            margin: 0;
-            padding: 0 em(10);
-        }
+    
+    li{
+      border-bottom: 1px solid $color-blue;
+      padding: 5px 0;
+      width: 100%;
     }
-    @include media($mobile-small) {
-        .menu {
-            display: none;
-            margin-bottom: -18px;
-        }
-        
-        li{
-            border-bottom: 1px solid $color-blue;
-            padding: 5px 0;
-            width: 100%;
-        }
-    }
+  }
 }
