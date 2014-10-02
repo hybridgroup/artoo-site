@@ -77,8 +77,8 @@
   },
 
   "Tutorials": {
-    "Arduino LED blinks": "/documentation/getting-started/tutorials/arduino",
-    "Sphero changes color": "/documentation/getting-started/tutorials/arduino"
+    "Arduino - Blink LED": "/documentation/getting-started/tutorials/arduino",
+    "Sphero - Change Color": "/documentation/getting-started/tutorials/sphero"
   },
 
   "Examples": "/documentation/examples",
