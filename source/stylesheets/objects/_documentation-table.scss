@@ -1,0 +1,25 @@
+.examples{
+
+  table {
+    @include span-columns(12 of 12);
+    margin-bottom: 21px;
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+  th, td {
+    padding: 8px;
+    line-height: 21px;
+    text-align: left;
+    border-top: 1px solid #a6a6a6;
+    vertical-align: top;
+
+    &:first-child{
+      @include span-columns(9 of 12);
+    }
+  }
+
+  thead:first-child th {
+    border-top: 0;
+  }
+}
