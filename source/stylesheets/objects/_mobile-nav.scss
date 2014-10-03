@@ -1,7 +1,7 @@
 .mobile-menu {
   text-align: right;
   display: none;
-  margin-right: 10px; 
+  margin-right: 10px;
 
   @include media ($tablet) {
     display: block;

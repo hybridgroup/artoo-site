@@ -34,7 +34,7 @@
     @include media ($tablet) {
       display: none;
     }
-    
+
     > a, .section .name {
       border-bottom: 1px solid white;
       font-size: em(14);

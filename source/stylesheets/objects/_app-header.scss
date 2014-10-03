@@ -43,7 +43,7 @@
       background: url(/images/elements/logo-normal.png) left top no-repeat;
       text-indent: -99999px;
       background-size: 100%;
-      
+
       @include hidpi(2) {
         background: url(/images/elements/logo-retina.png) left top no-repeat;
         background-size: 100%;
@@ -98,13 +98,13 @@
       padding: 0 em(10);
     }
   }
-  
+
   @include media($mobile-small) {
     .menu {
       display: none;
       margin-bottom: -18px;
     }
-    
+
     li{
       border-bottom: 1px solid $color-blue;
       padding: 5px 0;
