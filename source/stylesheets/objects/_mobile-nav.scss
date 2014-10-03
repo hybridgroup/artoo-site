@@ -1,7 +1,7 @@
 .mobile-menu {
   text-align: right;
   display: none;
-  margin-right: 10px;
+  margin-right: em(10);
 
   @include media ($tablet) {
     display: block;
@@ -13,9 +13,9 @@
 
   a {
     background: $color-medium-light-blue;
-    border-radius: 13px;
-    padding: 10px 12px;
-    margin: 5px;
+    border-radius: em(13);
+    padding: em(10) em(12);
+    margin: em(5);
     display: inline-block;
 
     &:hover {
@@ -28,7 +28,7 @@
     }
   }
   .line {
-    margin: 5px 0 5px;
+    margin: em(5) 0 em(5);
     background: white;
   }
 }

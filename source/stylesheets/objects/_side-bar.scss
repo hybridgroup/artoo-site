@@ -2,18 +2,19 @@
   @include span-columns(3);
   background: $color-panel-sidebar;
   border-bottom: 1px solid $color-dark-blue;
-  margin-top: 4.3em;
-  padding: 3.5em 0.625em 0;
+  margin-top: em(68);
+  padding: em(56) em(10) 0;
 
   @include media ($tablet) {
     @include span-columns(12 of 12);
     margin-top: 0;
     padding: 0;
   }
+
   .mobile-header{
     display: none;
     float: left;
-    margin: em(15) em(10);
+    margin: em(7) 0 0 em(15);
 
     @include media ($tablet) {
       display: block;
@@ -23,7 +24,7 @@
 
   .sidebar-header{
     background: url(/images/elements/sidebar-header.png) top center no-repeat;
-    margin: -7.825em -0.625em 0;
+    margin: em(-124) em(-10) 0;
 
     @include media ($tablet) {
       display: none;
@@ -48,7 +49,7 @@
     a, .name {
       width: 100%;
       display: block;
-      padding: 10px;
+      padding: em(12);
       cursor: pointer;
       color: $color-dark-blue;
       position: relative;
@@ -82,9 +83,9 @@
     .section:before {
       content: '▶';
       float: right;
-      margin: 12px 12px 0 0;
+      margin: em(24) em(22) 0 0;
       color: $color-dark-red;
-      font-size: 8px;
+      font-size: em(8);
       position: relative;
       z-index: 0;
     }
