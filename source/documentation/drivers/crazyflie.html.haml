@@ -10,15 +10,7 @@ layout: documentation
 subnav_driver: true
 active_menu_docs: true
 subnavjs: true
-
-crazyflie_platform: true
 ---
--content_for :js_accordeon do
-  :javascript
-    $("#driver-panel").addClass("active-panel");
-    $("#crazyflie li:nth-child(1)").addClass("active-link");
-    $(".accordion-docs dt:nth-child(9) a:nth-child(2) img").addClass("rotate");
-
 %section.intro
   =image_tag "/images/devices/crazyflie-driver.jpg", class: "display"
   .info_intro
@@ -26,7 +18,7 @@ crazyflie_platform: true
   .clear
 %section.how_to#HowToConnect
   %h2 How To Connect
-  %p Communication with the Crazyflie's flight control interface takes place using a 2.4GHz radio connection. The Crazyflie is controlled from your computer using a Crazyradio, which is a custom USB 2.4GHz radio device. 
+  %p Communication with the Crazyflie's flight control interface takes place using a 2.4GHz radio connection. The Crazyflie is controlled from your computer using a Crazyradio, which is a custom USB 2.4GHz radio device.
   :markdown
         :::ruby
         require 'artoo'
@@ -60,5 +52,4 @@ crazyflie_platform: true
 %section.compatability.hardware#Compatability
   %h2 Compatibility
   .devices
-    =# TODO: Update platform list at the top of the page.
-    = partial "documentation/partials/devices_platforms"
+    = partial "/layouts/partials/platforms_for_driver", locals: { driver: "Crazyflie - Flight" }

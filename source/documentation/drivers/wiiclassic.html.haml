@@ -11,24 +11,13 @@ subnav_driver: true
 subnav_circuit_driver: true
 active_menu_docs: true
 subnavjs: true
-
-arduino_platform: true
-beaglebone_platform: true
-digispark_platform: true
-raspberry_platform: true
 ---
--content_for :js_accordeon do
-  :javascript
-    $("#driver-panel").addClass("active-panel");
-    $("#i2c li:nth-child(3)").addClass("active-link");
-    $(".accordion-docs dt:nth-child(9) a:nth-child(2) img").addClass("rotate");
-
 %section.intro
   =image_tag "/images/devices/wiiclassic.jpg", class: "display"
   .info_intro
     %p Allows user to use a Nintendo Wii Classic Controller via i2c interface
   .clear
-  
+
 %section.how_to#HowToConnect
   %h2 How To Connect
   %h3 For Arduino:
@@ -74,11 +63,10 @@ raspberry_platform: true
     = partial "/documentation/drivers/partials/i2c/events_wiiclassic"
 
 %section.circuit#Circuit
-  %h2 Circuit 
+  %h2 Circuit
   %p Coming soon...
 
 %section.compatability.hardware#Compatability
   %h2 Compatibility
   .devices
-    =# TODO: Update platform list at the top of the page.
-    = partial "documentation/partials/devices_platforms"
+    = partial "/layouts/partials/platforms_for_driver", locals: { driver: "Wii Classic Controller" }

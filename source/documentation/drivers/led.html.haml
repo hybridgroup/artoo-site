@@ -11,25 +11,13 @@ subnav_driver: true
 subnav_circuit_driver: true
 active_menu_docs: true
 subnavjs: true
-
-arduino_platform: true
-beaglebone_platform: true
-digispark_platform: true
-raspberry_platform: true
-spark_platform: true
 ---
--content_for :js_accordeon do
-  :javascript
-    $("#driver-panel").addClass("active-panel");
-    $("#gpio li:nth-child(4)").addClass("active-link");
-    $(".accordion-docs dt:nth-child(9) a:nth-child(2) img").addClass("rotate");
-
 %section.intro
   =image_tag "/images/devices/led.jpg", class: "display"
   .info_intro
     %p  Allows user to interact with LEDs through digital output and PWM (Pulse Width Modulation)
   .clear
-  
+
 %section.how_to#HowToConnect
   %h2 How To Connect
   %h3 For Arduino:
@@ -69,23 +57,21 @@ spark_platform: true
     = partial "/documentation/drivers/partials/gpio/commands_led"
 
 %section.circuit#Circuit
-  %h2 Circuit 
+  %h2 Circuit
   .description-circuit
-    %p 
+    %p
   .image-circuit
-    %img{:src => "/documentation/drivers/breadboards/gpio/led_bb.png", :alt => ""}/ 
+    %img{:src => "/documentation/drivers/breadboards/gpio/led_bb.png", :alt => ""}/
   .clear
-  
+
 %section.compatability.hardware#Compatability
   %h2 Compatibility
-  %p 
+  %p
     %b Important Note:
     You need to install
     = link_to "pi-blaster", "https://github.com/sarfata/pi-blaster", target: :blank
-    in the 
-    %b raspberry-pi, 
+    in the
+    %b raspberry-pi,
     this project enables PWM in the GPIO pins .
-  =# TODO: Update platform list at the top of the page.
   .devices
-    = partial "documentation/partials/devices_platforms"
-
+    = partial "/layouts/partials/platforms_for_driver", locals: { driver: "LED" }

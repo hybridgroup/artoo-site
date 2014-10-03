@@ -1,8 +1,8 @@
 ---
 layout: documentation
 page_title_show: true
-title: "Artoo Example - sphero"
-page_title: "Example: sphero"
+title: "Artoo Example - sphero_interface"
+page_title: "Example: sphero_interface"
 author: The Hybrid Group
 description: A Artoo code example
 page_subtitle: "<a href='https://github.com/hybridgroup/artoo-sphero/tree/master/examples' target='_blank'>View In Repo</a>"
@@ -22,10 +22,12 @@ active_menu_docs: true
           every(3.seconds) do
             puts "Rolling..."
             unless @rolling
-              sphero.roll 90, rand(360)
+              # same as interfaces[:rover].forward(90)
+              forward(90)
               @rolling = true
             else
-              sphero.stop
+              #  same as interfaces[:rover].backward(90)
+              backward(90)
               @rolling = false
             end
           end

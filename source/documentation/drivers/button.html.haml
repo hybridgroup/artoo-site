@@ -11,19 +11,7 @@ subnav_driver: true
 subnav_circuit_driver: true
 active_menu_docs: true
 subnavjs: true
-
-arduino_platform: true
-beaglebone_platform: true
-digispark_platform: true
-raspberry_platform: true
-spark_platform: true
 ---
--content_for :js_accordeon do
-  :javascript
-    $("#driver-panel").addClass("active-panel");
-    $("#gpio li:nth-child(2)").addClass("active-link");
-    $(".accordion-docs dt:nth-child(9) a:nth-child(2) img").addClass("rotate");
-
 %section.intro
   = image_tag "/images/devices/button.jpg", class: "display"
   .info_intro
@@ -76,13 +64,13 @@ spark_platform: true
 %section.circuit#Circuit
   %h2 Circuit
   .description-circuit
-    %p 
+    %p
   .image-circuit
-    %img{:src => "/documentation/drivers/breadboards/gpio/button_bb.png", :alt => ""}/ 
+    %img{:src => "/documentation/drivers/breadboards/gpio/button_bb.png", :alt => ""}/
   .clear
 
 %section.compatability.hardware#Compatability
   %h2 Compatibility
   =# TODO: Update platform list at the top of the page.
   .devices
-    = partial "documentation/partials/devices_platforms"
+    = partial "/layouts/partials/platforms_for_driver", locals: { driver: "Button" }

@@ -8,12 +8,6 @@ description: A Artoo code example
 page_subtitle: "<a href='https://github.com/hybridgroup/artoo/tree/master/examples' target='_blank'>View In Repo</a>"
 active_menu_docs: true
 ---
-
--content_for :js_accordeon do
-  :javascript
-    $("#example-panel").addClass("active-panel");
-    $(".accordion-docs dt:nth-child(15) a:nth-child(2) img").addClass("rotate");
-
 .example
   :markdown
         :::ruby
@@ -33,7 +27,7 @@ active_menu_docs: true
             @heading = heading(value[1])
           }
           every(1.seconds) do
-          	puts "Rolling..."
+            puts "Rolling..."
             sphero.roll 50, @heading
           end
         end

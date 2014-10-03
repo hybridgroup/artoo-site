@@ -8,19 +8,13 @@ description: A Artoo code example
 page_subtitle: "<a href='https://github.com/hybridgroup/artoo-digispark/tree/master/examples' target='_blank'>View In Repo</a>"
 active_menu_docs: true
 ---
-
--content_for :js_accordeon do
-  :javascript
-    $("#example-panel").addClass("active-panel");
-    $(".accordion-docs dt:nth-child(15) a:nth-child(2) img").addClass("rotate");
-
 .example
   :markdown
         :::ruby
         require 'littlewire'
         require 'artoo'
 
-        # Uses Digispark USB board (http://digistump.com/products/1) 
+        # Uses Digispark USB board (http://digistump.com/products/1)
         # and Digispark RGB shield (http://digistump.com/products/3)
         # with Little Wire protocol (http://littlewire.cc)
 

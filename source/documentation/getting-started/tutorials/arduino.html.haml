@@ -7,12 +7,6 @@ page_subtitle: A Guide by Humans, for Humans.
 layout: documentation
 active_menu_docs: true
 ---
--content_for :js_accordeon do
-  :javascript
-    $("#getting-panel").addClass("active-panel");
-    $("#getting-panel ul li:nth-child(2)").addClass("active-link");
-    $(".accordion-docs dt:nth-child(3) a:nth-child(2) img").addClass("rotate");
-
 %section.intro
   %h1 Tutorial - Arduino LED Blinks
   %h3 Welcome!
@@ -30,7 +24,7 @@ active_menu_docs: true
       Before we start, make sure you have
       = link_to "Ruby and Artoo installed", "/documentation/getting-started"
     %li
-      Make sure your Arduino device supports the 
+      Make sure your Arduino device supports the
       = link_to "Firmata protocol." , "http://www.firmata.org/wiki/Main_Page", target: :blank
 
   %h3 Installing Arduino

@@ -11,18 +11,7 @@ subnav_driver: true
 subnav_circuit_driver: true
 active_menu_docs: true
 subnavjs: true
-
-arduino_platform: true
-beaglebone_platform: true
-digispark_platform: true
-raspberry_platform: true
 ---
--content_for :js_accordeon do
-  :javascript
-    $("#driver-panel").addClass("active-panel");
-    $("#i2c li:nth-child(4)").addClass("active-link");
-    $(".accordion-docs dt:nth-child(9) a:nth-child(2) img").addClass("rotate");
-
 %section.intro
   =image_tag "/images/devices/wiichuck.jpg", class: "display"
   .info_intro
@@ -72,5 +61,4 @@ raspberry_platform: true
 %section.compatability.hardware#Compatability
   %h2 Compatibility
   .devices
-    =# TODO: Update platform list at the top of the page.
-    = partial "documentation/partials/devices_platforms"
+    = partial "/layouts/partials/platforms_for_driver", locals: { driver: "Wii Nunchuck" }

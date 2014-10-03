@@ -8,12 +8,6 @@ description: A Artoo code example
 page_subtitle: "<a href='https://github.com/hybridgroup/artoo/tree/master/examples' target='_blank'>View In Repo</a>"
 active_menu_docs: true
 ---
-
--content_for :js_accordeon do
-  :javascript
-    $("#example-panel").addClass("active-panel");
-    $(".accordion-docs dt:nth-child(15) a:nth-child(2) img").addClass("rotate");
-
 .example
   :markdown
         :::ruby
@@ -22,7 +16,7 @@ active_menu_docs: true
         class ConwaySpheroRobot < Artoo::Robot
           connection :sphero, :adaptor => :sphero
           device :sphero, :driver => :sphero
-          
+
           #api :host => '127.0.0.1', :port => '8080'
 
           work do
@@ -60,7 +54,7 @@ active_menu_docs: true
 
           def birthday
             @age += 1
-            
+
             puts "Happy birthday, \#{name}, you are \#{@age} and had \#{@contacts} contacts."
             #return if @age <= 3
             death unless @contacts >= 6 && @contacts < 11
@@ -85,8 +79,8 @@ active_menu_docs: true
                    "127.0.0.1:4569" => "/dev/tty.Sphero-PYG-RN-SPP"}
         robots = []
         SPHEROS.each_key {|p|
-          robots << ConwaySpheroRobot.new(:connections => 
-                                      {:sphero => 
+          robots << ConwaySpheroRobot.new(:connections =>
+                                      {:sphero =>
                                         {:port => p}})
         }
 

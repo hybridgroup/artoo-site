@@ -16,13 +16,13 @@
     "LED": "led",
     "Wii Classic Controller": "wiiclassic",
     "Wii Nunchuck": "wiichuck"
-},
+  },
 
   "ARDrone - Flight": "ardrone-flight",
   "ARDrone - Navigation": "ardrone-navigation",
-  "ARDrone - video": "ardrone-video",
-  "Crazyflie Flight": "crazyflie",
-  "Crazyflie Navigation": "crazyflie-nav",
+  "ARDrone - Video": "ardrone-video",
+  "Crazyflie - Flight": "crazyflie",
+  "Crazyflie - Navigation": "crazyflie-nav",
   "Generic Joystick": "joystick",
   "Joystick - DualShock 3": "ps3",
   "Joystick - Xbox 360": "xbox360",

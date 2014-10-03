@@ -10,21 +10,13 @@ layout: documentation
 subnav_driver: true
 active_menu_docs: true
 subnavjs: true
-
-joystick_platform: true
 ---
--content_for :js_accordeon do
-  :javascript
-    $("#driver-panel").addClass("active-panel");
-    $("#joystick li:nth-child(2)").addClass("active-link");
-    $(".accordion-docs dt:nth-child(9) a:nth-child(2) img").addClass("rotate");
-
 %section.intro
   =image_tag "/images/devices/ps3.jpg", class: "display"
   .info_intro
     %p Allows user to interact with Artoo devices using a PS3 game controller.
   .clear
-  
+
 %section.how_to#HowToConnect
   %h2 How To Connect
   :markdown
@@ -63,10 +55,9 @@ joystick_platform: true
   .commands-api#Events
     = partial "/documentation/drivers/partials/joystick/events_ps3"
 
-  
+
 
 %section.compatability.hardware#Compatability
   %h2 Compatibility
   .devices
-    =# TODO: Update platform list at the top of the page.
-    = partial "documentation/partials/devices_platforms"
+    = partial "/layouts/partials/platforms_for_driver", locals: { driver: "Joystick - DualShock 3" }

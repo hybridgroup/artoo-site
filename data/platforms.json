@@ -16,7 +16,7 @@
 
   "Crazyflie": {
     "slug": "crazyflie",
-    "drivers": ["Crazyflie Navigation", "Crazyflie Flight"]
+    "drivers": ["Crazyflie - Navigation", "Crazyflie - Flight"]
   },
 
   "Digispark": {

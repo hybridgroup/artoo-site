@@ -8,12 +8,6 @@ description: A Artoo code example
 page_subtitle: "<a href='https://github.com/hybridgroup/artoo-opencv/tree/master/examples' target='_blank'>View In Repo</a>"
 active_menu_docs: true
 ---
-
--content_for :js_accordeon do
-  :javascript
-    $("#example-panel").addClass("active-panel");
-    $(".accordion-docs dt:nth-child(15) a:nth-child(2) img").addClass("rotate");
-
 .example
   :markdown
         :::ruby
@@ -29,7 +23,7 @@ active_menu_docs: true
         device :drone, :driver => :ardrone, :connection => :ardrone
 
         work do
-          on capture, :frame => proc { |*value| 
+          on capture, :frame => proc { |*value|
             begin
             opencv = value[1]
             biggest_circle = 0
@@ -50,9 +44,9 @@ active_menu_docs: true
               puts turnAmount
               if( turnAmount.abs > heightAmount.abs )
                 puts "turning " + turnAmount.to_s
-                if turnAmount < 0 
+                if turnAmount < 0
                   drone.turn_right(turnAmount.abs)
-                else 
+                else
                   drone.turn_left(turnAmount)
                 end
                 sleep 0.1

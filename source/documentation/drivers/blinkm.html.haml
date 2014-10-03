@@ -11,18 +11,7 @@ subnav_driver: true
 subnav_circuit_driver: true
 active_menu_docs: true
 subnavjs: true
-
-arduino_platform: true
-beaglebone_platform: true
-digispark_platform: true
-raspberry_platform: true
 ---
--content_for :js_accordeon do
-  :javascript
-    $("#driver-panel").addClass("active-panel");
-    $("#i2c li:nth-child(1)").addClass("active-link");
-    $(".accordion-docs dt:nth-child(9) a:nth-child(2) img").addClass("rotate");
-
 %section.intro
   =image_tag "/images/devices/blinkm.jpg", class: "display"
   .info_intro
@@ -68,15 +57,14 @@ raspberry_platform: true
 
 
 %section.circuit#Circuit
-  %h2 Circuit 
+  %h2 Circuit
   .description-circuit
     %p
-  .image-circuit 
-    %img{:src => "/documentation/drivers/breadboards/i2c/blinkm_bb.png", :alt => ""}/ 
-  .clear 
+  .image-circuit
+    %img{:src => "/documentation/drivers/breadboards/i2c/blinkm_bb.png", :alt => ""}/
+  .clear
 
 %section.compatability.hardware#Compatability
   %h2 Compatibility
   .devices
-    =# TODO: Update platform list at the top of the page.
-    = partial "documentation/partials/devices_platforms"
+    = partial "/layouts/partials/platforms_for_driver", locals: { driver: "BlinkM" }

@@ -6,7 +6,7 @@
         - if is_blog_article?
           = partial "blog/header", {locals: { article: current_article } }
           = yield
-        - else 
+        - else
           = yield
       - if is_blog_article?
         = partial "blog/disqus"
@@ -18,7 +18,7 @@
         %h3.side-header Network
         = yield_content :network
       .side-column
-        %h3.side-header 
+        %h3.side-header
           Posts
           %ul.archive
             = partial "blog/sidebar_links", {locals: { article: current_article } }

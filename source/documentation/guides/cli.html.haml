@@ -7,12 +7,6 @@ layout: documentation
 page_title_show: true
 active_menu_docs: true
 ---
--content_for :js_accordeon do
-  :javascript
-    $("#guides-panel").addClass("active-panel");
-    $("#guides-panel ul li:nth-child(4)").addClass("active-link");
-    $(".accordion-docs dt:nth-child(5) a:nth-child(2) img").addClass("rotate");
-
 .cli
   %h1 What is it?
   %p
@@ -87,7 +81,7 @@ active_menu_docs: true
         :::bash
         $ artoo scan bluetooth
         Scanning ...
-          00:06:66:4A:23:C3	Sphero-RPB
+          00:06:66:4A:23:C3  Sphero-RPB
 
   %h3 artoo install &lt;utility&gt;
   %h4 Description
@@ -145,7 +139,7 @@ active_menu_docs: true
         :::bash
         $ artoo bluetooth scan
         Scanning ...
-          00:06:66:4A:23:C3	Sphero-RPB
+          00:06:66:4A:23:C3  Sphero-RPB
 
   %h4 artoo bluetooth pair &lt;bluetooth_address&gt;
   %p

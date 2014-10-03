@@ -10,8 +10,6 @@ layout: documentation
 subnav_platform: true
 active_menu_platforms: true
 subnavjs: true
-
-ardrone_drivers: true
 ---
 
 %section.intro
@@ -22,7 +20,7 @@ ardrone_drivers: true
     %p
       = link_to "+ info about the ARDrone platform click here", "http://ardrone2.parrot.com/", target: :blank, :class => 'action'
   .clear
-  
+
 %section.how-to#HowToInstall
   %h2 How To Install
   %p Installing artoo with ardrone support is pretty easy using ruby gems.
@@ -48,7 +46,7 @@ ardrone_drivers: true
           after(25.seconds) { drone.hover.land }
           after(30.seconds) { drone.stop }
         end
-        
+
 %section.how-to#HowToConnect
   %h2 How To Connect
   %p The ARDrone is a WiFi device, so there is no additional work to establish a connection to a single drone. However, in order to connect to multiple drones, you need to perform some configuration steps on each drone via SSH.
@@ -80,4 +78,4 @@ ardrone_drivers: true
   .hardware
     .devices
       = partial "layouts/partials/devices_for_platform", locals: { platform: "ARDrone" }
-     
+

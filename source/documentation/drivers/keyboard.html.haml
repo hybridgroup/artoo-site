@@ -4,27 +4,19 @@ title: Artoo - Keyboard Driver
 author: The Hybrid Group
 page_title: Drivers
 page_subtitle: Artoo has a extensible system for connecting to hardware devices.
-page_title_docs: Keyboard 
+page_title_docs: Keyboard
 page_subtitle_docs: <a href='https://github.com/hybridgroup/artoo-keyboard' class='repository'>Repository</a>
 layout: documentation
 subnav_driver: true
 active_menu_docs: true
 subnavjs: true
-
-keyboard_platform: true
 ---
--content_for :js_accordeon do
-  :javascript
-    $("#driver-panel").addClass("active-panel");
-    $("#others li:nth-child(1)").addClass("active-link");
-    $(".accordion-docs dt:nth-child(9) a:nth-child(2) img").addClass("rotate");
-
 %section.intro
   =image_tag "/images/devices/keyboard.jpg", class: "display"
   .info_intro
     %p The Artoo adaptor for keyboard input.
   .clear
-  
+
 %section.how_to#HowToConnect
   %h2 How To Connect
   %h3 For Arduino:
@@ -61,5 +53,4 @@ keyboard_platform: true
 %section.compatability.hardware#Compatability
   %h2 Compatibility
   .devices
-    =# TODO: Update platform list at the top of the page.
-    = partial "documentation/partials/devices_platforms"
+    = partial "/layouts/partials/platforms_for_driver", locals: { driver: "Keyboard" }

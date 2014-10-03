@@ -10,10 +10,8 @@ layout: documentation
 subnav_platform: true
 active_menu_platforms: true
 subnavjs: true
-
-crazyflie_drivers: true
 ---
-  
+
 %section.intro
   = image_tag "/images/devices/crazyflie.jpg", class: "display"
   .info_intro
@@ -22,7 +20,7 @@ crazyflie_drivers: true
     %p
       = link_to "+ info about Crazyflie click here", "http://www.bitcraze.se/", target: :blank, :class => "action"
   .clear
-  
+
 %section.how-to#HowToInstall
   %h2 How To Install
   %p Installing artoo with arduino support is pretty easy using ruby gems.
@@ -56,10 +54,10 @@ crazyflie_drivers: true
     %a{ href: "http://stackoverflow.com/questions/17204253/crazyflie-usb-3-0-incompability"} http://stackoverflow.com/questions/17204253/crazyflie-usb-3-0-incompability
   %h2 How to hover
   %p
-    To use Crazyflie with the hover command, requires installing the 
+    To use Crazyflie with the hover command, requires installing the
     %a{ href:"https://bitbucket.org/omwdunkley/crazyflie-firmware" } https://bitbucket.org/omwdunkley/crazyflie-firmware
-    fork of the Crazyflie firmware. The easiest way to currently do this, is to 
-    install the Crazyflie PC Client, download the 'hover' branch BIN file from here 
+    fork of the Crazyflie firmware. The easiest way to currently do this, is to
+    install the Crazyflie PC Client, download the 'hover' branch BIN file from here
     %a{ href:"https://bitbucket.org/omwdunkley/crazyflie-firmware/downloads/cflie.bin" } https://bitbucket.org/omwdunkley/crazyflie-firmware/downloads/cflie.bin
     and then use the Crazyflie PC tools to update the Crazyflie firmware.
   %p Once you have updated the Crazyflie firmware, you will NEED to use the following syntax in your Artoo code to use it:
@@ -67,7 +65,7 @@ crazyflie_drivers: true
         :::ruby
         connection :crazyflie, :adaptor => :crazyflie, :supports_hover => true
 
-  %p If you do not add :supports_hover => true to your connection code to the Crazyflie, it will go crazy out of control as you as you try to connect to it. You have been warned... 
+  %p If you do not add :supports_hover => true to your connection code to the Crazyflie, it will go crazy out of control as you as you try to connect to it. You have been warned...
 
 %section.drivers#Drivers
   %h2 Drivers

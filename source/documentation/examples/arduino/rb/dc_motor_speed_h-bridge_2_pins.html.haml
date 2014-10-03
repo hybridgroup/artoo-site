@@ -8,12 +8,6 @@ description: A Artoo code example
 page_subtitle: "<a href='https://github.com/hybridgroup/artoo-arduino/tree/master/examples' target='_blank'>View In Repo</a>"
 active_menu_docs: true
 ---
-
--content_for :js_accordeon do
-  :javascript
-    $("#example-panel").addClass("active-panel");
-    $(".accordion-docs dt:nth-child(15) a:nth-child(2) img").addClass("rotate");
-
 .example
   :markdown
         :::ruby
@@ -25,7 +19,7 @@ active_menu_docs: true
         connection :firmata, :adaptor => :firmata, :port => '/dev/ttyACM0' # linux
         #connection :firmata, :adaptor => :firmata, :port => '127.0.0.1:8023'
         device :board, :driver => :device_info
-        device :motor, :driver => :motor, 
+        device :motor, :driver => :motor,
                        :forward_pin  => 4, # Digital or PWM pin
                        :backward_pin => 2, # Digital or PWM pin
                        :speed_pin    => 9  # PWM pin only

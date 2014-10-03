@@ -55,7 +55,7 @@ catcher_phrase: Ready to build the next big thing with Ruby?
   %p
     Artoo has an extensible system for connecting to hardware devices. The following robotics and physical computing platforms are currently supported:
 
-  %h2.alternative-heading 15 Platforms
+  %h2.alternative-heading #{data.platforms.length} Platforms
 
   %ul.platform-list
     - data.platforms.each do |name, info|
@@ -69,7 +69,7 @@ catcher_phrase: Ready to build the next big thing with Ruby?
   %p Artoo also has support for devices that can work across multiple hardware platforms.
 
   %h2.alternative-heading
-    = link_to "8 GPIO drivers", "https://en.wikipedia.org/wiki/General_Purpose_Input/Output" , target:"_blank"
+    = link_to "#{data.drivers.GPIO.length} GPIO drivers", "https://en.wikipedia.org/wiki/General_Purpose_Input/Output" , target:"_blank"
 
   %ul.platform-list
     - data.drivers.GPIO.each do |name, url|
@@ -78,8 +78,8 @@ catcher_phrase: Ready to build the next big thing with Ruby?
           %h3.title= name
           %img{src: "/images/devices/#{url}.jpg", style: "width: 90%"}
 
-  %h2.alternative-heading 
-    = link_to "5 I2C drivers", "https://en.wikipedia.org/wiki/I%C2%B2C", target:"_blank"
+  %h2.alternative-heading
+    = link_to "#{data.drivers.I2C.length} I2C drivers", "https://en.wikipedia.org/wiki/I%C2%B2C", target:"_blank"
 
   %ul.platform-list
     - data.drivers.I2C.each do |name, url|
@@ -117,7 +117,7 @@ catcher_phrase: Ready to build the next big thing with Ruby?
   %h2.homepage CLI
   %script{type:"text/javascript", src:"https://asciinema.org/a/10306.js", id:"asciicast-10306", "data-autoplay" => "1",  "data-loop" => "true"}
   :markdown
-    [Gort][] is a Command Line Toolkit (CLI) for RobotOps. Gort provides tools to scan for connected devices, upload firmware, and it works perfectly with Gobot. Also included with Gobot is a CLI for generating new robots and adaptors. 
+    [Gort][] is a Command Line Toolkit (CLI) for RobotOps. Gort provides tools to scan for connected devices, upload firmware, and it works perfectly with Gobot. Also included with Gobot is a CLI for generating new robots and adaptors.
 
     You can can learn more about Gobot's CLI in the docs [here][cli-docs].
 

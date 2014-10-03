@@ -8,12 +8,6 @@ description: A Artoo code example
 page_subtitle: "<a href='https://github.com/hybridgroup/artoo-joystick/tree/master/examples' target='_blank'>View In Repo</a>"
 active_menu_docs: true
 ---
-
--content_for :js_accordeon do
-  :javascript
-    $("#example-panel").addClass("active-panel");
-    $(".accordion-docs dt:nth-child(15) a:nth-child(2) img").addClass("rotate");
-
 .example
   :markdown
         :::ruby
@@ -39,7 +33,7 @@ active_menu_docs: true
           on controller, :button_a => proc { |*value|
             puts "Button A Pressed!"
           }
-          
+
           on controller, :button_dpad_up => proc { |*value|
             puts "Button DPad Up Pressed!"
           }
@@ -52,8 +46,8 @@ active_menu_docs: true
           on controller, :button_dpad_right => proc { |*value|
             puts "Button DPad Right Pressed!"
           }
-          
-          
+
+
           on controller, :button_lt => proc { |*value|
             puts "Button Left Trigger Pressed!"
           }
