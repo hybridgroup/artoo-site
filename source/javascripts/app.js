@@ -5,7 +5,7 @@ var SidebarCtrl = function SidebarCtrl($scope, $element) {
       activeTab = '';
 
   // see if a link in the sidebar is selected
-  var $el = $("a[href^='" + path + "']", $element),
+  var $el = $("a[href='" + path + "']", $element),
       $section = [];
 
   if ($el.length) {
