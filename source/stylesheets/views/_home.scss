@@ -1,24 +1,26 @@
 .hero {
   height: em(430);
-}
 
-.platform-list{
-  @include span-columns(12 of 12);
-}
-
-.platform{
-  @include span-columns(2.5 of 12);
-  @include omega;
-
-  @include media($tablet) {
-    @include span-columns(6 of 12);
-    @include omega;
+  /* center align twitter button*/
+  @include media($mobile-large) {
+    #twitter-widget-0{
+      width: 99px !important;
+    }
   }
 }
 
-/* center align twitter button*/
-@include media($mobile-large) {
-  #twitter-widget-0{
-    width: 99px !important;
+.home{
+  .platform-list{
+    @include span-columns(12 of 12);
+  }
+
+  .platform{
+    @include span-columns(2.5 of 12);
+    @include omega;
+
+    @include media($tablet) {
+      @include span-columns(6 of 12);
+      @include omega;
+    }
   }
 }
