@@ -31,7 +31,7 @@
     }
 
     .sub-nav-title {
-      line-height: em(62);
+      line-height: em(50);
     }
   }
 
@@ -47,5 +47,9 @@
 
   .image-circuit img {
     height: 300px;
+  }
+
+  .scroll-top {
+    height: em(27);
   }
 }
