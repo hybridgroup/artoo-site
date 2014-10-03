@@ -6,10 +6,12 @@
   }
 
   .platform{
-    width: 24%;
+    @include span-columns(3 of 12);
+    @include omega;
+
     @include media($mobile-large) {
-      width: 49%;
-      float: none;
+      @include span-columns(6 of 12);
+      @include omega;
     }
   }
 
@@ -19,11 +21,11 @@
   }
 
   .sidebar-header{
-    height: 69px;
+    height: em(69);
   }
 
   .subNavfixed {
-    width: 100%;
+    @include span-columns(12 of 12);
     background: $color-medium-blue;
 
     .container-subnav {
