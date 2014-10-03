@@ -1,5 +1,5 @@
 .app-footer {
-  @indlude row();
+  @include row();
   background: $color-panel-footer;
   color: white;
   font-family: $font-secondary;

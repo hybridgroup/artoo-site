@@ -1,27 +1,18 @@
 .hero {
-  height: 430px;
+  height: em(430);
 }
 
-.ship-small{
-  width: 100%;
-  height: 29px;
+.platform-list{
+  @include span-columns(12 of 12);
 }
 
-.ship-medium{
-  width: 100%;
-  height: 35px;
-}
-
-.ship-large{
-  width: 100%;
-  height: 46px;
-}
 .platform{
-  width: 19%;
+  @include span-columns(2.5 of 12);
+  @include omega;
 
-  @include media($mobile-large) {
-    width: 49%;
-    float: none;
+  @include media($tablet) {
+    @include span-columns(6 of 12);
+    @include omega;
   }
 }
 

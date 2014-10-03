@@ -9,7 +9,7 @@
     z-index: 1;
 
     .title{
-      font-size: 2.2em;
+      font-size: em(35);
       font-weight: 700;
     }
 
@@ -24,7 +24,7 @@
         display: none;
       }
     }
-    @include media($mobile){
+    @include media($mobile) {
       .title{
         font-size: em(26);
       }
@@ -62,8 +62,8 @@
       text-align: center;
       padding-left: em(13);
     }
-
   }
+
   .splitter{
     display: inline-block;
     margin-top: em(14);
@@ -79,7 +79,7 @@
       }
     }
 
-    @include media ($mobile-large){
+    @include media ($mobile-large) {
       display: block;
     }
   }
@@ -88,26 +88,38 @@
     @include animation(ship-small 10s infinite linear);
     background: url(/images/elements/ship-small.png) top center repeat-x;
     background-position-x: 325px;
+    height: 29px;
     top: 50px;
+    width: 100%;
   }
 
   .ship-medium{
     @include animation(ship-medium 5s infinite linear);
     background: url(/images/elements/ship-medium.png) top center repeat-x;
     background-position-x: 651px;
+    height: 35px;
     top: 120px;
+    width: 100%;
   }
 
   .ship-large{
     @include animation(ship-small 20s infinite linear);
     background: url(/images/elements/ship-large.png) top center repeat-x;
     background-position-x: 420px;
+    height: 46px;
     top: 210px;
+    width: 100%;
   }
+
   .window-panel{
     position: absolute;
     z-index: 2;
+
+    @include media($design-edge) {
+      display: none;
+    }
   }
+
   .panel{
     position: absolute;;
     width: 14px;
@@ -116,11 +128,11 @@
   }
 
   .one{
-    left: -65px;
+    left: em(-65);
   }
 
   .two{
-    left: 1022px;
+    left: em(1022);
   }
 }
 
