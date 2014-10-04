@@ -8,8 +8,13 @@
   .logo {
     display: block;
     background: url(/images/elements/logo.png) left top no-repeat;
-    text-indent: em(-99999);
     background-size: contain;
+    text-indent: em(-99999);
+    width: 188px;
+
+    @include media($tablet) {
+      height: 85px;
+    }
   }
 
   .menu {

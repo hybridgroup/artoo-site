@@ -1,24 +1,10 @@
 .app-header {
-  height: 53px;
 
-  @include media($tablet){
-    height: auto;
+  #docs-menu, #mobile-menu{
+      width: 55px;
   }
-}
-.app-logo{
-  width: 188px;
-}
 
-.logo{
-  @include media($tablet){
-    height: 85px;
+  .line {
+      height: 6px;
   }
-}
-
-#docs-menu, #mobile-menu{
-    width: 55px;
-}
-
-.line {
-    height: 6px;
 }
