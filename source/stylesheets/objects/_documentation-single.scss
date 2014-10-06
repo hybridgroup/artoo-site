@@ -16,6 +16,10 @@
     @extend %sub-nav-fixed;
   }
 
+  .arrow-top{
+    margin-top: em(5);
+  }
+
   .display {
     @include span-columns(4 of 9);
 
