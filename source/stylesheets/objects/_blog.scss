@@ -1,102 +1,111 @@
 .main-content.blog{
   @include outer-container;
-  padding-top: em(50);
   font-family: $font-secondary;
 
-  h1, h2, h3, h4, a{
-    color: $color-blog;
-  }
-  @include media($design-edge){
+  @include media($design-edge) {
     padding: 0 em(15);
   }
-}
 
-.articles {
-  @include span-columns(8 of 12);
-  padding-top: em(25);
+  .articles {
+    @include span-columns(8 of 12);
+    padding-top: em(25);
 
-  @include media($design-edge){
-    @include span-columns(12 of 12);
-  }
-
-  .header{
-    @include row();
-  }
-}
-
-.article {
-  .article-title {
-    display: inline-block;
-    font-size: 28px;
-    vertical-align: top;
-    margin: 0;
-  }
-
-  p {
-    text-align: justify;
-  }
-
-  .comments, .tags {
-    display: block;
-
-    a {
-      text-decoration: underline;
+    @include media($design-edge) {
+      @include span-columns(12 of 12);
     }
-  }
 
-  img {
-    width: 100%;
-    float: left;
-  }
+    .header{
+      @include row();
+    }
 
-  .tag{
-    display: inline-block;
-    font-size: em(16);
-    font-weight: bold;
-    margin-right: em(10);
-  }
+    .article-title {
+      @include span-columns(10 of 12);
+      display: inline-block;
+      font-size: em(28);
+      vertical-align: top;
+      margin: 0;
 
-  .comments {
-    margin-right: em(60);
-  }
-}
+      a{
+        color: $color-dark-blue;
+      }
+    }
 
-.side-columns {
-  @include span-columns(3 of 12);
+    .author{
+      color: $font-color;
+    }
 
-  @include media($design-edge){
-    @include span-columns(12 of 12);
-  }
+    p {
+      text-align: justify;
+    }
 
-  .side-header{
-    margin-bottom: em(10);
-    font-size: 22px;
-  }
+    .comments, .tags {
+      display: block;
 
-  .side-column{
-    vertical-align: top;
-    margin-bottom: 20px;
-
-  @include media($design-edge){
-    @include span-columns(4 of 12);
-  }
-
-    a {
-      font-size: 18px;
-      font-weight: 600;
-      color: $color-grey;
-
-      &:hover {
-        color: $color-blog;
+      a {
         text-decoration: underline;
       }
     }
+
+    img {
+      @include span-columns(12 of 12);
+      @include omega;
+    }
+
+    .tag{
+      display: inline-block;
+      font-size: em(16);
+      font-weight: bold;
+      margin-right: em(10);
+    }
+
+    .comments {
+      margin-right: em(60);
+    }
   }
-}
 
-@include media($mobile){
+  .side-columns {
+    @include span-columns(3 of 12);
 
-  .twitter-share-button {
-  margin-bottom: em(10);
+    @include media($design-edge) {
+      @include span-columns(12 of 12);
+    }
+
+    .side-header{
+      font-size: em(22);
+      margin-bottom: em(10);
+    }
+
+    .side-column{
+      vertical-align: top;
+      margin-bottom: em(20);
+
+      @include media($design-edge) {
+        @include span-columns(4 of 12);
+      }
+
+      a {
+        font-size: em(18);
+        font-weight: 600;
+        color: $color-grey;
+
+        &:hover {
+          color: $color-blog;
+          text-decoration: underline;
+        }
+      }
+
+      .archive {
+        margin-top: em(10);
+      }
+
+      .archive-article {
+        line-height: em(14);
+        margin-bottom: em(8);
+
+        a {
+          font-size: em(13);
+        }
+      }
+    }
   }
 }
