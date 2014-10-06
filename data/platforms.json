@@ -55,7 +55,7 @@
   },
 
   "Raspberry Pi": {
-    "slug": "raspi",
+    "slug": "raspberry-pi",
     "drivers": [
       "Button",
       "Continuous Servo",
