@@ -55,7 +55,13 @@ $(function() {
     var target_position = 0;
 
     if ( $(target).length ) {
-      target_position = $( target ).offset().top - 60;
+
+      if ($('#mainsubnav').hasClass('subNavfixed')) {
+        target_position = $( target ).offset().top - 60;
+      } else {
+        target_position = $( target ).offset().top - 120;
+      }
+      
       $('html, body').animate({
         scrollTop: target_position
       }, 1000);
