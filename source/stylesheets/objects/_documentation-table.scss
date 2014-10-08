@@ -2,14 +2,14 @@
 
   table {
     @include span-columns(12 of 12);
-    margin-bottom: 21px;
+    margin-bottom: em(21);
     border-collapse: collapse;
     border-spacing: 0;
   }
 
   th, td {
-    padding: 8px;
-    line-height: 21px;
+    padding: em(8);
+    line-height: em(21);
     text-align: left;
     border-top: 1px solid #a6a6a6;
     vertical-align: top;
