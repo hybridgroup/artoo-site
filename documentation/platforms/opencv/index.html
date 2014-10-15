@@ -198,7 +198,7 @@
                 </div>
               </div>
               <a href="/documentation/examples">Examples</a>
-              <a href="/documentation/chat/chat">Chat</a>
+              <a href="/documentation/chat">Chat</a>
             </nav>
           </div>
           <div class="documentation-single">
@@ -216,7 +216,7 @@
                   <a href="#HowToConnect">How To Connect</a>
                   <a href="#Drivers">Drivers</a>
                   <a class="scroll-top" href="#top">
-                    <img alt="Top page" src="/images/elements/top-arrow.png" width="20">
+                    <img alt="Top page" class="arrow-top" src="/images/elements/top-arrow.png" width="20">
                   </a>
                 </nav>
               </div>
@@ -296,7 +296,7 @@ sudo make install
   device <span class="symbol">:window</span>, <span class="symbol">:driver</span> =&gt; <span class="symbol">:opencv_window</span>, <span class="symbol">:connection</span> =&gt; <span class="symbol">:window</span>, <span class="symbol">:title</span> =&gt; <span class="string"><span class="delimiter">"</span><span class="content">My Window</span><span class="delimiter">"</span></span>, <span class="symbol">:interval</span> =&gt; <span class="float">0.01</span>
 
   work <span class="keyword">do</span>
-    on capture, <span class="symbol">:frame</span> =&gt; proc { |*value| 
+    on capture, <span class="symbol">:frame</span> =&gt; proc { |*value|
       window.image = value[<span class="integer">1</span>].image
     }
   <span class="keyword">end</span>

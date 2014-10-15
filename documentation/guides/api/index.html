@@ -198,7 +198,7 @@
                 </div>
               </div>
               <a href="/documentation/examples">Examples</a>
-              <a href="/documentation/chat/chat">Chat</a>
+              <a href="/documentation/chat">Chat</a>
             </nav>
           </div>
           <div class="documentation-single">
@@ -219,21 +219,21 @@
             <p>For example, on this code:</p>
             
             <pre class="CodeRay">require <span class="string"><span class="delimiter">'</span><span class="content">artoo</span><span class="delimiter">'</span></span>
-
-connection <span class="symbol">:loop</span>
-device <span class="symbol">:passthru</span>
-api <span class="symbol">:host</span> =&gt; <span class="string"><span class="delimiter">'</span><span class="content">127.0.0.1</span><span class="delimiter">'</span></span>, <span class="symbol">:port</span> =&gt; <span class="string"><span class="delimiter">'</span><span class="content">4321</span><span class="delimiter">'</span></span>
-
-work <span class="keyword">do</span>
-  puts <span class="string"><span class="delimiter">"</span><span class="content">Hello from the API running at </span><span class="inline"><span class="inline-delimiter">#{</span>api_host<span class="inline-delimiter">}</span></span><span class="content">:</span><span class="inline"><span class="inline-delimiter">#{</span>api_port<span class="inline-delimiter">}</span></span><span class="content">...</span><span class="delimiter">"</span></span>
-<span class="keyword">end</span>
 </pre>
+            
+            <p>connection :loop
+              device :passthru
+              api :host =&gt; '127.0.0.1', :port =&gt; '4321'</p>
+            
+            <p>work do
+                puts "Hello from the API running at #{api_host}:#{api_port}…"
+              end</p>
             <p>artoo automatically, starts the server.</p>
             <h2>How To Configure</h2>
             <p>The Artoo API server, allows a configuration for your robots.</p>
             <p>You can set it up like this:</p>
             
-            <pre class="CodeRay">  api <span class="symbol">:host</span> =&gt; <span class="string"><span class="delimiter">'</span><span class="content">127.0.0.1</span><span class="delimiter">'</span></span>, <span class="symbol">:port</span> =&gt; <span class="string"><span class="delimiter">'</span><span class="content">4321</span><span class="delimiter">'</span></span>
+            <pre class="CodeRay">api <span class="symbol">:host</span> =&gt; <span class="string"><span class="delimiter">'</span><span class="content">127.0.0.1</span><span class="delimiter">'</span></span>, <span class="symbol">:port</span> =&gt; <span class="string"><span class="delimiter">'</span><span class="content">4321</span><span class="delimiter">'</span></span>
 </pre>
             
             <p>Now you can run the server on the curl : <code>http://127.0.0.1:4321</code>.</p>
@@ -248,7 +248,7 @@ api <span class="symbol">:host</span> =&gt; <span class="string"><span class="de
 
 work <span class="keyword">do</span>
   puts <span class="string"><span class="delimiter">"</span><span class="content">Hello from the API running at </span><span class="inline"><span class="inline-delimiter">#{</span>api_host<span class="inline-delimiter">}</span></span><span class="content">:</span><span class="inline"><span class="inline-delimiter">#{</span>api_port<span class="inline-delimiter">}</span></span><span class="content">...</span><span class="delimiter">"</span></span>
-<span class="keyword">end</span>        
+<span class="keyword">end</span>
 </pre>
             <h2>Robeaux</h2>
             <p>Robeaux (/rō-bō/) is a universal dashboard to your robotic devices. Like a router admin page, but for robots.</p>
@@ -295,7 +295,7 @@ work <span class="keyword">do</span>
 ]
 </pre>
             <h3>GET /robots/:robotid</h3>
-            <p>Given a robot's name, returns JSON information about the requested Robot:</p>
+            Given a robot's name, returns JSON information about the requested Robot:
             
             <pre class="CodeRay">{
   "name": "SpheroBot",
@@ -329,7 +329,7 @@ work <span class="keyword">do</span>
   ]
 }
 </pre>
-            <h3>GET /robots/:robotid/devices</h3>
+            
             <p>Given a robot's name, returns JSON information about the devices belonging to
             the requested Robot:</p>
             
@@ -354,7 +354,7 @@ work <span class="keyword">do</span>
   }
 ]
 </pre>
-            <h3>GET /robots/:robotid/devices/:deviceid</h3>
+            
             <p>Given the names of a device and the robot it belongs to, returns data on the
             specified device.</p>
             
@@ -377,7 +377,7 @@ work <span class="keyword">do</span>
   ]
 }
 </pre>
-            <h3>GET /robots/:robotid/devices/:deviceid/commands</h3>
+            
             <p>Given the names of a device and the robot it belongs to, returns all commands
             available for the specified device.</p>
             
@@ -389,13 +389,13 @@ work <span class="keyword">do</span>
   "stop"
 ]
 </pre>
-            <h3>POST /robots/:robotid/devices/:deviceid/commands/:commandid</h3>
+            
             <p>Given a robot name, device name, and command name, executes a robot's command
             and returns the result.</p>
             
             <pre class="CodeRay">// example pending
 </pre>
-            <h3>GET /robots/:robotid/connections</h3>
+            
             <p>Given a robot's name, returns JSON information about the connections belonging
             to the requested Robot:</p>
             
@@ -408,7 +408,7 @@ work <span class="keyword">do</span>
   }
 ]
 </pre>
-            <h3>GET /robots/:robotid/connections/:connectionid</h3>
+            
             <p>Given a robot's name, returns JSON information about the connections belonging
             to the requested Robot:</p>
             
@@ -419,8 +419,6 @@ work <span class="keyword">do</span>
   "connection_id": 2778
 }
 </pre>
-            <h3>WS_GET /robots/:robotid/devices/:deviceid/events/:eventid</h3>
-            <p>Routes to a Reel route to handle WebSockets connections requesting updates on device events.</p>
           </div>
         </div>
       </div>

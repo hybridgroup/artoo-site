@@ -198,7 +198,7 @@
                 </div>
               </div>
               <a href="/documentation/examples">Examples</a>
-              <a href="/documentation/chat/chat">Chat</a>
+              <a href="/documentation/chat">Chat</a>
             </nav>
           </div>
           <div class="documentation-single">
@@ -214,7 +214,7 @@ device <span class="symbol">:video</span>, <span class="symbol">:driver</span> =
 
 work <span class="keyword">do</span>
   haar = <span class="string"><span class="delimiter">"</span><span class="inline"><span class="inline-delimiter">#{</span><span class="constant">Dir</span>.pwd<span class="inline-delimiter">}</span></span><span class="content">/examples/haarcascade_frontalface_alt.xml</span><span class="delimiter">"</span></span>
-  on capture, <span class="symbol">:frame</span> =&gt; proc { |*value| 
+  on capture, <span class="symbol">:frame</span> =&gt; proc { |*value|
     <span class="keyword">begin</span>
       opencv = value[<span class="integer">1</span>]
       faces = opencv.detect_faces(haar)

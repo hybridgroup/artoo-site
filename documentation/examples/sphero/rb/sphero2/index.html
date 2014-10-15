@@ -198,18 +198,18 @@
                 </div>
               </div>
               <a href="/documentation/examples">Examples</a>
-              <a href="/documentation/chat/chat">Chat</a>
+              <a href="/documentation/chat">Chat</a>
             </nav>
           </div>
           <div class="documentation-single">
             
             <div class="example">
               <pre class="CodeRay">require <span class="string"><span class="delimiter">'</span><span class="content">artoo/robot</span><span class="delimiter">'</span></span>
-           
+
 <span class="keyword">class</span> <span class="class">DoubleSpheroRobot</span> &lt; <span class="constant">Artoo</span>::<span class="constant">Robot</span>
   connection <span class="symbol">:sphero</span>, <span class="symbol">:adaptor</span> =&gt; <span class="symbol">:sphero</span>
   device <span class="symbol">:sphero</span>, <span class="symbol">:driver</span> =&gt; <span class="symbol">:sphero</span>
-  
+
   work <span class="keyword">do</span>
     <span class="instance-variable">@count</span> = <span class="integer">1</span>
     every(<span class="integer">3</span>.seconds) <span class="keyword">do</span>
@@ -224,8 +224,8 @@
            <span class="string"><span class="delimiter">"</span><span class="content">127.0.0.1:4561</span><span class="delimiter">"</span></span> =&gt; <span class="string"><span class="delimiter">"</span><span class="content">/dev/tty.Sphero-YBW-RN-SPP</span><span class="delimiter">"</span></span>}
 robots = []
 <span class="constant">SPHEROS</span>.each_key {|p|
-  robots &lt;&lt; <span class="constant">DoubleSpheroRobot</span>.new(<span class="symbol">:connections</span> =&gt; 
-                              {<span class="symbol">:sphero</span> =&gt; 
+  robots &lt;&lt; <span class="constant">DoubleSpheroRobot</span>.new(<span class="symbol">:connections</span> =&gt;
+                              {<span class="symbol">:sphero</span> =&gt;
                                 {<span class="symbol">:port</span> =&gt; p}})
 }
 

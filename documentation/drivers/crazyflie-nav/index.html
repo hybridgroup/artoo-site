@@ -198,7 +198,7 @@
                 </div>
               </div>
               <a href="/documentation/examples">Examples</a>
-              <a href="/documentation/chat/chat">Chat</a>
+              <a href="/documentation/chat">Chat</a>
             </nav>
           </div>
           <div class="documentation-single">
@@ -217,7 +217,7 @@
                   <a href="#Events">Events</a>
                   <a href="#Compatability">Compatibility</a>
                   <a class="scroll-top" href="#top">
-                    <img alt="Top page" src="/images/elements/top-arrow.png" width="20">
+                    <img alt="Top page" class="arrow-top" src="/images/elements/top-arrow.png" width="20">
                   </a>
                 </nav>
               </div>
@@ -250,7 +250,7 @@ connection <span class="symbol">:crazyflie</span>, <span class="symbol">:adaptor
 device <span class="symbol">:drone</span>, <span class="symbol">:driver</span> =&gt; <span class="symbol">:crazyflie_nav</span>, <span class="symbol">:connection</span> =&gt; <span class="symbol">:crazyflie</span>
 
 work <span class="keyword">do</span>
-  drone.log_value(<span class="string"><span class="delimiter">"</span><span class="content">stabilizer.pitch</span><span class="delimiter">"</span></span>)  
+  drone.log_value(<span class="string"><span class="delimiter">"</span><span class="content">stabilizer.pitch</span><span class="delimiter">"</span></span>)
   drone.start_logging
 
   every(<span class="integer">1</span>.seconds) {
@@ -269,7 +269,7 @@ work <span class="keyword">do</span>
                 
                 <h5 id="returns">Returns</h5>
                 
-                <p><code>nil</code> </p>
+                <p><code>nil</code></p>
                 
                 <h2 id="startgetvalue">start_get_value</h2>
                 
@@ -277,7 +277,7 @@ work <span class="keyword">do</span>
                 
                 <h5 id="returns-1">Returns</h5>
                 
-                <p><code>integer</code> </p>
+                <p><code>integer</code></p>
                 
                 <h2 id="toc">toc</h2>
                 
@@ -285,7 +285,7 @@ work <span class="keyword">do</span>
                 
                 <h5 id="returns-2">Returns</h5>
                 
-                <p><code>integer</code> </p>
+                <p><code>integer</code></p>
                 
                 <h2 id="values">values</h2>
                 
@@ -293,7 +293,7 @@ work <span class="keyword">do</span>
                 
                 <h5 id="returns-3">Returns</h5>
                 
-                <p><code>integer</code> </p>
+                <p><code>integer</code></p>
                 
                 <h2 id="log">log()</h2>
                 
@@ -301,7 +301,7 @@ work <span class="keyword">do</span>
                 
                 <h5 id="returns-4">Returns</h5>
                 
-                <p><code>nil</code> </p>
+                <p><code>nil</code></p>
                 
                 <h2 id="startdriver">start_driver()</h2>
                 
@@ -322,9 +322,7 @@ work <span class="keyword">do</span>
             <section class="compatability hardware" id="Compatability">
               <h2>Compatibility</h2>
               <div class="devices">
-                
-                <!-- // Crazylie -->
-                <a class="device" href="/documentation/platforms/crazyflie" title="Crazyflie">
+                <a class="device" href="/documentation/platforms/crazyflie">
                   <img src="/images/devices/crazyflie.jpg">
                 </a>
               </div>

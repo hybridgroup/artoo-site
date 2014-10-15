@@ -198,7 +198,7 @@
                 </div>
               </div>
               <a href="/documentation/examples">Examples</a>
-              <a href="/documentation/chat/chat">Chat</a>
+              <a href="/documentation/chat">Chat</a>
             </nav>
           </div>
           <div class="documentation-single">
@@ -253,7 +253,7 @@ work <span class="keyword">do</span>
     drone.backward(data[<span class="symbol">:y</span>].abs * deg_scale)
   <span class="keyword">else</span>
     drone.forward(<span class="integer">0</span>)
-  <span class="keyword">end</span> 
+  <span class="keyword">end</span>
 
   <span class="keyword">if</span> data[<span class="symbol">:x</span>] &gt; <span class="integer">0</span>
     drone.right(data[<span class="symbol">:x</span>].abs * deg_scale)
@@ -261,7 +261,7 @@ work <span class="keyword">do</span>
     drone.left(data[<span class="symbol">:x</span>].abs * deg_scale)
   <span class="keyword">else</span>
     drone.left(<span class="integer">0</span>)
-  <span class="keyword">end</span> 
+  <span class="keyword">end</span>
 <span class="keyword">end</span>
 
 <span class="keyword">def</span> <span class="function">handle_hover</span> caller
@@ -271,7 +271,7 @@ work <span class="keyword">do</span>
   <span class="keyword">else</span>
     <span class="instance-variable">@hover</span> = <span class="predefined-constant">true</span>
     drone.hover
-  <span class="keyword">end</span>  
+  <span class="keyword">end</span>
 <span class="keyword">end</span>
 </pre>
             </div>

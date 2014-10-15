@@ -198,7 +198,7 @@
                 </div>
               </div>
               <a href="/documentation/examples">Examples</a>
-              <a href="/documentation/chat/chat">Chat</a>
+              <a href="/documentation/chat">Chat</a>
             </nav>
           </div>
           <div class="documentation-single">
@@ -246,9 +246,9 @@ work <span class="keyword">do</span>
       center_x = opencv.image.width * <span class="float">0.5</span>
       turn = -( face.center.x - center_x ) / center_x
       puts <span class="string"><span class="delimiter">"</span><span class="content">turning: </span><span class="inline"><span class="inline-delimiter">#{</span>turn<span class="inline-delimiter">}</span></span><span class="delimiter">"</span></span>
-      <span class="keyword">if</span> turn &lt; <span class="integer">0</span> 
+      <span class="keyword">if</span> turn &lt; <span class="integer">0</span>
         drone.turn_right(turn.abs)
-      <span class="keyword">else</span> 
+      <span class="keyword">else</span>
         drone.turn_left(turn.abs)
       <span class="keyword">end</span>
       video.image = opencv.image

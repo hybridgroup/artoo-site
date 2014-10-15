@@ -198,7 +198,7 @@
                 </div>
               </div>
               <a href="/documentation/examples">Examples</a>
-              <a href="/documentation/chat/chat">Chat</a>
+              <a href="/documentation/chat">Chat</a>
             </nav>
           </div>
           <div class="documentation-single">
@@ -213,31 +213,31 @@ connection <span class="symbol">:sphero</span>, <span class="symbol">:adaptor</s
 device     <span class="symbol">:sphero</span>, <span class="symbol">:driver</span>  =&gt; <span class="symbol">:sphero</span>
 
 work <span class="keyword">do</span>
-        
-        on leapmotion, <span class="symbol">:hand</span> =&gt; <span class="symbol">:on_hand</span>
 
-        every (<span class="float">0.1</span>) <span class="keyword">do</span>
-                puts <span class="string"><span class="delimiter">"</span><span class="content">speed :</span><span class="inline"><span class="inline-delimiter">#{</span>speed<span class="inline-delimiter">}</span></span><span class="content">, heading :</span><span class="inline"><span class="inline-delimiter">#{</span>heading<span class="inline-delimiter">}</span></span><span class="delimiter">"</span></span>
-                sphero.roll speed, heading
-        <span class="keyword">end</span>
+  on leapmotion, <span class="symbol">:hand</span> =&gt; <span class="symbol">:on_hand</span>
+
+  every (<span class="float">0.1</span>) <span class="keyword">do</span>
+    puts <span class="string"><span class="delimiter">"</span><span class="content">speed :</span><span class="inline"><span class="inline-delimiter">#{</span>speed<span class="inline-delimiter">}</span></span><span class="content">, heading :</span><span class="inline"><span class="inline-delimiter">#{</span>heading<span class="inline-delimiter">}</span></span><span class="delimiter">"</span></span>
+    sphero.roll speed, heading
+  <span class="keyword">end</span>
 
 <span class="keyword">end</span>
 
 
 <span class="keyword">def</span> <span class="function">on_hand</span>(sender, hand)
-        x = hand.palm_x
-        y = hand.palm_y
+  x = hand.palm_x
+  y = hand.palm_y
 
-        <span class="instance-variable">@speed</span>   = [x.abs, y.abs].max
-        <span class="instance-variable">@heading</span> = ( <span class="float">180.0</span> - ( <span class="constant">Math</span>.atan2(x,y) * (<span class="float">180.0</span> / <span class="constant">Math</span>::<span class="constant">PI</span>) ) )
+  <span class="instance-variable">@speed</span>   = [x.abs, y.abs].max
+  <span class="instance-variable">@heading</span> = ( <span class="float">180.0</span> - ( <span class="constant">Math</span>.atan2(x,y) * (<span class="float">180.0</span> / <span class="constant">Math</span>::<span class="constant">PI</span>) ) )
 <span class="keyword">end</span>
 
 <span class="keyword">def</span> <span class="function">speed</span>
-        <span class="instance-variable">@speed</span> || <span class="integer">0</span>
+  <span class="instance-variable">@speed</span> || <span class="integer">0</span>
 <span class="keyword">end</span>
 
 <span class="keyword">def</span> <span class="function">heading</span>
-        <span class="instance-variable">@heading</span> || <span class="integer">0</span>
+  <span class="instance-variable">@heading</span> || <span class="integer">0</span>
 <span class="keyword">end</span>
 </pre>
             </div>

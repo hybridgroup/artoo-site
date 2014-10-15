@@ -198,7 +198,7 @@
                 </div>
               </div>
               <a href="/documentation/examples">Examples</a>
-              <a href="/documentation/chat/chat">Chat</a>
+              <a href="/documentation/chat">Chat</a>
             </nav>
           </div>
           <div class="documentation-single">
@@ -215,29 +215,24 @@
               <li>Connect the sphero to the computer using Bluetooth.</li>
               <li>
                 Run this command to look for it:
-                <pre class="CodeRay">artoo connect scan
-</pre>
+                <p>artoo connect scan</p>
               </li>
               <li>
                 You will see the following output:
-                <pre class="CodeRay">Scanning ...
-00:06:66:44:39:C6   Sphero-YBW
-</pre>
+                <p>Scanning …
+                  00:06:66:44:39:C6   Sphero-YBW</p>
               </li>
               <li>
                 Use that output to bind your device by name running this command:
-                <pre class="CodeRay">artoo connect bind 00:06:66:44:39:C6 Sphero-YBW
-</pre>
+                <p>artoo connect bind 00:06:66:44:39:C6 Sphero-YBW</p>
               </li>
               <li>
                 Finally, run this command to connect to your device:
-                <pre class="CodeRay">artoo connect serial Sphero-YBW 4567
-</pre>
+                <p>artoo connect serial Sphero-YBW 4567</p>
               </li>
               <li>
                 You should see this message displayed:
-                <pre class="CodeRay">N listening on AF=2 0.0.0.0:4567
-</pre>
+                <p>N listening on AF=2 0.0.0.0:4567</p>
               </li>
               <li>Leave this terminal open and running.</li>
             </ul>
@@ -264,13 +259,11 @@
               </li>
               <li>
                 This command should list your device, for example
-                <pre class="CodeRay">/dev/tty.Sphero-ORB-RN-SPP.
-</pre>
+                <p>/dev/tty.Sphero-ORB-RN-SPP.</p>
               </li>
               <li>
                 You should change the code to connect to that port, for example:
-                <pre class="CodeRay">connection :sphero, :adaptor =&gt; :sphero, :port =&gt; '/dev/tty.Sphero-ORB-RN-SPP'
-</pre>
+                <p>connection :sphero, :adaptor =&gt; :sphero, :port =&gt; '/dev/tty.Sphero-ORB-RN-SPP'</p>
               </li>
               <li>The latency on the initial connection is fairly high on all Bluetooth devices. The best way to get around this is to use a socket to serial utility to establish the connection.</li>
             </ul>

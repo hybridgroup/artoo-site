@@ -198,7 +198,7 @@
                 </div>
               </div>
               <a href="/documentation/examples">Examples</a>
-              <a href="/documentation/chat/chat">Chat</a>
+              <a href="/documentation/chat">Chat</a>
             </nav>
           </div>
           <div class="documentation-single">
@@ -211,10 +211,10 @@ device <span class="symbol">:roomba</span>, <span class="symbol">:driver</span> 
 
 connection <span class="symbol">:arduino</span>, <span class="symbol">:adaptor</span> =&gt; <span class="symbol">:firmata</span>, <span class="symbol">:port</span> =&gt; <span class="string"><span class="delimiter">'</span><span class="content">/dev/ttyACM0</span><span class="delimiter">'</span></span> <span class="comment">#linux</span>
 device <span class="symbol">:wiichuck</span>, <span class="symbol">:driver</span> =&gt; <span class="symbol">:wiichuck</span>, <span class="symbol">:connection</span> =&gt; <span class="symbol">:arduino</span>, <span class="symbol">:interval</span> =&gt; <span class="float">0.1</span>
-  
+
 work <span class="keyword">do</span>
   roomba.safe_mode
-  on wiichuck, <span class="symbol">:z_button</span> =&gt; proc { 
+  on wiichuck, <span class="symbol">:z_button</span> =&gt; proc {
     <span class="constant">C1</span> = <span class="integer">66</span>
     <span class="constant">D1</span> = <span class="integer">74</span>
     <span class="constant">E1</span> = <span class="integer">83</span>
@@ -223,23 +223,23 @@ work <span class="keyword">do</span>
     <span class="constant">QUARTER</span> = <span class="integer">16</span>
     <span class="constant">HALF</span> = <span class="integer">57</span>
     la_cucaracha = []
-    la_cucaracha &lt;&lt; [<span class="constant">C1</span>, <span class="constant">QUARTER</span>] 
-    la_cucaracha &lt;&lt; [<span class="constant">C1</span>, <span class="constant">QUARTER</span>]
-    la_cucaracha &lt;&lt; [<span class="constant">C1</span>, <span class="constant">QUARTER</span>] 
-    la_cucaracha &lt;&lt; [<span class="constant">F1</span>, <span class="constant">HALF</span>] 
-    la_cucaracha &lt;&lt; [<span class="constant">A2</span>, <span class="constant">QUARTER</span>] 
     la_cucaracha &lt;&lt; [<span class="constant">C1</span>, <span class="constant">QUARTER</span>]
     la_cucaracha &lt;&lt; [<span class="constant">C1</span>, <span class="constant">QUARTER</span>]
-    la_cucaracha &lt;&lt; [<span class="constant">C1</span>, <span class="constant">QUARTER</span>] 
-    la_cucaracha &lt;&lt; [<span class="constant">F1</span>, <span class="constant">HALF</span>] 
-    la_cucaracha &lt;&lt; [<span class="constant">A2</span>, <span class="constant">QUARTER</span>] 
-    la_cucaracha &lt;&lt; [<span class="constant">F1</span>, <span class="constant">QUARTER</span>] 
-    la_cucaracha &lt;&lt; [<span class="constant">F1</span>, <span class="constant">QUARTER</span>] 
-    la_cucaracha &lt;&lt; [<span class="constant">E1</span>, <span class="constant">QUARTER</span>] 
-    la_cucaracha &lt;&lt; [<span class="constant">E1</span>, <span class="constant">QUARTER</span>] 
-    la_cucaracha &lt;&lt; [<span class="constant">D1</span>, <span class="constant">QUARTER</span>] 
-    la_cucaracha &lt;&lt; [<span class="constant">D1</span>, <span class="constant">QUARTER</span>] 
-    la_cucaracha &lt;&lt; [<span class="constant">C1</span>, <span class="constant">QUARTER</span>] 
+    la_cucaracha &lt;&lt; [<span class="constant">C1</span>, <span class="constant">QUARTER</span>]
+    la_cucaracha &lt;&lt; [<span class="constant">F1</span>, <span class="constant">HALF</span>]
+    la_cucaracha &lt;&lt; [<span class="constant">A2</span>, <span class="constant">QUARTER</span>]
+    la_cucaracha &lt;&lt; [<span class="constant">C1</span>, <span class="constant">QUARTER</span>]
+    la_cucaracha &lt;&lt; [<span class="constant">C1</span>, <span class="constant">QUARTER</span>]
+    la_cucaracha &lt;&lt; [<span class="constant">C1</span>, <span class="constant">QUARTER</span>]
+    la_cucaracha &lt;&lt; [<span class="constant">F1</span>, <span class="constant">HALF</span>]
+    la_cucaracha &lt;&lt; [<span class="constant">A2</span>, <span class="constant">QUARTER</span>]
+    la_cucaracha &lt;&lt; [<span class="constant">F1</span>, <span class="constant">QUARTER</span>]
+    la_cucaracha &lt;&lt; [<span class="constant">F1</span>, <span class="constant">QUARTER</span>]
+    la_cucaracha &lt;&lt; [<span class="constant">E1</span>, <span class="constant">QUARTER</span>]
+    la_cucaracha &lt;&lt; [<span class="constant">E1</span>, <span class="constant">QUARTER</span>]
+    la_cucaracha &lt;&lt; [<span class="constant">D1</span>, <span class="constant">QUARTER</span>]
+    la_cucaracha &lt;&lt; [<span class="constant">D1</span>, <span class="constant">QUARTER</span>]
+    la_cucaracha &lt;&lt; [<span class="constant">C1</span>, <span class="constant">QUARTER</span>]
     roomba.play_song(la_cucaracha)
   }
   on wiichuck, <span class="symbol">:joystick</span> =&gt; proc { |*value|

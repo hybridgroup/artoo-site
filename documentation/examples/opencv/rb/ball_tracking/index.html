@@ -198,7 +198,7 @@
                 </div>
               </div>
               <a href="/documentation/examples">Examples</a>
-              <a href="/documentation/chat/chat">Chat</a>
+              <a href="/documentation/chat">Chat</a>
             </nav>
           </div>
           <div class="documentation-single">
@@ -213,7 +213,7 @@ connection <span class="symbol">:video</span>, <span class="symbol">:adaptor</sp
 device <span class="symbol">:video</span>, <span class="symbol">:driver</span> =&gt; <span class="symbol">:opencv_window</span>, <span class="symbol">:connection</span> =&gt; <span class="symbol">:video</span>, <span class="symbol">:title</span> =&gt; <span class="string"><span class="delimiter">"</span><span class="content">Video</span><span class="delimiter">"</span></span>, <span class="symbol">:interval</span> =&gt; <span class="float">0.01</span>
 
 work <span class="keyword">do</span>
-  on capture, <span class="symbol">:frame</span> =&gt; proc { |*value| 
+  on capture, <span class="symbol">:frame</span> =&gt; proc { |*value|
     <span class="keyword">begin</span>
       opencv = value[<span class="integer">1</span>]
       biggest_circle = <span class="integer">0</span>

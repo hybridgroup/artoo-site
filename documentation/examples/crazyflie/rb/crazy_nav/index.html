@@ -198,7 +198,7 @@
                 </div>
               </div>
               <a href="/documentation/examples">Examples</a>
-              <a href="/documentation/chat/chat">Chat</a>
+              <a href="/documentation/chat">Chat</a>
             </nav>
           </div>
           <div class="documentation-single">
@@ -210,7 +210,7 @@ connection <span class="symbol">:crazyflie</span>, <span class="symbol">:adaptor
 device <span class="symbol">:drone</span>, <span class="symbol">:driver</span> =&gt; <span class="symbol">:crazyflie_nav</span>, <span class="symbol">:connection</span> =&gt; <span class="symbol">:crazyflie</span>
 
 work <span class="keyword">do</span>
-  drone.log_value(<span class="string"><span class="delimiter">"</span><span class="content">stabilizer.pitch</span><span class="delimiter">"</span></span>)  
+  drone.log_value(<span class="string"><span class="delimiter">"</span><span class="content">stabilizer.pitch</span><span class="delimiter">"</span></span>)
   drone.start_logging
 
   every(<span class="integer">1</span>.seconds) {

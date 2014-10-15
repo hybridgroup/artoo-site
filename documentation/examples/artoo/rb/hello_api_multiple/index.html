@@ -198,7 +198,7 @@
                 </div>
               </div>
               <a href="/documentation/examples">Examples</a>
-              <a href="/documentation/chat/chat">Chat</a>
+              <a href="/documentation/chat">Chat</a>
             </nav>
           </div>
           <div class="documentation-single">
@@ -207,25 +207,25 @@
               <pre class="CodeRay">require <span class="string"><span class="delimiter">'</span><span class="content">artoo/robot</span><span class="delimiter">'</span></span>
 
 <span class="keyword">class</span> <span class="class">HelloRobot</span> &lt; <span class="constant">Artoo</span>::<span class="constant">Robot</span>
-        connection <span class="symbol">:loopback1</span>
-        connection <span class="symbol">:loopback2</span>
-        connection <span class="symbol">:loopback3</span>
-        device <span class="symbol">:pinger</span>, <span class="symbol">:driver</span> =&gt; <span class="symbol">:pinger</span>
-        device <span class="symbol">:counter</span>, <span class="symbol">:driver</span> =&gt; <span class="symbol">:counter</span>
-        device <span class="symbol">:random</span>, <span class="symbol">:driver</span> =&gt; <span class="symbol">:random</span>
-        device <span class="symbol">:passthru1</span>
-        device <span class="symbol">:passthru2</span>
+  connection <span class="symbol">:loopback1</span>
+  connection <span class="symbol">:loopback2</span>
+  connection <span class="symbol">:loopback3</span>
+  device <span class="symbol">:pinger</span>, <span class="symbol">:driver</span> =&gt; <span class="symbol">:ping</span>
+  device <span class="symbol">:counter</span>, <span class="symbol">:driver</span> =&gt; <span class="symbol">:counter</span>
+  device <span class="symbol">:random</span>, <span class="symbol">:driver</span> =&gt; <span class="symbol">:random</span>
+  device <span class="symbol">:passthru1</span>
+  device <span class="symbol">:passthru2</span>
 
-        api <span class="symbol">:host</span> =&gt; <span class="string"><span class="delimiter">'</span><span class="content">127.0.0.1</span><span class="delimiter">'</span></span>, <span class="symbol">:port</span> =&gt; <span class="string"><span class="delimiter">'</span><span class="content">8080</span><span class="delimiter">'</span></span>
+  api <span class="symbol">:host</span> =&gt; <span class="string"><span class="delimiter">'</span><span class="content">127.0.0.1</span><span class="delimiter">'</span></span>, <span class="symbol">:port</span> =&gt; <span class="string"><span class="delimiter">'</span><span class="content">8080</span><span class="delimiter">'</span></span>
 
-        work <span class="keyword">do</span>
-                puts <span class="string"><span class="delimiter">"</span><span class="content">Hello from '</span><span class="inline"><span class="inline-delimiter">#{</span>name<span class="inline-delimiter">}</span></span><span class="content">' attached to API running at </span><span class="inline"><span class="inline-delimiter">#{</span>api_host<span class="inline-delimiter">}</span></span><span class="content">:</span><span class="inline"><span class="inline-delimiter">#{</span>api_port<span class="inline-delimiter">}</span></span><span class="content">...</span><span class="delimiter">"</span></span>
-        <span class="keyword">end</span>
+  work <span class="keyword">do</span>
+    puts <span class="string"><span class="delimiter">"</span><span class="content">Hello from '</span><span class="inline"><span class="inline-delimiter">#{</span>name<span class="inline-delimiter">}</span></span><span class="content">' attached to API running at </span><span class="inline"><span class="inline-delimiter">#{</span>api_host<span class="inline-delimiter">}</span></span><span class="content">:</span><span class="inline"><span class="inline-delimiter">#{</span>api_port<span class="inline-delimiter">}</span></span><span class="content">...</span><span class="delimiter">"</span></span>
+  <span class="keyword">end</span>
 <span class="keyword">end</span>
 
 robots = []
 <span class="integer">5</span>.times <span class="keyword">do</span> |i|
-        robots &lt;&lt; <span class="constant">HelloRobot</span>.new(<span class="symbol">:name</span> =&gt; <span class="string"><span class="delimiter">"</span><span class="content">Number </span><span class="inline"><span class="inline-delimiter">#{</span>i<span class="inline-delimiter">}</span></span><span class="delimiter">"</span></span>)
+  robots &lt;&lt; <span class="constant">HelloRobot</span>.new(<span class="symbol">:name</span> =&gt; <span class="string"><span class="delimiter">"</span><span class="content">Number </span><span class="inline"><span class="inline-delimiter">#{</span>i<span class="inline-delimiter">}</span></span><span class="delimiter">"</span></span>)
 <span class="keyword">end</span>
 
 <span class="constant">HelloRobot</span>.work!(robots)

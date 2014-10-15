@@ -5,7 +5,7 @@ var SidebarCtrl = function SidebarCtrl($scope, $element) {
       activeTab = '';
 
   // see if a link in the sidebar is selected
-  var $el = $("a[href^='" + path + "']", $element),
+  var $el = $("a[href='" + path + "']", $element),
       $section = [];
 
   if ($el.length) {
@@ -39,7 +39,7 @@ var SidebarCtrl = function SidebarCtrl($scope, $element) {
 
 $(function() {
 
-  $('a.scroll, .container-subnav a').click(function(event){
+  $('a.scroll').click(function(event){
     event.preventDefault();
     var target = $(this).attr('href');
     if ( $(target).length ) {
@@ -49,16 +49,33 @@ $(function() {
     };
   });
 
+  $('.container-subnav a').click(function(event){
+    event.preventDefault();
+    var target = $(this).attr('href');
+    var target_position = 0;
+
+    if ( $(target).length ) {
+
+      if ($('#mainsubnav').hasClass('subNavfixed')) {
+        target_position = $( target ).offset().top - 60;
+      } else {
+        target_position = $( target ).offset().top - 120;
+      }
+      
+      $('html, body').animate({
+        scrollTop: target_position
+      }, 1000);
+    };
+  });
+
   var navpos = $('#mainsubnav').offset();
 
   $(window).bind('scroll', function() {
     if ($(window).scrollTop() > navpos.top) {
       $('#mainsubnav').addClass('subNavfixed');
-      $('#HowToConnect, #HowToUse, #Commands, #Events, #Circuit, #Compatability,#SpheroColors,#Drivers,#HowToInstall').addClass('marginTopSubnav');
      }
      else {
        $('#mainsubnav').removeClass('subNavfixed');
-       $('#HowToConnect, #HowToUse, #Commands, #Events, #Circuit, #Compatability,#SpheroColors,#Drivers,#HowToInstall').removeClass('marginTopSubnav');
        $("#mainsubnav a").removeClass("active");
      }
   });

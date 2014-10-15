@@ -198,7 +198,7 @@
                 </div>
               </div>
               <a href="/documentation/examples">Examples</a>
-              <a href="/documentation/chat/chat">Chat</a>
+              <a href="/documentation/chat">Chat</a>
             </nav>
           </div>
           <div class="documentation-single">
@@ -217,7 +217,7 @@
                   <a href="#Events">Events</a>
                   <a href="#Compatability">Compatibility</a>
                   <a class="scroll-top" href="#top">
-                    <img alt="Top page" src="/images/elements/top-arrow.png" width="20">
+                    <img alt="Top page" class="arrow-top" src="/images/elements/top-arrow.png" width="20">
                   </a>
                 </nav>
               </div>
@@ -247,7 +247,7 @@ device <span class="symbol">:nav</span>, <span class="symbol">:driver</span> =&g
               <h3>How to use events and call them on your drivers</h3>
               <p>Pretty simple, when the connection and the driver have been setup (as explained above) you can call events on them as follows:</p>
               <pre class="CodeRay">on nav, <span class="symbol">:navdata</span> =&gt; proc { |caller, navdata| puts <span class="string"><span class="delimiter">"</span><span class="content">Sequence number: </span><span class="inline"><span class="inline-delimiter">#{</span> navdata.sequence_number <span class="inline-delimiter">}</span></span><span class="delimiter">"</span></span> }
-on nav, <span class="symbol">:demo</span> =&gt; proc { |caller, navdata, nav_option_demo| 
+on nav, <span class="symbol">:demo</span> =&gt; proc { |caller, navdata, nav_option_demo|
   puts <span class="string"><span class="delimiter">"</span><span class="content">Ardrone pitch: </span><span class="inline"><span class="inline-delimiter">#{</span> nav_option_demo.pitch <span class="inline-delimiter">}</span></span><span class="delimiter">"</span></span>
   puts <span class="string"><span class="delimiter">"</span><span class="content">Ardrone roll:  </span><span class="inline"><span class="inline-delimiter">#{</span> nav_option_demo.roll <span class="inline-delimiter">}</span></span><span class="delimiter">"</span></span>
   puts <span class="string"><span class="delimiter">"</span><span class="content">Ardrone yaw:   </span><span class="inline"><span class="inline-delimiter">#{</span> nav_option_demo.yaw <span class="inline-delimiter">}</span></span><span class="delimiter">"</span></span>
@@ -347,9 +347,7 @@ work <span class="keyword">do</span>
             <section class="compatability hardware" id="Compatability">
               <h2>Compatibility</h2>
               <div class="devices">
-                
-                <!-- //Ardrone -->
-                <a class="device" href="/documentation/platforms/ardrone" title="AR Drone">
+                <a class="device" href="/documentation/platforms/ardrone">
                   <img src="/images/devices/ardrone.jpg">
                 </a>
               </div>

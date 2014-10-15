@@ -198,7 +198,7 @@
                 </div>
               </div>
               <a href="/documentation/examples">Examples</a>
-              <a href="/documentation/chat/chat">Chat</a>
+              <a href="/documentation/chat">Chat</a>
             </nav>
           </div>
           <div class="documentation-single">
@@ -228,7 +228,7 @@ work <span class="keyword">do</span>
   on classic, <span class="symbol">:a_button</span> =&gt; proc { drone.take_off }
   on classic, <span class="symbol">:b_button</span> =&gt; proc { drone.hover }
   on classic, <span class="symbol">:x_button</span> =&gt; proc { drone.land }
-  on classic, <span class="symbol">:y_button</span> =&gt; proc { 
+  on classic, <span class="symbol">:y_button</span> =&gt; proc {
     <span class="keyword">if</span> <span class="instance-variable">@toggle_camera</span> == <span class="integer">0</span>
       drone.bottom_camera
       <span class="instance-variable">@toggle_camera</span> = <span class="integer">1</span>
@@ -253,7 +253,7 @@ work <span class="keyword">do</span>
   on classic, <span class="symbol">:rotate_left</span> =&gt; proc { drone.turn_left(<span class="instance-variable">@rotate_pitch</span>) }
   on classic, <span class="symbol">:rotate_right</span> =&gt; proc { drone.turn_right(<span class="instance-variable">@rotate_pitch</span>) }
   on classic, <span class="symbol">:reset_rotate</span> =&gt; proc { drone.turn_left(<span class="float">0.0</span>) }
-  on classic, <span class="symbol">:reset_altitude</span> =&gt; proc { drone.up(<span class="float">0.0</span>) } 
+  on classic, <span class="symbol">:reset_altitude</span> =&gt; proc { drone.up(<span class="float">0.0</span>) }
 <span class="keyword">end</span>
 
 <span class="keyword">def</span> <span class="function">init_settings</span>

@@ -198,7 +198,7 @@
                 </div>
               </div>
               <a href="/documentation/examples">Examples</a>
-              <a href="/documentation/chat/chat">Chat</a>
+              <a href="/documentation/chat">Chat</a>
             </nav>
           </div>
           <div class="documentation-single">
@@ -209,7 +209,7 @@
 <span class="keyword">class</span> <span class="class">ConwaySpheroRobot</span> &lt; <span class="constant">Artoo</span>::<span class="constant">Robot</span>
   connection <span class="symbol">:sphero</span>, <span class="symbol">:adaptor</span> =&gt; <span class="symbol">:sphero</span>
   device <span class="symbol">:sphero</span>, <span class="symbol">:driver</span> =&gt; <span class="symbol">:sphero</span>
-  
+
   <span class="comment">#api :host =&gt; '127.0.0.1', :port =&gt; '8080'</span>
 
   work <span class="keyword">do</span>
@@ -247,7 +247,7 @@
 
   <span class="keyword">def</span> <span class="function">birthday</span>
     <span class="instance-variable">@age</span> += <span class="integer">1</span>
-    
+
     puts <span class="string"><span class="delimiter">"</span><span class="content">Happy birthday, </span><span class="inline"><span class="inline-delimiter">#{</span>name<span class="inline-delimiter">}</span></span><span class="content">, you are </span><span class="inline"><span class="inline-delimiter">#{</span><span class="instance-variable">@age</span><span class="inline-delimiter">}</span></span><span class="content"> and had </span><span class="inline"><span class="inline-delimiter">#{</span><span class="instance-variable">@contacts</span><span class="inline-delimiter">}</span></span><span class="content"> contacts.</span><span class="delimiter">"</span></span>
     <span class="comment">#return if @age &lt;= 3</span>
     death <span class="keyword">unless</span> <span class="instance-variable">@contacts</span> &gt;= <span class="integer">6</span> &amp;&amp; <span class="instance-variable">@contacts</span> &lt; <span class="integer">11</span>
@@ -272,8 +272,8 @@
            <span class="string"><span class="delimiter">"</span><span class="content">127.0.0.1:4569</span><span class="delimiter">"</span></span> =&gt; <span class="string"><span class="delimiter">"</span><span class="content">/dev/tty.Sphero-PYG-RN-SPP</span><span class="delimiter">"</span></span>}
 robots = []
 <span class="constant">SPHEROS</span>.each_key {|p|
-  robots &lt;&lt; <span class="constant">ConwaySpheroRobot</span>.new(<span class="symbol">:connections</span> =&gt; 
-                              {<span class="symbol">:sphero</span> =&gt; 
+  robots &lt;&lt; <span class="constant">ConwaySpheroRobot</span>.new(<span class="symbol">:connections</span> =&gt;
+                              {<span class="symbol">:sphero</span> =&gt;
                                 {<span class="symbol">:port</span> =&gt; p}})
 }
 

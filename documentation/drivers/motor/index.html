@@ -198,7 +198,7 @@
                 </div>
               </div>
               <a href="/documentation/examples">Examples</a>
-              <a href="/documentation/chat/chat">Chat</a>
+              <a href="/documentation/chat">Chat</a>
             </nav>
           </div>
           <div class="documentation-single">
@@ -218,7 +218,7 @@
                   <a href="#Circuit">Circuit</a>
                   <a href="#Compatability">Compatibility</a>
                   <a class="scroll-top" href="#top">
-                    <img alt="Top page" src="/images/elements/top-arrow.png" width="20">
+                    <img alt="Top page" class="arrow-top" src="/images/elements/top-arrow.png" width="20">
                   </a>
                 </nav>
               </div>
@@ -290,7 +290,7 @@ work <span class="keyword">do</span>
 <span class="comment">#connection :arduino, :adaptor =&gt; :firmata, :port =&gt; '/dev/tty*'</span>
 connection <span class="symbol">:arduino</span>, <span class="symbol">:adaptor</span> =&gt; <span class="symbol">:firmata</span>, <span class="symbol">:port</span> =&gt; <span class="string"><span class="delimiter">'</span><span class="content">127.0.0.1:8023</span><span class="delimiter">'</span></span>
 device <span class="symbol">:board</span>, <span class="symbol">:driver</span> =&gt; <span class="symbol">:device_info</span>
-device <span class="symbol">:motor</span>, <span class="symbol">:driver</span> =&gt; <span class="symbol">:motor</span>, 
+device <span class="symbol">:motor</span>, <span class="symbol">:driver</span> =&gt; <span class="symbol">:motor</span>,
                <span class="symbol">:forward_pin</span>  =&gt; <span class="integer">4</span>, <span class="comment"># Digital or PWM pin</span>
                <span class="symbol">:backward_pin</span> =&gt; <span class="integer">2</span>, <span class="comment"># Digital or PWM pin</span>
                <span class="symbol">:speed_pin</span>    =&gt; <span class="integer">9</span>  <span class="comment"># PWM pin only</span>
@@ -512,26 +512,20 @@ work <span class="keyword">do</span>
                 <b>raspberry-pi,</b>
                 this project enables PWM in the GPIO pins .
               </p>
-              
               <div class="devices">
-                <!-- // Arduino -->
-                <a class="device" href="/documentation/platforms/arduino" title="Arduino">
+                <a class="device" href="/documentation/platforms/arduino">
                   <img src="/images/devices/arduino.jpg">
                 </a>
-                <!-- // Beaglebone -->
-                <a class="device" href="/documentation/platforms/beaglebone" title="BeagleBone">
+                <a class="device" href="/documentation/platforms/beaglebone">
                   <img src="/images/devices/beaglebone.jpg">
                 </a>
-                <!-- // Analog Sensor -->
-                <a class="device" href="/documentation/platforms/digispark" title="Digispark">
+                <a class="device" href="/documentation/platforms/digispark">
                   <img src="/images/devices/digispark.jpg">
                 </a>
-                <!-- // Raspberry Pi -->
-                <a class="device" href="/documentation/platforms/raspberry-pi" title="Raspberry Pi">
-                  <img src="/images/devices/raspi.jpg">
+                <a class="device" href="/documentation/platforms/raspberry-pi">
+                  <img src="/images/devices/raspberry-pi.jpg">
                 </a>
-                <!-- // Spark -->
-                <a class="device" href="/documentation/platforms/spark" title="Spark">
+                <a class="device" href="/documentation/platforms/spark">
                   <img src="/images/devices/spark.jpg">
                 </a>
               </div>

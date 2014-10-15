@@ -198,7 +198,7 @@
                 </div>
               </div>
               <a href="/documentation/examples">Examples</a>
-              <a href="/documentation/chat/chat">Chat</a>
+              <a href="/documentation/chat">Chat</a>
             </nav>
           </div>
           <div class="documentation-single">
@@ -225,7 +225,7 @@ work <span class="keyword">do</span>
   on classic, <span class="symbol">:a_button</span> =&gt; proc { drone.take_off }
   on classic, <span class="symbol">:b_button</span> =&gt; proc { drone.hover }
   on classic, <span class="symbol">:x_button</span> =&gt; proc { drone.land }
-  on classic, <span class="symbol">:y_button</span> =&gt; proc { 
+  on classic, <span class="symbol">:y_button</span> =&gt; proc {
     <span class="keyword">unless</span> <span class="instance-variable">@toggle_camera</span>
       drone.bottom_camera
       <span class="instance-variable">@toggle_camera</span> = <span class="integer">1</span>
