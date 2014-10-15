@@ -1,135 +1,147 @@
 .hero{
-	@extend %hero;
+  @extend %hero;
 
-	.content{
-		@include span-columns(8 of 12);
-		@include omega;
-		margin-top: em(35);
-		position: relative;
-		z-index: 1;
+  .content{
+    @include span-columns(8 of 12);
+    @include omega;
+    margin-top: em(35);
+    position: relative;
+    z-index: 1;
 
-		.title{
-			font-size: 2.2em;
-			font-weight: 700;
-		}
+    .title{
+      font-size: em(35);
+      font-weight: 700;
+    }
 
-		.sub-title{
-			font-size: em(22);
-		}
-		@include media($tablet) {
-			@include span-columns(12 of 12);
-			text-align: center;
+    .sub-title{
+      font-size: em(22);
+    }
+    @include media($tablet) {
+      @include span-columns(12 of 12);
+      text-align: center;
 
-			br{
-				display: none;
-			}
-		}
-		@include media($mobile){
-			.title{
-				font-size: em(26);
-			}
-			.sub-title{
-				font-size: em(20);
-			}
-		}
-	}
+      br{
+        display: none;
+      }
+    }
+    @include media($mobile) {
+      .title{
+        font-size: em(26);
+      }
+      .sub-title{
+        font-size: em(20);
+      }
+    }
+  }
 
-	.display{
-		@include span-columns(4 of 12);
+  .display{
+    @include span-columns(4 of 12);
 
-		img{
-			position: relative;
-			top: 46px;
-			z-index: 2;
-		}
+    img{
+      position: relative;
+      top: 46px;
+      z-index: 2;
+    }
 
-		@include media($tablet) {
-	      display: none;
-	    }
-	}
+    @include media($tablet) {
+        display: none;
+      }
+  }
 
-	.action {
-		@extend %button-green;
-		text-shadow: 1px 2px 1px $color-button-action-hover-background;
-		top: 15px;
-	}
+  .action {
+    @extend %button-green;
+    text-shadow: 1px 2px 1px $color-button-action-hover-background;
+    top: 15px;
+  }
 
-	.social{
-		position: relative;
+  .social{
+    position: relative;
 
-		@include media($tablet) {
-			top: 40px;
-			text-align: center;
-			padding-left: em(13);
-		}
+    @include media($tablet) {
+      top: 40px;
+      text-align: center;
+      padding-left: em(13);
+    }
+  }
 
-	}
-	.splitter{
-		display: inline-block;
-		margin-top: em(14);
+  .splitter{
+    display: inline-block;
+    margin-top: em(14);
 
-		@include media($tablet) {
+    @include media($tablet) {
 
-			#twitter-widget-1{
-			  display: none;
-			}
+      #twitter-widget-1{
+        display: none;
+      }
 
-			.fork{
-			  display: none;
-			}
-		}
-		
-		@include media ($mobile-large){
-			display: block;
-		}
-	}
+      .fork{
+        display: none;
+      }
+    }
 
-	.ship-small{
-		@include animation(ship-small 10s infinite linear);
-		background: url(/images/elements/ship-small.png) top center repeat-x;
-		background-position-x: 325px;
-		top: 50px;
-	}
+    @include media ($mobile-large) {
+      display: block;
+    }
+  }
 
-	.ship-medium{
-		@include animation(ship-medium 5s infinite linear);
-		background: url(/images/elements/ship-medium.png) top center repeat-x;
-		background-position-x: 651px;
-		top: 120px;
-	}
+  .ship-small{
+    @include animation(ship-small 10s infinite linear);
+    background: url(/images/elements/ship-small.png) top center repeat-x;
+    background-position-x: 325px;
+    height: 29px;
+    top: 50px;
+    width: 100%;
+  }
 
-	.ship-large{
-		@include animation(ship-small 20s infinite linear);
-		background: url(/images/elements/ship-large.png) top center repeat-x;
-		background-position-x: 420px;
-		top: 210px;
-	}
-	.window-panel{
-		position: absolute;
-		z-index: 2;
-	}
-	.panel{
-		position: absolute;;
-		width: 14px;
-		height: 368px;
-		background-color: $color-dark-blue;
-	}
+  .ship-medium{
+    @include animation(ship-medium 5s infinite linear);
+    background: url(/images/elements/ship-medium.png) top center repeat-x;
+    background-position-x: 651px;
+    height: 35px;
+    top: 120px;
+    width: 100%;
+  }
 
-	.one{
-		left: -65px;
-	}
+  .ship-large{
+    @include animation(ship-small 20s infinite linear);
+    background: url(/images/elements/ship-large.png) top center repeat-x;
+    background-position-x: 420px;
+    height: 46px;
+    top: 210px;
+    width: 100%;
+  }
 
-	.two{
-		left: 1022px;
-	}
+  .window-panel{
+    position: absolute;
+    z-index: 2;
+
+    @include media($design-edge) {
+      display: none;
+    }
+  }
+
+  .panel{
+    position: absolute;;
+    width: 14px;
+    height: 368px;
+    background-color: $color-dark-blue;
+  }
+
+  .one{
+    left: em(-65);
+  }
+
+  .two{
+    left: em(1022);
+  }
 }
 
 .site-description{
-	background-color: $color-blue;
+  background-color: $color-blue;
 
-	.container{
-		padding: em(30) 0;
-	}
+  .container{
+    padding: em(30) 0;
+  }
 }
 
 @include keyframes(ship-small) {

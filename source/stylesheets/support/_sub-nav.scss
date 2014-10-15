@@ -25,6 +25,11 @@
 
   .scroll-top, .sub-nav-title {
     display: none;
+    vertical-align: middle;
+  }
+
+  .scroll-top {
+    padding: 0;
   }
 }
 

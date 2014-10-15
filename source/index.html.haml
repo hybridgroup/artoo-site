@@ -23,7 +23,6 @@ catcher_phrase: Ready to build the next big thing with Ruby?
     Artoo's simple code makes telling robots what to do incredibly simple and fun.<br>
     All you need to get started is the `artoo` gem
 
-  :markdown
         :::ruby
         require 'artoo'
 
@@ -31,16 +30,15 @@ catcher_phrase: Ready to build the next big thing with Ruby?
 %section
   %h2.alternative-heading Example
 
-  %p Then hook it up to your robot (in this case, a #{link_to("Sphero", "/documentation/platforms/sphero")})
-
   :markdown
+    Then hook it up to your robot (in this case, a [Sphero](/documentation/platforms/sphero))
+
         :::ruby
         connection :sphero, adaptor: :sphero, port: '4560'
         device :sphero, driver: :sphero
 
-  %p And tell it what to do!
+    And tell it what to do!
 
-  :markdown
         :::ruby
         work do
           every(3.seconds) do
@@ -51,9 +49,11 @@ catcher_phrase: Ready to build the next big thing with Ruby?
 
 %section#platforms
 
-  %h2 Platform Support
-  %p
-    Artoo has an extensible system for connecting to hardware devices. The following robotics and physical computing platforms are currently supported:
+  :markdown
+    ## Platform Support
+
+    Artoo has an extensible system for connecting to hardware devices.
+    The following robotics and physical computing platforms are currently supported:
 
   %h2.alternative-heading #{data.platforms.length} Platforms
 
@@ -92,21 +92,19 @@ catcher_phrase: Ready to build the next big thing with Ruby?
   See more drivers
   = link_to "here", "/documentation/drivers"
 
-
-%p More platforms are coming soon!
-
-%h2 API
-%p Artoo includes a RESTful API to query the status of any robot running within a group, including the connection and device status, and device streaming data via websockets.
-
 :markdown
+  ## API
+
+  Artoo includes a RESTful API to query the status of any robot running within a group, including the connection and device status, and device streaming data via websockets.
+
   To activate the API, use the `api` command like this:
 
-:markdown
       :::ruby
       require 'artoo'
 
       connection :loop
       device :passthru
+
       api :host => '127.0.0.1', :port => '4321'
 
       work do
@@ -115,8 +113,9 @@ catcher_phrase: Ready to build the next big thing with Ruby?
 
 %section.cli
   %h2.homepage CLI
-  %script{type:"text/javascript", src:"https://asciinema.org/a/10306.js", id:"asciicast-10306", "data-autoplay" => "1",  "data-loop" => "true"}
   :markdown
+    <script src="https://asciinema.org/a/10306.js" id="asciicast-10306" data-autoplay="1" data-loop="true"></script>
+
     [Gort][] is a Command Line Toolkit (CLI) for RobotOps. Gort provides tools to scan for connected devices, upload firmware, and it works perfectly with Gobot. Also included with Gobot is a CLI for generating new robots and adaptors.
 
     You can can learn more about Gobot's CLI in the docs [here][cli-docs].

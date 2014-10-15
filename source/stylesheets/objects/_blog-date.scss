@@ -1,38 +1,38 @@
 .dates {
-    color: white;
-    text-align: center;
-    margin-right: 20px;
-    float: left;
-    font-weight: 600;
+  color: white;
+  text-align: center;
+  margin-right: em(20);
+  float: left;
+  font-weight: 600;
 
-    @include media($mobile-large){
-        margin-right: 0;
-        float: right;
-    }
+  @include media($mobile-large) {
+    margin-right: 0;
+    float: right;
+  }
 
-    .date-top{
-        padding: em(8);
-        background-color: $color-medium-light-blue;
-    }
+  .date-top{
+    padding: em(8);
+    background-color: $color-medium-light-blue;
+  }
 
-    .month {
-        text-transform: uppercase;
-        font-size: 16px;
-        line-height: 16px;
-    }
+  .month {
+    text-transform: uppercase;
+    font-size: em(16);
+    line-height: em(16);
+  }
 
-    .day {
-        font-size: 24px;
-        line-height: 24px;
-    }
+  .day {
+    font-size: em(24);
+    line-height: em(17);
+  }
 
-    .date-bottom {
-        padding: em(2);
-        background-color: $color-blog;
-    }
+  .date-bottom {
+    padding: em(2);
+    background-color: $color-blog;
+  }
 
-    .year {
-        font-size: 14px;
-        line-height: 14px;
-    }
+  .year {
+    font-size: em(14);
+    line-height: em(16);
+  }
 }

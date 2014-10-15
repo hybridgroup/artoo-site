@@ -1,33 +1,33 @@
 h2.alternative-heading{
-	a{
-		@extend .alternative-heading;
-		
-	}
+  a{
+    @extend .alternative-heading;
+
+  }
 }
 
 .platform-list {
-	list-style: none;
-	margin: 0;
+  list-style: none;
+  margin: 0;
 
- 	li {
-		@include row();
-		display: inline-block;
-		text-align: center;
-	}
+  li {
+    @include row();
+    display: inline-block;
+    text-align: center;
+  }
 
     a:hover {
-		img {
-			opacity: .8;
-		}
-		.title{
-			@extend a:hover;
-		}
-	}
+    img {
+      opacity: .8;
+    }
+    .title{
+      @extend a:hover;
+    }
+  }
 
-	.title {
-		color: $color-medium-dark-blue;
-		font-size:	em(14);
-		padding:em(10);
-		width: 100%;
-	}
+  .title {
+    color: $color-medium-dark-blue;
+    font-size:  em(14);
+    padding:em(10);
+    width: 100%;
+  }
 }

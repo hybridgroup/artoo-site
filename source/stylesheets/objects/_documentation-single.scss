@@ -16,6 +16,10 @@
     @extend %sub-nav-fixed;
   }
 
+  .arrow-top{
+    margin-top: em(5);
+  }
+
   .display {
     @include span-columns(4 of 9);
 
@@ -47,10 +51,6 @@
     @include media ($design-edge){
     	font-size: em(12);
     }
-  }
-
-  .how-to {
-    padding-top: em(65);
   }
 
   .hardware h2 {

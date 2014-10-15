@@ -1,51 +1,57 @@
 .documentation {
-	font-family: $font-secondary;
+  font-family: $font-secondary;
 
-	.box{
-  		height: em(120);
-	}
-    
-	.platform{
-		width: 24%;
-        @include media($mobile-large) {
-            width: 49%;
-            float: none;
-        }
-	}
+  .box{
+    height: em(120);
+  }
 
-    section {
-        overflow: hidden;
-        display: block;
+  .platform{
+    @include span-columns(3 of 12);
+    @include omega;
+
+    @include media($mobile-large) {
+      @include span-columns(6 of 12);
+      @include omega;
+    }
+  }
+
+  section {
+    overflow: hidden;
+    display: block;
+  }
+
+  .sidebar-header{
+    height: em(69);
+  }
+
+  .subNavfixed {
+    @include span-columns(12 of 12);
+    background: $color-medium-blue;
+
+    .container-subnav {
+      max-width: $max-width;
     }
 
-	.sidebar-header{
-    	height: 69px;
+    .sub-nav-title {
+      line-height: em(50);
     }
+  }
 
-    .subNavfixed {
-        width: 100%;
-        background: $color-medium-blue;
+  .devices h2 {
+    overflow: hidden;
+    clear: both;
+    padding-top: em(20);
+  }
 
-        .container-subnav {
-            max-width: $max-width;
-        }
+  .device img {
+    max-width: 100%;
+  }
 
-        .sub-nav-title {
-            line-height: em(62);
-        }
-    }
+  .image-circuit img {
+    height: 300px;
+  }
 
-    .devices h2 {
-        overflow: hidden;
-        clear: both;
-        padding-top: em(20);
-    }
-
-    .device img {
-        max-width: 100%;
-    }
-
-    .image-circuit img {
-        height: 300px;
+  .scroll-top {
+    height: em(27);
   }
 }

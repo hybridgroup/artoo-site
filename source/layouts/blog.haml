@@ -2,12 +2,11 @@
   = partial "layouts/contents-blog"
   .main-content.blog{:role => "main"}
     .articles
-      .article
-        - if is_blog_article?
-          = partial "blog/header", {locals: { article: current_article } }
-          = yield
-        - else
-          = yield
+      - if is_blog_article?
+        = partial "blog/header", {locals: { article: current_article } }
+        = yield
+      - else
+        = yield
       - if is_blog_article?
         = partial "blog/disqus"
     .side-columns

@@ -1,60 +1,60 @@
 .app-footer {
-	@indlude row();
-	background: $color-panel-footer;
-	color: white;
-	font-family: $font-secondary;
-	margin-top: em(20);
-	position: relative;
-	text-align: center;
+  @include row();
+  background: $color-panel-footer;
+  color: white;
+  font-family: $font-secondary;
+  margin-top: em(20);
+  position: relative;
+  text-align: center;
 
 
-	.frameworks {
-		background: url(/images/elements/background-footer.png) top center repeat;
-		padding: em(20) 0;
-	}
+  .frameworks {
+    background: url(/images/elements/background-footer.png) top center repeat;
+    padding: em(20) 0;
+  }
 
-	.robot-title{
-		color: $color-alternative-heading;
-		font-weight: 600;
-	}
+  .robot-title{
+    color: $color-alternative-heading;
+    font-weight: 600;
+  }
 
-	.framework {
-		@include span-columns(4 of 12);
-		float: left;
-		padding: em(20);
+  .framework {
+    @include span-columns(4 of 12);
+    float: left;
+    padding: em(20);
 
-		.footer-button {
-			@extend %button-footer;
-		}
+    .footer-button {
+      @extend %button-footer;
+    }
 
-		@include media($tablet) {
-			@include span-columns(12 of 12);
-		}
-	}
+    @include media($tablet) {
+      @include span-columns(12 of 12);
+    }
+  }
 }
 
 .copyright {
-	
-	border-top: 2px solid $color-light-blue;
-	clear: both;
-	padding: em(10) 0;
 
-	.hybrid-group{
-		float: left;
+  border-top: 2px solid $color-light-blue;
+  clear: both;
+  padding: em(10) 0;
 
-		img{
-			vertical-align: sub;
-			margin-left: em(25);
-		}
-	}
+  .hybrid-group{
+    float: left;
 
-	.top-link {
-		float: right;
+    img{
+      vertical-align: sub;
+      margin-left: em(25);
+    }
+  }
 
-		.top {
-			color: $color-medium-blue;
-			text-align: center;
-			margin: 0;
-		}
-	}
+  .top-link {
+    float: right;
+
+    .top {
+      color: $color-medium-blue;
+      text-align: center;
+      margin: 0;
+    }
+  }
 }
