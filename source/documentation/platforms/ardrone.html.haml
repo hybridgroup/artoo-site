@@ -16,24 +16,31 @@ subnavjs: true
   = image_tag "/images/devices/ardrone.jpg", class: "display"
   .info_intro
     = partial '/layouts/hybridpages/page_repo_issues'
-    %p  The ARDrone from Parrot is an inexpensive quadcopter that is controlled using WiFi. It includes a built-in front-facing HD video camera, as well as a second lower resolution bottom facing video camera.
-    %p
-      = link_to "+ info about the ARDrone platform click here", "http://ardrone2.parrot.com/", target: :blank, :class => 'action'
+    :markdown
+      The ARDrone from Parrot is an inexpensive quadcopter that is controlled using WiFi.
+      It includes a built-in front-facing HD video camera, as well as a second lower resolution bottom facing video camera.
+
+      <a class="action" href="http://ardrone2.parrot.com" target="_blank">
+        + info about the ARDrone platform click here
+      </a>
+
   .clear
 
 %section.how-to#HowToInstall
-  %h2 How To Install
-  %p Installing artoo with ardrone support is pretty easy using ruby gems.
   :markdown
-        :::bash
-        gem install artoo-ardrone
+    ## How To Install
+
+    Install the Artoo module providing ARDrone support through RubyGems:
+
+        $ gem install artoo-ardrone
 
 %section.how-to#HowToUse
-  %h2 How To Use
-  %p This small program lets the ARDrone take-off, hover, and land.
   :markdown
-        :::ruby
+    ## How To Use
 
+    This small program lets the ARDrone takeoff, hover, and land.
+
+        :::ruby
         require 'artoo'
 
         connection :ardrone, :adaptor => :ardrone, :port => '192.168.0.43:5556'
@@ -48,12 +55,19 @@ subnavjs: true
         end
 
 %section.how-to#HowToConnect
-  %h2 How To Connect
-  %p The ARDrone is a WiFi device, so there is no additional work to establish a connection to a single drone. However, in order to connect to multiple drones, you need to perform some configuration steps on each drone via SSH.
-  %h2 Automatic Reset From Emergency Mode
-  %p  When you first connect to the ARDrone by calling the `start` method, if it is in "emergency" mode, the ARDrone will not take off. Artoo can automatically reset it back "normal" mode, to be able to fly IF you pass in the navigation like this example:
   :markdown
+    ## How To Connect
+
+    The ARDrone is a WiFi device, so there is no additional work to establish a connection to a single drone.
+    However, in order to connect to multiple drones, you need to perform some configuration steps on each drone via SSH.
+
+    ## Automatic Reset From Emergency Mode
+
+    When you first connect to the ARDrone by calling the `start` method, if it is in "emergency" mode, the ARDrone will not take off.
+    Artoo can automatically reset it back "normal" mode, to be able to fly IF you pass in the navigation like this example:
+
         :::ruby
+        require 'artoo'
 
         connection :ardrone, :adaptor => :ardrone
         device :drone, :driver => :ardrone, :connection => :ardrone
@@ -73,8 +87,12 @@ subnavjs: true
         end
 
 %section.drivers#Drivers
-  %h2 Drivers
-  %p Available drivers for the ARDrone platform are listed below. There are three drivers for the ARDrone: the ARDrone for flight control, the ARDroneNav for navigation data, and the ARDroneVideo for grabbing video data.
+  :markdown
+    ## Drivers
+
+    Available drivers for the ARDrone platform are listed below.
+    There are three drivers for the ARDrone: the ARDrone for flight control, the ARDroneNav for navigation data, and the ARDroneVideo for grabbing video data.
+
   .hardware
     .devices
       = partial "layouts/partials/devices_for_platform", locals: { platform: "ARDrone" }
