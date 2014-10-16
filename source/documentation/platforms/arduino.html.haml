@@ -16,27 +16,38 @@ subnavjs: true
   = image_tag "/images/devices/arduino.jpg", class: "display"
   .info_intro
     = partial '/layouts/hybridpages/page_repo_issues'
-    %p Arduino is an open-source electronics prototyping platform based on flexible, easy-to-use hardware and software. It's intended for artists, designers, hobbyists and anyone interested in creating interactive objects or environments.
-    %p
-      = link_to "+ info about the arduino platform click here", "http://arduino.cc/", target: :blank, :class => 'action'
+    :markdown
+      Arduino is an open-source electronics prototyping platform based on flexible, easy-to-use hardware and software.
+      It's intended for artists, designers, hobbyists and anyone interested in creating interactive objects or environments.
+
+      <a class="action" href="http://arduino.cc" target="_blank">
+        + info about the Arduino platform, click here
+      </a>
   .clear
 
 %section.how-to#HowToInstall
-  %h2 How To Install
-  %p Installing artoo with arduino support is pretty easy using ruby gems.
   :markdown
-        :::bash
-        gem install artoo-arduino
+    ## How To Install
+
+    Install the Artoo module providing Arduino support through RubyGems:
+
+        $ gem install artoo-arduino
 
 %section.how-to#HowToUse
-  %h2 How To Use
-  %p This small program lets you push a button on the arduino board to turn a LED on or off.
-  %p In less than 10 lines of code using Artoo.
   :markdown
+
+
+    ## How To Use
+
+    This small program lets you push a button on the arduino board to turn a LED on or off.
+
+    In less than 10 lines of code using Artoo.
+
         :::ruby
         require 'artoo'
 
-        connection :arduino, adaptor: :firmata, port: '/dev/ttyACM0' # linux
+        connection :arduino, adaptor: :firmata, port: '/dev/ttyACM0'
+
         device :led, driver: :led, pin: 13
         device :button, driver: :button, pin: 2, interval: 0.01
 
@@ -48,117 +59,93 @@ subnavjs: true
         end
 
 %section.how-to#HowToConnect
-  %h2 How To Connect
-  %h3 OSX
-
-  %p The main steps are:
-  %ul
-    %li Install the artoo-arduino gem
-    %li Find out what serial port your arduino is connected to
-    %li Upload the Firmata protocol to the arduino
-    %li Use a socket to serial connection to map a TCP socket to the local unix port
-    %li Connect to the device via Artoo
-
-  %p
-    First plug the Arduino into your computer via the USB/serial port. A dialog box
-    will appear telling you that a new network interface has been detected. Click
-    "Network Preferences...", and when it opens, simply click "Apply".
-
-  %p Install the artoo-arduino gem:
-
   :markdown
-        :::bash
+    ## How To Connect
+
+    ### OSX
+
+    The main steps are:
+
+    - Install the `artoo-arduino` gem
+    - Find out what serialport your arduino is connected to
+    - Upload the Firmata protocol sketch to the arduino
+    - Use a socket to serial connection to map a TCP socket to the local unix port
+    - Connect to the device via Artoo
+
+    First plug the Arduino into your computer via the USB/serial port.
+    A dialog box will appear telling you that a new network interface has been detected.
+    Click "Network Preferences...", and when it opens, simply click "Apply".
+
+    Install the `artoo-arduino` gem:
+
         $ gem install artoo-arduino
 
-    Once plugged in, use the [Gort](http://gort.io)´s `gort connect scan -t serial` command to find out your
-    connection info and serial port address:
+    Once plugged in, use the [Gort](http://gort.io)´s `gort connect scan -t serial` command to find out your connection info and serial port address:
 
-        :::bash
         $ gort arduino scan
 
-    Use the `gort firmata install` command to install avrdude,
-    this will allow us to upload firmata to the arduino:
+    Use the `gort firmata install` command to install `avrdude`, this will allow us to upload firmata to the arduino:
 
-        :::bash
         $ gort arduino install
 
-    Once the avrdude uploader is installed we upload the firmata protocol to
-    the arduino, use the arduino serial port address found when you ran `gort
-    connect scan -t serial`, or leave it blank to use the default address `/dev/ttyACM0`:
+    Once the `avrdude` uploader is installed, we can upload the Firmata protocol to the Arduino.
+    Use the serialport address we found with the earlier `gort`, or leave it blank to use the default address (`/dev/ttyACM0`).
 
-        :::bash
         $ gort arduino upload /dev/ttyACM0
 
-  %p
-    Finally change code to the correct serial port
+    Finally, change the connection to the correct serial port.
 
-  :markdown
-        :::bash
-        connection :arduino, adaptor: :firmata, port: '/dev/ttyACM0' # linux
+        :::ruby
+        connection :arduino, adaptor: :firmata, port: '/dev/[your_serial_port]'
 
-  %h3 Ubuntu
+    ### Ubuntu
 
-  %p The main steps are:
-  %ul
-    %li Install the artoo-arduino gem
-    %li Find out what serial port your arduino is connected to
-    %li Upload the Firmata protocol to the arduino
-    %li Connect to the device via Artoo
+    The main steps are:
 
-  %p First plug the Arduino into your computer via the USB/serial port.
+    - Install the `artoo-arduino` gem
+    - Find out what serial port your arduino is connected to
+    - Upload the Firmata protocol to the arduino
+    - Connect to the device via Artoo
 
-  %p Install the artoo-arduino gem:
+    First plug the Arduino into your computer via the USB/serial port.
 
-  :markdown
-        :::bash
+    Install the artoo-arduino gem:
+
         $ gem install artoo-arduino
 
-    Once plugged in, use the Gort´s `gort connect scan -t serial` command
-    to find out your connection info and serial port address:
+    Once plugged in, use Gort´s `gort connect scan -t serial` command to find out your connection info and serial port address:
 
-        :::bash
         $ gort arduino scan
 
-    Use the `gort firmata install` command to install avrdude,
-    this will allow us to upload firmata to the arduino:
+    Use the `gort firmata install` command to install avrdude, this will allow us to upload firmata to the arduino:
 
-        :::bash
         $ gort arduino install
 
-    Once the avrdude uploader is installed we upload the firmata protocol to
-    the arduino, use the arduino serial port address found when you ran `gort
-    connect scan -t serial`, or leave it blank to use the default address `/dev/ttyACM0`:
+    Once the `avrdude` uploader is installed, we can upload the Firmata protocol to the Arduino.
+    Use the serialport address we found with the earlier `gort`, or leave it blank to use the default address (`/dev/ttyACM0`).
 
-        :::bash
         $ gort arduino upload /dev/ttyACM0
 
-  %p
-    Finally change code to the correct serial port
+    Finally, change the connection to the correct serial port.
 
-  :markdown
-        :::bash
-        connection :arduino, adaptor: :firmata, port: '/dev/ttyACM0' # linux
+          :::ruby
+          connection :arduino, adaptor: :firmata, port: '/dev/[your_serial_port]'
 
-  %h3 Windows
+    ### Windows
 
-  %p We are currently working with the Celluloid team to add Windows support. Please check back soon!
+    We are currently working with the Celluloid team to add Windows support.
+    Please check back soon!
 
 
 %section.drivers#Drivers
-  %h2 Drivers
-  %p
-    Thanks to
-    %b artoo
-    and
-    %b ruby
-    it is possible to interact with several I/O hardware devices and interfaces connected to the arduino
-    using a set of already defined and easy to use drivers, all of this thanks to the artoo architecture, in conjuction with artoo-arduino
-    adaptor (using the firmata communication protocol),
-    which makes it even possible to swap the entire platform for something else like digispark, and keep using the same code you just wrote for
-    arduino, this just by swapping a couple of lines in your program.
-  %p
-    Available drivers for the arduino platform are listed below, the drivers contain detailed documentation and examples of what kind
-    physical computing (using artoo and ruby) you could be doing:
+  :markdown
+    ## Drivers
+
+    Thanks to the Firmata protocol, it's possible to interact with a number of hardware devices connected to the Arduino.
+
+    Artoo's flexible syntax also makes it simple to then swap the Arduino platform for another, such as the Beaglebone Black or Digispark, and use the same code.
+
+    Available drivers for the arduino platform are listed below, the drivers contain detailed documentation and examples of what kind physical computing (using artoo and ruby) you could be doing:
 
   .hardware
     .devices
