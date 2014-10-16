@@ -16,26 +16,34 @@ subnavjs: true
   = image_tag "/images/devices/digispark.jpg", class: "display"
   .info_intro
     = partial '/layouts/hybridpages/page_repo_issues'
-    %p The Digispark is an Attiny85 based microcontroller development board similar to the Arduino line, only cheaper, smaller, and a bit less powerful. With a whole host of shields to extend its functionality and the ability to use the familiar Arduino IDE the Digispark is a great way to jump into electronics, or perfect for when an Arduino is too big or too much.
-    %p
-      = link_to "+ info about the Digispark platform click here", "http://digistump.com/category/1", target: :blank, :class => "action"
+    :markdown
+      The Digispark is an Attiny85 based microcontroller development board similar to the Arduino line, only cheaper, smaller, and a bit less powerful.
+      With a whole host of shields to extend its functionality and the ability to use the familiar Arduino IDE the Digispark is a great way to jump into electronics, or perfect for when an Arduino is too big or too much.
+
+      <a class="action" href="http://digistump.com/category/1" target="_blank">
+        + info about the Digispark platform click here
+      </a>
   .clear
 
 %section.how-to#HowToInstall
-  %h2 How To Install
-  %p Installing artoo with digispark support is pretty easy using ruby gems.
   :markdown
-        :::bash
-        gem install artoo-digispark
+    ## How To Install
+
+    Install the Artoo module providing Digispark support through RubyGems:
+
+        $ gem install artoo-digispark
 
 %section.how-to#HowToUse
-  %h2 How To Use
-  %p This small program lets you toggle an LED on and off.
   :markdown
+    ## How To Use
+
+    This small program lets you toggle an LED on and off.
+
         :::ruby
         require 'artoo'
 
         connection :digispark, :adaptor => :littlewire, :vendor => 0x1781, :product => 0x0c9f
+
         device :board, :driver => :device_info
         device :led, :driver => :led, :pin => 1
 
@@ -49,118 +57,94 @@ subnavjs: true
         end
 
 %section.how-to#HowToConnect
-  %h2 How To Connect
-  %p
+  :markdown
+    ## How To Connect
+
     It is very easy to setup and connect to the Digispark using Artoo CLI commands.
-  %p
-    Connecting to the Digispark
-    =link_to "(Kickstarter Campaign)","http://www.kickstarter.com/projects/digistump/digispark-the-tiny-arduino-enabled-usb-dev-board"
-    ATTiny-based USB development board is very easy using Artoo, first we need to install the littlewire
-    =link_to "(http://littlewire.cc)", "http://littlewire.cc/"
-    protocol to communicate with the digispark, Artoo includes CLI commands to make the process of uploading littlewire to the
-    digispark as simple as possible, after littlewire has been uploaded you can connect and communicate using Artoo.
 
-  %h3 OSX
-  %p The main steps are:
-  %ul
-    %li Install the artoo-digispark gem
-    %li Upload the Littlewire protocol to the digispark
-    %li Connect to the device via Artoo
+    Connecting to the Digispark [(Kickstarter Campaign)](http://www.kickstarter.com/projects/digistump/digispark-the-tiny-arduino-enabled-usb-dev-board).
 
-  %h4 DO NOT plug in the Digispark to your computer's USB port until prompted.
+    ATTiny-based USB development board is very easy using Artoo.
 
-  %p Install the artoo-digispark gem:
+    First we need to install the [Littlewire protocol](http://littlewire.cc/) to communicate with the digispark.
+    Artoo includes CLI commands to make the process of uploading Littlewire to the Digispark as simple as possible.
+    After littlewire has been uploaded you can connect and communicate using Artoo.
 
-  :markdown
-        :::bash
+    ### OSX
+
+    The main steps are:
+
+    - Install the artoo-digispark gem
+    - Upload the Littlewire protocol to the digispark
+    - Connect to the device via Artoo
+
+    #### DO NOT plug in the Digispark to your computer's USB port until prompted.
+
+    Install the `artoo-digispark` gem:
+
         $ gem install artoo-digispark
 
-  %p
-    After installing the artoo-digispark gem run the following Gort´s command to
-    upload littlewire to the digispark, plug it to a USB port when
-    prompted:
+    After installing the artoo-digispark gem, run the following Gort command to upload littlewire to the digispark.
+    Plug it to a USB port when prompted:
 
-  :markdown
-        :::bash
         $ gort littlewire upload
 
     Once plugged in, use the `gort scan usb` command
     to verify your connection info:
 
-        :::bash
         $ gort scan usb
 
-    Now use the `ID` info returned to find the `product` and `vendor` ID's
-    required to establish a connection with the Digispark in your Artoo code.
+    Now use the `ID` info returned to find the `product` and `vendor` ID's required to establish a connection with the Digispark in your Artoo code.
 
-  %p That is it, you are set to start running Artoo digispark examples.
+    That is it, you are set to start running Artoo digispark examples.
 
-  %h3 Ubuntu
+    ### Ubuntu
 
-  %p The main steps are:
-  %ul
-    %li Install the artoo-digispark gem
-    %li
-      Add a udev rule to allow access to the Digispark device (Do not worry
-      about this, the `artoo littlewire upload` command does it for you if none is detected)
-    %li Upload the Littlewire protocol to the digispark
-    %li Connect to the device via Artoo
+    The main steps are:
 
-  %h4 DO NOT plug in the Digispark to your computer's USB port until prompted.
+    - Install the artoo-digispark gem
+    - Add a udev rule to allow access to the Digispark device (Do not worry about this, the `artoo littlewire upload` command does it for you if none is detected)
+    - Upload the Littlewire protocol to the digispark
+    - Connect to the device via Artoo
 
-  %p Install the artoo-digispark gem:
+    #### DO NOT plug in the Digispark to your computer's USB port until prompted.
 
-  :markdown
-        :::bash
+    Install the artoo-digispark gem:
+
         $ gem install artoo-digispark
 
-    After installing the artoo-digispark gem run the following command to
-    upload littlewire to the digispark, do NOT plug it to a USB port until
-    prompted, you might be asked to enter your sudo password, since
-    uploading littlewire to the digispark requires some new udev rules, you
-    can check and review them in /etc/udev/rules.d/49-micronucleus.rules
-    after running the `gort littlewire upload` command.
+    After installing the `artoo-digispark` gem run the following command to upload littlewire to the digispark.
 
-        :::bash
+    Do NOT plug it to a USB port until prompted.
+
+    You might be asked to enter your sudo password, since uploading littlewire to the digispark requires some new udev rules.
+    You can check and review them in /etc/udev/rules.d/49-micronucleus.rules after running the `gort littlewire upload` command.
+
         $ gort littlewire upload
 
-    Once plugged in, use the `gort scan usb` command
-    to verify your connection info:
+    Once plugged in, use the `gort scan usb` command to verify your connection info:
 
-        :::bash
         $ gort scan usb
-
 
     Now use the `ID` info returned to find the `product` and `vendor` ID's
     required to establish a connection with the Digispark in your Artoo code.
 
-  %p That is it, you are set to start running Artoo digispark examples.
+    That is it, you are set to start running Artoo digispark examples.
 
-  %p
-    Thanks to [@bluebie]
-    =link_to "https://github.com/Bluebie", "https://github.com/Bluebie"
-    for the help with udev rules used when uploading littlewire to the digispark!
-    =link_to "(https://github.com/Bluebie/micronucleus-t85/wiki/Ubuntu-Linux)", "https://github.com/Bluebie/micronucleus-t85/wiki/Ubuntu-Linux"
+    Thanks to [@bluebie](https://github.com/Bluebie) for the help with udev rules used when uploading littlewire to the digispark!
 
-  %h3 Windows
+    [https://github.com/Bluebie/micronucleus-t85/wiki/Ubuntu-Linux](https://github.com/Bluebie/micronucleus-t85/wiki/Ubuntu-Linux)
 
-  %p We are currently working with the Celluloid team to add Windows support. Please check back soon!
+    ### Windows
+
+    We are currently working with the Celluloid team to add Windows support.
+    Please check back soon!
 
 %section.drivers#Drivers
-  %h2 Drivers
-  %p
-    Thanks to
-    %b artoo
-    and
-    %b ruby
-    it is possible to interact with several I/O hardware devices and interfaces connected to the digispark
-    using a set of already defined and easy to use drivers, all of this thanks to the artoo architecture,
-    in conjuction with artoo-digispark adaptor (using the littlewire communication protocol),
-    which makes it even possible to swap the entire platform for something else like arduino,
-    and keep using the same code you just wrote for digispark, this just by swapping a couple
-    of lines in your program.
-  %p Available drivers for the digispark platform are listed below, the drivers contain detailed documentation and examples of what kind physical computing (using artoo and ruby) you could be doing:
+  :markdown
+
+    Available drivers for the digispark platform are listed below, the drivers contain detailed documentation and examples of what kind physical computing (using artoo and ruby) you could be doing:
 
   .hardware
     .devices
-      = partial "layouts/partials/devices_for_platform", locals: { platform: "Arduino" }
+      = partial "layouts/partials/devices_for_platform", locals: { platform: "Digispark" }
