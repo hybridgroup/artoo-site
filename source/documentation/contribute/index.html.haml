@@ -7,51 +7,32 @@ page_subtitle: "Anyone can contribute to Artoo."
 layout: documentation
 active_menu_docs: true
 ---
-%h1 How to contribute?
+:markdown
+  # How To Contribute?
 
-%ul
-  %li
-    Spread the word: visit
-    = link_to "artoo.io", "http://artoo.io", target: :blank
-    website or follow
-    = link_to "@artooio", "https://twitter.com/artooio", target: :blank
-    twitter
-  %li
-    Open a
-    = link_to "new issue", "https://github.com/hybridgroup/artoo/issues/new", target: :blank
-    if you find a bug or you have problems with our documentation.
-  %li
-    Follow our contribute guidelines if you would like to make a code contribution.
+  - Spread the word: follow us on Twitter - [@ArtooIO](https://twitter.com/artooio)
+  - Open a [new issue][] if you find a bug, or have problems with our documentation.
+  - Submit a patch!
+    We can always use new code contributions.
+    Please make sure to follow our contribution guidelines.
 
-%h2 Code contribution
+  [new issue]: https://github.com/hybridgroup/artoo/issues/new
 
-%h3 Set up The Library
+  ## Submitting a patch
 
-%ol
-  %li
-    :markdown
-      Clone the repository:  `git clone git@github.com:hybridgroup/artoo.git
-  %li
-    :markdown
-      Optional Create a gemset: `rvm --create --rvmrc 1.9.3@artoo
-  %li
-    :markdown
-      Install all the dependencies: bundle install
+  ### Setup the library
 
-%h3 Tests
+  1. Clone the repository: `git clone git@github.com:hybridgroup/artoo.git`
+  2. Install dependencies: `bundle install`
+  3. Make sure the tests pass: `bundle exec rake test`
 
-%p
-  :markdown
-    Make sure the tests pass: `rake test`
+  ### Submitting code
 
-%h3 Submitting Code
-
-%ul
-  %li= link_to 'Review guidelines', '/documentation/contribute/guidelines'
-  %li Fork the code.
-  %li Create your feature branch (git checkout -b my-new-feature)
-  %li Commit your changes (git commit -am 'Add some feature')
-  %li Push to the branch (git push origin my-new-feature)
-  %li
-    Create a
-    = link_to "new pull request" , "https://github.com/hybridgroup/artoo/compare?expand=1", target: :blank
+  - Check the [review guidelines](/documentation/contribute/guidelines)
+  - Fork the repo on GitHub
+  - Point your local copy of Artoo to your fork
+  - `git remote rm origin ; git remote add origin git@github.com:[your-username]/artoo.git`
+  - Create your new feature branch (`git checkout -b add/my-new-feature`)
+  - Commit your changes (`git commit -am "Add new feature"`)
+  - Push to your fork (`git push origin add/my-new-feature`)
+  - Create a [new pull request](https://github.com/hybridgroup/artoo/compare?expand=1)
