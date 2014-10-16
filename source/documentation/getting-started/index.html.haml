@@ -11,79 +11,61 @@ page_subtitle: A Guide by Humans, for Humans.
 platforms: true
 ---
 %section.intro
-  %h1 Setup your environment
-  %h2 Ruby
-  %p To be able to run Artoo, you first need to install a Ruby interpreter.
-
-  %h3 Install RVM
-  %p
-    %b Follow the instructions below
-    or go to
-    %a{ href: "the RVM site" } https://rvm.io/rvm/install
-    for more detailed instructions.
-
-  %p
-    Run the following command in a terminal
   :markdown
-        :::bash
-        \curl -L https://get.rvm.io | bash -s stable
+    # Setup Your Environment
 
-  %p Once the installation is complete, close your terminal and open a new one.
-  %p To make sure your RVM is installed correctly, run the following command:
-  :markdown
-        :::bash
-        type rvm | head -n 1
-  %p and you should see the following output:
-  :markdown
-        :::bash
+    ## Ruby
+
+    To be able to run Artoo, you first need to install a Ruby interpreter.
+
+    ### Install RVM
+
+    **Follow the instructions below** or go to [the RVM site](https://rvm.io/rvm/install) for more detailed instructions.
+
+    Run the following command in a terminal:
+
+        $ \curl -sSL https://get.rvm.io | bash -s stable
+
+    Once the installation is complete, close your terminal window and open a new one.
+
+    To make sure RVM was installed correctly, run the following command:
+
+        $ type rvm | head -n 1
+
+    And you should see the following output
+
         rvm is a function
 
-  %h3 Install Ruby 2.1.1
-  %p If you are a first time user, we recommend you install this version.
-  %p With RVM installed, just run this command:
-  :markdown
-        :::bash
-        rvm install 2.1.1
+    ### Install Ruby 2.1.1
 
-  %h3 Or install Rubinius 2.1.1
+    If you're a first time user, we recommend you install this version of Ruby.
 
-  %p
-    For maximum concurrency, like when you need to control multiple robots,
-    microcontrollers or devices at the same time, we recommend using Rubinius
-    2.1.1 or higher.
-
-  %p
     With RVM installed, just run this command:
 
-  :markdown
-        :::bash
-        rvm get head && rvm install rbx-2.1.1 --1.9
-        rvm install rbx-2.1.1
+      $ rvm install 2.1.1
 
-  %h3 Other versions supported
-  %p Ruby 1.9.3+, JRuby 1.7.4+, and Rubinius 2.0+
+    Optionally, more advanced users can choose from other Rubies they prefer.
+    Artoo supports MRI 1.9.3+, JRuby 1.7.4+, and Rubinius 2.0+.
 
 %section.installation
-  %h2 Install Artoo
-  %p Once you have Ruby installed, you can install the Artoo gem with this command:
   :markdown
-        :::ruby
-        gem install artoo
+    ## Install Artoo
 
-  %p Then install the gems required by the hardware you want to use. For example, if you wanted to use an Xbox 360 controller to fly an ARDrone:
-  :markdown
-        :::ruby
-        gem install artoo-joystick
-        gem install artoo-ardrone
+    Once you've gotten your Ruby interpreter installed, you can install the Artoo gem:
 
-  %h2 Writing your robot code
-  %p Now you are ready to write your own code.
+        $ gem install artoo
 
-  %p
-    Follow our Getting Started Tutorials for step-by-step guidance on next steps.
-  %p
-    Visit
-    %a{href: '/documentation/platforms'} platforms section for more information about our supported devices and examples.
-  %p
-    Or visit a repo with full example of using Artoo for test driven robotics located at
-    =link_to "https://github.com/hybridgroup/artoo-test-example", "https://github.com/hybridgroup/artoo-test-example"
+    Then, install the gems required by the hardware you want to use.
+    For example, if you wanted to use an Xbox 360 controller to fly an ARDrone:
+
+      $ gem install artoo-joystick artoo-ardrone
+
+    ## Writing Robot Code
+
+    Now you're ready to write your own code to power your robots.
+
+    Follow our tutorials and other docs for step-by-step guidance on how you can make amazing things with Artoo.
+
+    Visit our [platforms section](/documentation/platforms) for information about our supported devices, and some examples.
+
+    Or visit our [Test-Driven Robotics example repo](https://github.com/hybridgroup/artoo-test-example).
