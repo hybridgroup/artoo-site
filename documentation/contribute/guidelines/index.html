@@ -203,20 +203,21 @@
           </div>
           <div class="documentation-single">
             
-            <h1>Guidelines</h1>
+            <h1 id="contribution-guidelines">Contribution Guidelines:</h1>
+            
             <ul>
-              <li>Patches must be provided under the Apache 2.0 License</li>
-              <li>Please use the -s option in git to "sign off" that the commit is your work and you are providing it under the Apache 2.0 License</li>
-              <li>Submit a Github Pull Request to the appropriate branch and ideally discuss the changes with us in IRC.</li>
-              <li>We will look at the patch, test it out, and give you feedback.</li>
-              <li>Avoid doing minor whitespace changes, renamings, etc. along with merged content. These will be done by the maintainers from time to time but they can complicate merges and should be done seperately.</li>
-              <li>Take care to maintain the existing coding style.</li>
-              <li>Add unit tests for any new or changed functionality &amp; lint and test your code using make test and make lint.</li>
-              <li>All pull requests should be "fast forward"</li>
-              <li>If there are commits after yours use “git rebase -i ”</li>
-              <li>If you have local changes you may need to use “git stash”</li>
-              <li>For git help see progit which is an awesome (and free) book on git</li>
+              <li>All patches must be provided under the Apache 2.0 License.</li>
+              <li>Please use the <code>-s</code> option in git to "sign off" that the commit is your work, and you're providing it under the Apache 2.0 License.</li>
+              <li>Submit a GitHub PR to the appropriate branch (usually <code>dev</code>).
+            Ideally, discuss the changes with us in IRC beforehand.</li>
+              <li>We'll look at the patch, test it out, and give you feedback.</li>
+              <li>Please take care to maintain the existing coding style.</li>
+              <li>If you are adding code, or changing existing functionality, please add unit tests, and test your code (<code>make test</code>).</li>
+              <li>All PRs should be "fast forward"</li>
+              <li>If there are commits after yours, use <code>git rebase -i</code> to rebase against the branch.</li>
             </ul>
+            
+            <p>If you have any questions on Git usage, check out <a href="http://git-scm.com">git-scm.com</a>.</p>
           </div>
         </div>
       </div>

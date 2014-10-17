@@ -228,26 +228,34 @@
                 <h2 class="subtitle">
 <a href="https://github.com/hybridgroup/artoo-arduino" class="repository">Repository</a> <a class="issues" href="https://github.com/hybridgroup/artoo-arduino/issues">Issues</a>
 </h2>
-                <p>Arduino is an open-source electronics prototyping platform based on flexible, easy-to-use hardware and software. It's intended for artists, designers, hobbyists and anyone interested in creating interactive objects or environments.</p>
-                <p>
-                  <a target="blank" class="action" href="http://arduino.cc/">+ info about the arduino platform click here</a>
-                </p>
+                <p>Arduino is an open-source electronics prototyping platform based on flexible, easy-to-use hardware and software.
+                It's intended for artists, designers, hobbyists and anyone interested in creating interactive objects or environments.</p>
+                
+                <p><a class="action" href="http://arduino.cc" target="_blank">
+                  + info about the Arduino platform, click here
+                </a></p>
               </div>
               <div class="clear"></div>
             </section>
             <section class="how-to" id="HowToInstall">
-              <h2>How To Install</h2>
-              <p>Installing artoo with arduino support is pretty easy using ruby gems.</p>
-              <pre class="CodeRay">gem install artoo-arduino
+              <h2 id="how-to-install">How To Install</h2>
+              
+              <p>Install the Artoo module providing Arduino support through RubyGems:</p>
+              
+              <pre class="CodeRay">$ gem install artoo-arduino
 </pre>
             </section>
             <section class="how-to" id="HowToUse">
-              <h2>How To Use</h2>
+              <h2 id="how-to-use">How To Use</h2>
+              
               <p>This small program lets you push a button on the arduino board to turn a LED on or off.</p>
+              
               <p>In less than 10 lines of code using Artoo.</p>
+              
               <pre class="CodeRay">require <span class="string"><span class="delimiter">'</span><span class="content">artoo</span><span class="delimiter">'</span></span>
 
-connection <span class="symbol">:arduino</span>, <span class="key">adaptor</span>: <span class="symbol">:firmata</span>, <span class="key">port</span>: <span class="string"><span class="delimiter">'</span><span class="content">/dev/ttyACM0</span><span class="delimiter">'</span></span> <span class="comment"># linux</span>
+connection <span class="symbol">:arduino</span>, <span class="key">adaptor</span>: <span class="symbol">:firmata</span>, <span class="key">port</span>: <span class="string"><span class="delimiter">'</span><span class="content">/dev/ttyACM0</span><span class="delimiter">'</span></span>
+
 device <span class="symbol">:led</span>, <span class="key">driver</span>: <span class="symbol">:led</span>, <span class="key">pin</span>: <span class="integer">13</span>
 device <span class="symbol">:button</span>, <span class="key">driver</span>: <span class="symbol">:button</span>, <span class="key">pin</span>: <span class="integer">2</span>, <span class="key">interval</span>: <span class="float">0.01</span>
 
@@ -260,104 +268,103 @@ work <span class="keyword">do</span>
 </pre>
             </section>
             <section class="how-to" id="HowToConnect">
-              <h2>How To Connect</h2>
-              <h3>OSX</h3>
+              <h2 id="how-to-connect">How To Connect</h2>
+              
+              <h3 id="osx">OSX</h3>
+              
               <p>The main steps are:</p>
+              
               <ul>
-                <li>Install the artoo-arduino gem</li>
-                <li>Find out what serial port your arduino is connected to</li>
-                <li>Upload the Firmata protocol to the arduino</li>
+                <li>Install the <code>artoo-arduino</code> gem</li>
+                <li>Find out what serialport your arduino is connected to</li>
+                <li>Upload the Firmata protocol sketch to the arduino</li>
                 <li>Use a socket to serial connection to map a TCP socket to the local unix port</li>
                 <li>Connect to the device via Artoo</li>
               </ul>
-              <p>
-                First plug the Arduino into your computer via the USB/serial port. A dialog box
-                will appear telling you that a new network interface has been detected. Click
-                "Network Preferences...", and when it opens, simply click "Apply".
-              </p>
-              <p>Install the artoo-arduino gem:</p>
+              
+              <p>First plug the Arduino into your computer via the USB/serial port.
+              A dialog box will appear telling you that a new network interface has been detected.
+              Click "Network Preferences…", and when it opens, simply click "Apply".</p>
+              
+              <p>Install the <code>artoo-arduino</code> gem:</p>
+              
               <pre class="CodeRay">$ gem install artoo-arduino
 </pre>
               
-              <p>Once plugged in, use the <a href="http://gort.io">Gort</a>´s <code>gort connect scan -t serial</code> command to find out your
-              connection info and serial port address:</p>
+              <p>Once plugged in, use the <a href="http://gort.io">Gort</a>´s <code>gort connect scan -t serial</code> command to find out your connection info and serial port address:</p>
               
               <pre class="CodeRay">$ gort arduino scan
 </pre>
               
-              <p>Use the <code>gort firmata install</code> command to install avrdude,
-              this will allow us to upload firmata to the arduino:</p>
+              <p>Use the <code>gort firmata install</code> command to install <code>avrdude</code>, this will allow us to upload firmata to the arduino:</p>
               
               <pre class="CodeRay">$ gort arduino install
 </pre>
               
-              <p>Once the avrdude uploader is installed we upload the firmata protocol to
-              the arduino, use the arduino serial port address found when you ran <code>gort
-connect scan -t serial</code>, or leave it blank to use the default address <code>/dev/ttyACM0</code>:</p>
+              <p>Once the <code>avrdude</code> uploader is installed, we can upload the Firmata protocol to the Arduino.
+              Use the serialport address we found with the earlier <code>gort</code>, or leave it blank to use the default address (<code>/dev/ttyACM0</code>).</p>
               
               <pre class="CodeRay">$ gort arduino upload /dev/ttyACM0
 </pre>
-              <p>
-                Finally change code to the correct serial port
-              </p>
-              <pre class="CodeRay">connection :arduino, adaptor: :firmata, port: '/dev/ttyACM0' # linux
+              
+              <p>Finally, change the connection to the correct serial port.</p>
+              
+              <pre class="CodeRay">connection <span class="symbol">:arduino</span>, <span class="key">adaptor</span>: <span class="symbol">:firmata</span>, <span class="key">port</span>: <span class="string"><span class="delimiter">'</span><span class="content">/dev/[your_serial_port]</span><span class="delimiter">'</span></span>
 </pre>
-              <h3>Ubuntu</h3>
+              
+              <h3 id="ubuntu">Ubuntu</h3>
+              
               <p>The main steps are:</p>
+              
               <ul>
-                <li>Install the artoo-arduino gem</li>
+                <li>Install the <code>artoo-arduino</code> gem</li>
                 <li>Find out what serial port your arduino is connected to</li>
                 <li>Upload the Firmata protocol to the arduino</li>
                 <li>Connect to the device via Artoo</li>
               </ul>
+              
               <p>First plug the Arduino into your computer via the USB/serial port.</p>
+              
               <p>Install the artoo-arduino gem:</p>
+              
               <pre class="CodeRay">$ gem install artoo-arduino
 </pre>
               
-              <p>Once plugged in, use the Gort´s <code>gort connect scan -t serial</code> command
-              to find out your connection info and serial port address:</p>
+              <p>Once plugged in, use Gort´s <code>gort connect scan -t serial</code> command to find out your connection info and serial port address:</p>
               
               <pre class="CodeRay">$ gort arduino scan
 </pre>
               
-              <p>Use the <code>gort firmata install</code> command to install avrdude,
-              this will allow us to upload firmata to the arduino:</p>
+              <p>Use the <code>gort firmata install</code> command to install avrdude, this will allow us to upload firmata to the arduino:</p>
               
               <pre class="CodeRay">$ gort arduino install
 </pre>
               
-              <p>Once the avrdude uploader is installed we upload the firmata protocol to
-              the arduino, use the arduino serial port address found when you ran <code>gort
-connect scan -t serial</code>, or leave it blank to use the default address <code>/dev/ttyACM0</code>:</p>
+              <p>Once the <code>avrdude</code> uploader is installed, we can upload the Firmata protocol to the Arduino.
+              Use the serialport address we found with the earlier <code>gort</code>, or leave it blank to use the default address (<code>/dev/ttyACM0</code>).</p>
               
               <pre class="CodeRay">$ gort arduino upload /dev/ttyACM0
 </pre>
-              <p>
-                Finally change code to the correct serial port
-              </p>
-              <pre class="CodeRay">connection :arduino, adaptor: :firmata, port: '/dev/ttyACM0' # linux
+              
+              <p>Finally, change the connection to the correct serial port.</p>
+              
+              <pre class="CodeRay">  :::ruby
+  connection :arduino, adaptor: :firmata, port: '/dev/[your_serial_port]'
 </pre>
-              <h3>Windows</h3>
-              <p>We are currently working with the Celluloid team to add Windows support. Please check back soon!</p>
+              
+              <h3 id="windows">Windows</h3>
+              
+              <p>We are currently working with the Celluloid team to add Windows support.
+              Please check back soon!</p>
             </section>
             <section class="drivers" id="Drivers">
-              <h2>Drivers</h2>
-              <p>
-                Thanks to
-                <b>artoo</b>
-                and
-                <b>ruby</b>
-                it is possible to interact with several I/O hardware devices and interfaces connected to the arduino
-                using a set of already defined and easy to use drivers, all of this thanks to the artoo architecture, in conjuction with artoo-arduino
-                adaptor (using the firmata communication protocol),
-                which makes it even possible to swap the entire platform for something else like digispark, and keep using the same code you just wrote for
-                arduino, this just by swapping a couple of lines in your program.
-              </p>
-              <p>
-                Available drivers for the arduino platform are listed below, the drivers contain detailed documentation and examples of what kind
-                physical computing (using artoo and ruby) you could be doing:
-              </p>
+              <h2 id="drivers">Drivers</h2>
+              
+              <p>Thanks to the Firmata protocol, it's possible to interact with a number of hardware devices connected to the Arduino.</p>
+              
+              <p>Artoo's flexible syntax also makes it simple to then swap the Arduino platform for another, such as the Beaglebone Black or Digispark, and use the same code.</p>
+              
+              <p>Available drivers for the arduino platform are listed below, the drivers contain detailed documentation and examples of what kind physical computing (using artoo and ruby) you could be doing:</p>
               <div class="hardware">
                 <div class="devices">
                   <h2>GPIO Drivers</h2>

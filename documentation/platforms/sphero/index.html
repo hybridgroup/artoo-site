@@ -228,27 +228,30 @@
                 <h2 class="subtitle">
 <a href="https://github.com/hybridgroup/artoo-sphero" class="repository">Repository</a> <a class="issues" href="https://github.com/hybridgroup/artoo-sphero/issues">Issues</a>
 </h2>
-                <h4>What is Sphero?</h4>
-                <p>Sphero is a sophisticated and programmable robot housed in a polycarbonate sphere shell.</p>
-                <p>The artoo-sphero adaptor makes it easy to interact with Sphero using Ruby, once you have your Sphero setup and connected to your computer you can start writing code to make Sphero move, change direction, speed and colors, or detect Sphero events and execute some code when they occur.</p>
-                <h4>Where can I get a Sphero or find more info about it?</h4>
-                <p>
-                  You can do it by following this link
-                  <a href="http://www.gosphero.com/">GoSphero.</a>
-                </p>
+                <p>The Sphero is a sophisticated and programmable robot housed in a polycarbonate sphere shell.</p>
+                
+                <p>The <code>artoo-sphero</code> adaptor makes it easy to interact with Sphero using Ruby, once you have your Sphero setup and connected to your computer you can start writing code to make Sphero move, change direction, speed and colors, or detect Sphero events and execute some code when they occur.</p>
+                
+                <p><a class="action" href="http://www.gosphero.com/" target="_blank">
+                  + info about the Sphero platform click here
+                </a></p>
               </div>
               <div class="clear"></div>
             </section>
             <section class="how-to" id="HowToInstall">
-              <h2>How To Install</h2>
-              <p>Installing artoo with sphero support is pretty easy using ruby gems.</p>
-              <pre class="CodeRay">gem install artoo-sphero
+              <h2 id="how-to-install">How To Install</h2>
+              
+              <p>Install the Artoo module providing Sphero support through RubyGems:</p>
+              
+              <pre class="CodeRay">$ gem install artoo-sphero
 </pre>
             </section>
             <section class="how-to" id="HowToUse">
-              <h2>How To Use</h2>
+              <h2 id="how-to-use">How To Use</h2>
+              
               <p>Example of a simple program that makes the Sphero roll and change colors.</p>
-              <pre class="CodeRay"> require <span class="string"><span class="delimiter">'</span><span class="content">artoo</span><span class="delimiter">'</span></span>
+              
+              <pre class="CodeRay">require <span class="string"><span class="delimiter">'</span><span class="content">artoo</span><span class="delimiter">'</span></span>
 
 connection <span class="symbol">:sphero</span>, <span class="symbol">:adaptor</span> =&gt; <span class="symbol">:sphero</span>, <span class="symbol">:port</span> =&gt; <span class="string"><span class="delimiter">'</span><span class="content">/dev/Sphero-WRW</span><span class="delimiter">'</span></span>
 device <span class="symbol">:sphero</span>, <span class="symbol">:driver</span> =&gt; <span class="symbol">:sphero</span>
@@ -264,38 +267,44 @@ work <span class="keyword">do</span>
 </pre>
             </section>
             <section class="how-to" id="HowToConnect">
-              <h2>How To Connect</h2>
-              <h3>OSX</h3>
+              <h2 id="how-to-connect">How To Connect</h2>
+              
+              <h3 id="osx">OSX</h3>
+              
               <p>The main steps are:</p>
+              
               <ul>
                 <li>Pair your computer and the Sphero</li>
                 <li>Find out the sphero bluetooth address</li>
                 <li>Connect to the device via Artoo</li>
               </ul>
-              <p>
-                First pair your computer and Sphero. You can do this using bluetooth preferences. (Sphero won't stay connected)
-              </p>
-              <p>
-                Find out serial port address by running this command:
-              </p>
-              <pre class="CodeRay">ls /dev/tty.Sphero*
+              
+              <p>First pair your computer and Sphero. You can do this using bluetooth preferences. (Sphero won't stay connected)</p>
+              
+              <p>Find out serial port address by running this command:</p>
+              
+              <pre class="CodeRay">$ ls /dev/tty.Sphero*
 </pre>
-              <p>
-                Now you are ready to run the example code, be sure to update this line with correct port
-              </p>
+              
+              <p>Now you are ready to run the example code, be sure to update this line with correct port</p>
+              
               <pre class="CodeRay">connection <span class="symbol">:sphero</span>, <span class="symbol">:adaptor</span> =&gt; <span class="symbol">:sphero</span>, <span class="symbol">:port</span> =&gt; <span class="string"><span class="delimiter">'</span><span class="content">/dev/Sphero-WRW-RN-SPP</span><span class="delimiter">'</span></span>
 </pre>
-              <h3>Linux</h3>
+              
+              <h3 id="linux">Linux</h3>
+              
               <p>The main steps are:</p>
+              
               <ul>
                 <li>Find out the sphero bluetooth address</li>
                 <li>Pair your computer and the Sphero</li>
                 <li>Map your device to a unix port</li>
                 <li>Connect to the device via Artoo</li>
               </ul>
-              <p>First pair your computer and Sphero. We do this by finding the sphero bluetooth address
-              and then running the <a href="http://gort.io">Gort´s</a> <code>gort bluetooth pair</code> command, you might be prompted to confirm a passcode,
-              just accept whatever passcode prompted.</p>
+              
+              <p>First pair your computer and Sphero.
+              We do this by finding the sphero bluetooth address and then running <a href="http://gort.io">Gort´s</a> <code>gort bluetooth pair</code> command, you might be prompted to confirm a passcode.
+              Just accept whatever passcode prompted.</p>
               
               <pre class="CodeRay">$ gort bluetooth scan
 Scanning ...
@@ -305,22 +314,23 @@ Scanning ...
               <p>After finding the bluetooth address, we pair the device with the computer.
               The easiest way to do this is to use the <code>gort bluetooth pair</code> command:</p>
               
-              <pre class="CodeRay">gort bluetooth pair 00:06:66:4A:14:99
+              <pre class="CodeRay">$ gort bluetooth pair 00:06:66:4A:14:99
 </pre>
               
               <p>Next, you need to bind the Sphero to the system serial port. In the above
               example, /dev/Sphero-WRW. Use the <code>gort bluetooth bind</code> command:</p>
               
-              <pre class="CodeRay">gort bluetooth bind 00:06:66:4A:14:99 Sphero-WRW
+              <pre class="CodeRay">$ gort bluetooth bind 00:06:66:4A:14:99 Sphero-WRW
 </pre>
-              <p>
-                Now you are ready to run the example code, be sure to update this line with correct port
-              </p>
+              
+              <p>Now you are ready to run the example code, be sure to update this line with correct port.</p>
+              
               <pre class="CodeRay">connection <span class="symbol">:sphero</span>, <span class="symbol">:adaptor</span> =&gt; <span class="symbol">:sphero</span>, <span class="symbol">:port</span> =&gt; <span class="string"><span class="delimiter">'</span><span class="content">/dev/Sphero-WRW</span><span class="delimiter">'</span></span>
 </pre>
             </section>
             <section class="drivers" id="Drivers">
-              <h2>Drivers</h2>
+              <h2 id="drivers">Drivers</h2>
+              
               <p>There is only one driver for the Sphero.</p>
               <div class="hardware">
                 <div class="devices">

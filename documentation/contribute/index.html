@@ -203,53 +203,43 @@
           </div>
           <div class="documentation-single">
             
-            <h1>How to contribute?</h1>
-            <ul>
-              <li>
-                Spread the word: visit
-                <a target="blank" href="http://artoo.io">artoo.io</a>
-                website or follow
-                <a target="blank" href="https://twitter.com/artooio">@artooio</a>
-                twitter
-              </li>
-              <li>
-                Open a
-                <a target="blank" href="https://github.com/hybridgroup/artoo/issues/new">new issue</a>
-                if you find a bug or you have problems with our documentation.
-              </li>
-              <li>
-                Follow our contribute guidelines if you would like to make a code contribution.
-              </li>
-            </ul>
-            <h2>Code contribution</h2>
-            <h3>Set up The Library</h3>
-            <ol>
-              <li>
-                <p>Clone the repository:  `git clone git@github.com:hybridgroup/artoo.git</p>
-              </li>
-              <li>
-                <p>Optional Create a gemset: `rvm –create –rvmrc 1.9.3@artoo</p>
-              </li>
-              <li>
-                <p>Install all the dependencies: bundle install</p>
-              </li>
-            </ol>
-            <h3>Tests</h3>
-            <p>
-              </p>
-<p>Make sure the tests pass: <code>rake test</code></p>
+            <h1 id="how-to-contribute">How To Contribute?</h1>
             
-            <h3>Submitting Code</h3>
             <ul>
-              <li><a href="/documentation/contribute/guidelines">Review guidelines</a></li>
-              <li>Fork the code.</li>
-              <li>Create your feature branch (git checkout -b my-new-feature)</li>
-              <li>Commit your changes (git commit -am 'Add some feature')</li>
-              <li>Push to the branch (git push origin my-new-feature)</li>
-              <li>
-                Create a
-                <a target="blank" href="https://github.com/hybridgroup/artoo/compare?expand=1">new pull request</a>
-              </li>
+              <li>Spread the word: follow us on Twitter - <a href="https://twitter.com/artooio">@ArtooIO</a>
+</li>
+              <li>Open a <a href="https://github.com/hybridgroup/artoo/issues/new">new issue</a> if you find a bug, or have problems with our documentation.</li>
+              <li>Submit a patch!
+            We can always use new code contributions.
+            Please make sure to follow our contribution guidelines.</li>
+            </ul>
+            
+            <h2 id="submitting-a-patch">Submitting a patch</h2>
+            
+            <h3 id="setup-the-library">Setup the library</h3>
+            
+            <ol>
+              <li>Clone the repository: <code>git clone git@github.com:hybridgroup/artoo.git</code>
+</li>
+              <li>Install dependencies: <code>bundle install</code>
+</li>
+              <li>Make sure the tests pass: <code>bundle exec rake test</code>
+</li>
+            </ol>
+            
+            <h3 id="submitting-code">Submitting code</h3>
+            
+            <ul>
+              <li>Check the <a href="/documentation/contribute/guidelines">review guidelines</a>
+</li>
+              <li>Fork the repo on GitHub</li>
+              <li>Point your local copy of Artoo to your fork</li>
+              <li><code>git remote rm origin ; git remote add origin git@github.com:[your-username]/artoo.git</code></li>
+              <li>Create your new feature branch (<code>git checkout -b add/my-new-feature</code>)</li>
+              <li>Commit your changes (<code>git commit -am "Add new feature"</code>)</li>
+              <li>Push to your fork (<code>git push origin add/my-new-feature</code>)</li>
+              <li>Create a <a href="https://github.com/hybridgroup/artoo/compare?expand=1">new pull request</a>
+</li>
             </ul>
           </div>
         </div>
