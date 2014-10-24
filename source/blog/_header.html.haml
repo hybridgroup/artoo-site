@@ -11,5 +11,6 @@
   %h2.article-title
     = link_to article.title, article, :id =>'#disqus_thread'
   - if is_blog_article?
+    <br>
     .author
       = "by #{article.data.author}"

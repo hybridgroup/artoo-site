@@ -19,7 +19,6 @@
     }
 
     .article-title {
-      @include span-columns(10 of 12);
       display: inline-block;
       font-size: em(28);
       vertical-align: top;
