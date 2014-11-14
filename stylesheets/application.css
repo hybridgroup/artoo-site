@@ -2049,12 +2049,9 @@ code {
   .side-documentation .docs-sidebar .section.active:before {
     content: '▼'; }
 
-/* line 2, /home/nathan/Documents/Github/artoo-site/source/stylesheets/views/_blog.scss */
+/* line 3, /home/nathan/Documents/Github/artoo-site/source/stylesheets/views/_blog.scss */
 .blog .dates {
   width: 4.375em; }
-/* line 6, /home/nathan/Documents/Github/artoo-site/source/stylesheets/views/_blog.scss */
-.blog .article-title {
-  max-width: 80%; }
 
 /* line 1, /home/nathan/Documents/Github/artoo-site/source/stylesheets/views/_documentation.scss */
 .documentation {
