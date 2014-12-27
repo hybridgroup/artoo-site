@@ -210,7 +210,9 @@
               <ul>
                 <li>
                   Before we start, be sure to have
-                  <a target="blank" href="/documentation/getting-started">ruby and artoo installed.</a>
+                  <a target="blank" href="/documentation/getting-started">Ruby and Artoo installed.</a>
+                  , along with
+                  <a target="blank" href="http://gort.io">Gort</a>
                 </li>
                 <li>You should have Bluetooth in your computer.</li>
                 <li>
@@ -242,7 +244,7 @@
               <ul>
                 <li>
                   Run this command to look for it:
-                  <pre class="CodeRay">artoo connect scan
+                  <pre class="CodeRay">gort scan bluetooth
 </pre>
                 </li>
                 <li>
@@ -252,8 +254,8 @@
 </pre>
                 </li>
                 <li>
-                  Use that output to bind your device by name running this command:
-                  <pre class="CodeRay">artoo connect bind 00:06:66:44:39:C6 Sphero-YBW
+                  Use that output to connect your device by name running this command:
+                  <pre class="CodeRay">gort bluetooth connect 00:06:66:44:39:C6 Sphero-YBW
 </pre>
                 </li>
               </ul>

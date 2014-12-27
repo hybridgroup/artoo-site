@@ -203,69 +203,28 @@
           </div>
           <div class="documentation-single">
             
-            <h1>Communication with Devices</h1>
-            <h3>Socket to serial connection</h3>
-            <p>Also known as Serial to network connection</p>
-            <p>Sometimes, when creating applications, developers are barred from accessing hardware devices such as serial ports, but have the need to access serial ports in order to communicate with interface boards and sensors.</p>
-            <p>This type of communication solves the problem by connecting on one side to a serial port and on the other side acting as a TCP/IP server.</p>
-            <p>With the Sphero, the initial connecting process might require a few retries, but once connected performance is fine.</p>
-            <h3>Any OS</h3>
-            <ul>
-              <li>Turn on your bluetooth and device (sphero).</li>
-              <li>Connect the sphero to the computer using Bluetooth.</li>
-              <li>
-                Run this command to look for it:
-                <p>artoo connect scan</p>
-              </li>
-              <li>
-                You will see the following output:
-                <p>Scanning …
-                  00:06:66:44:39:C6   Sphero-YBW</p>
-              </li>
-              <li>
-                Use that output to bind your device by name running this command:
-                <p>artoo connect bind 00:06:66:44:39:C6 Sphero-YBW</p>
-              </li>
-              <li>
-                Finally, run this command to connect to your device:
-                <p>artoo connect serial Sphero-YBW 4567</p>
-              </li>
-              <li>
-                You should see this message displayed:
-                <p>N listening on AF=2 0.0.0.0:4567</p>
-              </li>
-              <li>Leave this terminal open and running.</li>
-            </ul>
-            <h3>MacOSX</h3>
+            <h1 id="communication-with-devices">Communication with Devices</h1>
+            
+            <h2 id="serial-connection">Serial Connection</h2>
+            
+            <p>Connection to devices is done primarily using serial ports in Artoo.</p>
+            
+            <p>Setup:</p>
+            
             <ul>
               <li>
-                Download and install
-                <a target="blank" href="http://members.iinet.net.au/~mgl/MartysPlace/MultiCom.html">Multicom.</a>
+                <p>To get the serial port identifier for your device, open a terminal and type the following command:</p>
+            
+                <pre class="CodeRay">$ ls /dev/tty.*
+/dev/tty.Sphero-ORB-RN-SPP
+</pre>
               </li>
               <li>
-                Open the Multicom application and set the following configuration to Port A and Port B:
-                <img alt="Port A" src="/images/elements/porta.png" style="height: 350px">
-                <img alt="Port B" src="/images/elements/portb.png" style="height: 350px">
+                <p>You should change the code to connect to that port, for example:</p>
+            
+                <pre class="CodeRay">connection <span class="symbol">:sphero</span>, <span class="symbol">:adaptor</span> =&gt; <span class="symbol">:sphero</span>, <span class="symbol">:port</span> =&gt; <span class="string"><span class="delimiter">'</span><span class="content">/dev/tty.Sphero-ORB-RN-SPP</span><span class="delimiter">'</span></span>
+</pre>
               </li>
-              <li>NOTE Port B information is very important to make sure that the listen port is the same one that you are using in your Ruby program; you could change this to fit your needs.</li>
-              <li>Both ports should be green.</li>
-            </ul>
-            <h3>Serial connection</h3>
-            <h4>MacOSX/Linux</h4>
-            <ul>
-              <li>
-                To get the serial port identifier for your device, open a terminal and type the following command:
-                <p><code>ls /dev/tty.*</code></p>
-              </li>
-              <li>
-                This command should list your device, for example
-                <p>/dev/tty.Sphero-ORB-RN-SPP.</p>
-              </li>
-              <li>
-                You should change the code to connect to that port, for example:
-                <p>connection :sphero, :adaptor =&gt; :sphero, :port =&gt; '/dev/tty.Sphero-ORB-RN-SPP'</p>
-              </li>
-              <li>The latency on the initial connection is fairly high on all Bluetooth devices. The best way to get around this is to use a socket to serial utility to establish the connection.</li>
             </ul>
           </div>
         </div>

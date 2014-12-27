@@ -217,6 +217,8 @@
                 <li>
                   Before we start, make sure you have
                   <a href="/documentation/getting-started">Ruby and Artoo installed</a>
+                  , as well as
+                  <a href="http://gort.io">Gort</a>
                 </li>
                 <li>
                   Make sure your Arduino device supports the
@@ -255,23 +257,23 @@
               <pre class="CodeRay">$ gem install artoo-arduino
 </pre>
               <p>
-                Once plugged in, use the `artoo connect scan -t serial` command to find out your
+                Once plugged in, use the `gort scan serial` command to find out your
                 connection info and serial port address:
               </p>
-              <pre class="CodeRay">$ artoo arduino scan
+              <pre class="CodeRay">$ gort scan serial
 </pre>
               <p>
-                Use the `artoo firmata install` command to install avrdude,
+                Use the `gort arduino install` command to install avrdude,
                 this will allow us to upload firmata to the arduino:
               </p>
-              <pre class="CodeRay">$ artoo arduino install
+              <pre class="CodeRay">$ gort arduino install
 </pre>
               <p>
                 Once the avrdude uploader is installed we upload the firmata protocol to
                 the arduino, use the arduino serial port address found when you ran `artoo
                 connect scan -t serial`, or leave it blank to use the default address `/dev/ttyACM0`:
               </p>
-              <pre class="CodeRay">$ artoo arduino upload /dev/ttyACM0
+              <pre class="CodeRay">$ gort arduino upload firmata /dev/ttyACM0
 </pre>
               <p>
                 Finally change code to the correct serial port
