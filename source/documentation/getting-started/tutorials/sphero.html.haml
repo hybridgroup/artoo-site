@@ -16,7 +16,9 @@ active_menu_docs: true
   %ul
     %li
       Before we start, be sure to have
-      = link_to "ruby and artoo installed." , "/documentation/getting-started", target: :blank
+      = link_to "Ruby and Artoo installed." , "/documentation/getting-started", target: :blank
+      , along with
+      = link_to "Gort" , "http://gort.io", target: :blank
     %li You should have Bluetooth in your computer.
     %li
       :markdown
@@ -52,16 +54,16 @@ active_menu_docs: true
     %li
       Run this command to look for it:
       :markdown
-            artoo connect scan
+            gort scan bluetooth
     %li
       You will see the following output:
       :markdown
             Scanning ...
             00:06:66:44:39:C6   Sphero-YBW
     %li
-      Use that output to bind your device by name running this command:
+      Use that output to connect your device by name running this command:
       :markdown
-            artoo connect bind 00:06:66:44:39:C6 Sphero-YBW
+            gort bluetooth connect 00:06:66:44:39:C6 Sphero-YBW
 
   %h3 Run artoo program
 

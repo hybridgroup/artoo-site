@@ -94,10 +94,10 @@ subnavjs: true
         Scanning ...
           00:06:66:4A:14:99 Mindwave
 
-    Next, you need to bind the Mindawave to the system port. In the above example, /dev/rfcomm0. The easiest way to do this is to use the `artoo connect bind` command:
+    Next, you need to bind the Mindawave to the system port. In the above example, /dev/rfcomm0. The easiest way to do this is to use the `gort bluetooth connect` command:
 
         :::bash
-        artoo connect bind 00:06:66:4A:14:99 /dev/rfcomm0
+        gort bluetooth connect 00:06:66:4A:14:99 /dev/rfcomm0
 
   %p Now you are ready to connect to the Mindwave
 
