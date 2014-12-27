@@ -102,9 +102,9 @@ subnavjs: true
         $ gort bluetooth pair 00:06:66:4A:14:99
 
     Next, you need to bind the Sphero to the system serial port. In the above
-    example, /dev/Sphero-WRW. Use the `gort bluetooth bind` command:
+    example, /dev/Sphero-WRW. Use the `gort bluetooth connect` command:
 
-        $ gort bluetooth bind 00:06:66:4A:14:99 Sphero-WRW
+        $ gort bluetooth connect 00:06:66:4A:14:99 Sphero-WRW
 
     Now you are ready to run the example code, be sure to update this line with correct port.
 

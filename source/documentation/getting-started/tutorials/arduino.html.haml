@@ -23,6 +23,8 @@ active_menu_docs: true
     %li
       Before we start, make sure you have
       = link_to "Ruby and Artoo installed", "/documentation/getting-started"
+      , as well as
+      = link_to "Gort", "http://gort.io"
     %li
       Make sure your Arduino device supports the
       = link_to "Firmata protocol." , "http://www.firmata.org/wiki/Main_Page", target: :blank
@@ -62,20 +64,20 @@ active_menu_docs: true
         $ gem install artoo-arduino
 
   %p
-    Once plugged in, use the `artoo connect scan -t serial` command to find out your
+    Once plugged in, use the `gort scan serial` command to find out your
     connection info and serial port address:
 
   :markdown
         :::bash
-        $ artoo arduino scan
+        $ gort scan serial
 
   %p
-    Use the `artoo firmata install` command to install avrdude,
+    Use the `gort arduino install` command to install avrdude,
     this will allow us to upload firmata to the arduino:
 
   :markdown
         :::bash
-        $ artoo arduino install
+        $ gort arduino install
 
   %p
     Once the avrdude uploader is installed we upload the firmata protocol to
@@ -84,7 +86,7 @@ active_menu_docs: true
 
   :markdown
         :::bash
-        $ artoo arduino upload /dev/ttyACM0
+        $ gort arduino upload firmata /dev/ttyACM0
 
   %p
     Finally change code to the correct serial port
