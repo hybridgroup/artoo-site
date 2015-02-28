@@ -26,13 +26,13 @@ active_menu_docs: true
       :::ruby
       require 'artoo'
 
-    connection :loop
-    device :passthru
-    api :host => '127.0.0.1', :port => '4321'
+      connection :loop
+      device :passthru
+      api :host => '127.0.0.1', :port => '4321'
 
-    work do
-      puts "Hello from the API running at \#{api_host}:\#{api_port}..."
-    end
+      work do
+        puts "Hello from the API running at \#{api_host}:\#{api_port}..."
+      end
 
 %p artoo automatically, starts the server.
 %h2  How To Configure
