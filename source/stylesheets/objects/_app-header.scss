@@ -67,13 +67,14 @@
     .logo{
       background: url(/images/elements/logo-mobile.png) left top no-repeat;
     }
+
     .subtitle, .menu {
      width: auto;
      display: block;
     }
 
-    .display,.app-logo {
-      display: inline-block;
+    .display, .app-logo {
+      display: inline-block !important;
     }
 
     .display {
@@ -102,6 +103,13 @@
       margin: 0;
       padding: 0 em(10);
     }
+
+    .mobile-menu {
+      display: inline-block;
+      position: absolute;
+      top: 10;
+      right: 0;
+    }
   }
 
   @include media($mobile-small) {
@@ -115,4 +123,6 @@
       width: 100%;
     }
   }
+
+
 }

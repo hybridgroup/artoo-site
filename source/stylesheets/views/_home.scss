@@ -11,6 +11,12 @@
 
 .home{
 
+  section {
+    @include media($tablet) {
+      margin: 0 em(10);
+    }
+  }
+
   .platform-list{
     @include span-columns(12 of 12);
   }

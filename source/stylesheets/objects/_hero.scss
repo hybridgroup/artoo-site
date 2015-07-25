@@ -141,6 +141,9 @@
 
   .container{
     padding: em(30) 0;
+    @include media($tablet) {
+      margin: 0 em(10);
+    }
   }
 }
 
