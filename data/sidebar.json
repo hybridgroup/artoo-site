@@ -49,7 +49,7 @@
       "Wii Nunchuck Controller": "/documentation/drivers/wiichuck"
     },
 
-    "Ardrone - Flight": "/documentation/drivers/ardrone",
+    "Ardrone - Flight": "/documentation/drivers/ardrone-flight",
     "Ardrone - Navigation": "/documentation/drivers/ardrone-navigation",
     "Ardrone - Video": "/documentation/drivers/ardrone-video",
     "Crazyflie - Flight": "/documentation/drivers/crazyflie",
