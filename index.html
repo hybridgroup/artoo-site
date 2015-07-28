@@ -340,18 +340,19 @@ device <span class="symbol">:sphero</span>, <span class="key">driver</span>: <sp
               </a>
             </li>
           </ul>
+          <p class="important-title">
+            See more drivers
+            <a href="/documentation/drivers">here</a>
+          </p>
         </section>
-        <p class="important-title">
-          See more drivers
-          <a href="/documentation/drivers">here</a>
-        </p>
-        <h2 id="api">API</h2>
-        
-        <p>Artoo includes a RESTful API to query the status of any robot running within a group, including the connection and device status, and device streaming data via websockets.</p>
-        
-        <p>To activate the API, use the <code>api</code> command like this:</p>
-        
-        <pre class="CodeRay">require <span class="string"><span class="delimiter">'</span><span class="content">artoo</span><span class="delimiter">'</span></span>
+        <section class="api">
+          <h2 id="api">API</h2>
+          
+          <p>Artoo includes a RESTful API to query the status of any robot running within a group, including the connection and device status, and device streaming data via websockets.</p>
+          
+          <p>To activate the API, use the <code>api</code> command like this:</p>
+          
+          <pre class="CodeRay">require <span class="string"><span class="delimiter">'</span><span class="content">artoo</span><span class="delimiter">'</span></span>
 
 connection <span class="symbol">:loop</span>
 device <span class="symbol">:passthru</span>
@@ -362,6 +363,7 @@ work <span class="keyword">do</span>
   puts <span class="string"><span class="delimiter">"</span><span class="content">Hello from the API running at </span><span class="inline"><span class="inline-delimiter">#{</span>api_host<span class="inline-delimiter">}</span></span><span class="content">:</span><span class="inline"><span class="inline-delimiter">#{</span>api_port<span class="inline-delimiter">}</span></span><span class="content">...</span><span class="delimiter">"</span></span>
 <span class="keyword">end</span>
 </pre>
+        </section>
         <section class="cli">
           <h2 class="homepage">CLI</h2>
           <script src="https://asciinema.org/a/10306.js" id="asciicast-10306" data-autoplay="1" data-loop="true"></script>

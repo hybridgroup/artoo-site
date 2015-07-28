@@ -1105,14 +1105,14 @@ code {
   /* line 67, /home/nathan/Documents/Github/artoo-site/source/stylesheets/objects/_app-header.scss */
   .app-header .logo {
     background: url(/images/elements/logo-mobile.png) left top no-repeat; }
-  /* line 70, /home/nathan/Documents/Github/artoo-site/source/stylesheets/objects/_app-header.scss */
+  /* line 71, /home/nathan/Documents/Github/artoo-site/source/stylesheets/objects/_app-header.scss */
   .app-header .subtitle, .app-header .menu {
     width: auto;
     display: block; }
-  /* line 75, /home/nathan/Documents/Github/artoo-site/source/stylesheets/objects/_app-header.scss */
+  /* line 76, /home/nathan/Documents/Github/artoo-site/source/stylesheets/objects/_app-header.scss */
   .app-header .display, .app-header .app-logo {
-    display: inline-block; }
-  /* line 79, /home/nathan/Documents/Github/artoo-site/source/stylesheets/objects/_app-header.scss */
+    display: inline-block !important; }
+  /* line 80, /home/nathan/Documents/Github/artoo-site/source/stylesheets/objects/_app-header.scss */
   .app-header .display {
     float: left;
     display: block;
@@ -1122,12 +1122,12 @@ code {
     /* line 38, /home/nathan/.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/neat-1.6.0/app/assets/stylesheets/grid/_span-columns.scss */
     .app-header .display:last-child {
       margin-right: 0; }
-  /* line 84, /home/nathan/Documents/Github/artoo-site/source/stylesheets/objects/_app-header.scss */
+  /* line 85, /home/nathan/Documents/Github/artoo-site/source/stylesheets/objects/_app-header.scss */
   .app-header .subtitle {
     font-size: 1.1875em;
     line-height: 0.9375em;
     padding: 0; }
-  /* line 90, /home/nathan/Documents/Github/artoo-site/source/stylesheets/objects/_app-header.scss */
+  /* line 91, /home/nathan/Documents/Github/artoo-site/source/stylesheets/objects/_app-header.scss */
   .app-header .menu {
     text-align: center;
     margin-top: -1.25em 0 0;
@@ -1138,19 +1138,25 @@ code {
     /* line 38, /home/nathan/.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/neat-1.6.0/app/assets/stylesheets/grid/_span-columns.scss */
     .app-header .menu:last-child {
       margin-right: 0; }
-  /* line 96, /home/nathan/Documents/Github/artoo-site/source/stylesheets/objects/_app-header.scss */
+  /* line 97, /home/nathan/Documents/Github/artoo-site/source/stylesheets/objects/_app-header.scss */
   .app-header .nav-list {
     padding: 0;
     margin: 0; }
-  /* line 101, /home/nathan/Documents/Github/artoo-site/source/stylesheets/objects/_app-header.scss */
+  /* line 102, /home/nathan/Documents/Github/artoo-site/source/stylesheets/objects/_app-header.scss */
   .app-header .item {
     margin: 0;
-    padding: 0 0.625em; } }
+    padding: 0 0.625em; }
+  /* line 107, /home/nathan/Documents/Github/artoo-site/source/stylesheets/objects/_app-header.scss */
+  .app-header .mobile-menu {
+    display: inline-block;
+    position: absolute;
+    top: 10;
+    right: 0; } }
 @media screen and (max-width: 320px) {
-  /* line 108, /home/nathan/Documents/Github/artoo-site/source/stylesheets/objects/_app-header.scss */
+  /* line 116, /home/nathan/Documents/Github/artoo-site/source/stylesheets/objects/_app-header.scss */
   .app-header .menu {
     display: none; }
-  /* line 112, /home/nathan/Documents/Github/artoo-site/source/stylesheets/objects/_app-header.scss */
+  /* line 120, /home/nathan/Documents/Github/artoo-site/source/stylesheets/objects/_app-header.scss */
   .app-header li {
     border-bottom: 1px solid #c1effe;
     padding: 0.3125em 0;
@@ -1856,6 +1862,10 @@ code {
   /* line 142, /home/nathan/Documents/Github/artoo-site/source/stylesheets/objects/_hero.scss */
   .site-description .container {
     padding: 1.875em 0; }
+    @media screen and (max-width: 768px) {
+      /* line 142, /home/nathan/Documents/Github/artoo-site/source/stylesheets/objects/_hero.scss */
+      .site-description .container {
+        margin: 0 0.625em; } }
 
 @-webkit-keyframes ship-small {
   from {
@@ -2127,7 +2137,11 @@ code {
     .hero #twitter-widget-0 {
       width: 99px !important; } }
 
-/* line 14, /home/nathan/Documents/Github/artoo-site/source/stylesheets/views/_home.scss */
+@media screen and (max-width: 768px) {
+  /* line 14, /home/nathan/Documents/Github/artoo-site/source/stylesheets/views/_home.scss */
+  .home section {
+    margin: 0 0.625em; } }
+/* line 20, /home/nathan/Documents/Github/artoo-site/source/stylesheets/views/_home.scss */
 .home .platform-list {
   float: left;
   display: block;
@@ -2136,7 +2150,7 @@ code {
   /* line 38, /home/nathan/.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/neat-1.6.0/app/assets/stylesheets/grid/_span-columns.scss */
   .home .platform-list:last-child {
     margin-right: 0; }
-/* line 18, /home/nathan/Documents/Github/artoo-site/source/stylesheets/views/_home.scss */
+/* line 24, /home/nathan/Documents/Github/artoo-site/source/stylesheets/views/_home.scss */
 .home .platform {
   float: left;
   display: block;
@@ -2147,7 +2161,7 @@ code {
   .home .platform:last-child {
     margin-right: 0; }
   @media screen and (max-width: 768px) {
-    /* line 18, /home/nathan/Documents/Github/artoo-site/source/stylesheets/views/_home.scss */
+    /* line 24, /home/nathan/Documents/Github/artoo-site/source/stylesheets/views/_home.scss */
     .home .platform {
       float: left;
       display: block;
@@ -2733,7 +2747,10 @@ code {
   margin-right: 2.35765%;
   width: 48.82117%;
   margin-right: 0;
-  margin: 0.3125em; }
+  margin: 0.3125em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
   /* line 38, /home/nathan/.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/neat-1.6.0/app/assets/stylesheets/grid/_span-columns.scss */
   .video:last-child {
     margin-right: 0; }
@@ -2743,15 +2760,27 @@ code {
       float: left;
       display: block;
       margin-right: 2.35765%;
-      width: 100%; }
+      width: 100%;
+      margin: 0;
+      padding: 0 0.625em; }
       /* line 38, /home/nathan/.rvm/gems/ruby-2.0.0-p247@artoo-io/gems/neat-1.6.0/app/assets/stylesheets/grid/_span-columns.scss */
       .video:last-child {
         margin-right: 0; } }
-  /* line 10, /home/nathan/Documents/Github/artoo-site/source/stylesheets/views/_videos.scss */
+  /* line 15, /home/nathan/Documents/Github/artoo-site/source/stylesheets/views/_videos.scss */
   .video .video-title {
     font-size: 1em;
     height: 1.875em; }
-  /* line 15, /home/nathan/Documents/Github/artoo-site/source/stylesheets/views/_videos.scss */
+  /* line 20, /home/nathan/Documents/Github/artoo-site/source/stylesheets/views/_videos.scss */
   .video iframe, .video object {
     width: 100%;
-    height: 300px; }
+    height: 300px;
+    display: block;
+    border: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+
+@media screen and (max-width: 768px) {
+  /* line 32, /home/nathan/Documents/Github/artoo-site/source/stylesheets/views/_videos.scss */
+  .videos p {
+    margin: 0.625em 0.9375em; } }
